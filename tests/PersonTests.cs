@@ -12,5 +12,13 @@ namespace tests
             person.Name = "Pratikchhya Shrestha";
             Assert.Equal("Pratikchhya Shrestha", person.Name);
         }
+
+        [Fact]
+        public void ShortPasswordsFail()
+        {
+            Person person = new Person();
+            bool actual = person.CheckPasswordMeetsRequirements("hunter2");
+            Assert.False(actual);
+        }
     }
 }
