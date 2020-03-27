@@ -4,6 +4,7 @@ namespace hellolib
 {
     public class Person
     {
+        private static readonly int MINIMUM_PASSWORD_LENGTH = 8;
         public string Name { get; set; }
 
         public string Password { get; set; }
@@ -11,7 +12,7 @@ namespace hellolib
         public bool CheckPasswordMeetsRequirements(string password)
         {
             int length = password.Length;
-            if (length < 8)
+            if (length < MINIMUM_PASSWORD_LENGTH)
             {
                 return false;
             }
