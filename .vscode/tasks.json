@@ -45,7 +45,7 @@
             "group": "test",
             "args": [
                 "test",
-                "${workspaceFolder}/testprojectfolder/testprojectname.csproj"
+                "${workspaceFolder}"
             ],
             "presentation": {
                 "reveal": "silent"
