@@ -19,5 +19,19 @@ namespace tests
             int queryItem = 4;
             Assert.True(MySearch.LinearSearchIntegers(arrayToSearch, queryItem));
         }
+        [Fact]
+        public void BinarySearchDoesNotExist()
+        {
+            int[] arrayToSearch = { 1, 2, 3, 4, 5, 6 };
+            int queryItem = 9;
+            Assert.False(MySearch.BinarySearchIntegers(arrayToSearch, queryItem));
+        }
+        [Fact]
+        public void BinarySearchDoesNotExistOdd()
+        {
+            int[] arrayToSearch = { 1, 2, 3, 4, 5, 6, 7 };
+            int queryItem = 9;
+            Assert.False(MySearch.BinarySearchIntegers(arrayToSearch, queryItem));
+        }
     }
 }
