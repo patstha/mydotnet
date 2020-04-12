@@ -89,5 +89,19 @@ namespace tests
             int queryItem = 4;
             Assert.True(MySearch.BinarySearchIntegers(arrayToSearch, queryItem).Equals(3));
         }
+        [Fact]
+        public void BinarySearchDoesExist4Twice()
+        {
+            int[] arrayToSearch = { 1, 2, 3, 4, 4, 5, 6 };
+            int queryItem = 4;
+            Assert.True(MySearch.BinarySearchIntegers(arrayToSearch, queryItem).Equals(3));
+        }
+        [Fact]
+        public void BinarySearchDoesExistOdd4Twice()
+        {
+            int[] arrayToSearch = { 1, 2, 3, 4, 4, 5, 6, 7 };
+            int queryItem = 4;
+            Assert.True(MySearch.BinarySearchIntegers(arrayToSearch, queryItem).Equals(3));
+        }
     }
 }
