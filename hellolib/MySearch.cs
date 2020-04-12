@@ -16,7 +16,7 @@ namespace hellolib
             return false;
         }
 
-        public static bool BinarySearchIntegers(int[] arrayToSearch, int queryItem)
+        public static int BinarySearchIntegers(int[] arrayToSearch, int queryItem)
         {
             int[] inputArray = arrayToSearch;
             Array.Sort(inputArray);
@@ -28,7 +28,7 @@ namespace hellolib
                 midPoint = (upperBound + lowerBound) / 2;
                 if (inputArray[midPoint] == queryItem)
                 {
-                    return true;
+                    return midPoint;
                 } 
                 else if (inputArray[midPoint] < queryItem)
                 {
@@ -39,7 +39,7 @@ namespace hellolib
                     upperBound = midPoint - 1;
                 }
             }
-            return false;
+            return -1;
         }
     }
 }
