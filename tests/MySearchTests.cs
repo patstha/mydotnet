@@ -75,7 +75,7 @@ namespace tests
             int queryItem = 3;
             Assert.True(MySearch.BinarySearchIntegers(arrayToSearch, queryItem).Equals(2));
         }
-                [Fact]
+        [Fact]
         public void BinarySearchDoesExist4()
         {
             int[] arrayToSearch = { 1, 2, 3, 4, 5, 6 };
