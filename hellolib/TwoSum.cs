@@ -21,5 +21,21 @@ namespace hellolib
             }
             return false;
         }
+        public static bool CheckExistsHashed(int[] array, int target)
+        {
+            HashSet<int> mySet = new HashSet<int>();
+            foreach (int element in array)
+            {
+                if (mySet.Contains(element))
+                {
+                    return true;
+                }
+                else
+                {
+                    mySet.Add(target - element);
+                }
+            }
+            return false;
+        }
     }
 }
