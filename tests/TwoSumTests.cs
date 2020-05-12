@@ -13,14 +13,14 @@ namespace tests
         [Fact]
         public void SumExistsInCheckExists()
         {
-            int[] a = { 1, 5, 3, 7, 12, 8};
+            int[] a = { 1, 5, 3, 7, 12, 8 };
             int X = 20;
             Assert.True(TwoSum.CheckExists(a, X));
         }
         [Fact]
         public void SumDoesNotExistInCheckExists()
         {
-            int[] a = { 1, 5, 3, 7, 12, 9};
+            int[] a = { 1, 5, 3, 7, 12, 9 };
             int X = 20;
             Assert.False(TwoSum.CheckExists(a, X));
         }

@@ -12,9 +12,9 @@ namespace hellolib
             {
                 myList.Add(element);
             }
-            foreach (int element in myList) 
+            foreach (int element in myList)
             {
-                if (myList.Contains(X - element)) 
+                if (myList.Contains(X - element))
                 {
                     return true;
                 }
