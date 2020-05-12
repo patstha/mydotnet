@@ -25,11 +25,25 @@ namespace tests
             Assert.False(TwoSum.CheckExists(a, X));
         }
         [Fact]
+        public void SumDoesNotExistInCheckExistsTen()
+        {
+            int[] a = { 1, 5, 3, 7, 10, 9 };
+            int X = 20;
+            Assert.False(TwoSum.CheckExists(a, X));
+        }
+        [Fact]
         public void SumExistsInCheckExistsHashed()
         {
             int[] a = { 1, 5, 3, 7, 12, 8 };
             int X = 20;
             Assert.True(TwoSum.CheckExistsHashed(a, X));
+        }
+        [Fact]
+        public void SumDoesNotExistInCheckExistsHashedTen()
+        {
+            int[] a = { 1, 5, 3, 7, 10, 9 };
+            int X = 20;
+            Assert.False(TwoSum.CheckExistsHashed(a, X));
         }
         [Fact]
         public void SumDoesNotExistInCheckExistsHashed()
