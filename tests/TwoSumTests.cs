@@ -17,5 +17,12 @@ namespace tests
             int X = 20;
             Assert.True(TwoSum.CheckExists(a, X));
         }
+        [Fact]
+        public void SumDoesNotExistInCheckExists()
+        {
+            int[] a = { 1, 5, 3, 7, 12, 9};
+            int X = 20;
+            Assert.False(TwoSum.CheckExists(a, X));
+        }
     }
 }
