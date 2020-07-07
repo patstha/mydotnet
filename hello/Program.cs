@@ -2,14 +2,27 @@
 
 namespace hello
 {
-    class Program
+    class main
     {
-        static void Main(string[] args)
+        public static void Main()
         {
-            Console.WriteLine("Hello Kushal!");
-            for (int i=0; i<10; i++)
+            Console.WriteLine(DoSomething());
+            Console.Read();
+        }
+
+        public static string DoSomething()
+        {
+            try
             {
-                Console.WriteLine("this is the " + i + " step.");
+                return "A";
+            }
+            catch
+            {
+                return "B";
+            }
+            finally
+            {
+                Console.WriteLine("C");
             }
         }
     }
