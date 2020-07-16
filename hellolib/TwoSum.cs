@@ -8,10 +8,7 @@ namespace hellolib
         public static bool CheckExists(int[] a, int X)
         {
             List<int> myList = new List<int>();
-            foreach (int element in a)
-            {
-                myList.Add(element);
-            }
+            myList.AddRange(a);
             foreach (int element in myList)
             {
                 if (myList.Contains(X - element))
