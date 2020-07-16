@@ -74,7 +74,7 @@ namespace tests
         public void GetFreqLabsTwoCoins()
         {
             var coinValues = new List<int>() { 1, 120, 200 };
-            minimumCoin = new MinimumCoin(CoinSet: coinValues, RepeatFactor: 6);
+            minimumCoin = new MinimumCoin(CoinSet: coinValues, RepeatFactor: 100);
             Assert.Equal(2, minimumCoin.getCount(240));
         }
     }
