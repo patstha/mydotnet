@@ -9,6 +9,7 @@ namespace hellolib
         {
             List<int> myList = new List<int>();
             myList.AddRange(a);
+            myList.Remove(X / 2);
             foreach (int element in myList)
             {
                 if (myList.Contains(X - element))
