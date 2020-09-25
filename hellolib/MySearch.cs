@@ -41,5 +41,31 @@ namespace hellolib
             }
             return -1;
         }
+
+        public static int ReverseBinarySearchIntegers(int[] arrayToSearch, int queryItem)
+        {
+            int[] inputArray = arrayToSearch;
+            Array.Sort(inputArray);
+            int lowerBound = 0;
+            int upperBound = inputArray.Length - 1;
+            int midPoint;
+            while (lowerBound <= upperBound)
+            {
+                midPoint = (upperBound + lowerBound) / 2;
+                if (inputArray[midPoint] == queryItem)
+                {
+                    return midPoint;
+                } 
+                else if (inputArray[midPoint] > queryItem)
+                {
+                    upperBound = midPoint - 1;
+                } 
+                else if (inputArray[midPoint] < queryItem)
+                {
+                    lowerBound = midPoint + 1;
+                }
+            }
+            return -1;
+        }
     }
 }
