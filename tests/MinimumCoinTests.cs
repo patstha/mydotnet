@@ -20,19 +20,12 @@ namespace tests
             Assert.Equal(4, 2 + 2);
         }
 
-        [Fact]
-        public void GetTrivialCaseOfZeroCoin()
+        [Theory]
+        [InlineData(0)]
+        [InlineData(1)]
+        public void GetTrivialCase(int input)
         {
-            Assert.Equal(0, minimumCoin.getCount(0));
-        }
-
-        [Fact]
-        public void GetTrivialCaseOfOneCoin()
-        {
-            foreach (int i in minimumCoin.CoinSet)
-            {
-                Assert.Equal(1, minimumCoin.getCount(i));
-            }
+            Assert.Equal(0, minimumCoin.getCount(input));
         }
 
         [Fact]
