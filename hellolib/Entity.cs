@@ -2,7 +2,7 @@
 
 namespace hellolib
 {
-    public class Entity
+    public abstract class Entity
     {
         public Guid Guid { get; set; } = Guid.NewGuid();
     }
