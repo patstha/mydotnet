@@ -5,27 +5,27 @@ namespace tests
 {
     public class PersonTests
     {
-        [Fact]
-        public void CreatePersonWithNameSucceeds()
+        [Theory]
+        [InlineData("Pratikchhya Shrestha", "12345678")]
+        public void CreatePersonWithNameSucceeds(string name, string password)
         {
-            Person person = new Person();
-            person.Name = "Pratikchhya Shrestha";
+            Person person = PersonFactory.Create(name, password);
             Assert.Equal("Pratikchhya Shrestha", person.Name);
         }
 
-        [Fact]
-        public void ShortPasswordsFail()
+        [Theory]
+        [InlineData("Pratikchhya Shrestha", "hunter2")]
+        [InlineData("Pratikchhya Shrestha", "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz")]
+        public void ShortOrLongPasswordsFail(string name, string password)
         {
-            Person person = new Person();
-            bool actual = person.CheckPasswordMeetsRequirements("hunter2");
-            Assert.False(actual);
-        }
-        [Fact]
-        public void LongPasswordsFail()
-        {
-            Person person = new Person();
-            bool actual = person.CheckPasswordMeetsRequirements("abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz");
-            Assert.False(actual);
+            try
+            {
+                Person person = PersonFactory.Create(name, password);
+            }
+            catch (ArgumentException e)
+            {
+                Assert.NotNull(e);
+            }
         }
     }
 }
