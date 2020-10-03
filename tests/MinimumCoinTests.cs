@@ -25,7 +25,7 @@ namespace tests
         [InlineData(1)]
         public void GetTrivialCase(int input)
         {
-            Assert.Equal(0, minimumCoin.getCount(input));
+            Assert.Equal(input, minimumCoin.getCount(input));
         }
 
         [Fact]
