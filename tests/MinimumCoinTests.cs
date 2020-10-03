@@ -11,7 +11,7 @@ namespace tests
         public MinimumCoinTests()
         {
             var coinValues = new List<int>() { 1, 5, 10, 25 };
-            minimumCoin = new MinimumCoin(CoinSet: coinValues, RepeatFactor: 6);
+            minimumCoin = new MinimumCoin(CoinSet: coinValues, RepeatFactor: 8);
         }
 
         [Fact]
