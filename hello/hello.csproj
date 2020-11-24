@@ -2,6 +2,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\hellolib\hellolib.csproj" />
+    <ProjectReference Include="..\MyCommonImagesLib\MyCommonImagesLib.csproj" />
   </ItemGroup>
 
   <PropertyGroup>
