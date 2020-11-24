@@ -20,7 +20,8 @@ class Solution
         var myEncoder = Encoder.Quality;
         var myEncoderParameter = new EncoderParameter(myEncoder, 100L);
         myEncoderParameters.Param[0] = myEncoderParameter;
-        myBitmap.Save("slick.png", myImageCodecInfo, myEncoderParameters);
+        System.Guid guid = System.Guid.NewGuid();
+        myBitmap.Save($"slick-{guid.ToString()}.png", myImageCodecInfo, myEncoderParameters);
 
     }
 
