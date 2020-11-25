@@ -20,8 +20,7 @@ class Solution
         var myEncoder = Encoder.Quality;
         var myEncoderParameter = new EncoderParameter(myEncoder, 100L);
         myEncoderParameters.Param[0] = myEncoderParameter;
-        System.Guid guid = System.Guid.NewGuid();
-        myBitmap.Save($"slick-{guid.ToString()}.png", myImageCodecInfo, myEncoderParameters);
+        myBitmap.Save($"slick-{DateTime.Now.Subtract(DateTime.MinValue.AddYears(1969)).TotalMilliseconds}.png", myImageCodecInfo, myEncoderParameters);
 
     }
 

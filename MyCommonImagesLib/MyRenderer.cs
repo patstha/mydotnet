@@ -13,8 +13,11 @@ namespace MyCommonImagesLib
         readonly int x = 5;
         public Bitmap CreateBitmap()
         {
-            Bitmap bmp = new Bitmap(650, 518);
-            bmp.SetResolution(300.0F, 300.0F);
+            int canvasWidth = 6000;
+            int canvasHeight = 5180;
+            int margin = 10;
+            Bitmap bmp = new Bitmap(canvasWidth, canvasHeight);
+            bmp.SetResolution(3000.0F, 3000.0F);
 
             string FirstName = "AbcdefghijklmnopqrstuvwxyzAbcdefghijklmnopqrstuv";
             string LastName = "AbcdefghijklmnopqrstuvwxyzAbcdefghijklmnopqrstuv";
@@ -32,17 +35,23 @@ namespace MyCommonImagesLib
 
                 graphics.FillRectangle(new SolidBrush(Color.White), 0, 0, bmp.Width, bmp.Height);
 
-                DrawStringSection(graphics, "First Name: ", FirstName);
+                RectangleF rectF1 = new RectangleF(0, 0, bmp.Width - margin, bmp.Height - margin);
 
-                DrawStringSection(graphics, "Last Name: ", LastName);
+                RectangleF rectF2 = DrawStringSection(graphics, "First Name: ", FirstName, rectF1);
+                
+                RectangleF rectF3 =  DrawStringSection(graphics, "First Name Length: ", FirstName.Length.ToString(), rectF2);
+                
+                RectangleF rectF4 = DrawStringSection(graphics, "Last Name: ", LastName, rectF3);
 
-                DrawStringSection(graphics, "Date of birth: ", DOB);
+                RectangleF rectF5 = DrawStringSection(graphics, "Last Name Length: ", LastName.Length.ToString(), rectF4);
 
-                DrawStringSection(graphics, "Lab Order Number: ", OrderNumber);
+                RectangleF rectF6 = DrawStringSection(graphics, "Date of birth: ", DOB, rectF5);
 
-                DrawStringSection(graphics, "Company: ", Client);
+                RectangleF rectF7 = DrawStringSection(graphics, "Lab Order Number: ", OrderNumber, rectF6);
 
-                DrawStringSection(graphics, "Lab Acct: ", LocationCode);
+                RectangleF rectF8 = DrawStringSection(graphics, "Company: ", Client, rectF7);
+
+                _ = DrawStringSection(graphics, "Lab Acct: ", LocationCode, rectF8);
 
                 graphics.Flush();
                 font.Dispose();
@@ -54,13 +63,13 @@ namespace MyCommonImagesLib
             return bmp;
         }
 
-        private void DrawStringSection(Graphics graphics, string header, string detail)
+        private RectangleF DrawStringSection(Graphics graphics, string header, string detail, RectangleF rectangleF)
         {
             var stringSize = graphics.MeasureString(header, boldFont);
-            graphics.DrawString(header, boldFont, new SolidBrush(Color.Black), x, y);
-            graphics.DrawString(detail, font, new SolidBrush(Color.Black), (int)stringSize.Width + 10, y);
+            //graphics.DrawString(header, boldFont, new SolidBrush(Color.Black));
+            graphics.DrawString(detail, font, new SolidBrush(Color.Black), rectangleF);
 
-            y = y + (int)stringSize.Height + 5;
+            return new RectangleF(rectangleF.X, rectangleF.Y + (int)stringSize.Height, rectangleF.Width, rectangleF.Height);
         }
     }
 }
