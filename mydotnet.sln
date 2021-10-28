@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30523.141
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31825.309
 MinimumVisualStudioVersion = 15.0.26124.0
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "hello", "hello\hello.csproj", "{8F19025A-87A7-4127-8C5E-966456BF8E42}"
 EndProject
@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "hellolib", "hellolib\hellol
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dataaccess", "dataaccess\dataaccess.csproj", "{009F5D95-3452-4ED5-9010-4FE1BC0CE46E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyCommonImagesLib", "MyCommonImagesLib\MyCommonImagesLib.csproj", "{078FF74D-3D1B-4BC0-B79F-931F9CEC19D6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MyCommonImagesLib", "MyCommonImagesLib\MyCommonImagesLib.csproj", "{078FF74D-3D1B-4BC0-B79F-931F9CEC19D6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LearnJwt", "LearnJwt\LearnJwt.csproj", "{B77E90CE-593A-4FEC-8911-E38FC0E54B9A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -83,6 +85,18 @@ Global
 		{078FF74D-3D1B-4BC0-B79F-931F9CEC19D6}.Release|x64.Build.0 = Release|Any CPU
 		{078FF74D-3D1B-4BC0-B79F-931F9CEC19D6}.Release|x86.ActiveCfg = Release|Any CPU
 		{078FF74D-3D1B-4BC0-B79F-931F9CEC19D6}.Release|x86.Build.0 = Release|Any CPU
+		{B77E90CE-593A-4FEC-8911-E38FC0E54B9A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B77E90CE-593A-4FEC-8911-E38FC0E54B9A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B77E90CE-593A-4FEC-8911-E38FC0E54B9A}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{B77E90CE-593A-4FEC-8911-E38FC0E54B9A}.Debug|x64.Build.0 = Debug|Any CPU
+		{B77E90CE-593A-4FEC-8911-E38FC0E54B9A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{B77E90CE-593A-4FEC-8911-E38FC0E54B9A}.Debug|x86.Build.0 = Debug|Any CPU
+		{B77E90CE-593A-4FEC-8911-E38FC0E54B9A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B77E90CE-593A-4FEC-8911-E38FC0E54B9A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B77E90CE-593A-4FEC-8911-E38FC0E54B9A}.Release|x64.ActiveCfg = Release|Any CPU
+		{B77E90CE-593A-4FEC-8911-E38FC0E54B9A}.Release|x64.Build.0 = Release|Any CPU
+		{B77E90CE-593A-4FEC-8911-E38FC0E54B9A}.Release|x86.ActiveCfg = Release|Any CPU
+		{B77E90CE-593A-4FEC-8911-E38FC0E54B9A}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
