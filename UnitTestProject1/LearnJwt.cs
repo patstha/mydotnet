@@ -17,22 +17,25 @@ namespace LearnJwt
             string header = BuildTokenHeader();
             string payload = BuildTokenPayload(email, timestamp);
 
-            string base64Header = Base64UrlEncode(header);
-            string base64Payload = Base64UrlEncode(payload);
+            string base64Header = Base64Encode(header);
+            string base64EncodedHeader = JwtUrlEncode(base64Header);
+            string base64Payload = Base64Encode(payload);
+            string base64EncodedPayload = JwtUrlEncode(base64Payload);
 
-            return GetHMACSHA256(base64Header + "." + base64Payload, clientSecret);
+            return GetHMACSHA256(base64EncodedHeader + "." + base64EncodedPayload, clientSecret);
         }
 
         private string GetHMACSHA256(string token, string clientSecret)
         {
-            var sha = new HMACSHA512(Encoding.UTF8.GetBytes(clientSecret));
-            var hashedByteArray = sha.ComputeHash(Encoding.UTF8.GetBytes(token));
+            HMACSHA512 sha = new HMACSHA512(Encoding.UTF8.GetBytes(clientSecret));
+            byte[] hashedByteArray = sha.ComputeHash(Encoding.UTF8.GetBytes(token));
 
             //You need to base64UrlEncode the signature hash value
-            var partThree = Base64UrlEncode(Encoding.UTF8.GetString(hashedByteArray));
+            string partThree = Base64Encode(Encoding.UTF8.GetString(hashedByteArray));
+            string partThreeHashed = JwtUrlEncode(partThree);
 
             //Now construct the token
-            var tokenString = string.Join(".", token, partThree);
+            string tokenString = string.Join(".", token, partThreeHashed);
             return tokenString;
         }
 
@@ -49,14 +52,17 @@ namespace LearnJwt
         }
 
         // from JWT spec
-        private static string Base64UrlEncode(string plainText)
+        private static string JwtUrlEncode(string input)
         {
-            byte[] input = Encoding.UTF8.GetBytes(plainText);
-            string output = Convert.ToBase64String(input);
-            output = output.Split('=')[0]; // Remove any trailing '='s
-            output = output.Replace('+', '-'); // 62nd char of encoding
-            output = output.Replace('/', '_'); // 63rd char of encoding
-            return output;
+            input = input.Split('=')[0]; // Remove any trailing '='s
+            input = input.Replace('+', '-'); // 62nd char of encoding
+            input = input.Replace('/', '_'); // 63rd char of encoding
+            return input;
+        }
+
+        private static string Base64Encode(string plainText)
+        {
+            return Convert.ToBase64String(Encoding.UTF8.GetBytes(plainText));
         }
 
         public string GenerateSignature(JwtPayload payload, string clientSecret)
@@ -76,7 +82,7 @@ namespace LearnJwt
             // Arrange
             string expectedEmail = "appleballcatdogeggfishgunhenicejugkitelionmonkeynestorangequeenroseshipteaumbrellavanwaterxylophoneyachtzebra@gmx.com";
             long expectedTimestamp = DateTimeOffset.Now.ToUnixTimeSeconds();
-            string clientSecret = "appleballcatdogeggfishgunhenicejugkitelionmonkeynestorangequeenroseshipteaumbrellavanwaterxylophoneyachtzebra";
+            string clientSecret = "TrcfYR6EhWX6LQSAvY3RVjf7uPaFacr3";
             var payload = new JwtPayload
             {
                 { "email", expectedEmail },
@@ -104,7 +110,7 @@ namespace LearnJwt
             // Arrange
             string expectedEmail = "appleballcatdogeggfishgunhenicejugkitelionmonkeynestorangequeenroseshipteaumbrellavanwaterxylophoneyachtzebra@gmx.com";
             long expectedTimestamp = DateTimeOffset.Now.ToUnixTimeSeconds();
-            string clientSecret = "appleballcatdogeggfishgunhenicejugkitelionmonkeynestorangequeenroseshipteaumbrellavanwaterxylophoneyachtzebra";
+            string clientSecret = "TrcfYR6EhWX6LQSAvY3RVjf7uPaFacr3";
 
             // Act 
             string token = BuildToken(expectedEmail, expectedTimestamp, clientSecret);
