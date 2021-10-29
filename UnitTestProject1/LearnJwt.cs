@@ -41,7 +41,6 @@ namespace LearnJwt
 
         private string BuildTokenHeader()
         {
-            //return "{ ""alg"": ""HS256"",""typ"": ""JWT"" }";
             return JsonConvert.SerializeObject(new { alg = "HS256", typ = "JWT" });
         }
 
