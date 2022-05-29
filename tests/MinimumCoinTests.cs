@@ -25,7 +25,7 @@ namespace tests
         public void Freebie(int firstNumber, int secondNumber, int expectedSum)
         {
             // Arrange, Act
-            int actualSum = 2 + 2;
+            int actualSum = firstNumber + secondNumber;
 
             // Assert 
             actualSum.Should().Be(expectedSum, $"because {firstNumber} + {secondNumber} is {expectedSum}", new List<int>[firstNumber, secondNumber, actualSum]);
