@@ -2,6 +2,7 @@ using System.Linq;
 using Xunit;
 using hellolib;
 using System.Collections.Generic;
+using FluentAssertions;
 
 namespace tests
 {
@@ -14,10 +15,15 @@ namespace tests
             minimumCoin = new MinimumCoin(CoinSet: coinValues, RepeatFactor: 5);
         }
 
-        [Fact]
-        public void Freebie()
+        [Theory]
+        [InlineData(2, 2, 4)]
+        public void Freebie(int firstNumber, int secondNumber, int expectedSum)
         {
-            Assert.Equal(4, 2 + 2);
+            // Arrange, Act
+            int actualSum = 2 + 2;
+
+            // Assert 
+            actualSum.Should().Be(expectedSum, $"because {firstNumber} + {secondNumber} is {expectedSum}", new List<int>[firstNumber, secondNumber, actualSum]);
         }
 
         [Theory]
