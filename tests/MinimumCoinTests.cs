@@ -17,6 +17,11 @@ namespace tests
 
         [Theory]
         [InlineData(2, 2, 4)]
+        [InlineData(1, 2, 3)]
+        [InlineData(0, 2, 2)]
+        [InlineData(2, 0, 2)]
+        [InlineData(9, 5, 14)]
+        [InlineData(24, 24, 48)]
         public void Freebie(int firstNumber, int secondNumber, int expectedSum)
         {
             // Arrange, Act
