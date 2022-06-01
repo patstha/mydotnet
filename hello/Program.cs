@@ -1,7 +1,7 @@
 ﻿using System;
 using hellolib;
 namespace hello;
-class Solution
+public class Solution
 {
     public static void Main(string[] args)
     {
