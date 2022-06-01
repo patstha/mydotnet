@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace hellolib
 {
@@ -10,14 +11,7 @@ namespace hellolib
             List<int> myList = new List<int>();
             myList.AddRange(a);
             myList.Remove(X / 2);
-            foreach (int element in myList)
-            {
-                if (myList.Contains(X - element))
-                {
-                    return true;
-                }
-            }
-            return false;
+            return myList.Any(x => myList.Contains(X - x));
         }
         public static bool CheckExistsHashed(int[] array, int target)
         {
