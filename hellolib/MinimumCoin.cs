@@ -35,12 +35,9 @@ namespace hellolib
             foreach (var y in x)
             {
                 int sum = y.Sum();
-                if (sum == total)
+                if (sum == total && currentCount > y.Count())
                 {
-                    if (currentCount > y.Count())
-                    {
-                        currentCount = y.Count();
-                    }
+                    currentCount = y.Count();
                 }
             }
             return currentCount;
