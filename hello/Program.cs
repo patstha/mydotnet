@@ -1,6 +1,6 @@
 ﻿using System;
 using hellolib;
-
+namespace hello;
 class Solution
 {
     public static void Main(string[] args)
