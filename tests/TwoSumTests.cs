@@ -10,53 +10,46 @@ namespace tests
         {
             Assert.True(true);
         }
-        [Fact]
-        public void SumExistsInCheckExists()
+        [Theory]
+        [InlineData(new int[]{ 1, 5, 3, 7, 12, 8 }, 20)]
+        public void SumExistsInCheckExists(int[] a, int X)
         {
-            int[] a = { 1, 5, 3, 7, 12, 8 };
-            int X = 20;
             Assert.True(TwoSum.CheckExists(a, X));
         }
-        [Fact]
-        public void SumDoesNotExistInCheckExists()
+        [Theory]
+        [InlineData(new int[]{ 1, 5, 3, 7, 12, 9 }, 20)]
+        public void SumDoesNotExistInCheckExists(int[] a, int X)
         {
-            int[] a = { 1, 5, 3, 7, 12, 9 };
-            int X = 20;
             Assert.False(TwoSum.CheckExists(a, X));
         }
-        [Fact]
-        public void SumDoesNotExistInCheckExistsTen()
+        [Theory]
+        [InlineData(new int[]{ 1, 5, 3, 7, 10, 9 }, 20)]
+        public void SumDoesNotExistInCheckExistsTen(int[] a, int X)
         {
-            int[] a = { 1, 5, 3, 7, 10, 9 };
-            int X = 20;
             Assert.False(TwoSum.CheckExists(a, X));
         }
-        [Fact]
-        public void SumExistsInCheckExistsTen()
+        [Theory]
+        [InlineData(new int[]{ 1, 5, 3, 7, 10, 10, 9 }, 20)]
+        public void SumExistsInCheckExistsTen(int[] a, int X)
         {
-            int[] a = { 1, 5, 3, 7, 10, 10, 9 };
-            int X = 20;
             Assert.True(TwoSum.CheckExists(a, X));
         }
-        [Fact]
-        public void SumExistsInCheckExistsHashed()
+        [Theory]
+        [InlineData(new int[]{ 1, 5, 3, 7, 12, 8 }, 20)]
+        public void SumExistsInCheckExistsHashed(int[] a, int X)
         {
-            int[] a = { 1, 5, 3, 7, 12, 8 };
-            int X = 20;
             Assert.True(TwoSum.CheckExistsHashed(a, X));
         }
-        [Fact]
-        public void SumDoesNotExistInCheckExistsHashedTen()
+        [Theory]
+        [InlineData(new int[]{ 1, 5, 3, 7, 10, 9 }, 20)]
+        public void SumDoesNotExistInCheckExistsHashedTen(int[] a, int X)
         {
-            int[] a = { 1, 5, 3, 7, 10, 9 };
-            int X = 20;
             Assert.False(TwoSum.CheckExistsHashed(a, X));
         }
-        [Fact]
-        public void SumDoesNotExistInCheckExistsHashed()
+        [Theory]
+        [InlineData(new int[]{ 1, 5, 3, 7, 12, 9 }, 20)]
+        public void SumDoesNotExistInCheckExistsHashed(int[] a, int X)
         {
-            int[] a = { 1, 5, 3, 7, 12, 9 };
-            int X = 20;
             Assert.False(TwoSum.CheckExistsHashed(a, X));
         }
     }
