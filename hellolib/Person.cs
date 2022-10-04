@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace hellolib
+﻿namespace hellolib
 {
     public class Person: Entity
     {
