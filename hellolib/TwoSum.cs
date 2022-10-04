@@ -1,7 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-
 namespace hellolib
 {
     public static class TwoSum
