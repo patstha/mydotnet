@@ -11,6 +11,7 @@ namespace tests
             Assert.True(true);
         }
         [Theory]
+        [InlineData(new int[]{ 1, 5, 3, 7, 02, 8 }, 10)]
         [InlineData(new int[]{ 1, 5, 3, 7, 12, 8 }, 20)]
         [InlineData(new int[]{ 1, 5, 3, 7, 22, 8 }, 30)]
         [InlineData(new int[]{ 1, 5, 3, 7, 32, 8 }, 40)]
@@ -20,7 +21,6 @@ namespace tests
         [InlineData(new int[]{ 1, 5, 3, 7, 72, 8 }, 80)]
         [InlineData(new int[]{ 1, 5, 3, 7, 82, 8 }, 90)]
         [InlineData(new int[]{ 1, 5, 3, 7, 92, 8 }, 100)]
-        [InlineData(new int[]{ 1, 5, 3, 7, 02, 8 }, 10)]
         public void SumExistsInCheckExists(int[] a, int X)
         {
             Assert.True(TwoSum.CheckExists(a, X));
