@@ -24,4 +24,8 @@
     <ProjectReference Include="..\hellolib\hellolib.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\SalesforceMapper\SalesforceMapper.csproj" />
+  </ItemGroup>
+
 </Project>
