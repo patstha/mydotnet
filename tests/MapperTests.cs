@@ -30,8 +30,8 @@ namespace tests
 
         [Theory]
         [InlineData(
-            "{\"Id\": \"Abraham Lincoln\", \"ContactEmail__c\": \"abe@whitehouse.gov\"}", 
-            "{\"Preferences\": [ { \"PrefCode\": \"email__c\" } }"
+            "{\"Id\": \"Abraham Lincoln\", \"ContactEmail__c\": \"abe@whitehouse.gov\"}",
+            "{\"Preferences\": [ { \"PrefCode\": \"email__c\" } ] } }"
         )]
         public void ManipulateJsonString_ShouldReturnExpectedJsonString(string json, string expected)
         {
