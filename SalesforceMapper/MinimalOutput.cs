@@ -4,18 +4,17 @@
 //
 //    using SalesforceMapper.MinimalOutput;
 //
-//    var znodeContactPreference = ZnodeContactPreference.FromJson(jsonString);
+//    var minimalOutput = MinimalOutput.FromJson(jsonString);
 
 namespace SalesforceMapper.MinimalOutput
 {
-    using System;
     using System.Collections.Generic;
 
     using System.Globalization;
     using Newtonsoft.Json;
     using Newtonsoft.Json.Converters;
 
-    public partial class ZnodeContactPreference
+    public partial class MinimalOutput
     {
         [JsonProperty("Preferences", Required = Required.Always)]
         public List<Preference> Preferences { get; set; }
@@ -27,14 +26,14 @@ namespace SalesforceMapper.MinimalOutput
         public string PrefCode { get; set; }
     }
 
-    public partial class ZnodeContactPreference
+    public partial class MinimalOutput
     {
-        public static ZnodeContactPreference FromJson(string json) => JsonConvert.DeserializeObject<ZnodeContactPreference>(json, SalesforceMapper.MinimalOutput.Converter.Settings);
+        public static MinimalOutput FromJson(string json) => JsonConvert.DeserializeObject<MinimalOutput>(json, SalesforceMapper.MinimalOutput.Converter.Settings);
     }
 
     public static class Serialize
     {
-        public static string ToJson(this ZnodeContactPreference self) => JsonConvert.SerializeObject(self, SalesforceMapper.MinimalOutput.Converter.Settings);
+        public static string ToJson(this MinimalOutput self) => JsonConvert.SerializeObject(self, SalesforceMapper.MinimalOutput.Converter.Settings);
     }
 
     internal static class Converter

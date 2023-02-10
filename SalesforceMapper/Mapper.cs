@@ -12,7 +12,21 @@ public static class Mapper
     public static string ManipulateJsonString(string json)
     {
         if (string.IsNullOrWhiteSpace(json)) { return "";  }
-        dynamic? input = JsonConvert.DeserializeObject(json);
-        return "";
+        MinimalInput.MinimalInput? input = JsonConvert.DeserializeObject<MinimalInput.MinimalInput>(json);
+        string test = JsonConvert.SerializeObject(input);
+
+        MinimalOutput.MinimalOutput output = new()
+        {
+            Preferences =
+            {
+                new()
+                {
+                    PrefCode = nameof(input.ContactEmailC),
+
+                }
+            }
+        };
+
+        return test;
     }
 }
