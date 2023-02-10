@@ -24,6 +24,9 @@ namespace SalesforceMapper.MinimalOutput
     {
         [JsonProperty("PrefCode", Required = Required.Always)]
         public string PrefCode { get; set; }
+
+        [JsonProperty("CurrentValue", Required = Required.Always)]
+        public string CurrentValue { get; set; }
     }
 
     public partial class MinimalOutput
