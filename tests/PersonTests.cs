@@ -1,31 +1,30 @@
 using System;
 using Xunit;
 using hellolib;
-namespace tests
+namespace tests;
+
+public class PersonTests
 {
-    public class PersonTests
+    [Theory]
+    [InlineData("Pratikchhya Shrestha", "12345678")]
+    public void CreatePersonWithNameSucceeds(string name, string password)
     {
-        [Theory]
-        [InlineData("Pratikchhya Shrestha", "12345678")]
-        public void CreatePersonWithNameSucceeds(string name, string password)
+        Person person = PersonFactory.Create(name, password);
+        Assert.Equal("Pratikchhya Shrestha", person.Name);
+    }
+
+    [Theory]
+    [InlineData("Pratikchhya Shrestha", "hunter2")]
+    [InlineData("Pratikchhya Shrestha", "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz")]
+    public void ShortOrLongPasswordsFail(string name, string password)
+    {
+        try
         {
             Person person = PersonFactory.Create(name, password);
-            Assert.Equal("Pratikchhya Shrestha", person.Name);
         }
-
-        [Theory]
-        [InlineData("Pratikchhya Shrestha", "hunter2")]
-        [InlineData("Pratikchhya Shrestha", "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz")]
-        public void ShortOrLongPasswordsFail(string name, string password)
+        catch (ArgumentException e)
         {
-            try
-            {
-                Person person = PersonFactory.Create(name, password);
-            }
-            catch (ArgumentException e)
-            {
-                Assert.NotNull(e);
-            }
+            Assert.NotNull(e);
         }
     }
 }
