@@ -13,6 +13,8 @@ public static class Mapper
     {
         if (string.IsNullOrWhiteSpace(json)) { return "";  }
         MinimalInput.MinimalInput? input = JsonConvert.DeserializeObject<MinimalInput.MinimalInput>(json);
+        if (input == null) { return ""; }
+
         string test = JsonConvert.SerializeObject(input);
 
         MinimalOutput.MinimalOutput output = new()
@@ -22,11 +24,12 @@ public static class Mapper
                 new()
                 {
                     PrefCode = nameof(input.ContactEmailC),
-
+                    CurrentValue = input.ContactEmailC
                 }
             }
         };
 
-        return test;
+        string outputString = JsonConvert.SerializeObject(output);
+        return outputString;
     }
 }

@@ -17,7 +17,7 @@ namespace SalesforceMapper.MinimalOutput
     public partial class MinimalOutput
     {
         [JsonProperty("Preferences", Required = Required.Always)]
-        public List<Preference> Preferences { get; set; }
+        public List<Preference> Preferences { get; set; } = new();
     }
 
     public partial class Preference
