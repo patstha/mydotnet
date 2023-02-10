@@ -31,7 +31,7 @@ namespace tests
         [Theory]
         [InlineData(
             "{\"Id\":\"Abraham Lincoln\",\"ContactEmail__c\":\"abe@whitehouse.gov\"}",
-            "{\"Preferences\":[{\"PrefCode\":\"ContactEmail__c\",\"CurrentValue\":\"abe@whitehouse.gov\"}]}}"
+            "{\"Preferences\":[{\"PrefCode\":\"ContactEmail__c\",\"CurrentValue\":\"abe@whitehouse.gov\"}]}"
         )]
         public void ManipulateJsonString_ShouldReturnExpectedJsonString(string json, string expected)
         {
@@ -39,7 +39,7 @@ namespace tests
             string actual = Mapper.ManipulateJsonString(json);
 
             // assert 
-            expected.Should().Be(actual);
+            actual.Should().Be(expected);
         }
     }
 }
