@@ -14,12 +14,14 @@ namespace hellolib
         private static IEnumerable<IEnumerable<T>> SubSetsOf<T>(IEnumerable<T> source)
         {
             if (!source.Any())
+            {
                 return Enumerable.Repeat(Enumerable.Empty<T>(), 1);
+            }
 
-            var element = source.Take(1);
+            IEnumerable<T> element = source.Take(1);
 
-            var haveNots = SubSetsOf(source.Skip(1));
-            var haves = haveNots.Select(set => element.Concat(set));
+            IEnumerable<IEnumerable<T>> haveNots = SubSetsOf(source.Skip(1));
+            IEnumerable<IEnumerable<T>> haves = haveNots.Select(set => element.Concat(set));
 
             return haves.Concat(haveNots);
         }
@@ -27,8 +29,8 @@ namespace hellolib
         private int getCountInternal(int total, List<int> repeatedList)
         {
             int currentCount = int.MaxValue;
-            var x = SubSetsOf<int>(repeatedList);
-            foreach (var y in x)
+            IEnumerable<IEnumerable<int>> x = SubSetsOf<int>(repeatedList);
+            foreach (IEnumerable<int> y in x)
             {
                 int sum = y.Sum();
                 if (sum == total && currentCount > y.Count())
@@ -41,25 +43,25 @@ namespace hellolib
 
         public int getCount(int total)
         {
-            if (this.CoinSet.Contains(total))
+            if (CoinSet.Contains(total))
             {
                 return 1;
             }
-            else if (this.CoinSet.Min() > total)
+            else if (CoinSet.Min() > total)
             {
                 return 0;
             }
             else
             {
-                List<int> repeatedList = new List<int>();
-                for (int i = 0; i < this.RepeatFactor; i++)
+                List<int> repeatedList = new();
+                for (int i = 0; i < RepeatFactor; i++)
                 {
-                    foreach (int x in this.CoinSet)
+                    foreach (int x in CoinSet)
                     {
                         repeatedList.Add(x);
                     }
                 }
-                return this.getCountInternal(total, repeatedList);
+                return getCountInternal(total, repeatedList);
             }
         }
     }
