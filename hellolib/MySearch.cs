@@ -27,11 +27,11 @@ namespace hellolib
                 if (inputArray[midPoint] == queryItem)
                 {
                     return midPoint;
-                } 
+                }
                 else if (inputArray[midPoint] < queryItem)
                 {
                     lowerBound = midPoint + 1;
-                } 
+                }
                 else if (inputArray[midPoint] > queryItem)
                 {
                     upperBound = midPoint - 1;
@@ -53,11 +53,11 @@ namespace hellolib
                 if (inputArray[midPoint] == queryItem)
                 {
                     return midPoint;
-                } 
+                }
                 else if (inputArray[midPoint] > queryItem)
                 {
                     upperBound = midPoint - 1;
-                } 
+                }
                 else if (inputArray[midPoint] < queryItem)
                 {
                     lowerBound = midPoint + 1;

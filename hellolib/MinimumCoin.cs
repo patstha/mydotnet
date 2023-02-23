@@ -52,8 +52,9 @@ namespace hellolib
             else
             {
                 List<int> repeatedList = new List<int>();
-                for (int i = 0; i < this.RepeatFactor; i++) {
-                    foreach (int x in this.CoinSet) 
+                for (int i = 0; i < this.RepeatFactor; i++)
+                {
+                    foreach (int x in this.CoinSet)
                     {
                         repeatedList.Add(x);
                     }

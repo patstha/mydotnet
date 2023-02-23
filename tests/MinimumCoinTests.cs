@@ -1,8 +1,7 @@
-using System.Linq;
-using Xunit;
+using FluentAssertions;
 using hellolib;
 using System.Collections.Generic;
-using FluentAssertions;
+using Xunit;
 
 namespace tests
 {
