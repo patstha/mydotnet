@@ -4,14 +4,14 @@ namespace hellolib
     {
         public static bool CheckExists(int[] a, int X)
         {
-            List<int> myList = new List<int>();
+            List<int> myList = new();
             myList.AddRange(a);
-            myList.Remove(X / 2);
+            _ = myList.Remove(X / 2);
             return myList.Any(x => myList.Contains(X - x));
         }
         public static bool CheckExistsHashed(int[] array, int target)
         {
-            HashSet<int> mySet = new HashSet<int>();
+            HashSet<int> mySet = new();
             foreach (int element in array)
             {
                 if (mySet.Contains(element))
@@ -20,7 +20,7 @@ namespace hellolib
                 }
                 else
                 {
-                    mySet.Add(target - element);
+                    _ = mySet.Add(target - element);
                 }
             }
             return false;

@@ -6,27 +6,14 @@
         private static readonly int MAXIMUM_PASSWORD_LENGTH = 128;
         public static Person Create(string name, string password)
         {
-            if (CheckPasswordMeetsRequirements(password))
-            {
-                return new Person(name, password);
-            }
-            else
-            {
-                throw new ArgumentException($"The password provided to create user {name} is not valid. A password must have a minimum length no shorter than {MINIMUM_PASSWORD_LENGTH} and no longer than {MAXIMUM_PASSWORD_LENGTH}.");
-            }
+            return CheckPasswordMeetsRequirements(password)
+                ? new Person(name, password)
+                : throw new ArgumentException($"The password provided to create user {name} is not valid. A password must have a minimum length no shorter than {MINIMUM_PASSWORD_LENGTH} and no longer than {MAXIMUM_PASSWORD_LENGTH}.");
         }
         public static bool CheckPasswordMeetsRequirements(string password)
         {
             int length = password.Length;
-            if (length < MINIMUM_PASSWORD_LENGTH)
-            {
-                return false;
-            }
-            if (length > MAXIMUM_PASSWORD_LENGTH)
-            {
-                return false;
-            }
-            return true;
+            return length >= MINIMUM_PASSWORD_LENGTH && length <= MAXIMUM_PASSWORD_LENGTH;
         }
     }
 }

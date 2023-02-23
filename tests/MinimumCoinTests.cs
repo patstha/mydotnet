@@ -7,10 +7,10 @@ namespace tests
 {
     public class MinimumCoinTests
     {
-        MinimumCoin minimumCoin;
+        private MinimumCoin minimumCoin;
         public MinimumCoinTests()
         {
-            var coinValues = new List<int>() { 1, 5, 10, 25 };
+            List<int> coinValues = new() { 1, 5, 10, 25 };
             minimumCoin = new MinimumCoin(CoinSet: coinValues, RepeatFactor: 5);
         }
 
@@ -27,7 +27,7 @@ namespace tests
             int actualSum = firstNumber + secondNumber;
 
             // Assert 
-            actualSum.Should().Be(expectedSum, $"because {firstNumber} + {secondNumber} is {expectedSum}", new List<int>[firstNumber, secondNumber, actualSum]);
+            _ = actualSum.Should().Be(expectedSum, $"because {firstNumber} + {secondNumber} is {expectedSum}", new List<int>[firstNumber, secondNumber, actualSum]);
         }
 
         [Theory]
@@ -76,7 +76,7 @@ namespace tests
         [Fact]
         public void GetFreqLabsTwoCoins()
         {
-            var coinValues = new List<int>() { 1, 120, 200 };
+            List<int> coinValues = new() { 1, 120, 200 };
             minimumCoin = new MinimumCoin(CoinSet: coinValues, RepeatFactor: 6);
             Assert.Equal(2, minimumCoin.getCount(240));
         }
