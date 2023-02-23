@@ -1,6 +1,6 @@
 ﻿namespace hellolib
 {
-    public class Person: Entity
+    public class Person : Entity
     {
         public string Name { get; }
         public string Password { get; }

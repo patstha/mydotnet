@@ -1,6 +1,5 @@
-using System;
-using Xunit;
 using hellolib;
+using Xunit;
 namespace tests
 {
     public class MySearchTests
