@@ -26,7 +26,7 @@ namespace hellolib
             return haves.Concat(haveNots);
         }
 
-        private int getCountInternal(int total, List<int> repeatedList)
+        private static int GetCountInternal(int total, List<int> repeatedList)
         {
             int currentCount = int.MaxValue;
             IEnumerable<IEnumerable<int>> x = SubSetsOf<int>(repeatedList);
@@ -41,7 +41,7 @@ namespace hellolib
             return currentCount;
         }
 
-        public int getCount(int total)
+        public int GetCount(int total)
         {
             if (CoinSet.Contains(total))
             {
@@ -61,7 +61,7 @@ namespace hellolib
                         repeatedList.Add(x);
                     }
                 }
-                return getCountInternal(total, repeatedList);
+                return GetCountInternal(total, repeatedList);
             }
         }
     }
