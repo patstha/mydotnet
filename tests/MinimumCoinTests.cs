@@ -35,7 +35,7 @@ namespace tests
         [InlineData(1)]
         public void GetTrivialCase(int input)
         {
-            Assert.Equal(input, minimumCoin.getCount(input));
+            Assert.Equal(input, minimumCoin.GetCount(input));
         }
 
         [Fact]
@@ -44,7 +44,7 @@ namespace tests
             if (minimumCoin.CoinSet.Count > 1 && !minimumCoin.CoinSet.Contains(minimumCoin.CoinSet[0] + minimumCoin.CoinSet[1]))
             {
                 int total = minimumCoin.CoinSet[0] + minimumCoin.CoinSet[1];
-                int actual = minimumCoin.getCount(total);
+                int actual = minimumCoin.GetCount(total);
                 Assert.Equal(2, actual);
             }
         }
@@ -56,7 +56,7 @@ namespace tests
             if (minimumCoin.CoinSet.Count > 1 && !minimumCoin.CoinSet.Contains(total))
             {
                 ;
-                int actual = minimumCoin.getCount(total);
+                int actual = minimumCoin.GetCount(total);
                 Assert.Equal(4, actual);
             }
         }
@@ -68,7 +68,7 @@ namespace tests
             if (minimumCoin.CoinSet.Count > 1 && !minimumCoin.CoinSet.Contains(total))
             {
                 ;
-                int actual = minimumCoin.getCount(total);
+                int actual = minimumCoin.GetCount(total);
                 Assert.True(6 >= actual);
             }
         }
@@ -78,7 +78,7 @@ namespace tests
         {
             List<int> coinValues = new() { 1, 120, 200 };
             minimumCoin = new MinimumCoin(CoinSet: coinValues, RepeatFactor: 6);
-            Assert.Equal(2, minimumCoin.getCount(240));
+            Assert.Equal(2, minimumCoin.GetCount(240));
         }
     }
 }
