@@ -1,5 +1,4 @@
-﻿using MoreLinq;
-using System.IO;
+﻿using System.IO;
 
 namespace hellolib;
 
@@ -27,6 +26,34 @@ public static class Revocation
         {
             int x = bat.ToList().Count;
             Console.WriteLine(x);
+        }
+    }
+
+    public static IEnumerable<IEnumerable<TSource>> Batch<TSource>(
+                  this IEnumerable<TSource> source, int size)
+    {
+        TSource[] bucket = null;
+        int count = 0;
+
+        foreach (TSource item in source)
+        {
+            bucket ??= new TSource[size];
+
+            bucket[count++] = item;
+            if (count != size)
+            {
+                continue;
+            }
+
+            yield return bucket;
+
+            bucket = null;
+            count = 0;
+        }
+
+        if (bucket != null && count > 0)
+        {
+            yield return bucket.Take(count).ToArray();
         }
     }
 }
