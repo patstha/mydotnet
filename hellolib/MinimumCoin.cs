@@ -1,68 +1,67 @@
-namespace hellolib
+namespace hellolib;
+
+public class MinimumCoin
 {
-    public class MinimumCoin
+    public List<int> CoinSet { get; private set; }
+    public int RepeatFactor { get; private set; }
+
+    public MinimumCoin(List<int> CoinSet, int RepeatFactor)
     {
-        public List<int> CoinSet { get; private set; }
-        public int RepeatFactor { get; private set; }
+        this.CoinSet = CoinSet;
+        this.RepeatFactor = RepeatFactor;
+    }
 
-        public MinimumCoin(List<int> CoinSet, int RepeatFactor)
+    private static IEnumerable<IEnumerable<T>> SubSetsOf<T>(IEnumerable<T> source)
+    {
+        if (!source.Any())
         {
-            this.CoinSet = CoinSet;
-            this.RepeatFactor = RepeatFactor;
+            return Enumerable.Repeat(Enumerable.Empty<T>(), 1);
         }
 
-        private static IEnumerable<IEnumerable<T>> SubSetsOf<T>(IEnumerable<T> source)
+        IEnumerable<T> element = source.Take(1);
+
+        IEnumerable<IEnumerable<T>> haveNots = SubSetsOf(source.Skip(1));
+        IEnumerable<IEnumerable<T>> haves = haveNots.Select(set => element.Concat(set));
+
+        return haves.Concat(haveNots);
+    }
+
+    private static int GetCountInternal(int total, List<int> repeatedList)
+    {
+        int currentCount = int.MaxValue;
+        IEnumerable<IEnumerable<int>> x = SubSetsOf<int>(repeatedList);
+        foreach (IEnumerable<int> y in x)
         {
-            if (!source.Any())
+            int sum = y.Sum();
+            if (sum == total && currentCount > y.Count())
             {
-                return Enumerable.Repeat(Enumerable.Empty<T>(), 1);
+                currentCount = y.Count();
             }
-
-            IEnumerable<T> element = source.Take(1);
-
-            IEnumerable<IEnumerable<T>> haveNots = SubSetsOf(source.Skip(1));
-            IEnumerable<IEnumerable<T>> haves = haveNots.Select(set => element.Concat(set));
-
-            return haves.Concat(haveNots);
         }
+        return currentCount;
+    }
 
-        private static int GetCountInternal(int total, List<int> repeatedList)
+    public int GetCount(int total)
+    {
+        if (CoinSet.Contains(total))
         {
-            int currentCount = int.MaxValue;
-            IEnumerable<IEnumerable<int>> x = SubSetsOf<int>(repeatedList);
-            foreach (IEnumerable<int> y in x)
+            return 1;
+        }
+        else if (CoinSet.Min() > total)
+        {
+            return 0;
+        }
+        else
+        {
+            List<int> repeatedList = new();
+            for (int i = 0; i < RepeatFactor; i++)
             {
-                int sum = y.Sum();
-                if (sum == total && currentCount > y.Count())
+                foreach (int x in CoinSet)
                 {
-                    currentCount = y.Count();
+                    repeatedList.Add(x);
                 }
             }
-            return currentCount;
-        }
-
-        public int GetCount(int total)
-        {
-            if (CoinSet.Contains(total))
-            {
-                return 1;
-            }
-            else if (CoinSet.Min() > total)
-            {
-                return 0;
-            }
-            else
-            {
-                List<int> repeatedList = new();
-                for (int i = 0; i < RepeatFactor; i++)
-                {
-                    foreach (int x in CoinSet)
-                    {
-                        repeatedList.Add(x);
-                    }
-                }
-                return GetCountInternal(total, repeatedList);
-            }
+            return GetCountInternal(total, repeatedList);
         }
     }
 }
