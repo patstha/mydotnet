@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="authorizations.csv" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="FluentAssertions" Version="6.10.0" />
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.5.0" />
     <PackageReference Include="xunit" Version="2.4.2" />
@@ -22,6 +26,12 @@
 
   <ItemGroup>
     <ProjectReference Include="..\hellolib\hellolib.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="authorizations.csv">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
 
 </Project>

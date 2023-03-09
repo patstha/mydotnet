@@ -1,6 +1,5 @@
 using hellolib;
 using System;
-using Xunit;
 namespace tests;
 
 public class PersonTests
