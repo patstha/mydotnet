@@ -11,7 +11,8 @@ public class PersonTests
     {
         Person person = PersonFactory.Create(name, password);
         // Assert.Equal("Pratikchhya Shrestha", person.Name);
-        person.Name.Should().BeEqualTo("Pratikchhya Shrestha");
+        person.Name.Should().Be("Pratikchhya Shrestha");
+        person.CreatedBy.Should().Be("System");
     }
 
     [Theory]
