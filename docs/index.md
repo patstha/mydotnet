@@ -1,6 +1,6 @@
 # Testing Stryker
 
-Stryker logs are at [stryker.txt](/strykeroutput/stryker.txt). 
+Stryker logs are at [stryker.txt](https://raw.githubusercontent.com/patstha/mydotnet/master/docs/StrykerOutput/output.txt). 
 
 Take a look at this mutation report though
 
