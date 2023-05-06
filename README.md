@@ -6,3 +6,6 @@ This project is a playground for .NET core and github actions.
 
 Add a very aggressive code clean up
 ![added all options in code cleanup profile in visual studio 2022](docs/assets/code-cleanup.png)
+
+Github pages: 
+[https://patstha.github.io/mydotnet/](https://patstha.github.io/mydotnet/) 
