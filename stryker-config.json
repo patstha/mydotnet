@@ -1,0 +1,14 @@
+{
+    "stryker-config":
+    {
+        "reporters": [
+            "progress",
+            "html", 
+            "json"
+        ],
+        "verbosity": "trace",
+        "coverage-analysis": "perTestInIsolation",
+        "mutation-level": "Advanced",
+        "project-info": { "name": "github.com/patstha/mydotnet" }
+    }
+}
