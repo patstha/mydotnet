@@ -14,7 +14,6 @@ public static class Revocation
             string[] values = line.Split(',');
             result.Add(values[0]);
         }
-        reader.Close();
         return result;
     }
 
@@ -25,7 +24,6 @@ public static class Revocation
         foreach (IEnumerable<string> bat in batches)
         {
             int x = bat.ToList().Count;
-            Console.WriteLine(x);
         }
     }
 
