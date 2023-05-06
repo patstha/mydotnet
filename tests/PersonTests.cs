@@ -1,5 +1,6 @@
 using hellolib;
 using System;
+using FluentAssertions;
 namespace tests;
 
 public class PersonTests
@@ -9,7 +10,8 @@ public class PersonTests
     public void CreatePersonWithNameSucceeds(string name, string password)
     {
         Person person = PersonFactory.Create(name, password);
-        Assert.Equal("Pratikchhya Shrestha", person.Name);
+        // Assert.Equal("Pratikchhya Shrestha", person.Name);
+        person.Name.Should().BeEqualTo("Pratikchhya Shrestha");
     }
 
     [Theory]
