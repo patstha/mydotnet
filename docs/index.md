@@ -31,3 +31,6 @@ public static class PersonFactory
 ```
 
 How would you fix these? 
+
+Other locally generated reports are in the 
+[stryker output folder](https://patstha.github.io/mydotnet/StrykerOutput/).
