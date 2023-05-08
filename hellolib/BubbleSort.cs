@@ -2,7 +2,7 @@ namespace hellolib;
 
 public static class BubbleSort
 {
-    public static int[] SortIntegers(int[] input)
+    public static void SortIntegers(int[] input)
     {
         for (int i = 0; i < input.Length; i++)
         {
@@ -14,6 +14,5 @@ public static class BubbleSort
                 }
             }
         }
-        return input;
     }
 }

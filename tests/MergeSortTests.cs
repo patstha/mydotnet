@@ -1,14 +1,14 @@
-using hellolib;
+﻿using hellolib;
 namespace tests;
 
-public class BubbleSortTests
+public class MergeSortTests
 {
     [Fact]
     public void SortSingleElementSortedArray()
     {
         int[] input = { 1 };
         int[] output = { 1 };
-        BubbleSort.SortIntegers(output);
+        MergeSort.SortIntegers(output);
         Assert.Equal(output, input);
     }
     [Fact]
@@ -16,7 +16,7 @@ public class BubbleSortTests
     {
         int[] input = { 1, 2 };
         int[] output = { 1, 2 };
-        BubbleSort.SortIntegers(output);
+        MergeSort.SortIntegers(output);
         Assert.Equal(output, input);
     }
     [Fact]
@@ -24,7 +24,7 @@ public class BubbleSortTests
     {
         int[] input = { 1, 2, 3 };
         int[] output = { 1, 2, 3 };
-        BubbleSort.SortIntegers(output);
+        MergeSort.SortIntegers(output);
         Assert.Equal(input, output);
     }
     [Fact]
@@ -32,7 +32,7 @@ public class BubbleSortTests
     {
         int[] input = { 1, 2, 3, 4 };
         int[] output = { 1, 2, 3, 4 };
-        BubbleSort.SortIntegers(output);
+        MergeSort.SortIntegers(output);
         Assert.Equal(input, output);
     }
     [Fact]
@@ -41,7 +41,7 @@ public class BubbleSortTests
         int[] input = { 3, 2, 1 };
         int[] output = { 3, 2, 1 };
         int[] expectedOutput = { 1, 2, 3 };
-        BubbleSort.SortIntegers(output);
+        MergeSort.SortIntegers(output);
         Assert.Equal(expectedOutput, output);
     }
 }
