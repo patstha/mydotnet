@@ -10,7 +10,7 @@
           console.info({ path: file.path});
           const filepath = file.path.replace("docs/StrykerOutput/", "");
           console.info({ filepath });
-          if (filepath.includes(".")) {
+          if (filepath.includes(".txt") || filepath.includes(".html")) {
             htmlString += `<li><a href="${filepath}">${file.name}</a></li>`;
           } else {
             htmlString += `<li><a href="${filepath}/reports/mutation-report.html">${file.name}</a></li>`;
