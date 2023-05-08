@@ -49,5 +49,5 @@ Tool 'dotnet-stryker' was successfully updated from version '3.8.1' to version '
 
 
 ```powershell
-$now = (Get-Date).ToString("yyyyMMddHHmmss"); "debug${now}"; cd C:\Users\kushal\src\mydotnet\; git status; date; dotnet build --verbosity=minimal; date; dotnet test --verbosity=minimal; date; dotnet tool restore; date; dotnet tool update dotnet-stryker; date; dotnet stryker | Out-File "docs\StrykerOutput\debug${now}.txt"; date; robocopy C:\Users\kushal\src\mydotnet\StrykerOutput C:\Users\kushal\src\mydotnet\docs\StrykerOutput /xf ".gitignore"; git status; date; git add .; date; git commit -m "run tests locally"; date; git push origin master --progress --verbose; date;
+$now = (Get-Date).ToString("yyyyMMddHHmmss"); "debug${now}"; cd C:\Users\kushal\src\mydotnet\; git status; date; dotnet build --verbosity=minimal; date; dotnet test --verbosity=minimal; date; dotnet tool restore; date; dotnet tool update dotnet-stryker; date; dotnet stryker | Out-File "docs\StrykerOutput\debug${now}.txt"; date; robocopy C:\Users\kushal\src\mydotnet\StrykerOutput C:\Users\kushal\src\mydotnet\docs\StrykerOutput /S /E /xf ".gitignore"; git status; date; git add .; date; git commit -m "run tests locally"; date; git push origin master --progress --verbose; date;
 ```
