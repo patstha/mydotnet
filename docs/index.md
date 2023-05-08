@@ -6,8 +6,8 @@ Take a look at this mutation report though
 
 [StrykerOutput\2023-05-06.03-53-34\reports\mutation-report.html](/StrykerOutput/2023-05-06.03-53-34/reports/mutation-report.html) 
 
-![and or](/assets/stryker-andor.png)
-![less than](/assets/stryker-lessthan.png)
+![and or](assets/stryker-andor.png)
+![less than](assets/stryker-lessthan.png)
 
 ```csharp
 namespace hellolib;
