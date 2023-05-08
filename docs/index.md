@@ -34,3 +34,20 @@ How would you fix these?
 
 Other locally generated reports are in the 
 [stryker output folder](https://patstha.github.io/mydotnet/StrykerOutput/).
+
+
+```powershell
+A new version of Stryker.NET (3.8.2) is available. Please consider upgrading using `dotnet tool update -g dotnet-stryker`
+
+```
+
+```powershell
+dotnet tool update dotnet-stryker
+dotnet tool update dotnet-stryker
+Tool 'dotnet-stryker' was successfully updated from version '3.8.1' to version '3.8.2' (manifest file [redacted]\mydotnet\.config\dotnet-tools.json).
+```
+
+
+```powershell
+$now = (Get-Date).ToString("yyyyMMddHHmmss"); "debug${now}"; cd C:\Users\kushal\src\mydotnet\; git status; date; dotnet build --verbosity=minimal; date; dotnet test --verbosity=minimal; date; dotnet tool restore; date; dotnet tool update dotnet-stryker; date; dotnet stryker | Out-File "docs\StrykerOutput\debug${now}.txt"; date; robocopy C:\Users\kushal\src\mydotnet\StrykerOutput C:\Users\kushal\src\mydotnet\docs\StrykerOutput /xf ".gitignore"; git status; date; git add .; date; git commit -m "run tests locally"; date; git push origin master --progress --verbose; date;
+```
