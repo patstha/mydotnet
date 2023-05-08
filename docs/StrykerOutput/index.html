@@ -10,7 +10,11 @@
           console.info({ path: file.path});
           const filepath = file.path.replace("docs/StrykerOutput/", "");
           console.info({ filepath });
-          htmlString += `<li><a href="${filepath}/reports/mutation-report.html">${file.name}</a></li>`;
+          if (filepath.includes(".")) {
+            htmlString += `<li><a href="${filepath}">${file.name}</a></li>`;
+          } else {
+            htmlString += `<li><a href="${filepath}/reports/mutation-report.html">${file.name}</a></li>`;
+          }
         }
 
         htmlString += '</ul>';
