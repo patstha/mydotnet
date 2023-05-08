@@ -8,8 +8,9 @@
         
         for (let file of data) {
           console.info({ path: file.path});
-          const filepath = file.path.substring(file.path.indexOf("docs/StrykerOutput/") + 1);
-          htmlString += `<li><a href="${file.path}/reports/mutation-report.html">${file.name}</a></li>`;
+          const filepath = file.path.replace("docs/StrykerOutput/", "");
+          console.info({ filepath });
+          htmlString += `<li><a href="${filepath}/reports/mutation-report.html">${file.name}</a></li>`;
         }
 
         htmlString += '</ul>';
