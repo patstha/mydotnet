@@ -67,6 +67,9 @@ public class AddTwoNumbersTests
     [InlineData(1, 2, 3, 4, 4, 6)]
     [InlineData(5, 6, 4, 3, 9, 9)]
     [InlineData(5, 4, 4, 3, 9, 7)]
+    [InlineData(1, 1, 1, 1, 2, 2)]
+    [InlineData(0, 2, 1, 1, 1, 3)]
+    [InlineData(1, 2, 0, 1, 1, 3)]
     public void AddTwoNumbers_ShouldReturnSumWhenBothInputsAreTwoDigits(int first1, int first2, int second1, int second2, int result1, int result2)
     {
         // Arrange

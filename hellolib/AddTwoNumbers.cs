@@ -39,7 +39,6 @@ public class Solution
 
     public ListNode GetListFromInteger(int input)
     {
-        System.Console.WriteLine(input);
         if (input / 10 == 0)
         {
             return new ListNode()
@@ -50,7 +49,7 @@ public class Solution
         }
         int currentVal = input % 10;
         List<ListNode> nodes = new();
-        ListNode current = new ListNode()
+        ListNode current = new()
         {
             val = currentVal
         };
