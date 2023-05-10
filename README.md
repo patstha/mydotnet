@@ -28,3 +28,4 @@ AMD Ryzen 7 5800X, 1 CPU, 16 logical and 8 physical cores
 | Bubble | 62,200.1 μs | 116.72 μs | 109.18 μs |
 |  Merge |    291.4 μs |   2.73 μs |   2.56 μs |
 
+[![Mutation testing badge](https://img.shields.io/endpoint?style=flat&url=https%3A%2F%2Fbadge-api.stryker-mutator.io%2Fgithub.com%2Fpatstha%2Fmydotnet%2Fmaster)](https://dashboard.stryker-mutator.io/reports/github.com/patstha/mydotnet/master)
