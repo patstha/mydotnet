@@ -7,6 +7,8 @@ public class PersonTests
 {
     [Theory]
     [InlineData("Pratikchhya Shrestha", "12345678")]
+    [InlineData("Pratikchhya Shrestha", "123456789")]
+    [InlineData("Pratikchhya Shrestha", "12345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678")]
     public void CreatePersonWithNameSucceeds(string name, string password)
     {
         Person person = PersonFactory.Create(name, password);
