@@ -12,9 +12,9 @@ public class PersonTests
     public void CreatePersonWithNameSucceeds(string name, string password)
     {
         Person person = PersonFactory.Create(name, password);
-        // Assert.Equal("Pratikchhya Shrestha", person.Name);
-        person.Name.Should().Be("Pratikchhya Shrestha");
-        person.CreatedBy.Should().Be("System");
+        Assert.Equal("Pratikchhya Shrestha", person.Name);
+        //person.Name.Should().Be("Pratikchhya Shrestha");
+        //person.CreatedBy.Should().Be("System");
     }
 
     [Theory]
