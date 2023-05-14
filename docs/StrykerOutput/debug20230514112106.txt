@@ -1,0 +1,83 @@
+
+   _____ _              _               _   _ ______ _______ ┬á
+  / ____| |            | |             | \ | |  ____|__   __|┬á
+ | (___ | |_ _ __ _   _| | _____ _ __  |  \| | |__     | |   ┬á
+  \___ \| __| '__| | | | |/ / _ \ '__| | . ` |  __|    | |   ┬á
+  ____) | |_| |  | |_| |   <  __/ |    | |\  | |____   | |   ┬á
+ |_____/ \__|_|   \__, |_|\_\___|_| (_)|_| \_|______|  |_|   ┬á
+                   __/ |                                     ┬á
+                  |___/                                      ┬á
+
+
+[11:21:17 INF] Logging enabled at level Trace
+Version: 3.9.0
+
+[11:21:17 VRB]   GET https://api.nuget.org/v3/registration5-gz-semver2/dotnet-stryker/index.json
+[11:21:17 DBG] Stryker started with options: {"MsBuildPath": null, "DevMode": false, "ProjectPath": "C:\\Users\\kushal\\src\\mydotnet", "IsSolutionContext": true, "WorkingDirectory": "C:\\Users\\kushal\\src\\mydotnet", "OutputPath": "C:\\Users\\kushal\\src\\mydotnet\\StrykerOutput\\2023-05-14.11-21-17", "ReportPath": "C:\\Users\\kushal\\src\\mydotnet\\StrykerOutput\\2023-05-14.11-21-17\\reports", "ReportFileName": "mutation-report", "SolutionPath": "C:\\Users\\kushal\\src\\mydotnet\\mydotnet.sln", "TargetFramework": null, "LogOptions": {"LogToFile": false, "LogLevel": "Verbose", "$type": "LogOptions"}, "MutationLevel": "Advanced", "Thresholds": {"High": 80, "Low": 60, "Break": 0, "$type": "Thresholds"}, "AdditionalTimeout": 5000, "LanguageVersion": "Default", "Concurrency": 8, "SourceProjectName": "", "TestProjects": [], "TestCaseFilter": "", "Reporters": ["Progress", "Html", "Json"], "WithBaseline": false, "BaselineProvider": "Disk", "AzureFileStorageUrl": "", "AzureFileStorageSas": "", "DashboardUrl": "https://dashboard.stryker-mutator.io", "DashboardApiKey": null, "Since": false, "SinceTarget": "master", "DiffIgnoreChanges": [], "FallbackVersion": "master", "ModuleName": "", "ReportTypeToOpen": null, "Mutate": [{"Glob": {"Tokens": [{"TrailingPathSeparator": {"Value": "\\", "$type": "PathSeparatorToken"}, "LeadingPathSeparator": null, "$type": "WildcardDirectoryToken"}, {"$type": "WildcardToken"}], "$type": "Glob"}, "IsExclude": false, "TextSpans": [{"Start": 0, "End": 2147483647, "Length": 2147483647, "IsEmpty": false, "$type": "TextSpan"}], "$type": "FilePattern"}], "IgnoredMethods": [], "ExcludedMutations": [], "ExcludedLinqExpressions": [], "OptimizationMode": "CoverageBasedTest, CaptureCoveragePerTest", "ProjectName": "github.com/patstha/mydotnet", "ProjectVersion": "", "BreakOnInitialTestFailure": false, "$type": "StrykerOptions"}
+[11:21:17 INF] Analysis starting.
+[11:21:17 INF] Identifying projects to mutate in C:\Users\kushal\src\mydotnet\mydotnet.sln. This can take a while.
+[11:21:17 DBG] Analyzing 4 projects.
+[11:21:17 DBG] Analyzing hellobenchamarks\hellobenchamarks.csproj
+[11:21:17 DBG] Analyzing tests\tests.csproj
+[11:21:17 DBG] Analyzing hellolib\hellolib.csproj
+[11:21:17 DBG] Analyzing hello\hello.csproj
+[11:21:17 VRB]   OK https://api.nuget.org/v3/registration5-gz-semver2/dotnet-stryker/index.json 179ms
+[11:21:17 VRB]   CACHE https://api.nuget.org/v3/registration5-gz-semver2/dotnet-stryker/index.json
+[11:21:18 DBG] Analysis of project hellolib\hellolib.csproj succeeded.
+[11:21:18 DBG] Analysis of project hello\hello.csproj succeeded.
+[11:21:19 DBG] Analysis of project hellobenchamarks\hellobenchamarks.csproj succeeded.
+[11:21:19 DBG] Analysis of project tests\tests.csproj succeeded.
+[11:21:19 INF] Found 3 source projects
+[11:21:19 INF] Found 1 test projects
+[11:21:19 WRN] Project hellobenchamarks\hellobenchamarks.csproj will not be mutated because Stryker did not find a test project for it.
+[11:21:19 WRN] Project hello\hello.csproj will not be mutated because Stryker did not find a test project for it.
+[11:21:19 DBG] Matched hellolib\hellolib.csproj to 1 test projects:
+[11:21:19 DBG] C:\Users\kushal\src\mydotnet\tests\tests.csproj
+[11:21:19 DBG] Skipping auto-generated code file: C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net7.0\.NETCoreApp,Version=v7.0.AssemblyAttributes.cs
+[11:21:19 DBG] Skipping auto-generated code file: C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net7.0\hellolib.AssemblyInfo.cs
+[11:21:19 INF] Found project C:\Users\kushal\src\mydotnet\hellolib\hellolib.csproj to mutate.
+[11:21:19 INF] Analysis complete.
+[11:21:19 INF] Building solution mydotnet.sln
+[11:21:19 DBG] Started initial build using dotnet build
+[11:21:19 DBG] Initial build using path: C:\Users\kushal\src\mydotnet\mydotnet.sln
+[11:21:20 VRB] Initial build output MSBuild version 17.5.1+f6fdcf537 for .NET
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  hellolib -> C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net7.0\hellolib.dll
+C:\Users\kushal\src\mydotnet\tests\PersonTests.cs(43,55): error CS1061: 'ObjectAssertions' does not contain a definition for 'Throw' and no accessible extension method 'Throw' accepting a first argument of type 'ObjectAssertions' could be found (are you missing a using directive or an assembly reference?) [C:\Users\kushal\src\mydotnet\tests\tests.csproj]
+  hellobenchamarks -> C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net7.0\hellobenchamarks.dll
+  hello -> C:\Users\kushal\src\mydotnet\hello\bin\Debug\net7.0\hello.dll
+
+Build FAILED.
+
+C:\Users\kushal\src\mydotnet\tests\PersonTests.cs(43,55): error CS1061: 'ObjectAssertions' does not contain a definition for 'Throw' and no accessible extension method 'Throw' accepting a first argument of type 'ObjectAssertions' could be found (are you missing a using directive or an assembly reference?) [C:\Users\kushal\src\mydotnet\tests\tests.csproj]
+    0 Warning(s)
+    1 Error(s)
+
+Time Elapsed 00:00:00.82
+
+[11:21:20 INF] Time Elapsed 00:00:02.4626450
+Stryker.NET failed to mutate your project. For more information see the logs below:
+
+
+MSBuild version 17.5.1+f6fdcf537 for .NET
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  hellolib -> C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net7.0\hellolib.dll
+C:\Users\kushal\src\mydotnet\tests\PersonTests.cs(43,55): error CS1061: 'ObjectAssertions' does not contain a definition for 'Throw' and no accessible extension method 'Throw' accepting a first argument of type 'ObjectAssertions' could be found (are you missing a using directive 
+or an assembly reference?) [C:\Users\kushal\src\mydotnet\tests\tests.csproj]
+  hellobenchamarks -> C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net7.0\hellobenchamarks.dll
+  hello -> C:\Users\kushal\src\mydotnet\hello\bin\Debug\net7.0\hello.dll
+
+Build FAILED.
+
+C:\Users\kushal\src\mydotnet\tests\PersonTests.cs(43,55): error CS1061: 'ObjectAssertions' does not contain a definition for 'Throw' and no accessible extension method 'Throw' accepting a first argument of type 'ObjectAssertions' could be found (are you missing a using directive 
+or an assembly reference?) [C:\Users\kushal\src\mydotnet\tests\tests.csproj]
+    0 Warning(s)
+    1 Error(s)
+
+Time Elapsed 00:00:00.82
+
+
+Initial build of targeted project failed. Please make sure the targeted project is buildable. You can reproduce this error yourself using: "dotnet build "C:\Users\kushal\src\mydotnet""
+

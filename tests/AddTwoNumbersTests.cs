@@ -1,6 +1,4 @@
-﻿using FluentAssertions;
-using hellolib.AddTwoNumbers;
-using System.Collections.Generic;
+﻿using hellolib.AddTwoNumbers;
 
 namespace tests;
 
