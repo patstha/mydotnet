@@ -8,7 +8,7 @@ public class PersonTests
     {
         int MINIMUM_PASSWORD_LENGTH = 8;
         Person person = PersonFactory.Create("", new string('X', MINIMUM_PASSWORD_LENGTH));
-        person.Name.Should().Be("Pratikchhya Shrestha");
+        person.Name.Should().Be("");
         person.CreatedBy.Should().Be("System");
     }
 
@@ -22,7 +22,7 @@ public class PersonTests
         for (int i = 0; i > MINIMUM_PASSWORD_LENGTH && i < MAXIMUM_PASSWORD_LENGTH; i++) 
         {
             Person person = PersonFactory.Create("", new string('X', i));
-            person.Name.Should().Be("Pratikchhya Shrestha");
+            person.Name.Should().Be("");
             person.CreatedBy.Should().Be("System");
         }
     }
@@ -32,7 +32,7 @@ public class PersonTests
     {
         int MAXIMUM_PASSWORD_LENGTH = 128;
         Person person = PersonFactory.Create("", new string('X', MAXIMUM_PASSWORD_LENGTH));
-        person.Name.Should().Be("Pratikchhya Shrestha");
+        person.Name.Should().Be("");
         person.CreatedBy.Should().Be("System");
     }
 
