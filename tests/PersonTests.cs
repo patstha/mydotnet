@@ -3,13 +3,35 @@ namespace tests;
 
 public class PersonTests
 {
-    [Theory]
-    [InlineData("Pratikchhya Shrestha", "12345678")]
-    [InlineData("Pratikchhya Shrestha", "123456789")]
-    [InlineData("Pratikchhya Shrestha", "12345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678901234567890123456789012345678")]
-    public void CreatePersonWithNameSucceeds(string name, string password)
+    [Fact]
+    public void CreatePersonWithName_ShouldSucceed_WhenPasswordMatchesMinimumLength()
     {
-        Person person = PersonFactory.Create(name, password);
+        int MINIMUM_PASSWORD_LENGTH = 8;
+        Person person = PersonFactory.Create("", new string('X', MINIMUM_PASSWORD_LENGTH));
+        person.Name.Should().Be("Pratikchhya Shrestha");
+        person.CreatedBy.Should().Be("System");
+    }
+
+
+    [Fact]
+    public void CreatePersonWithName_ShouldSucceed_WhenPasswordIsBetweenMinimumAndMaximumLength()
+    {
+        // Arrange
+        int MINIMUM_PASSWORD_LENGTH = 8;
+        int MAXIMUM_PASSWORD_LENGTH = 128;
+        for (int i = 0; i > MINIMUM_PASSWORD_LENGTH && i < MAXIMUM_PASSWORD_LENGTH; i++) 
+        {
+            Person person = PersonFactory.Create("", new string('X', i));
+            person.Name.Should().Be("Pratikchhya Shrestha");
+            person.CreatedBy.Should().Be("System");
+        }
+    }
+
+    [Fact]
+    public void CreatePersonWithName_ShouldSucceed_WhenPasswordMatchesMaximumLength()
+    {
+        int MAXIMUM_PASSWORD_LENGTH = 128;
+        Person person = PersonFactory.Create("", new string('X', MAXIMUM_PASSWORD_LENGTH));
         person.Name.Should().Be("Pratikchhya Shrestha");
         person.CreatedBy.Should().Be("System");
     }
