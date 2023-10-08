@@ -29,7 +29,7 @@ public class Weather
         }
         else
         {
-            throw new Exception($"Failed to get weather information: {response.StatusCode}");
+            throw new WeatherFetchException($"Failed to get weather information: {response.StatusCode}");
         }
     }
 }
@@ -40,4 +40,11 @@ public class CurrentWeather
     public string Humidity { get; set; }
     public string WindSpeed { get; set; }
     public string WindDirection { get; set; }
+}
+
+public class WeatherFetchException : Exception
+{
+    public WeatherFetchException(string message) : base(message)
+    {
+    }
 }
