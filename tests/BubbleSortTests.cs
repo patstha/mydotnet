@@ -44,4 +44,46 @@ public class BubbleSortTests
         BubbleSort.SortIntegers(output);
         Assert.Equal(expectedOutput, output);
     }
+
+    [Fact]
+    public void SortIntegers_ShouldSortArrayInAscendingOrder()
+    {
+        // Arrange
+        int[] input = new int[] { 5, 3, 1, 4, 2 };
+        int[] expected = new int[] { 1, 2, 3, 4, 5 };
+
+        // Act
+        BubbleSort.SortIntegers(input);
+
+        // Assert
+        input.Should().Equal(expected);
+    }
+
+    [Fact]
+    public void SortIntegers_ShouldNotChangeAlreadySortedArray()
+    {
+        // Arrange
+        int[] input = new int[] { 1, 2, 3, 4, 5 };
+        int[] expected = new int[] { 1, 2, 3, 4, 5 };
+
+        // Act
+        BubbleSort.SortIntegers(input);
+
+        // Assert
+        input.Should().Equal(expected);
+    }
+
+    [Fact]
+    public void SortIntegers_ShouldNotChangeArrayWithSameElements()
+    {
+        // Arrange
+        int[] input = new int[] { 1, 1, 1, 1 };
+        int[] expected = new int[] { 1, 1, 1, 1 };
+
+        // Act
+        BubbleSort.SortIntegers(input);
+
+        // Assert
+        input.Should().Equal(expected);
+    }
 }
