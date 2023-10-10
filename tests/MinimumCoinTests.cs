@@ -78,4 +78,55 @@ public class MinimumCoinTests
         minimumCoin = new MinimumCoin(CoinSet: coinValues, RepeatFactor: 6);
         Assert.Equal(2, minimumCoin.GetCount(240));
     }
+
+    [Fact]
+    public void GetCount_ShouldReturnCorrectCount()
+    {
+        // Arrange
+        List<int> coinSet = new List<int> { 1, 2, 5 };
+        int repeatFactor = 3;
+        MinimumCoin minimumCoin = new MinimumCoin(coinSet, repeatFactor);
+        int total = 11;
+        int expectedCount = 3; // 5 + 5 + 1
+
+        // Act
+        int count = minimumCoin.GetCount(total);
+
+        // Assert
+        count.Should().Be(expectedCount);
+    }
+
+    [Fact]
+    public void GetCount_ShouldReturnZeroWhenTotalIsLessThanMinimumCoin()
+    {
+        // Arrange
+        List<int> coinSet = new List<int> { 2, 3, 5 };
+        int repeatFactor = 3;
+        MinimumCoin minimumCoin = new MinimumCoin(coinSet, repeatFactor);
+        int total = 1;
+        int expectedCount = 0;
+
+        // Act
+        int count = minimumCoin.GetCount(total);
+
+        // Assert
+        count.Should().Be(expectedCount);
+    }
+
+    [Fact]
+    public void GetCount_ShouldReturnOneWhenTotalIsInCoinSet()
+    {
+        // Arrange
+        List<int> coinSet = new List<int> { 1, 2, 5 };
+        int repeatFactor = 3;
+        MinimumCoin minimumCoin = new MinimumCoin(coinSet, repeatFactor);
+        int total = 5;
+        int expectedCount = 1;
+
+        // Act
+        int count = minimumCoin.GetCount(total);
+
+        // Assert
+        count.Should().Be(expectedCount);
+    }
 }
