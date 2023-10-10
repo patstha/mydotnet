@@ -112,4 +112,60 @@ public class TwoSumTests
     {
         Assert.False(TwoSum.CheckExistsHashed(a, X));
     }
+
+    [Fact]
+    public void CheckExists_ShouldReturnTrueWhenTwoNumbersSumToTarget()
+    {
+        // Arrange
+        int[] array = new int[] { 1, 2, 3, 4, 5 };
+        int target = 9;
+
+        // Act
+        bool exists = TwoSum.CheckExists(array, target);
+
+        // Assert
+        exists.Should().BeTrue();
+    }
+
+    [Fact]
+    public void CheckExists_ShouldReturnFalseWhenNoTwoNumbersSumToTarget()
+    {
+        // Arrange
+        int[] array = new int[] { 1, 2, 3, 4, 5 };
+        int target = 10;
+
+        // Act
+        bool exists = TwoSum.CheckExists(array, target);
+
+        // Assert
+        exists.Should().BeFalse();
+    }
+
+    [Fact]
+    public void CheckExistsHashed_ShouldReturnTrueWhenTwoNumbersSumToTarget()
+    {
+        // Arrange
+        int[] array = new int[] { 1, 2, 3, 4, 5 };
+        int target = 9;
+
+        // Act
+        bool exists = TwoSum.CheckExistsHashed(array, target);
+
+        // Assert
+        exists.Should().BeTrue();
+    }
+
+    [Fact]
+    public void CheckExistsHashed_ShouldReturnFalseWhenNoTwoNumbersSumToTarget()
+    {
+        // Arrange
+        int[] array = new int[] { 1, 2, 3, 4, 5 };
+        int target = 10;
+
+        // Act
+        bool exists = TwoSum.CheckExistsHashed(array, target);
+
+        // Assert
+        exists.Should().BeFalse();
+    }
 }

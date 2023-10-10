@@ -6,9 +6,20 @@ public static class TwoSum
     {
         List<int> myList = new();
         myList.AddRange(a);
-        _ = myList.Remove(X / 2);
-        return myList.Any(x => myList.Contains(X - x));
+        for (int i = 0; i < myList.Count; i++)
+        {
+            for (int j = i + 1; j < myList.Count; j++)
+            {
+                if (myList[i] + myList[j] == X)
+                {
+                    return true;
+                }
+            }
+        }
+        return false;
     }
+
+
     public static bool CheckExistsHashed(int[] array, int target)
     {
         HashSet<int> mySet = new();
