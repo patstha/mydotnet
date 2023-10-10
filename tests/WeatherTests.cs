@@ -58,6 +58,81 @@ public class WeatherTests
         // Assert
         act.Should().ThrowAsync<Exception>().WithMessage("Failed to get weather information: NotFound");
     }
+    [Fact]
+    public async Task GetCurrentWeatherAsync_ReturnsCurrentWeather_WhenRequestIsSuccessfulAndDataIsPartial()
+    {
+        // Arrange
+        var expectedWeather = new CurrentWeather
+        {
+            Temperature = "20",
+            Humidity = null,
+            WindSpeed = null,
+            WindDirection = null
+        };
+
+        var messageHandler = new HttpMessageHandlerStub(new HttpResponseMessage
+        {
+            StatusCode = HttpStatusCode.OK,
+            Content = new StringContent(JsonSerializer.Serialize(expectedWeather))
+        });
+
+        var httpClient = new HttpClient(messageHandler);
+        var weatherService = new Weather(httpClient);
+
+        // Act
+        var result = await weatherService.GetCurrentWeatherAsync("37.7833", "-122.4167");
+
+        // Assert
+        result.Should().BeEquivalentTo(expectedWeather);
+    }
+
+    [Fact]
+    public async Task GetCurrentWeatherAsync_ReturnsCurrentWeather_WhenRequestIsSuccessfulAndDataIsEmpty()
+    {
+        // Arrange
+        var expectedWeather = new CurrentWeather
+        {
+            Temperature = null,
+            Humidity = null,
+            WindSpeed = null,
+            WindDirection = null
+        };
+
+        var messageHandler = new HttpMessageHandlerStub(new HttpResponseMessage
+        {
+            StatusCode = HttpStatusCode.OK,
+            Content = new StringContent(JsonSerializer.Serialize(expectedWeather))
+        });
+
+        var httpClient = new HttpClient(messageHandler);
+        var weatherService = new Weather(httpClient);
+
+        // Act
+        var result = await weatherService.GetCurrentWeatherAsync("37.7833", "-122.4167");
+
+        // Assert
+        result.Should().BeEquivalentTo(expectedWeather);
+    }
+
+    [Fact]
+    public void GetCurrentWeatherAsync_ThrowsException_WhenRequestIsUnsuccessfulWithDifferentStatusCode()
+    {
+        // Arrange
+        var messageHandler = new HttpMessageHandlerStub(new HttpResponseMessage
+        {
+            StatusCode = HttpStatusCode.InternalServerError
+        });
+
+        var httpClient = new HttpClient(messageHandler);
+        var weatherService = new Weather(httpClient);
+
+        // Act
+        Func<Task> act = async () => await weatherService.GetCurrentWeatherAsync("37.7833", "-122.4167");
+
+        // Assert
+        act.Should().ThrowAsync<Exception>().WithMessage("Failed to get weather information: InternalServerError");
+    }
+
 }
 
 public class HttpMessageHandlerStub : HttpMessageHandler
