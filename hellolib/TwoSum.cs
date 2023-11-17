@@ -4,21 +4,10 @@ public static class TwoSum
 {
     public static bool CheckExists(int[] a, int X)
     {
-        List<int> myList = new();
-        myList.AddRange(a);
-        for (int i = 0; i < myList.Count; i++)
-        {
-            for (int j = i + 1; j < myList.Count; j++)
-            {
-                if (myList[i] + myList[j] == X)
-                {
-                    return true;
-                }
-            }
-        }
-        return false;
+        return Enumerable.Range(0, a.Length)
+                         .SelectMany(i => Enumerable.Range(i + 1, a.Length - i - 1), (i, j) => new { i, j })
+                         .Any(pair => a[pair.i] + a[pair.j] == X);
     }
-
 
     public static bool CheckExistsHashed(int[] array, int target)
     {

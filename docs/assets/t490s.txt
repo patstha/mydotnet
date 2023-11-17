@@ -1,0 +1,154 @@
+[kushal@kalimati ~]$ 
+[kushal@kalimati ~]$ 
+[kushal@kalimati ~]$ time sudo echo "hello"; date; time flatpak update -y; date; time sudo fwupdmgr get-updates; date; time sudo dnf offline-upgrade download -y && time sudo dnf offline-upgrade reboot
+[sudo] password for kushal: 
+hello
+
+real	0m3.675s
+user	0m0.045s
+sys	0m0.038s
+Mon Oct 30 10:07:54 PM EDT 2023
+Looking for updates…
+
+Info: runtime org.kde.Platform branch 6.4 is end-of-life, with reason:
+   We strongly recommend moving to the latest stable version of the Plaform and SDK
+Info: applications using this runtime:
+   com.obsproject.Studio
+
+Info: runtime org.gnome.Platform branch 43 is end-of-life, with reason:
+   The GNOME 43 runtime is no longer supported as of September 20, 2023. Please ask your application developer to migrate to a supported platform.
+Info: applications using this runtime:
+   org.remmina.Remmina
+
+Nothing to do.
+
+real	0m0.615s
+user	0m0.201s
+sys	0m0.049s
+Mon Oct 30 10:07:54 PM EDT 2023
+Devices with no available firmware updates: 
+ • USB2.0 Hub
+ • USB2.0 Hub
+ • UEFI Device Firmware
+ • UEFI Device Firmware
+Devices with the latest available firmware version:
+ • Embedded Controller
+ • Intel Management Engine
+ • MZVLB256HBHQ-000L7
+ • Prometheus
+ • Prometheus IOTA Config
+ • UEFI dbx
+LENOVO 20NYS3YH00
+│
+└─System Firmware:
+  │   Device ID:          a45df35ac0e948ee180fe216a5f703f32dda163f
+  │   Summary:            UEFI ESRT device
+  │   Current version:    0.1.72
+  │   Vendor:             Lenovo (DMI:LENOVO)
+  │   Update State:       Success
+  │   GUIDs:              6300ba52-d9ea-4ca0-88f9-f89ef73cc07b
+  │                       230c8b18-8d9b-53ec-838b-6cfc0383493a ← main-system-firmware
+  │   Device Flags:       • Internal device
+  │                       • Updatable
+  │                       • System requires external power source
+  │                       • Supported on remote server
+  │                       • Needs a reboot after installation
+  │                       • Cryptographic hash verification is available
+  │                       • Device is usable for the duration of the update
+  │ 
+  ├─ThinkPad T490s/X390 System Update:
+  │     New version:      0.1.80
+  │     Remote ID:        lvfs
+  │     Release ID:       58619
+  │     Summary:          Lenovo ThinkPad T490s/ThinkPad X390/ThinkPad System Firmware
+  │     Variant:          W-BIOS Machine types: 20NX, 20NY, 20Q0, 20Q1
+  │     License:          Proprietary
+  │     Size:             25.1 MB
+  │     Created:          2023-08-21
+  │     Urgency:          High
+  │     Vendor:           Lenovo
+  │     Release Flags:    • Trusted metadata
+  │                       • Is upgrade
+  │     Description:      
+  │     This stable release fixes the following issues:
+  │     
+  │     • Fixed an issue when displaying invalid password error in Setup menu,
+  │     
+  │     mouse cursor background may become blurry.
+  │     
+  │     Some new functionality has also been added:
+  │     
+  │     • Updated the Diagnostics module to version 04.30.000.
+  │     • Updated the CPU microcode.
+  │     Checksum:         9778b4e445bc69d8cc346cb6c9eece7caacfbaf5a783f3a2a09d915c271d97b1
+  │   
+  ├─ThinkPad T490s/X390 System Update:
+  │     New version:      0.1.79
+  │     Remote ID:        lvfs
+  │     Release ID:       22418
+  │     Summary:          Lenovo ThinkPad T490s/ThinkPad X390/ThinkPad System Firmware
+  │     Variant:          W-BIOS Machine types: 20NX, 20NY, 20Q0, 20Q1
+  │     License:          Proprietary
+  │     Size:             25.1 MB
+  │     Created:          2023-03-01
+  │     Urgency:          High
+  │     Vendor:           Lenovo
+  │     Release Flags:    • Trusted metadata
+  │                       • Is upgrade
+  │     Description:      
+  │     This stable release fixes the following issues:
+  │     
+  │     • Updated the Diagnostics module to version 04.28.000.
+  │     • Fixed an issue where the boot order may fail to be changed when SVP/SMP is set.
+  │     • Fixed an issue where MEFW capsule may fail to update.
+  │     • Fixed an issue where LenovoCloud service may fail to connect.
+  │     Checksum:         7635f0e5e99aec3c19cbeed6a9ff4308f284915aba682c50fdd2e3d2fc74046b
+  │   
+  └─ThinkPad T490s/X390 System Update:
+        New version:      0.1.75
+        Remote ID:        lvfs
+        Release ID:       11927
+        Summary:          Lenovo ThinkPad T490s/ThinkPad X390/ThinkPad System Firmware
+        Variant:          W-BIOS for Machine types: 20NX, 20NY, 20Q0, 20Q1
+        License:          Proprietary
+        Size:             25.1 MB
+        Created:          2022-01-17
+        Urgency:          High
+        Vendor:           Lenovo
+        Release Flags:    • Trusted metadata
+                          • Is upgrade
+        Description:      
+        This stable release fixes the following issues:
+        
+        • Fixed an issue that WUFU does not work when SecureDoc is installed.
+        Checksum:         d7db7fc7bcc2af6064ad87d2be3fce7795663cae678a2bffd34c8a4ae852603f
+      
+
+real	0m0.387s
+user	0m0.039s
+sys	0m0.024s
+Mon Oct 30 10:07:55 PM EDT 2023
+Copr repo for PyCharm owned by phracek                                                                                                                                                                        3.8 kB/s | 2.1 kB     00:00    
+Fedora 38 - x86_64                                                                                                                                                                                             67 kB/s |  26 kB     00:00    
+Fedora 38 openh264 (From Cisco) - x86_64                                                                                                                                                                      4.5 kB/s | 989  B     00:00    
+Fedora Modular 38 - x86_64                                                                                                                                                                                    101 kB/s |  25 kB     00:00    
+Fedora 38 - x86_64 - Updates                                                                                                                                                                                   75 kB/s |  26 kB     00:00    
+Fedora Modular 38 - x86_64 - Updates                                                                                                                                                                           39 kB/s |  25 kB     00:00    
+google-chrome                                                                                                                                                                                                 3.1 kB/s | 1.3 kB     00:00    
+RPM Fusion for Fedora 38 - Nonfree - NVIDIA Driver                                                                                                                                                            9.7 kB/s | 6.5 kB     00:00    
+RPM Fusion for Fedora 38 - Nonfree - Steam                                                                                                                                                                     13 kB/s | 6.2 kB     00:00    
+Tailscale stable                                                                                                                                                                                              685  B/s | 832  B     00:01    
+Dependencies resolved.
+Nothing to do.
+Complete!
+The system-upgrade transaction is empty, your system is already up-to-date.
+
+real	0m7.392s
+user	0m2.169s
+sys	0m0.330s
+Error: system is not ready for upgrade
+
+real	0m0.205s
+user	0m0.162s
+sys	0m0.032s
+[kushal@kalimati ~]$ 
