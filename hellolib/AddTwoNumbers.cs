@@ -23,12 +23,12 @@ public class Solution
         int counter = 0;
         while (l1.next != null)
         {
-            int val = l1.val * (int)System.Math.Pow(10, counter);
+            int val = l1.val * (int)Math.Pow(10, counter);
             result += val;
             l1 = l1.next;
             counter++;
         }
-        result += l1.val * (int)System.Math.Pow(10, counter);
+        result += l1.val * (int)Math.Pow(10, counter);
         return result;
     }
 
@@ -36,17 +36,10 @@ public class Solution
     {
         if (input / 10 == 0)
         {
-            return new ListNode()
-            {
-                val = input,
-                next = null
-            };
+            return new ListNode(input);
         }
         int currentVal = input % 10;
-        ListNode current = new()
-        {
-            val = currentVal
-        };
+        ListNode current = new(currentVal);
         // how do I tell if next exists? 
         if (input / 10 > 0)
         {
@@ -59,10 +52,7 @@ public class Solution
 
         while (input / 10 > 0)
         {
-            ListNode current2 = new()
-            {
-                val = currentVal
-            };
+            ListNode current2 = new(currentVal);
             input /= 10;
             if (input == 0)
             {
