@@ -4,14 +4,9 @@ using System.Threading.Tasks;
 
 namespace hellolib;
 
-public class Weather
+public class Weather(HttpClient httpClient)
 {
-    private readonly HttpClient _httpClient;
-
-    public Weather(HttpClient httpClient)
-    {
-        _httpClient = httpClient;
-    }
+    private readonly HttpClient _httpClient = httpClient;
 
     public async Task<CurrentWeather> GetCurrentWeatherAsync(string latitude, string longitude)
     {
@@ -42,9 +37,6 @@ public class CurrentWeather
     public string WindDirection { get; set; }
 }
 
-public class WeatherFetchException : Exception
+public class WeatherFetchException(string message) : Exception(message)
 {
-    public WeatherFetchException(string message) : base(message)
-    {
-    }
 }

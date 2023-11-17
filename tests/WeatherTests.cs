@@ -135,14 +135,9 @@ public class WeatherTests
 
 }
 
-public class HttpMessageHandlerStub : HttpMessageHandler
+public class HttpMessageHandlerStub(HttpResponseMessage response) : HttpMessageHandler
 {
-    private readonly HttpResponseMessage _response;
-
-    public HttpMessageHandlerStub(HttpResponseMessage response)
-    {
-        _response = response;
-    }
+    private readonly HttpResponseMessage _response = response;
 
     protected override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
     {

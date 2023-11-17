@@ -7,7 +7,7 @@ public static class Revocation
     public static List<string> ReadCsv(string filename)
     {
         using StreamReader reader = new(filename);
-        List<string> result = new();
+        List<string> result = [];
         while (!reader.EndOfStream)
         {
             string line = reader.ReadLine();
@@ -17,14 +17,16 @@ public static class Revocation
         return result;
     }
 
-    public static void GetBatches(string filename, int size)
+    public static List<int> GetBatches(string filename, int size)
     {
         List<string> source = ReadCsv(filename);
+        List<int> ints = [];
         IEnumerable<IEnumerable<string>> batches = source.Batch(size);
         foreach (IEnumerable<string> bat in batches)
         {
-            int x = bat.ToList().Count;
+            ints.Add(bat.ToList().Count);
         }
+        return ints;
     }
 
     public static IEnumerable<IEnumerable<TSource>> Batch<TSource>(
