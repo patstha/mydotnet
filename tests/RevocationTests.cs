@@ -1,5 +1,6 @@
 ﻿using hellolib;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace tests;
 
@@ -32,8 +33,14 @@ public class RevocationTests
         string filename = "authorizations.csv";
 
         // act
-        Revocation.GetBatches(filename, 10);
+        List<int> actual = Revocation.GetBatches(filename, 10);
 
+        // assert
         Assert.True(true);
+        for (int i = 0; i < actual.Count - 1; i++)
+        {
+            actual[i].Should().Be(10);
+        }
+        actual.Skip(actual.Count - 1).Take(1).Single().Should().BeOneOf(10, 187749 % 10);
     }
 }
