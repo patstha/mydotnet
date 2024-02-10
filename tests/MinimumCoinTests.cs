@@ -8,7 +8,7 @@ public class MinimumCoinTests
     private MinimumCoin minimumCoin;
     public MinimumCoinTests()
     {
-        List<int> coinValues = new() { 1, 5, 10, 25 };
+        List<int> coinValues = [1, 5, 10, 25];
         minimumCoin = new MinimumCoin(CoinSet: coinValues, RepeatFactor: 5);
     }
 
@@ -74,7 +74,7 @@ public class MinimumCoinTests
     [Fact]
     public void GetFreqLabsTwoCoins()
     {
-        List<int> coinValues = new() { 1, 120, 200 };
+        List<int> coinValues = [1, 120, 200];
         minimumCoin = new MinimumCoin(CoinSet: coinValues, RepeatFactor: 6);
         Assert.Equal(2, minimumCoin.GetCount(240));
     }
@@ -83,7 +83,7 @@ public class MinimumCoinTests
     public void GetCount_ShouldReturnCorrectCount()
     {
         // Arrange
-        List<int> coinSet = new List<int> { 1, 2, 5 };
+        List<int> coinSet = [1, 2, 5];
         int repeatFactor = 3;
         MinimumCoin minimumCoin = new MinimumCoin(coinSet, repeatFactor);
         int total = 11;
@@ -100,7 +100,7 @@ public class MinimumCoinTests
     public void GetCount_ShouldReturnZeroWhenTotalIsLessThanMinimumCoin()
     {
         // Arrange
-        List<int> coinSet = new List<int> { 2, 3, 5 };
+        List<int> coinSet = [2, 3, 5];
         int repeatFactor = 3;
         MinimumCoin minimumCoin = new MinimumCoin(coinSet, repeatFactor);
         int total = 1;
@@ -117,7 +117,7 @@ public class MinimumCoinTests
     public void GetCount_ShouldReturnOneWhenTotalIsInCoinSet()
     {
         // Arrange
-        List<int> coinSet = new List<int> { 1, 2, 5 };
+        List<int> coinSet = [1, 2, 5];
         int repeatFactor = 3;
         MinimumCoin minimumCoin = new MinimumCoin(coinSet, repeatFactor);
         int total = 5;
