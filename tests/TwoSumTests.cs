@@ -1,4 +1,5 @@
 using hellolib;
+using System.Diagnostics;
 namespace tests;
 
 public class TwoSumTests
@@ -167,5 +168,50 @@ public class TwoSumTests
 
         // Assert
         exists.Should().BeFalse();
+    }
+
+    [Fact]
+    public void GetTwoSumNaive_ShouldReturnCorrectOutput()
+    {
+        int[] nums = [2, 7, 11, 15];
+        int target = 9;
+        int[] expected = [0, 1];
+
+        int[] actual = TwoSum.GetTwoSumNaive(nums, target);
+
+        actual.Should().BeEquivalentTo(expected);
+    }
+
+    [Fact]
+    public void GetTwoSumOptimized_ShouldReturnCorrectOutput()
+    {
+        int[] nums = [2, 7, 11, 15];
+        int target = 9;
+        int[] expected = [0, 1];
+
+        int[] actual = TwoSum.GetTwoSumOptimized(nums, target);
+
+        actual.Should().BeEquivalentTo(expected);
+    }
+
+    [Fact]
+    public void GetTwoSumOptimized_ShouldBeFasterThanGetTwoSumNaive()
+    {
+        int[] nums = [2, 7, 11, 15];
+        int target = 9;
+        int[] expected = [0, 1];
+
+        Stopwatch stopwatch = Stopwatch.StartNew();
+        int[] actualOptimized = TwoSum.GetTwoSumOptimized(nums, target);
+        stopwatch.Stop();
+
+        Stopwatch stopwatchNaive = Stopwatch.StartNew();
+        int[] actualNaive = TwoSum.GetTwoSumOptimized(nums, target);
+        stopwatchNaive.Stop();
+
+        actualOptimized.Should().BeEquivalentTo(expected);
+        actualNaive.Should().BeEquivalentTo(expected);
+
+        stopwatch.ElapsedMilliseconds.Should().BeLessThan(stopwatchNaive.ElapsedMilliseconds);
     }
 }
