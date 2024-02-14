@@ -197,34 +197,24 @@ public class TwoSumTests
     [Fact]
     public void GetTwoSumOptimized_ShouldBeFasterThanGetTwoSumNaive()
     {
-        // generate a large array of random numbers between 0 and 1000
-        Random random = new Random();
-        int[] nums = new int[10000];
+        Random random = new();
+        int[] nums = new int[10000000];
         for (int i = 0; i < nums.Length; i++)
         {
             nums[i] = random.Next(0, 1001);
         }
-
-        // generate a random target value between 0 and 2000
         int target = random.Next(0, 2001);
-
-        // find two indices that add up to the target value using the optimized approach
-        int[] actualOptimized = TwoSum.GetTwoSumOptimized(nums, target);
-
-        // find two indices that add up to the target value using the naive approach
-        int[] actualNaive = TwoSum.GetTwoSumNaive(nums, target);
-
-        // measure the time taken by each approach
         Stopwatch stopwatch = Stopwatch.StartNew();
-        actualOptimized = TwoSum.GetTwoSumOptimized(nums, target);
+        int[] optimized = TwoSum.GetTwoSumOptimized(nums, target);
         stopwatch.Stop();
 
         Stopwatch stopwatchNaive = Stopwatch.StartNew();
-        actualNaive = TwoSum.GetTwoSumNaive(nums, target);
+        int[] naive = TwoSum.GetTwoSumNaive(nums, target);
         stopwatchNaive.Stop();
 
-        // compare the results and the time taken by each approach
-        actualOptimized.Should().BeEquivalentTo(actualNaive);
+        (optimized[0] + optimized[1]).Should().Be(target);
+        (naive[0] + naive[1]).Should().Be(target);
+
         stopwatch.ElapsedMilliseconds.Should().BeLessThan(stopwatchNaive.ElapsedMilliseconds);
 
     }
