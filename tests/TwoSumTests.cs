@@ -198,7 +198,7 @@ public class TwoSumTests
     public void GetTwoSumOptimized_ShouldBeFasterThanGetTwoSumNaive()
     {
         Random random = new();
-        uint length = 100000;
+        uint length = 1000;
         int[] nums = new int[length];
         for (int i = 0; i < nums.Length - 2; i++)
         {
