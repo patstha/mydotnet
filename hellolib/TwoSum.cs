@@ -19,28 +19,17 @@ public static class TwoSum
 
     public static int[] GetTwoSumOptimized(int[] nums, int target)
     {
-        // create a hash map to store the elements and their indices
-        Dictionary<int, int> map = new Dictionary<int, int>();
-
-        // iterate through the array
+        Dictionary<int, int> map = [];
         for (int i = 0; i < nums.Length; i++)
         {
-            // calculate the complement of the current element
             int complement = target - nums[i];
-
-            // check if the complement is already in the hash map
-            if (map.ContainsKey(complement))
+            if (map.TryGetValue(complement, out int value))
             {
-                // return the indices of the current element and its complement
-                return new int[] { map[complement], i };
+                return [value, i];
             }
-
-            // add the current element and its index to the hash map
             map[nums[i]] = i;
         }
-
-        // return an empty array if no solution is found
-        return new int[] { };
+        return [];
     }
 
     public static bool CheckExists(int[] a, int X)

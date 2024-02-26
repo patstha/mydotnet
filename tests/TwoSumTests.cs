@@ -118,7 +118,7 @@ public class TwoSumTests
     public void CheckExists_ShouldReturnTrueWhenTwoNumbersSumToTarget()
     {
         // Arrange
-        int[] array = new int[] { 1, 2, 3, 4, 5 };
+        int[] array = [1, 2, 3, 4, 5];
         int target = 9;
 
         // Act
@@ -132,7 +132,7 @@ public class TwoSumTests
     public void CheckExists_ShouldReturnFalseWhenNoTwoNumbersSumToTarget()
     {
         // Arrange
-        int[] array = new int[] { 1, 2, 3, 4, 5 };
+        int[] array = [1, 2, 3, 4, 5];
         int target = 10;
 
         // Act
@@ -146,7 +146,7 @@ public class TwoSumTests
     public void CheckExistsHashed_ShouldReturnTrueWhenTwoNumbersSumToTarget()
     {
         // Arrange
-        int[] array = new int[] { 1, 2, 3, 4, 5 };
+        int[] array = [1, 2, 3, 4, 5];
         int target = 9;
 
         // Act
@@ -160,7 +160,7 @@ public class TwoSumTests
     public void CheckExistsHashed_ShouldReturnFalseWhenNoTwoNumbersSumToTarget()
     {
         // Arrange
-        int[] array = new int[] { 1, 2, 3, 4, 5 };
+        int[] array = [1, 2, 3, 4, 5];
         int target = 10;
 
         // Act
