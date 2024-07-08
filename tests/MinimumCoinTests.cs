@@ -85,7 +85,7 @@ public class MinimumCoinTests
         // Arrange
         List<int> coinSet = [1, 2, 5];
         int repeatFactor = 3;
-        MinimumCoin minimumCoin = new MinimumCoin(coinSet, repeatFactor);
+        MinimumCoin minimumCoin = new(coinSet, repeatFactor);
         int total = 11;
         int expectedCount = 3; // 5 + 5 + 1
 
@@ -102,7 +102,7 @@ public class MinimumCoinTests
         // Arrange
         List<int> coinSet = [2, 3, 5];
         int repeatFactor = 3;
-        MinimumCoin minimumCoin = new MinimumCoin(coinSet, repeatFactor);
+        MinimumCoin minimumCoin = new(coinSet, repeatFactor);
         int total = 1;
         int expectedCount = 0;
 
@@ -119,7 +119,7 @@ public class MinimumCoinTests
         // Arrange
         List<int> coinSet = [1, 2, 5];
         int repeatFactor = 3;
-        MinimumCoin minimumCoin = new MinimumCoin(coinSet, repeatFactor);
+        MinimumCoin minimumCoin = new(coinSet, repeatFactor);
         int total = 5;
         int expectedCount = 1;
 

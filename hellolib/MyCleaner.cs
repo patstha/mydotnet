@@ -1,37 +1,90 @@
 ﻿using System.Net.Http;
 using System.Threading.Tasks;
 
-namespace hellolib;
-
-public class MyCleaner(ILogger<MyCleaner> logger, HttpClient httpClient)
+namespace hellolib
 {
-    public async Task<string> CleanUrlAsync(string url)
+    public class MyCleaner(ILogger<MyCleaner> logger, HttpClient httpClient)
     {
-        if (string.IsNullOrWhiteSpace(url))
+        public async Task<string> CleanUrlAsync(string url)
         {
-            return "";
+            if (string.IsNullOrWhiteSpace(url))
+            {
+                return "";
+            }
+
+            try
+            {
+                string extracted = ExtractFromAddress(url);
+                if (string.IsNullOrWhiteSpace(extracted))
+                {
+                    return "";
+                }
+                if (extracted != url)
+                {
+                    return extracted;
+                }
+
+                string finalRedirectUrl = await FollowRedirectsAsync(url);
+
+                if (finalRedirectUrl.Contains("amazon.com"))
+                {
+                    finalRedirectUrl = RemoveAmazonExtraPathSegments(finalRedirectUrl);
+                }
+
+                return finalRedirectUrl;
+            }
+            catch (Exception ex)
+            {
+                logger.LogError(ex, "Error processing URL: {Url}", url);
+                return null;
+            }
         }
 
-        try
+        private async Task<string> FollowRedirectsAsync(string url)
         {
+            HttpResponseMessage response = await httpClient.GetAsync(url);
+            while (response.StatusCode == System.Net.HttpStatusCode.Redirect || response.StatusCode == System.Net.HttpStatusCode.MovedPermanently)
+            {
+                string redirectUrl = response.Headers.Location.ToString();
+                if (!Uri.IsWellFormedUriString(redirectUrl, UriKind.Absolute))
+                {
+                    Uri baseUri = new(url);
+                    redirectUrl = new Uri(baseUri, redirectUrl).ToString();
+                }
+                try
+                {
+                    response = await httpClient.GetAsync(redirectUrl);
+                }
+                catch (Exception e)
+                {
+                    logger.LogError("Exception {e} in method {method}", e, nameof(FollowRedirectsAsync));
+                    return ExtractFromAddress(redirectUrl);
+                }
+            }
+            return response.RequestMessage.RequestUri.ToString();
+        }
+
+        private static string ExtractFromAddress(string url)
+        {
+            if (string.IsNullOrWhiteSpace(url))
+            {
+                return "";
+            }
             Uri uri = new(url);
             var queryParams = HttpUtility.ParseQueryString(uri.Query);
 
-            // Check for 'u' parameter directly
             string uParam = queryParams.Get("u");
             if (uParam != null)
             {
                 return HttpUtility.UrlDecode(uParam);
             }
 
-            // Check for 'url' parameter
             string urlParam = queryParams.Get("url");
             if (urlParam != null)
             {
                 return HttpUtility.UrlDecode(urlParam);
             }
 
-            // Check for 'return' parameter
             string returnUrl = queryParams.Get("return");
             if (returnUrl != null)
             {
@@ -42,36 +95,19 @@ public class MyCleaner(ILogger<MyCleaner> logger, HttpClient httpClient)
                     return HttpUtility.UrlDecode(finalUrl);
                 }
             }
+            return url;
+        }
 
-            // If no known parameters are found, follow the URL
-            HttpResponseMessage response = await httpClient.GetAsync(url);
-            string finalRedirectUrl = response.RequestMessage.RequestUri.ToString();
-
-            // Remove extra path segments for amazon.com URLs
-            if (finalRedirectUrl.Contains("amazon.com"))
+        private static string RemoveAmazonExtraPathSegments(string url)
+        {
+            Uri uri = new(url);
+            string[] segments = uri.Segments;
+            if (segments.Length > 3 && segments[1].TrimEnd('/') == "gp" && segments[2].TrimEnd('/') == "product")
             {
-                finalRedirectUrl = RemoveAmazonExtraPathSegments(finalRedirectUrl);
+                string cleanUrl = $"{uri.Scheme}://{uri.Host}{segments[0]}{segments[1]}{segments[2]}{segments[3]}";
+                return cleanUrl;
             }
-
-            return finalRedirectUrl;
+            return uri.GetLeftPart(UriPartial.Path);
         }
-        catch (Exception ex)
-        {
-            logger.LogError(ex, "Error processing URL: {Url}", url);
-            return null;
-        }
-    }
-
-    private static string RemoveAmazonExtraPathSegments(string url)
-    {
-        Uri uri = new(url);
-        string[] segments = uri.Segments;
-        if (segments.Length > 3 && segments[1].TrimEnd('/') == "gp" && segments[2].TrimEnd('/') == "product")
-        {
-            // Reconstruct the URL with only the first three segments
-            string cleanUrl = $"{uri.Scheme}://{uri.Host}{segments[0]}{segments[1]}{segments[2]}{segments[3]}";
-            return cleanUrl;
-        }
-        return uri.GetLeftPart(UriPartial.Path);
     }
 }
