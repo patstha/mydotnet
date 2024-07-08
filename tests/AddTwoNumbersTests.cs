@@ -1,4 +1,4 @@
-﻿using hellolib.AddTwoNumbers;
+﻿using hellolib;
 
 namespace tests;
 
