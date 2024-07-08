@@ -1,7 +1,4 @@
-﻿using System.Net.Http;
-using System.Threading.Tasks;
-
-namespace hellolib;
+﻿namespace hellolib;
 
 public class MyCleaner(ILogger<MyCleaner> logger, HttpClient httpClient)
 {

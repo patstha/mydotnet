@@ -1,8 +1,4 @@
-﻿using System.Net.Http;
-using System.Threading.Tasks;
-using hellolib;
-
-namespace tests;
+﻿namespace tests;
 
 public class MyCleanerTests
 {

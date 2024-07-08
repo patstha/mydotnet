@@ -1,6 +1,4 @@
-﻿using hellolib;
-
-namespace tests;
+﻿namespace tests;
 
 public class AddTwoNumbersTests
 {
