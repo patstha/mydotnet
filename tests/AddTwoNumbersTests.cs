@@ -1,6 +1,4 @@
-﻿using hellolib.AddTwoNumbers;
-
-namespace tests;
+﻿namespace tests;
 
 public class AddTwoNumbersTests
 {

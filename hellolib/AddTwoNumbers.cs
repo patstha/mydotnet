@@ -1,4 +1,4 @@
-﻿namespace hellolib.AddTwoNumbers;
+﻿namespace hellolib;
 
 public class ListNode(int val = 0, ListNode next = null)
 {
@@ -23,12 +23,12 @@ public class Solution
         int counter = 0;
         while (l1.next != null)
         {
-            int val = l1.val * (int)System.Math.Pow(10, counter);
+            int val = l1.val * (int)Math.Pow(10, counter);
             result += val;
             l1 = l1.next;
             counter++;
         }
-        result += l1.val * (int)System.Math.Pow(10, counter);
+        result += l1.val * (int)Math.Pow(10, counter);
         return result;
     }
 

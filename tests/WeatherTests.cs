@@ -1,11 +1,4 @@
 ﻿using System.Net;
-using System.Net.Http;
-using System.Threading.Tasks;
-using FluentAssertions;
-using NSubstitute;
-using Xunit;
-using hellolib;
-using NSubstitute.ExceptionExtensions;
 using System.Threading;
 using System.Text.Json;
 
