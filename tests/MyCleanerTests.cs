@@ -1,6 +1,4 @@
-﻿using Microsoft.Extensions.Logging;
-using NSubstitute;
-using hellolib;
+﻿using hellolib;
 
 namespace tests;
 

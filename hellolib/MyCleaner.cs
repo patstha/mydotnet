@@ -29,6 +29,12 @@ public class MyCleaner(ILogger<MyCleaner> logger)
                 {
                     return HttpUtility.UrlDecode(urlParam);
                 }
+
+                string uParam = HttpUtility.ParseQueryString(uri.Query).Get("u");
+                if (uParam != null)
+                {
+                    return HttpUtility.UrlDecode(uParam);
+                }
             }
         }
         catch (Exception ex)
