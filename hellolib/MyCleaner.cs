@@ -1,47 +1,78 @@
-﻿namespace hellolib;
+﻿using System.Net.Http;
+using System.Threading.Tasks;
 
-public class MyCleaner(ILogger<MyCleaner> logger)
+namespace hellolib
 {
-    public string CleanUrl(string url)
+    public class MyCleaner(ILogger<MyCleaner> logger, HttpClient httpClient)
     {
-        if (string.IsNullOrWhiteSpace(url))
+        public async Task<string> CleanUrlAsync(string url)
         {
-            return "";
-        }
-
-        try
-        {
-            Uri uri = new(url);
-            string returnUrl = HttpUtility.ParseQueryString(uri.Query).Get("return");
-            if (returnUrl != null)
+            if (string.IsNullOrWhiteSpace(url))
             {
-                string decodedUrl = HttpUtility.UrlDecode(returnUrl);
-                string finalUrl = HttpUtility.ParseQueryString(new Uri(decodedUrl).Query).Get("u");
-                if (finalUrl != null)
-                {
-                    return HttpUtility.UrlDecode(finalUrl);
-                }
+                return "";
             }
-            else
+
+            try
             {
-                string urlParam = HttpUtility.ParseQueryString(uri.Query).Get("url");
+                Uri uri = new(url);
+                var queryParams = HttpUtility.ParseQueryString(uri.Query);
+
+                // Check for 'u' parameter directly
+                string uParam = queryParams.Get("u");
+                if (uParam != null)
+                {
+                    return HttpUtility.UrlDecode(uParam);
+                }
+
+                // Check for 'url' parameter
+                string urlParam = queryParams.Get("url");
                 if (urlParam != null)
                 {
                     return HttpUtility.UrlDecode(urlParam);
                 }
 
-                string uParam = HttpUtility.ParseQueryString(uri.Query).Get("u");
-                if (uParam != null)
+                // Check for 'return' parameter
+                string returnUrl = queryParams.Get("return");
+                if (returnUrl != null)
                 {
-                    return HttpUtility.UrlDecode(uParam);
+                    string decodedUrl = HttpUtility.UrlDecode(returnUrl);
+                    string finalUrl = HttpUtility.ParseQueryString(new Uri(decodedUrl).Query).Get("u");
+                    if (finalUrl != null)
+                    {
+                        return HttpUtility.UrlDecode(finalUrl);
+                    }
                 }
+
+                // If no known parameters are found, follow the URL
+                HttpResponseMessage response = await httpClient.GetAsync(url);
+                string finalRedirectUrl = response.RequestMessage.RequestUri.ToString();
+
+                // Remove extra path segments for amazon.com URLs
+                if (finalRedirectUrl.Contains("amazon.com"))
+                {
+                    finalRedirectUrl = RemoveAmazonExtraPathSegments(finalRedirectUrl);
+                }
+
+                return finalRedirectUrl;
+            }
+            catch (Exception ex)
+            {
+                logger.LogError(ex, "Error processing URL: {Url}", url);
+                return null;
             }
         }
-        catch (Exception ex)
-        {
-            logger.LogError(ex, "Error processing URL: {Url}", url);
-        }
 
-        return null;
+        private static string RemoveAmazonExtraPathSegments(string url)
+        {
+            Uri uri = new(url);
+            string[] segments = uri.Segments;
+            if (segments.Length > 3 && segments[1].TrimEnd('/') == "gp" && segments[2].TrimEnd('/') == "product")
+            {
+                // Reconstruct the URL with only the first three segments
+                string cleanUrl = $"{uri.Scheme}://{uri.Host}{segments[0]}{segments[1]}{segments[2]}{segments[3]}";
+                return cleanUrl;
+            }
+            return uri.GetLeftPart(UriPartial.Path);
+        }
     }
 }
