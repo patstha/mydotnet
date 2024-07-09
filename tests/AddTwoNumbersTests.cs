@@ -26,7 +26,7 @@ public class AddTwoNumbersTests
         Solution solution = new ();
 
         // Act
-        ListNode actual = Solution.AddTwoNumbers(first, second);
+        ListNode actual = solution.AddTwoNumbers(first, second);
 
         // Assert
         actual.val.Should().Be(0);
@@ -50,7 +50,7 @@ public class AddTwoNumbersTests
         Solution solution = new();
 
         // Act
-        ListNode actual = Solution.AddTwoNumbers(first, second);
+        ListNode actual = solution.AddTwoNumbers(first, second);
 
         // Assert
         actual.val.Should().Be(2);
@@ -92,7 +92,7 @@ public class AddTwoNumbersTests
         Solution solution = new();
 
         // Act
-        ListNode actual = Solution.AddTwoNumbers(firstB, secondB);
+        ListNode actual = solution.AddTwoNumbers(firstB, secondB);
 
         // Assert
         actual.val.Should().Be(result2);
