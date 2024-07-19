@@ -11,7 +11,7 @@ public class MyCleaner(ILogger<MyCleaner> logger, HttpClient httpClient)
         string extractedUrl = ExtractFromAddress(url);
         if (extractedUrl != url)
         {
-            return extractedUrl;
+            return RemoveQueryParameters(extractedUrl);
         }
         try
         {
@@ -22,13 +22,19 @@ public class MyCleaner(ILogger<MyCleaner> logger, HttpClient httpClient)
                 finalRedirectUrl = RemoveAmazonExtraPathSegments(finalRedirectUrl);
             }
 
-            return finalRedirectUrl;
+            return RemoveQueryParameters(finalRedirectUrl);
         }
         catch (Exception ex)
         {
             logger.LogError(ex, "Error processing URL: {Url}", url);
             return null;
         }
+    }
+
+    private static string RemoveQueryParameters(string url)
+    {
+        Uri uri = new(url);
+        return uri.GetLeftPart(UriPartial.Path);
     }
 
     private async Task<string> FollowRedirectsAsync(string url)
