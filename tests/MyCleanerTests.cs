@@ -35,6 +35,7 @@ public class MyCleanerTests
     [InlineData("https://kus.runasp.net/", "https://kus.runasp.net/")]
     [InlineData("https://goto.walmart.com/c/10451/567111/9383?subid1=bf60adae3df511efb3c85a85c909964f0INT&veh=aff&sourceid=imp_000011112222333344&u=https%3A%2F%2Fwww.walmart.com%2Fip%2FHisense-75-Class-U7-Series-Mini-LED-ULED-4K-UHD-Google-Smart-TV-75U7K-QLED-Native-144Hz-1000-Nit-Dolby-Vision-IQ-Full-Array-Local-Dimming-Game-Mode-P%2F1300394852", "https://www.walmart.com/ip/Hisense-75-Class-U7-Series-Mini-LED-ULED-4K-UHD-Google-Smart-TV-75U7K-QLED-Native-144Hz-1000-Nit-Dolby-Vision-IQ-Full-Array-Local-Dimming-Game-Mode-P/1300394852")]
     [InlineData("https://www.tkqlhce.com/click-4485850-13112209?sid=3243752a45be11ef9cb92a70558bfcd60INT&url=https%3A%2F%2Fcomputers.woot.com%2Foffers%2Famazon-kindle-2019-release-sd-1%3Fref%3Dw_cnt_lnd_cat_pc_6_1", "https://computers.woot.com/offers/amazon-kindle-2019-release-sd-1")]
+    [InlineData("https://go.redirectingat.com/?id=355X561&test=off&xcust=c3445bf4492211ef9b8e768b6c08171e0INT&url=https%3A%2F%2Fwww.casio.com%2Fus%2Fwatches%2Fcasio%2Fproduct.A158WA-1%2F", "https://www.casio.com/us/watches/casio/product.A158WA-1/")]
     public async Task CleanUrl_ShouldReturnValidOutput(string input, string expectedOutput)
     {
         // Act 
