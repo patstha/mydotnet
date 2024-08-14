@@ -8,15 +8,15 @@ public class Weather(HttpClient httpClient)
 
     public async Task<CurrentWeather> GetCurrentWeatherAsync(string latitude, string longitude)
     {
-        var url = $"https://api.weather.gov/points/{latitude},{longitude}/forecast/current";
+        string url = $"https://api.weather.gov/points/{latitude},{longitude}/forecast/current";
 
-        var response = await _httpClient.GetAsync(url);
+        HttpResponseMessage response = await _httpClient.GetAsync(url);
 
         if (response.IsSuccessStatusCode)
         {
-            var content = await response.Content.ReadAsStringAsync();
+            string content = await response.Content.ReadAsStringAsync();
 
-            var currentWeather = JsonSerializer.Deserialize<CurrentWeather>(content);
+            CurrentWeather currentWeather = JsonSerializer.Deserialize<CurrentWeather>(content);
 
             return currentWeather;
         }

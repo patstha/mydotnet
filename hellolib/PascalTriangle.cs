@@ -4,11 +4,11 @@ public class PascalTriangle
 {
     public static List<List<int>> GeneratePascalsTriangle(int rows)
     {
-        var triangle = new List<List<int>>();
+        List<List<int>> triangle = [];
 
         for (int i = 0; i < rows; i++)
         {
-            var row = new List<int> { 1 };
+            List<int> row = [1];
 
             for (int j = 1; j < i; j++)
             {

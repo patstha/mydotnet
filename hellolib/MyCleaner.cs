@@ -64,7 +64,7 @@ public class MyCleaner(ILogger<MyCleaner> logger, HttpClient httpClient)
     private static string ExtractFromAddress(string url)
     {
         Uri uri = new(url);
-        var queryParams = HttpUtility.ParseQueryString(uri.Query);
+        System.Collections.Specialized.NameValueCollection queryParams = HttpUtility.ParseQueryString(uri.Query);
 
         string uParam = queryParams.Get("u");
         if (uParam != null)
