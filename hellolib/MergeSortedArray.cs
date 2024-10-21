@@ -1,6 +1,6 @@
 ﻿namespace hellolib;
 
-public class MergeSortedArray
+public class MergeSortedArray(ILogger<MergeSortedArray> logger)
 {
     public void Merge(int[] nums1, int m, int[] nums2, int n)
     {
@@ -33,6 +33,7 @@ public class MergeSortedArray
         }
 
         // No need to copy the remaining elements of nums1, as they are already in place
+        logger.LogInformation("Executed {method} for inputs of size {m} and {n}", nameof(Merge), m, n);
     }
 }
 

@@ -2,7 +2,7 @@
 
 namespace hellolib;
 
-public class MergeStringsAlternately
+public class MergeStringsAlternately(ILogger<MergeStringsAlternately> logger)
 {
     public string MergeAlternately(string word1, string word2)
     {
@@ -27,7 +27,7 @@ public class MergeStringsAlternately
         {
             result.Append(word2.AsSpan(minLength));
         }
-
+        logger.LogInformation("Executed {method} for inputs of size {m} and {n}", nameof(MergeAlternately), word1.Length, word2.Length);
         return result.ToString();
     }
 }

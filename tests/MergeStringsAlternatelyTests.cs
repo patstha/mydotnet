@@ -1,6 +1,8 @@
 ﻿namespace tests;
 public class MergeStringsAlternatelyTests
 {
+    private readonly ILogger<MergeStringsAlternately> _logger;
+    public MergeStringsAlternatelyTests() => _logger = Substitute.For<ILogger<MergeStringsAlternately>>();
     [Fact]
     public void MergeAlternately_ShouldReturn1()
     {
@@ -10,7 +12,7 @@ public class MergeStringsAlternatelyTests
         string expected = "apbqcd";
 
         // act 
-        MergeStringsAlternately mergeStringsAlternately = new();
+        MergeStringsAlternately mergeStringsAlternately = new(_logger);
         string actual = mergeStringsAlternately.MergeAlternately(word1, word2);
 
         actual.Should().BeEquivalentTo(expected);
