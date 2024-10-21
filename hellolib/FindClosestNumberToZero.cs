@@ -14,15 +14,19 @@ public class FindClosestNumberToZero
         {
             return nums[0];
         }
-        Array.Sort(nums);
-        int left = nums[0];
-        int right = nums[^1];
-        if (Math.Abs(left) > Math.Abs(right))
+        int[] abs = [.. nums];
+        for (int i = 0; i < nums.Length; i++)
         {
-            return nums[left];
-        } else
+            abs[i] = Math.Abs(abs[i]);
+        }
+        Array.Sort(abs);
+        if (nums.Contains(abs[0]))
         {
-            return right;
+            return abs[0];
+        }
+        else
+        {
+             return -abs[0];
         }
     }
 }

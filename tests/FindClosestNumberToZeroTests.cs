@@ -16,4 +16,20 @@ public class FindClosestNumberToZeroTests
         // assert 
         actual.Should().Be(expected);
     }
+    // [-100000,-100000]
+
+    [Fact]
+    public void FindClosestNumber_ShouldReturn2()
+    {
+        // arrange
+        int[] nums = { -100000, -100000 };
+        int expected = -100000;
+
+        // act 
+        FindClosestNumberToZero find = new();
+        int actual = find.FindClosestNumber(nums);
+
+        // assert 
+        actual.Should().Be(expected);
+    }
 }
