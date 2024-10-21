@@ -1,12 +1,4 @@
-﻿using static System.Runtime.InteropServices.JavaScript.JSType;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Globalization;
-using System.Security.Cryptography;
-using System.Text;
-using System.Xml.Linq;
-
-namespace hellolib;
+﻿namespace hellolib;
 
 public class MergeSortedArray
 {

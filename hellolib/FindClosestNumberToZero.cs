@@ -1,35 +1,43 @@
-﻿using static System.Runtime.InteropServices.JavaScript.JSType;
-using System.Drawing;
-using System.Net.NetworkInformation;
-namespace hellolib;
+﻿namespace hellolib;
+
 public class FindClosestNumberToZero
 {
+    private readonly ILogger<FindClosestNumberToZero> _logger;
+
+    public FindClosestNumberToZero(ILogger<FindClosestNumberToZero> logger)
+    {
+        _logger = logger;
+    }
+
     public int FindClosestNumber(int[] nums)
     {
         if (nums == null || nums.Length == 0)
         {
+            _logger.LogWarning("Input array is null or empty.");
             return 0;
         }
+
         if (nums.Length == 1)
         {
+            _logger.LogInformation("Single element array, returning the only element.");
             return nums[0];
         }
-        int[] abs = [.. nums];
+
+        int[] abs = new int[nums.Length];
         for (int i = 0; i < nums.Length; i++)
         {
-            abs[i] = Math.Abs(abs[i]);
+            abs[i] = Math.Abs(nums[i]);
         }
+
         Array.Sort(abs);
-        if (nums.Contains(abs[0]))
-        {
-            return abs[0];
-        }
-        else
-        {
-             return -abs[0];
-        }
+
+        int closestNumber = nums.Contains(abs[0]) ? abs[0] : -abs[0];
+        _logger.LogInformation($"Closest number to zero found: {closestNumber}");
+
+        return closestNumber;
     }
 }
+
 
 
 //Given an integer array nums of size n, return the number with the value closest to 0 in nums.If there are multiple answers, return the number with the largest value.
