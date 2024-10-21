@@ -1,25 +1,18 @@
 ﻿namespace hellolib;
 
-public class FindClosestNumberToZero
+public class FindClosestNumberToZero(ILogger<FindClosestNumberToZero> logger)
 {
-    private readonly ILogger<FindClosestNumberToZero> _logger;
-
-    public FindClosestNumberToZero(ILogger<FindClosestNumberToZero> logger)
-    {
-        _logger = logger;
-    }
-
     public int FindClosestNumber(int[] nums)
     {
         if (nums == null || nums.Length == 0)
         {
-            _logger.LogWarning("Input array is null or empty.");
+            logger.LogWarning("Input array is null or empty.");
             return 0;
         }
 
         if (nums.Length == 1)
         {
-            _logger.LogInformation("Single element array, returning the only element.");
+            logger.LogInformation("Single element array, returning the only element.");
             return nums[0];
         }
 
@@ -32,7 +25,7 @@ public class FindClosestNumberToZero
         Array.Sort(abs);
 
         int closestNumber = nums.Contains(abs[0]) ? abs[0] : -abs[0];
-        _logger.LogInformation($"Closest number to zero found: {closestNumber}");
+        logger.LogInformation($"Closest number to zero found: {closestNumber}");
 
         return closestNumber;
     }
