@@ -6,6 +6,6 @@ public class BackoffExceptionTests
     public async Task DoSomething()
     {
         BackoffException backoffException = new();
-        await backoffException.BackoffSelfinflictedException("name");
+        await backoffException.BackoffSelfinflictedException("name", 100);
     }
 }
