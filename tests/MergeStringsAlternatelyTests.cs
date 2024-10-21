@@ -13,7 +13,7 @@ public class MergeStringsAlternatelyTests
         string expected = "apbqcd";
 
         // act 
-        MergeStringsAlternately mergeStringsAlternately = new MergeStringsAlternately();
+        MergeStringsAlternately mergeStringsAlternately = new();
         string actual = mergeStringsAlternately.MergeAlternately(word1, word2);
 
         actual.Should().BeEquivalentTo(expected);
