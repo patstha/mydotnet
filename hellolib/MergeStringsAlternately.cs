@@ -1,31 +1,33 @@
-﻿namespace hellolib;
+﻿using System.Text;
+
+namespace hellolib;
 
 public class MergeStringsAlternately
 {
     public string MergeAlternately(string word1, string word2)
     {
-        return Concatenate(word1, word2);
-    }
-
-    private string Concatenate(string word1, string word2)
-    {
-        string result = "";
+        StringBuilder result = new StringBuilder();
         int length1 = word1.Length;
         int length2 = word2.Length;
         int minLength = Math.Min(length1, length2);
 
+        // Merge characters from both strings
         for (int i = 0; i < minLength; i++)
         {
-            result += word1[i].ToString() + word2[i].ToString();
+            result.Append(word1[i]);
+            result.Append(word2[i]);
         }
-        for (int i = minLength; i < length1; i++)
+
+        // Append remaining characters from the longer string
+        if (length1 > minLength)
         {
-            result += word1[i];
+            result.Append(word1.Substring(minLength));
         }
-        for (int i = minLength; i < length2; i++)
+        else if (length2 > minLength)
         {
-            result += word2[i];
+            result.Append(word2.Substring(minLength));
         }
-        return result;
+
+        return result.ToString();
     }
 }
