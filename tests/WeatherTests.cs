@@ -9,7 +9,7 @@ public class WeatherTests
     public async Task GetCurrentWeatherAsync_ReturnsCurrentWeather_WhenRequestIsSuccessful()
     {
         // Arrange
-        CurrentWeather expectedWeather = new CurrentWeather
+        CurrentWeather expectedWeather = new()
         {
             Temperature = "20",
             Humidity = "30",
@@ -17,14 +17,14 @@ public class WeatherTests
             WindDirection = "North"
         };
 
-        HttpMessageHandlerStub messageHandler = new HttpMessageHandlerStub(new HttpResponseMessage
+        HttpMessageHandlerStub messageHandler = new(new HttpResponseMessage
         {
             StatusCode = HttpStatusCode.OK,
             Content = new StringContent(JsonSerializer.Serialize(expectedWeather))
         });
 
-        HttpClient httpClient = new HttpClient(messageHandler);
-        Weather weatherService = new Weather(httpClient);
+        HttpClient httpClient = new(messageHandler);
+        Weather weatherService = new(httpClient);
 
         // Act
         CurrentWeather result = await weatherService.GetCurrentWeatherAsync("37.7833", "-122.4167");
@@ -37,13 +37,13 @@ public class WeatherTests
     public void GetCurrentWeatherAsync_ThrowsException_WhenRequestIsUnsuccessful()
     {
         // Arrange
-        HttpMessageHandlerStub messageHandler = new HttpMessageHandlerStub(new HttpResponseMessage
+        HttpMessageHandlerStub messageHandler = new(new HttpResponseMessage
         {
             StatusCode = HttpStatusCode.NotFound
         });
 
-        HttpClient httpClient = new HttpClient(messageHandler);
-        Weather weatherService = new Weather(httpClient);
+        HttpClient httpClient = new(messageHandler);
+        Weather weatherService = new(httpClient);
 
         // Act
         Func<Task> act = async () => await weatherService.GetCurrentWeatherAsync("37.7833", "-122.4167");
@@ -55,7 +55,7 @@ public class WeatherTests
     public async Task GetCurrentWeatherAsync_ReturnsCurrentWeather_WhenRequestIsSuccessfulAndDataIsPartial()
     {
         // Arrange
-        CurrentWeather expectedWeather = new CurrentWeather
+        CurrentWeather expectedWeather = new()
         {
             Temperature = "20",
             Humidity = null,
@@ -63,14 +63,14 @@ public class WeatherTests
             WindDirection = null
         };
 
-        HttpMessageHandlerStub messageHandler = new HttpMessageHandlerStub(new HttpResponseMessage
+        HttpMessageHandlerStub messageHandler = new(new HttpResponseMessage
         {
             StatusCode = HttpStatusCode.OK,
             Content = new StringContent(JsonSerializer.Serialize(expectedWeather))
         });
 
-        HttpClient httpClient = new HttpClient(messageHandler);
-        Weather weatherService = new Weather(httpClient);
+        HttpClient httpClient = new(messageHandler);
+        Weather weatherService = new(httpClient);
 
         // Act
         CurrentWeather result = await weatherService.GetCurrentWeatherAsync("37.7833", "-122.4167");
@@ -83,7 +83,7 @@ public class WeatherTests
     public async Task GetCurrentWeatherAsync_ReturnsCurrentWeather_WhenRequestIsSuccessfulAndDataIsEmpty()
     {
         // Arrange
-        CurrentWeather expectedWeather = new CurrentWeather
+        CurrentWeather expectedWeather = new()
         {
             Temperature = null,
             Humidity = null,
@@ -91,14 +91,14 @@ public class WeatherTests
             WindDirection = null
         };
 
-        HttpMessageHandlerStub messageHandler = new HttpMessageHandlerStub(new HttpResponseMessage
+        HttpMessageHandlerStub messageHandler = new(new HttpResponseMessage
         {
             StatusCode = HttpStatusCode.OK,
             Content = new StringContent(JsonSerializer.Serialize(expectedWeather))
         });
 
-        HttpClient httpClient = new HttpClient(messageHandler);
-        Weather weatherService = new Weather(httpClient);
+        HttpClient httpClient = new(messageHandler);
+        Weather weatherService = new(httpClient);
 
         // Act
         CurrentWeather result = await weatherService.GetCurrentWeatherAsync("37.7833", "-122.4167");
@@ -111,13 +111,13 @@ public class WeatherTests
     public void GetCurrentWeatherAsync_ThrowsException_WhenRequestIsUnsuccessfulWithDifferentStatusCode()
     {
         // Arrange
-        HttpMessageHandlerStub messageHandler = new HttpMessageHandlerStub(new HttpResponseMessage
+        HttpMessageHandlerStub messageHandler = new(new HttpResponseMessage
         {
             StatusCode = HttpStatusCode.InternalServerError
         });
 
-        HttpClient httpClient = new HttpClient(messageHandler);
-        Weather weatherService = new Weather(httpClient);
+        HttpClient httpClient = new(messageHandler);
+        Weather weatherService = new(httpClient);
 
         // Act
         Func<Task> act = async () => await weatherService.GetCurrentWeatherAsync("37.7833", "-122.4167");
