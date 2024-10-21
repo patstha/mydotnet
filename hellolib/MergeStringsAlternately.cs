@@ -4,36 +4,27 @@ public class MergeStringsAlternately
 {
     public string MergeAlternately(string word1, string word2)
     {
-        int length1 = word1.Length;
-        int length2 = word2.Length;
-        if (length1 > length2)
-        {
-            //string result = "";
-            //for (int i = 0; i < length2; i++)
-            //{
-            //    result += word1[i] + word2[i];
-            //}
-            //for (int i = length2; i < length1; i++)
-            //{
-            //    result += word1[i];
-            //}
-            return concatanate(word1, word2);
-        } else
-        {
-            return concatanate(word2, word1);
-        }
+        return Concatenate(word1, word2);
     }
 
-    private string concatanate(string word1, string word2)
+    private string Concatenate(string word1, string word2)
     {
         string result = "";
-        for (int i = 0; i < word2.Length; i++)
+        int length1 = word1.Length;
+        int length2 = word2.Length;
+        int minLength = Math.Min(length1, length2);
+
+        for (int i = 0; i < minLength; i++)
         {
-            result += word1[i] + word2[i];
+            result += word1[i].ToString() + word2[i].ToString();
         }
-        for (int i = word2.Length; i < word1.Length; i++)
+        for (int i = minLength; i < length1; i++)
         {
             result += word1[i];
+        }
+        for (int i = minLength; i < length2; i++)
+        {
+            result += word2[i];
         }
         return result;
     }
