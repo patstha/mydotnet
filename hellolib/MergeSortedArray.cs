@@ -12,7 +12,14 @@ public class MergeSortedArray
 {
     public void Merge(int[] nums1, int m, int[] nums2, int n)
     {
-
+        for (int i = m; i < nums1.Length; i++)
+        {
+            for (int j = 0; j < nums2.Length; j++)
+            {
+                nums1[i] = nums2[j];
+            }
+        }
+        Array.Sort(nums1);
     }
 }
 
