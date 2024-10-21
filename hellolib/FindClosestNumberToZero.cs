@@ -25,7 +25,7 @@ public class FindClosestNumberToZero(ILogger<FindClosestNumberToZero> logger)
         Array.Sort(abs);
 
         int closestNumber = nums.Contains(abs[0]) ? abs[0] : -abs[0];
-        logger.LogInformation($"Closest number to zero found: {closestNumber}");
+        logger.LogInformation("Closest number to zero found: {closestNumber}", closestNumber);
 
         return closestNumber;
     }
