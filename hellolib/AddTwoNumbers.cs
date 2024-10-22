@@ -1,65 +1,61 @@
-﻿namespace hellolib;
-
-/**
- * Definition for singly-linked list.
- * public class ListNode {
- *     public int val;
- *     public ListNode next;
- *     public ListNode(int val=0, ListNode next=null) {
- *         this.val = val;
- *         this.next = next;
- *     }
- * }
- */
-public class SinglyLinkedListAddTwoNumbers(ILogger<SinglyLinkedListAddTwoNumbers> logger)
+﻿namespace hellolib
 {
-    public ListNode AddTwoNumbers(ListNode l1, ListNode l2)
+    public class ListNode(int val = 0, ListNode next = null)
     {
-        logger.LogInformation("Got two list nodes {l1} and {l2}", l1.val, l2.val);
-        ListNode dummyHead = new(0);
-        ListNode p = l1, q = l2, current = dummyHead;
-        int carry = 0;
-
-        while (p != null || q != null)
+        public int Val
         {
-            logger.LogInformation("Got two list nodes {l1} and {l2}", l1.val, l2.val);
-            int x = (p != null) ? p.val : 0;
-            int y = (q != null) ? q.val : 0;
-            int sum = carry + x + y;
-            carry = sum / 10;
-            current.next = new(sum % 10);
-            current = current.next;
-            if (p != null) p = p.next;
-            if (q != null) q = q.next;
+            get => val;
+            set => val = value;
         }
-
-        if (carry > 0)
+        public ListNode Next
         {
-            current.next = new(carry);
+            get => next;
+            set => next = value;
         }
-
-        return dummyHead.next;
     }
 
-    public int GetIntegerFromListNode(ListNode l)
+    public class SinglyLinkedListAddTwoNumbers(ILogger<SinglyLinkedListAddTwoNumbers> logger)
     {
-        int number = 0;
-        int multiplier = 1;
-
-        while (l != null)
+        public ListNode AddTwoNumbers(ListNode l1, ListNode l2)
         {
-            number += l.val * multiplier;
-            multiplier *= 10;
-            l = l.next;
+            logger.LogInformation("Starting AddTwoNumbers with list nodes {l1} and {l2}", l1?.Val, l2?.Val);
+            ListNode dummyHead = new(0);
+            ListNode p = l1, q = l2, current = dummyHead;
+            int carry = 0;
+
+            while (p != null || q != null)
+            {
+                int x = (p != null) ? p.Val : 0;
+                int y = (q != null) ? q.Val : 0;
+                int sum = carry + x + y;
+                carry = sum / 10;
+                current.Next = new ListNode(sum % 10);
+                current = current.Next;
+                if (p != null) p = p.Next;
+                if (q != null) q = q.Next;
+            }
+
+            if (carry > 0)
+            {
+                current.Next = new ListNode(carry);
+            }
+
+            return dummyHead.Next;
         }
-        logger.LogInformation("The result is {number}", number);
-        return number;
+
+        public int GetIntegerFromListNode(ListNode l)
+        {
+            int number = 0;
+            int multiplier = 1;
+
+            while (l != null)
+            {
+                number += l.Val * multiplier;
+                multiplier *= 10;
+                l = l.Next;
+            }
+            logger.LogInformation("The result is {number}", number);
+            return number;
+        }
     }
-
-}
-
-public class ListNode(int val = 0, ListNode next = null)
-{
-    public int val = val;
-    public ListNode next = next;
 }

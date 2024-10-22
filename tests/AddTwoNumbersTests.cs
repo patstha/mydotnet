@@ -17,13 +17,13 @@ public class AddTwoNumbersTests
         // Arrange
         ListNode first = new()
         {
-            val = 0,
-            next = null
+            Val = 0,
+            Next = null
         };
         ListNode second = new()
         {
-            val = 0,
-            next = null
+            Val = 0,
+            Next = null
         };
         SinglyLinkedListAddTwoNumbers solution = new (_logger);
 
@@ -31,8 +31,8 @@ public class AddTwoNumbersTests
         ListNode actual = solution.AddTwoNumbers(first, second);
 
         // Assert
-        actual.val.Should().Be(0);
-        actual.next.Should().BeNull();
+        actual.Val.Should().Be(0);
+        actual.Next.Should().BeNull();
     }
 
     [Fact]
@@ -41,13 +41,13 @@ public class AddTwoNumbersTests
         // Arrange
         ListNode first = new()
         {
-            val = 1,
-            next = null
+            Val = 1,
+            Next = null
         };
         ListNode second = new()
         {
-            val = 1,
-            next = null
+            Val = 1,
+            Next = null
         };
         SinglyLinkedListAddTwoNumbers solution = new(_logger);
 
@@ -55,8 +55,8 @@ public class AddTwoNumbersTests
         ListNode actual = solution.AddTwoNumbers(first, second);
 
         // Assert
-        actual.val.Should().Be(2);
-        actual.next.Should().BeNull();
+        actual.Val.Should().Be(2);
+        actual.Next.Should().BeNull();
     }
 
     
@@ -73,23 +73,23 @@ public class AddTwoNumbersTests
         // Arrange
         ListNode firstA = new()
         {
-            val = first1,
-            next = null
+            Val = first1,
+            Next = null
         };
         ListNode firstB = new()
         {
-            val = first2,
-            next = firstA
+            Val = first2,
+            Next = firstA
         };
         ListNode secondA = new()
         {
-            val = second1,
-            next = null
+            Val = second1,
+            Next = null
         };
         ListNode secondB = new()
         {
-            val = second2,
-            next = secondA
+            Val = second2,
+            Next = secondA
         };
         SinglyLinkedListAddTwoNumbers solution = new(_logger);
 
@@ -97,8 +97,8 @@ public class AddTwoNumbersTests
         ListNode actual = solution.AddTwoNumbers(firstB, secondB);
 
         // Assert
-        actual.val.Should().Be(result2);
-        actual.next.val.Should().Be(result1);
+        actual.Val.Should().Be(result2);
+        actual.Next.Val.Should().Be(result1);
     }
 }
 
