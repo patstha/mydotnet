@@ -7,7 +7,7 @@ public static class Revocation
     public static List<string> ReadCsv(string filename)
     {
         using StreamReader reader = new(filename);
-        List<string> result = [];
+        List<string> result = new();
         while (!reader.EndOfStream)
         {
             string line = reader.ReadLine();
@@ -36,17 +36,14 @@ public static class Revocation
         foreach (TSource item in source)
         {
             bucket ??= new TSource[size];
-
             bucket[count++] = item;
-            if (count != size)
+
+            if (count == size)
             {
-                continue;
+                yield return bucket;
+                bucket = null;
+                count = 0;
             }
-
-            yield return bucket;
-
-            bucket = null;
-            count = 0;
         }
 
         if (bucket != null && count > 0)
