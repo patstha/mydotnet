@@ -4,8 +4,8 @@ public static class RomanToInteger
 {
     public static int RomanToInt(string s)
     {
-        // lets just write enough code to make this test case pass 
-        return 3;
+
+        return 0;
     }
 }
 
