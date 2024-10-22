@@ -147,4 +147,56 @@ public class RomanToIntegerTests
         // assert 
         actual.Should().Be(expected);
     }
+    [Fact]
+    public void RomanToInt_ShouldReturn_MinValue()
+    {
+        // arrange 
+        string s = "I";
+        int expected = 1;
+
+        // act 
+        int actual = RomanToInteger.RomanToInt(s);
+
+        // assert 
+        actual.Should().Be(expected);
+    }
+    [Fact]
+    public void RomanToInt_ShouldReturn_MaxValue()
+    {
+        // arrange 
+        string s = "MMMCMXCIX";
+        int expected = 3999;
+
+        // act 
+        int actual = RomanToInteger.RomanToInt(s);
+
+        // assert 
+        actual.Should().Be(expected);
+    }
+    [Fact]
+    public void RomanToInt_ShouldReturn_SingleCharacter()
+    {
+        // arrange 
+        string s = "V";
+        int expected = 5;
+
+        // act 
+        int actual = RomanToInteger.RomanToInt(s);
+
+        // assert 
+        actual.Should().Be(expected);
+    }
+    [Fact]
+    public void RomanToInt_ShouldReturn_Combination()
+    {
+        // arrange 
+        string s = "CDXLIV";
+        int expected = 444;
+
+        // act 
+        int actual = RomanToInteger.RomanToInt(s);
+
+        // assert 
+        actual.Should().Be(expected);
+    }
 }
