@@ -2,7 +2,10 @@
 {
     public static class RomanToInteger
     {
-        private static readonly Dictionary<char, int> RomanMap = new Dictionary<char, int>
+        public static int RomanToInt(string s)
+        {
+            // Step 1: Create a dictionary to map Roman numerals to their integer values
+            Dictionary<char, int> romanMap = new Dictionary<char, int>
         {
             {'I', 1},
             {'V', 5},
@@ -13,23 +16,26 @@
             {'M', 1000}
         };
 
-        public static int RomanToInt(string s)
-        {
             int result = 0;
+
+            // Step 2: Iterate through the string
             for (int i = 0; i < s.Length; i++)
             {
-                if (i < s.Length - 1 && RomanMap[s[i]] < RomanMap[s[i + 1]])
+                // Step 3: Handle the subtraction cases
+                if (i < s.Length - 1 && romanMap[s[i]] < romanMap[s[i + 1]])
                 {
-                    result -= RomanMap[s[i]];
+                    result -= romanMap[s[i]];
                 }
                 else
                 {
-                    result += RomanMap[s[i]];
+                    result += romanMap[s[i]];
                 }
             }
+
             return result;
         }
     }
+
 }
 
 
