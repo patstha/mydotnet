@@ -1,6 +1,6 @@
 ﻿namespace hellolib;
 
-public class MergeSort
+public static class MergeSort
 {
     public static void SortIntegers(int[] input)
     {

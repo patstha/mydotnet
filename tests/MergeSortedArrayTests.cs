@@ -3,6 +3,11 @@
 public class MergeSortedArrayTests
 {
     private readonly ILogger<MergeSortedArray> _logger;
+    private static readonly int[] expectation = [1, 2, 2, 3, 5, 6];
+    private static readonly int[] expectationArray = [1];
+    private static readonly int[] expectationArray0 = [10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100];
+    private static readonly int[] expectationArray1 = [1, 2, 3, 5, 6, 99999];
+
     public MergeSortedArrayTests() => _logger = Substitute.For<ILogger<MergeSortedArray>>();
     [Fact]
     public void Merge_ShouldReturn1()
@@ -14,7 +19,7 @@ public class MergeSortedArrayTests
         MergeSortedArray mergeSortedArray = new(_logger);
         mergeSortedArray.Merge(nums1, m, nums2, n);
 
-        nums1.Should().BeEquivalentTo(new[] { 1, 2, 2, 3, 5, 6 }); // Corrected initialization
+        nums1.Should().BeEquivalentTo(expectation); // Corrected initialization
     }
 
     [Fact]
@@ -27,7 +32,7 @@ public class MergeSortedArrayTests
         MergeSortedArray mergeSortedArray = new(_logger);
         mergeSortedArray.Merge(nums1, m, nums2, n);
 
-        nums1.Should().BeEquivalentTo(new[] { 1 }); // Corrected initialization
+        nums1.Should().BeEquivalentTo(expectationArray); // Corrected initialization
     }
 
     [Fact]
@@ -40,7 +45,7 @@ public class MergeSortedArrayTests
         MergeSortedArray mergeSortedArray = new(_logger);
         mergeSortedArray.Merge(nums1, m, nums2, n);
 
-        nums1.Should().BeEquivalentTo(new[] { 1 }); // Corrected initialization
+        nums1.Should().BeEquivalentTo(expectationArray); // Corrected initialization
     }
 
     [Fact]
@@ -53,7 +58,7 @@ public class MergeSortedArrayTests
         MergeSortedArray mergeSortedArray = new(_logger);
         mergeSortedArray.Merge(nums1, m, nums2, n);
 
-        nums1.Should().BeEquivalentTo(new[] { 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63, 64, 65, 66, 67, 68, 69, 70, 71, 72, 73, 74, 75, 76, 77, 78, 79, 80, 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100 });
+        nums1.Should().BeEquivalentTo(expectationArray0);
     }
 
     [Fact]
@@ -66,7 +71,7 @@ public class MergeSortedArrayTests
         MergeSortedArray mergeSortedArray = new(_logger);
         mergeSortedArray.Merge(nums1, m, nums2, n);
 
-        nums1.Should().BeEquivalentTo(new[] { 1, 2, 3, 5, 6, 99999 }); // Corrected initialization
+        nums1.Should().BeEquivalentTo(expectationArray1); // Corrected initialization
     }
 
 }

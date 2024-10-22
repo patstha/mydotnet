@@ -2,10 +2,12 @@
 
 public class AddTwoNumbersTests
 {
+    private readonly ILogger<SinglyLinkedListAddTwoNumbers> _logger;
+    public AddTwoNumbersTests() => _logger = Substitute.For<ILogger<SinglyLinkedListAddTwoNumbers>>();
     [Fact]
     public void AddTwoNumbers_Freebie()
     {
-        Solution solution = new();
+        SinglyLinkedListAddTwoNumbers solution = new(_logger);
         solution.Should().NotBeNull();
     }
 
@@ -23,7 +25,7 @@ public class AddTwoNumbersTests
             val = 0,
             next = null
         };
-        Solution solution = new ();
+        SinglyLinkedListAddTwoNumbers solution = new (_logger);
 
         // Act
         ListNode actual = solution.AddTwoNumbers(first, second);
@@ -47,7 +49,7 @@ public class AddTwoNumbersTests
             val = 1,
             next = null
         };
-        Solution solution = new();
+        SinglyLinkedListAddTwoNumbers solution = new(_logger);
 
         // Act
         ListNode actual = solution.AddTwoNumbers(first, second);
@@ -89,7 +91,7 @@ public class AddTwoNumbersTests
             val = second2,
             next = secondA
         };
-        Solution solution = new();
+        SinglyLinkedListAddTwoNumbers solution = new(_logger);
 
         // Act
         ListNode actual = solution.AddTwoNumbers(firstB, secondB);

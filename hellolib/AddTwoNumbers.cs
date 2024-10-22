@@ -11,7 +11,7 @@
  *     }
  * }
  */
-public class Solution
+public class SinglyLinkedListAddTwoNumbers(ILogger<SinglyLinkedListAddTwoNumbers> logger)
 {
     public ListNode AddTwoNumbers(ListNode l1, ListNode l2)
     {
@@ -50,7 +50,7 @@ public class Solution
             multiplier *= 10;
             l = l.next;
         }
-
+        logger.LogInformation("The result is {number}", number);
         return number;
     }
 

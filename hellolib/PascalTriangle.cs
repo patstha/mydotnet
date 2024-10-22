@@ -1,6 +1,6 @@
 ﻿namespace hellolib;
 
-public class PascalTriangle
+public static class PascalTriangle
 {
     public static List<List<int>> GeneratePascalsTriangle(int rows)
     {
