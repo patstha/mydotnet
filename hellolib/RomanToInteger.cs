@@ -1,41 +1,37 @@
-﻿namespace hellolib;
-
-public static class RomanToInteger
+﻿namespace hellolib
 {
-    public static int RomanToInt(string s)
+    public static class RomanToInteger
     {
-        Dictionary<string, int> keyValuePairs = [];
-        keyValuePairs.Add("I", 1);
-        keyValuePairs.Add("V", 5);
-        keyValuePairs.Add("X", 10);
-        keyValuePairs.Add("L", 50);
-        keyValuePairs.Add("C", 100);
-        keyValuePairs.Add("D", 500);
-        keyValuePairs.Add("M", 1000);
-        int result = 0;
-
-        // lets enumerate our special cases
-        // if it contains IV, IX, XL, XC, CD, CM, do something special
-        for (int i = 0; i < s.Length; i++)
+        private static readonly Dictionary<char, int> RomanMap = new Dictionary<char, int>
         {
-            if (keyValuePairs.ContainsKey(s[i].ToString()))
+            {'I', 1},
+            {'V', 5},
+            {'X', 10},
+            {'L', 50},
+            {'C', 100},
+            {'D', 500},
+            {'M', 1000}
+        };
+
+        public static int RomanToInt(string s)
+        {
+            int result = 0;
+            for (int i = 0; i < s.Length; i++)
             {
-                keyValuePairs.TryGetValue(s[i].ToString(), out int workingResult);
-                if (i < s.Length - 1)
+                if (i < s.Length - 1 && RomanMap[s[i]] < RomanMap[s[i + 1]])
                 {
-                    keyValuePairs.TryGetValue(s[i + 1].ToString(), out int nextWorkingResult);
-                    if (workingResult < nextWorkingResult)
-                    {
-                        result -= workingResult;
-                        continue;
-                    }
+                    result -= RomanMap[s[i]];
                 }
-                result += workingResult;
+                else
+                {
+                    result += RomanMap[s[i]];
+                }
             }
+            return result;
         }
-        return result;
     }
 }
+
 
 //13. Roman to Integer
 //Easy
