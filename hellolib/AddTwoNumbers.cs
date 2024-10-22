@@ -15,6 +15,7 @@ public class SinglyLinkedListAddTwoNumbers(ILogger<SinglyLinkedListAddTwoNumbers
 {
     public ListNode AddTwoNumbers(ListNode l1, ListNode l2)
     {
+        logger.LogInformation("Got two list nodes {l1} and {l2}", l1.val, l2.val);
         ListNode dummyHead = new(0);
         ListNode p = l1, q = l2, current = dummyHead;
         int carry = 0;
