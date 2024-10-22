@@ -22,6 +22,7 @@ public class SinglyLinkedListAddTwoNumbers(ILogger<SinglyLinkedListAddTwoNumbers
 
         while (p != null || q != null)
         {
+            logger.LogInformation("Got two list nodes {l1} and {l2}", l1.val, l2.val);
             int x = (p != null) ? p.val : 0;
             int y = (q != null) ? q.val : 0;
             int sum = carry + x + y;
