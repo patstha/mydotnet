@@ -2,7 +2,7 @@
 
 public static class RomanToInteger
 {
-    private static readonly Dictionary<char, int> RomanMap = new Dictionary<char, int>
+    private static readonly Dictionary<char, int> RomanMap = new()
     {
         {'I', 1},
         {'V', 5},
@@ -15,14 +15,14 @@ public static class RomanToInteger
 
     public static int RomanToInt(string s)
     {
-        var total = 0;
-        var prevValue = 0;
-        var length = s.Length;
+        int total = 0;
+        int prevValue = 0;
+        int length = s.Length;
 
         // Iterate through the string from right to left
-        for (var i = length - 1; i >= 0; i--)
+        for (int i = length - 1; i >= 0; i--)
         {
-            var currentValue = RomanMap[s[i]];
+            int currentValue = RomanMap[s[i]];
 
             // Determine if we should add or subtract the current value
             if (currentValue < prevValue)
