@@ -1,40 +1,37 @@
 ﻿using System.Collections.Generic;
-using Xunit;
-using FluentAssertions;
 
-namespace tests
+namespace tests;
+
+public class RevocationTests
 {
-    public class RevocationTests
+    [Fact]
+    public void Freebie()
     {
-        [Fact]
-        public void Freebie()
-        {
-            Assert.True(true);
-        }
+        Assert.True(true);
+    }
 
-        [Fact]
-        public void ReadCsv_ShouldReturnTokens()
-        {
-            // arrange
-            string filename = "authorizations.csv";
+    [Fact]
+    public void ReadCsv_ShouldReturnTokens()
+    {
+        // arrange
+        string filename = "authorizations.csv";
 
-            // act
-            List<string> authorizationIds = Revocation.ReadCsv(filename);
+        // act
+        List<string> authorizationIds = Revocation.ReadCsv(filename);
 
-            // assert
-            authorizationIds.Count.Should().Be(187749);
-        }
+        // assert
+        authorizationIds.Count.Should().Be(187749);
+    }
 
-        [Fact]
-        public void GetBatches()
-        {
-            // arrange
-            string filename = "authorizations.csv";
+    [Fact]
+    public void GetBatches()
+    {
+        // arrange
+        string filename = "authorizations.csv";
 
-            // act
-            Revocation.GetBatches(filename, 10);
+        // act
+        Revocation.GetBatches(filename, 10);
 
-            Assert.True(true);
-        }
+        Assert.True(true);
     }
 }
