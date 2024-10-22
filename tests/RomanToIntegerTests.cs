@@ -1,4 +1,6 @@
-﻿namespace tests;
+﻿using HelloLib;
+
+namespace tests;
 
 public class RomanToIntegerTests
 {

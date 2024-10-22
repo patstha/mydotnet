@@ -1,46 +1,46 @@
-﻿namespace hellolib
+﻿namespace HelloLib;
+
+public static class RomanToInteger
 {
-    public static class RomanToInteger
+    private static readonly Dictionary<char, int> RomanMap = new Dictionary<char, int>
     {
-        public static int RomanToInt(string s)
+        {'I', 1},
+        {'V', 5},
+        {'X', 10},
+        {'L', 50},
+        {'C', 100},
+        {'D', 500},
+        {'M', 1000}
+    };
+
+    public static int RomanToInt(string s)
+    {
+        var total = 0;
+        var prevValue = 0;
+        var length = s.Length;
+
+        // Iterate through the string from right to left
+        for (var i = length - 1; i >= 0; i--)
         {
-            // Step 1: Create a dictionary to map Roman numerals to their integer values
-            Dictionary<char, int> romanMap = new Dictionary<char, int> {
-            {'I', 1},
-            {'V', 5},
-            {'X', 10},
-            {'L', 50},
-            {'C', 100},
-            {'D', 500},
-            {'M', 1000}
-        };
+            var currentValue = RomanMap[s[i]];
 
-            int total = 0;
-            int prevValue = 0;
-
-            // Step 2: Iterate through the string from right to left
-            for (int i = s.Length - 1; i >= 0; i--)
+            // Determine if we should add or subtract the current value
+            if (currentValue < prevValue)
             {
-                int currentValue = romanMap[s[i]];
-
-                // Step 3: Determine if we should add or subtract the current value
-                if (currentValue < prevValue)
-                {
-                    total -= currentValue;
-                }
-                else
-                {
-                    total += currentValue;
-                }
-
-                prevValue = currentValue;
+                total -= currentValue;
+            }
+            else
+            {
+                total += currentValue;
             }
 
-            return total;
+            prevValue = currentValue;
         }
-    }
 
+        return total;
+    }
 }
+
 
 
 //13. Roman to Integer
