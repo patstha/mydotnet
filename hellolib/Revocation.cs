@@ -1,54 +1,58 @@
-﻿using System.IO;
+﻿using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 
-namespace hellolib;
-
-public static class Revocation
+namespace hellolib
 {
-    public static List<string> ReadCsv(string filename)
+    public static class Revocation
     {
-        using StreamReader reader = new(filename);
-        List<string> result = [];
-        while (!reader.EndOfStream)
+        public static List<string> ReadCsv(string filename)
         {
-            string line = reader.ReadLine();
-            string[] values = line.Split(',');
-            result.Add(values[0]);
-        }
-        return result;
-    }
-
-    public static void GetBatches(string filename, int size)
-    {
-        List<string> source = ReadCsv(filename);
-        IEnumerable<IEnumerable<string>> batches = source.Batch(size);
-        foreach (IEnumerable<string> bat in batches)
-        {
-            _ = bat.ToList().Count;
-        }
-    }
-
-    public static IEnumerable<IEnumerable<TSource>> Batch<TSource>(
-                  this IEnumerable<TSource> source, int size)
-    {
-        TSource[] bucket = null;
-        int count = 0;
-
-        foreach (TSource item in source)
-        {
-            bucket ??= new TSource[size];
-            bucket[count++] = item;
-
-            if (count == size)
+            using StreamReader reader = new(filename);
+            List<string> result = new();
+            while (!reader.EndOfStream)
             {
-                yield return bucket;
-                bucket = null;
-                count = 0;
+                string line = reader.ReadLine();
+                string[] values = line.Split(',');
+                result.Add(values[0]);
+            }
+            return result;
+        }
+
+        public static void GetBatches(string filename, int size)
+        {
+            List<string> source = ReadCsv(filename);
+            IEnumerable<IEnumerable<string>> batches = source.Batch(size);
+            foreach (IEnumerable<string> bat in batches)
+            {
+                _ = bat.ToList().Count;
             }
         }
 
-        if (bucket != null && count > 0)
+        public static IEnumerable<IEnumerable<TSource>> Batch<TSource>(
+                      this IEnumerable<TSource> source, int size)
         {
-            yield return bucket.Take(count).ToArray();
+            TSource[] bucket = null;
+            int count = 0;
+
+            foreach (TSource item in source)
+            {
+                bucket ??= new TSource[size];
+                bucket[count++] = item;
+
+                if (count == size)
+                {
+                    yield return bucket;
+                    bucket = null;
+                    count = 0;
+                }
+            }
+
+            if (bucket != null && count > 0)
+            {
+                yield return bucket.Take(count).ToArray();
+            }
         }
     }
 }
