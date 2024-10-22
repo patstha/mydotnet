@@ -7,7 +7,7 @@ public static class Revocation
     public static List<string> ReadCsv(string filename)
     {
         using StreamReader reader = new(filename);
-        List<string> result = new();
+        List<string> result = [];
         while (!reader.EndOfStream)
         {
             string line = reader.ReadLine();
