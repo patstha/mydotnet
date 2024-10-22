@@ -23,7 +23,7 @@ public static class Revocation
         IEnumerable<IEnumerable<string>> batches = source.Batch(size);
         foreach (IEnumerable<string> bat in batches)
         {
-            int x = bat.ToList().Count;
+            _ = bat.ToList().Count;
         }
     }
 
