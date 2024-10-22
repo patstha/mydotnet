@@ -5,8 +5,7 @@
         public static int RomanToInt(string s)
         {
             // Step 1: Create a dictionary to map Roman numerals to their integer values
-            Dictionary<char, int> romanMap = new Dictionary<char, int>
-        {
+            Dictionary<char, int> romanMap = new Dictionary<char, int> {
             {'I', 1},
             {'V', 5},
             {'X', 10},
@@ -16,23 +15,28 @@
             {'M', 1000}
         };
 
-            int result = 0;
+            int total = 0;
+            int prevValue = 0;
 
-            // Step 2: Iterate through the string
-            for (int i = 0; i < s.Length; i++)
+            // Step 2: Iterate through the string from right to left
+            for (int i = s.Length - 1; i >= 0; i--)
             {
-                // Step 3: Handle the subtraction cases
-                if (i < s.Length - 1 && romanMap[s[i]] < romanMap[s[i + 1]])
+                int currentValue = romanMap[s[i]];
+
+                // Step 3: Determine if we should add or subtract the current value
+                if (currentValue < prevValue)
                 {
-                    result -= romanMap[s[i]];
+                    total -= currentValue;
                 }
                 else
                 {
-                    result += romanMap[s[i]];
+                    total += currentValue;
                 }
+
+                prevValue = currentValue;
             }
 
-            return result;
+            return total;
         }
     }
 
