@@ -1,37 +1,70 @@
 ﻿using System.Collections.Generic;
+using System.IO;
+using System.Linq;
 
-namespace tests;
-
-public class RevocationTests
+namespace tests
 {
-    [Fact]
-    public void Freebie()
+    public class RevocationTests
     {
-        Assert.True(true);
-    }
+        [Fact]
+        public void Freebie()
+        {
+            Assert.True(true);
+        }
 
-    [Fact]
-    public void ReadCsv_ShouldReturnTokens()
-    {
-        // arrange
-        string filename = "authorizations.csv";
+        [Fact]
+        public void ReadCsv_ShouldReturnTokens()
+        {
+            // arrange
+            string filename = "authorizations.csv";
 
-        // act
-        List<string> authorizationIds = Revocation.ReadCsv(filename);
+            // act
+            List<string> authorizationIds = Revocation.ReadCsv(filename);
 
-        // assert
-        authorizationIds.Count.Should().Be(187749);
-    }
+            // assert
+            authorizationIds.Count.Should().Be(187749);
+        }
 
-    [Fact]
-    public void GetBatches()
-    {
-        // arrange
-        string filename = "authorizations.csv";
+        [Fact]
+        public void ReadCsv_ShouldHandleEmptyFile()
+        {
+            // arrange
+            string filename = "empty.csv";
+            File.WriteAllText(filename, string.Empty);
 
-        // act
-        Revocation.GetBatches(filename, 10);
+            // act
+            List<string> authorizationIds = Revocation.ReadCsv(filename);
 
-        Assert.True(true);
+            // assert
+            authorizationIds.Should().BeEmpty();
+        }
+
+        [Fact]
+        public void Batch_ShouldBatchItemsCorrectly()
+        {
+            // arrange
+            List<int> numbers = new() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+
+            // act
+            IEnumerable<IEnumerable<int>> batches = numbers.Batch(3);
+
+            // assert
+            batches.Should().HaveCount(4);
+            batches.First().Should().Equal(1, 2, 3);
+        }
+
+        [Fact]
+        public void GetBatches_ShouldWorkWithDifferentSizes()
+        {
+            // arrange
+            string filename = "authorizations.csv";
+
+            // act
+            Revocation.GetBatches(filename, 5);
+            Revocation.GetBatches(filename, 20);
+
+            // assert
+            Assert.True(true); // Just to ensure no exceptions are thrown
+        }
     }
 }
