@@ -4,8 +4,24 @@ public static class RomanToInteger
 {
     public static int RomanToInt(string s)
     {
-
-        return 0;
+        Dictionary<string, int> keyValuePairs = [];
+        keyValuePairs.Add("I", 1);
+        keyValuePairs.Add("V", 5);
+        keyValuePairs.Add("X", 10);
+        keyValuePairs.Add("L", 50);
+        keyValuePairs.Add("C", 100);
+        keyValuePairs.Add("D", 500);
+        keyValuePairs.Add("M", 1000);
+        int result = 0;
+        foreach (char c in s)
+        {
+            if (keyValuePairs.ContainsKey(c.ToString()))
+            {
+                keyValuePairs.TryGetValue(c.ToString(), out int workingResult);
+                result += workingResult;
+            }
+        }
+        return result;
     }
 }
 
