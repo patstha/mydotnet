@@ -80,4 +80,69 @@ public class RomanToIntegerTests
         // assert 
         actual.Should().Be(expected);
     }
+    [Fact]
+    public void RomanToInt_ShouldReturn_kus3()
+    {
+        // arrange 
+        string s = "XIV";
+        int expected = 14;
+
+        // act 
+        int actual = RomanToInteger.RomanToInt(s);
+
+        // assert 
+        actual.Should().Be(expected);
+    }
+    [Fact]
+    public void RomanToInt_ShouldReturn_kus4()
+    {
+        // arrange 
+        string s = "XCIX";
+        int expected = 99;
+
+        // act 
+        int actual = RomanToInteger.RomanToInt(s);
+
+        // assert 
+        actual.Should().Be(expected);
+    }
+    [Fact]
+    public void RomanToInt_ShouldReturn_kus5()
+    {
+        // arrange 
+        string s = "XCIII";
+        int expected = 93;
+
+        // act 
+        int actual = RomanToInteger.RomanToInt(s);
+
+        // assert 
+        actual.Should().Be(expected);
+    }
+    [Fact]
+    public void RomanToInt_ShouldReturn_kus6()
+    {
+        // arrange 
+        string s = "XCVI";
+        int expected = 96;
+
+        // act 
+        int actual = RomanToInteger.RomanToInt(s);
+
+        // assert 
+        actual.Should().Be(expected);
+    }
+    [Fact]
+    public void RomanToInt_ShouldReturn_kus7()
+    {
+        // arrange 
+        string s = "LXIX";
+        int expected = 69;
+
+        // act 
+        int actual = RomanToInteger.RomanToInt(s);
+
+        // assert 
+        actual.Should().Be(expected);
+    }
 }

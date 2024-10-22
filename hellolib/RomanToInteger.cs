@@ -13,11 +13,23 @@ public static class RomanToInteger
         keyValuePairs.Add("D", 500);
         keyValuePairs.Add("M", 1000);
         int result = 0;
-        foreach (char c in s)
+
+        // lets enumerate our special cases
+        // if it contains IV, IX, XL, XC, CD, CM, do something special
+        for (int i = 0; i < s.Length; i++)
         {
-            if (keyValuePairs.ContainsKey(c.ToString()))
+            if (keyValuePairs.ContainsKey(s[i].ToString()))
             {
-                keyValuePairs.TryGetValue(c.ToString(), out int workingResult);
+                keyValuePairs.TryGetValue(s[i].ToString(), out int workingResult);
+                if (i < s.Length - 1)
+                {
+                    keyValuePairs.TryGetValue(s[i + 1].ToString(), out int nextWorkingResult);
+                    if (workingResult < nextWorkingResult)
+                    {
+                        result -= workingResult;
+                        continue;
+                    }
+                }
                 result += workingResult;
             }
         }
