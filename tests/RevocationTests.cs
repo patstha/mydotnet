@@ -43,7 +43,7 @@ namespace tests
         public void Batch_ShouldBatchItemsCorrectly()
         {
             // arrange
-            List<int> numbers = new() { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+            List<int> numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
             // act
             IEnumerable<IEnumerable<int>> batches = numbers.Batch(3);
