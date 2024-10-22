@@ -67,4 +67,17 @@ public class RomanToIntegerTests
         // assert 
         actual.Should().Be(expected);
     }
+    [Fact]
+    public void RomanToInt_ShouldReturn_kus2()
+    {
+        // arrange 
+        string s = "IV";
+        int expected = 4;
+
+        // act 
+        int actual = RomanToInteger.RomanToInt(s);
+
+        // assert 
+        actual.Should().Be(expected);
+    }
 }
