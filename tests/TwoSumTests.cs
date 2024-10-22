@@ -101,7 +101,7 @@ public class TwoSumTests
         { Array19, 20 },
         { Array19, 30 },
         { Array19, 40 },
-                    { Array19, 50 },
+        { Array19, 50 },
         { Array19, 60 },
         { Array19, 70 },
         { Array19, 80 },
