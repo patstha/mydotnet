@@ -35,6 +35,7 @@ public class DesignDynamicArrayTests
                     newValues[i] = values[i];
                 }
                 values = newValues;
+                values[values.Length - 1] = n;
             }
         }
 
@@ -92,6 +93,52 @@ public class DesignDynamicArrayTests
         size.Should().Be(0);
         int capacity = dynamicArray.GetCapacity();
         capacity.Should().Be(1);
+    }
+    [Fact]
+    public void PushbackGetCapcityPushBackGetCapacity_ShouldReturn()
+    {
+        // input ["Array", 1, "pushback", 1, "getCapacity", "pushback", 2, "getCapacity"]
+        // expected [null,null,1,null,2]
+
+        DynamicArray dynamicArray = new(1);
+        dynamicArray.PushBack(1);
+        int capacity = dynamicArray.GetCapacity();
+        capacity.Should().Be(1);
+        dynamicArray.PushBack(1);
+        capacity = dynamicArray.GetCapacity();
+        capacity.Should().Be(2);
+    }
+
+    [Fact]
+    public void PushbackPopback_ShouldReturn()
+    {
+        // input ["Array", 1, "getSize", "getCapacity", "pushback", 1, "getSize", "getCapacity", "pushback", 2, "getSize", "getCapacity", "get", 1, "set", 1, 3, "get", 1, "popback", "getSize", "getCapacity"]
+        // expected [null,0,1,null,1,1,null,2,2,2,null,3,3,1,2]
+
+        DynamicArray dynamicArray = new(1);
+        int size = dynamicArray.GetSize();
+        size.Should().Be(0);
+        int capacity = dynamicArray.GetCapacity();
+        capacity.Should().Be(1);
+        dynamicArray.PushBack(1);
+        size = dynamicArray.GetSize();
+        size.Should().Be(1);
+        capacity = dynamicArray.GetCapacity();
+        capacity.Should().Be(1);
+        dynamicArray.PushBack(2);
+        size = dynamicArray.GetSize();
+        size.Should().Be(2);
+        capacity = dynamicArray.GetCapacity();
+        capacity.Should().Be(2);
+        int get = dynamicArray.Get(1);
+        get.Should().Be(2);
+        dynamicArray.Set(1, 3);
+        int pop = dynamicArray.PopBack();
+        pop.Should().Be(3);
+        size = dynamicArray.GetSize();
+        size.Should().Be(1);
+        capacity = dynamicArray.GetCapacity();
+        capacity.Should().Be(2);
     }
 
 }
