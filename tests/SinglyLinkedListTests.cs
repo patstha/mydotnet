@@ -24,7 +24,7 @@ public class SinglyLinkedListTests
             {
                 placeholder = placeholder.Next;
             }
-            return placeholder.Value ?? 0;
+            return placeholder.Value ?? -1;
         }
 
         public void InsertHead(int val)
@@ -55,7 +55,7 @@ public class SinglyLinkedListTests
         public bool Remove(int index)
         {
             Node placeholder = node;
-            for (int i = 0; i < index; i++)
+            for (int i = 0; i < index - 1; i++)
             {
                 if (placeholder == null)
                 {
@@ -68,7 +68,7 @@ public class SinglyLinkedListTests
 
         public List<int> GetValues()
         {
-            List<int> results = new();
+            List<int> results = [];
             Node placeholder = node;
             while (placeholder != null && placeholder.Value != null)
             {
@@ -91,10 +91,25 @@ public class SinglyLinkedListTests
         LinkedList linkedList = new();
         linkedList.InsertHead(1);
         linkedList.InsertTail(2);
+        linkedList.InsertHead(0);
         bool removed = linkedList.Remove(1);
         removed.Should().BeTrue();
         List<int> actual = linkedList.GetValues();
         actual.Should().BeEquivalentTo(expected);
+    }
+
+    [Fact]
+    public void InsertHeadInsertHeadGet_ShouldReturn()
+    {
+        // input ["insertHead", 1, "insertHead", 2, "get", 5]
+        // expected [null,null,-1]
+
+        LinkedList linkedList = new ();
+        linkedList.InsertHead(1);
+        linkedList.InsertHead(2);
+        int actual = linkedList.Get(5);
+
+        actual.Should().Be(-1);
     }
 }
 
