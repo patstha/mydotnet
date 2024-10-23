@@ -6,89 +6,103 @@ public class SinglyLinkedListTests
 {
     public class Node
     {
-        public int? Value { get; set; } = null;
-        public Node Next { get; set; } = null;
+        public int? Value { get; set; }
+        public Node Next { get; set; }
     }
+
     public class LinkedList
     {
-        private Node node;
+        private Node head;
+
         public LinkedList()
         {
-            node = new();
+            head = null;
         }
 
         public int Get(int index)
         {
-            Node placeholder = node;
+            Node current = head;
             for (int i = 0; i < index; i++)
             {
-                placeholder = placeholder.Next;
+                if (current == null) return -1;
+                current = current.Next;
             }
-            return placeholder.Value ?? -1;
+            return current?.Value ?? -1;
         }
 
         public void InsertHead(int val)
         {
-            Node placeholder = node;
-            Node newNode = new()
+            Node newNode = new Node
             {
                 Value = val,
-                Next = placeholder
+                Next = head
             };
-            node = newNode;
+            head = newNode;
         }
 
         public void InsertTail(int val)
         {
-            Node placeholder = node;
-            while (placeholder != null)
-            {
-                placeholder = placeholder.Next;
-            }
-            placeholder = new()
+            Node newNode = new Node
             {
                 Value = val,
                 Next = null
             };
+
+            if (head == null)
+            {
+                head = newNode;
+            }
+            else
+            {
+                Node current = head;
+                while (current.Next != null)
+                {
+                    current = current.Next;
+                }
+                current.Next = newNode;
+            }
         }
 
         public bool Remove(int index)
         {
-            Node placeholder = node;
+            if (index == 0)
+            {
+                if (head == null) return false;
+                head = head.Next;
+                return true;
+            }
+
+            Node current = head;
             for (int i = 0; i < index - 1; i++)
             {
-                if (placeholder == null)
-                {
-                    return false;
-                }
+                if (current == null || current.Next == null) return false;
+                current = current.Next;
             }
-            placeholder = placeholder.Next;
+
+            if (current.Next == null) return false;
+            current.Next = current.Next.Next;
             return true;
         }
 
         public List<int> GetValues()
         {
-            List<int> results = [];
-            Node placeholder = node;
-            while (placeholder != null && placeholder.Value != null)
+            List<int> results = new List<int>();
+            Node current = head;
+            while (current != null)
             {
-                results.Add(placeholder.Value ?? 0);
-                placeholder = placeholder.Next;
+                results.Add(current.Value ?? 0);
+                current = current.Next;
             }
             return results;
         }
     }
 
     [Fact]
-    public void InsertHeadInsertTaiilRemove_ShouldReturnOneValue()
+    public void InsertHeadInsertTailRemove_ShouldReturnOneValue()
     {
-        // input ["insertHead", 1, "insertTail", 2, "insertHead", 0, "remove", 1, "getValues"]
-        // expected [null,null,null,true,[0, 2]]
-        // actual [null,null,null,true,[0, 1]]
+        List<int> expected = new List<int> { 0, 2 };
 
-        List<int> expected = [0, 2];
-
-        LinkedList linkedList = new();
+        LinkedList linkedList = new LinkedList();
         linkedList.InsertHead(1);
         linkedList.InsertTail(2);
         linkedList.InsertHead(0);
@@ -101,10 +115,7 @@ public class SinglyLinkedListTests
     [Fact]
     public void InsertHeadInsertHeadGet_ShouldReturn()
     {
-        // input ["insertHead", 1, "insertHead", 2, "get", 5]
-        // expected [null,null,-1]
-
-        LinkedList linkedList = new ();
+        LinkedList linkedList = new LinkedList();
         linkedList.InsertHead(1);
         linkedList.InsertHead(2);
         int actual = linkedList.Get(5);
