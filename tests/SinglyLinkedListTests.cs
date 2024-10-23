@@ -4,105 +4,12 @@ namespace tests;
 
 public class SinglyLinkedListTests
 {
-    public class Node
-    {
-        public int? Value { get; set; }
-        public Node Next { get; set; }
-    }
-
-    public class LinkedList
-    {
-        private Node head;
-
-        public LinkedList()
-        {
-            head = null;
-        }
-
-        public int Get(int index)
-        {
-            Node current = head;
-            for (int i = 0; i < index; i++)
-            {
-                if (current == null) return -1;
-                current = current.Next;
-            }
-            return current?.Value ?? -1;
-        }
-
-        public void InsertHead(int val)
-        {
-            Node newNode = new Node
-            {
-                Value = val,
-                Next = head
-            };
-            head = newNode;
-        }
-
-        public void InsertTail(int val)
-        {
-            Node newNode = new Node
-            {
-                Value = val,
-                Next = null
-            };
-
-            if (head == null)
-            {
-                head = newNode;
-            }
-            else
-            {
-                Node current = head;
-                while (current.Next != null)
-                {
-                    current = current.Next;
-                }
-                current.Next = newNode;
-            }
-        }
-
-        public bool Remove(int index)
-        {
-            if (index == 0)
-            {
-                if (head == null) return false;
-                head = head.Next;
-                return true;
-            }
-
-            Node current = head;
-            for (int i = 0; i < index - 1; i++)
-            {
-                if (current == null || current.Next == null) return false;
-                current = current.Next;
-            }
-
-            if (current.Next == null) return false;
-            current.Next = current.Next.Next;
-            return true;
-        }
-
-        public List<int> GetValues()
-        {
-            List<int> results = new List<int>();
-            Node current = head;
-            while (current != null)
-            {
-                results.Add(current.Value ?? 0);
-                current = current.Next;
-            }
-            return results;
-        }
-    }
-
     [Fact]
     public void InsertHeadInsertTailRemove_ShouldReturnOneValue()
     {
         List<int> expected = new List<int> { 0, 2 };
 
-        LinkedList linkedList = new LinkedList();
+        SinglyLinkedList linkedList = new SinglyLinkedList();
         linkedList.InsertHead(1);
         linkedList.InsertTail(2);
         linkedList.InsertHead(0);
@@ -115,7 +22,7 @@ public class SinglyLinkedListTests
     [Fact]
     public void InsertHeadInsertHeadGet_ShouldReturn()
     {
-        LinkedList linkedList = new LinkedList();
+        SinglyLinkedList linkedList = new SinglyLinkedList();
         linkedList.InsertHead(1);
         linkedList.InsertHead(2);
         int actual = linkedList.Get(5);

@@ -2,72 +2,10 @@
 
 public class DesignDynamicArrayTests
 {
-    public class DynamicArray
-    {
-        int?[] values;
-        int size;
-
-        public DynamicArray(int capacity)
-        {
-            values = new int?[capacity];
-            size = 0;
-        }
-
-        public int Get(int i)
-        {
-            return values[i] ?? 0;
-        }
-
-        public void Set(int i, int n)
-        {
-            values[i] = n;
-        }
-
-        public void PushBack(int n)
-        {
-            if (size == values.Length)
-            {
-                Resize();
-            }
-            values[size] = n;
-            size++;
-        }
-
-        public int PopBack()
-        {
-            if (size == 0) throw new InvalidOperationException("Array is empty.");
-            int? returnValue = values[size - 1];
-            values[size - 1] = null;
-            size--;
-            return returnValue ?? 0;
-        }
-
-        private void Resize()
-        {
-            int capacity = values.Length * 2;
-            int?[] newValues = new int?[capacity];
-            for (int i = 0; i < values.Length; i++)
-            {
-                newValues[i] = values[i];
-            }
-            values = newValues;
-        }
-
-        public int GetSize()
-        {
-            return size;
-        }
-
-        public int GetCapacity()
-        {
-            return values.Length;
-        }
-    }
-
     [Fact]
     public void GetSizeGetCapacity_ShouldReturn()
     {
-        DynamicArray dynamicArray = new(1);
+        DesignDynamicArray dynamicArray = new(1);
         int size = dynamicArray.GetSize();
         size.Should().Be(0);
         int capacity = dynamicArray.GetCapacity();
@@ -77,7 +15,7 @@ public class DesignDynamicArrayTests
     [Fact]
     public void PushbackGetCapacityPushBackGetCapacity_ShouldReturn()
     {
-        DynamicArray dynamicArray = new(1);
+        DesignDynamicArray dynamicArray = new(1);
         dynamicArray.PushBack(1);
         int capacity = dynamicArray.GetCapacity();
         capacity.Should().Be(1);
@@ -89,7 +27,7 @@ public class DesignDynamicArrayTests
     [Fact]
     public void PushbackPopback_ShouldReturn()
     {
-        DynamicArray dynamicArray = new(1);
+        DesignDynamicArray dynamicArray = new(1);
         int size = dynamicArray.GetSize();
         size.Should().Be(0);
         int capacity = dynamicArray.GetCapacity();
