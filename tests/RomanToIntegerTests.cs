@@ -124,4 +124,30 @@ public class RomanToIntegerTests
         // assert 
         actual.Should().BeTrue();
     }
+
+    [Fact]
+    public void IsValidRomanNumeral_ShouldReturnTrue_ForCombinationVI()
+    {
+        // arrange 
+        string s = "VI";
+
+        // act 
+        bool actual = RomanToInteger.IsValidRomanNumeral(s);
+
+        // assert 
+        actual.Should().BeTrue();
+    }
+
+    [Fact]
+    public void IsValidRomanNumeral_ShouldReturnFalse_ForCombination()
+    {
+        // arrange 
+        string s = "XD";
+
+        // act 
+        bool actual = RomanToInteger.IsValidRomanNumeral(s);
+
+        // assert 
+        actual.Should().BeFalse();
+    }
 }
