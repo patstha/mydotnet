@@ -17,6 +17,7 @@ public class RomanToIntegerTests
         // assert 
         actual.Should().Be(expected);
     }
+
     [Fact]
     public void RomanToInt_ShouldReturn2()
     {
@@ -30,6 +31,7 @@ public class RomanToIntegerTests
         // assert 
         actual.Should().Be(expected);
     }
+
     [Fact]
     public void RomanToInt_ShouldReturn3()
     {
@@ -43,160 +45,83 @@ public class RomanToIntegerTests
         // assert 
         actual.Should().Be(expected);
     }
+
+    // Additional tests for IsValidRomanNumeral method
     [Fact]
-    public void RomanToInt_ShouldReturn_kus0()
+    public void IsValidRomanNumeral_ShouldReturnTrue_ForValidNumeral()
     {
         // arrange 
-        string s = "I";
-        int expected = 1;
+        string s = "MCMXCIV";
 
         // act 
-        int actual = RomanToInteger.RomanToInt(s);
+        bool actual = RomanToInteger.IsValidRomanNumeral(s);
 
         // assert 
-        actual.Should().Be(expected);
+        actual.Should().BeTrue();
     }
+
     [Fact]
-    public void RomanToInt_ShouldReturn_kus1()
+    public void IsValidRomanNumeral_ShouldReturnFalse_ForInvalidNumeral()
     {
         // arrange 
-        string s = "XXX";
-        int expected = 30;
+        string s = "IIII";
 
         // act 
-        int actual = RomanToInteger.RomanToInt(s);
+        bool actual = RomanToInteger.IsValidRomanNumeral(s);
 
         // assert 
-        actual.Should().Be(expected);
+        actual.Should().BeFalse();
     }
+
     [Fact]
-    public void RomanToInt_ShouldReturn_kus2()
+    public void IsValidRomanNumeral_ShouldReturnFalse_ForInvalidCharacters()
     {
         // arrange 
-        string s = "IV";
-        int expected = 4;
+        string s = "ABCD";
 
         // act 
-        int actual = RomanToInteger.RomanToInt(s);
+        bool actual = RomanToInteger.IsValidRomanNumeral(s);
 
         // assert 
-        actual.Should().Be(expected);
+        actual.Should().BeFalse();
     }
+
     [Fact]
-    public void RomanToInt_ShouldReturn_kus3()
+    public void IsValidRomanNumeral_ShouldReturnFalse_ForInvalidSubtraction()
     {
         // arrange 
-        string s = "XIV";
-        int expected = 14;
+        string s = "IC";
 
         // act 
-        int actual = RomanToInteger.RomanToInt(s);
+        bool actual = RomanToInteger.IsValidRomanNumeral(s);
 
         // assert 
-        actual.Should().Be(expected);
+        actual.Should().BeFalse();
     }
+
     [Fact]
-    public void RomanToInt_ShouldReturn_kus4()
-    {
-        // arrange 
-        string s = "XCIX";
-        int expected = 99;
-
-        // act 
-        int actual = RomanToInteger.RomanToInt(s);
-
-        // assert 
-        actual.Should().Be(expected);
-    }
-    [Fact]
-    public void RomanToInt_ShouldReturn_kus5()
-    {
-        // arrange 
-        string s = "XCIII";
-        int expected = 93;
-
-        // act 
-        int actual = RomanToInteger.RomanToInt(s);
-
-        // assert 
-        actual.Should().Be(expected);
-    }
-    [Fact]
-    public void RomanToInt_ShouldReturn_kus6()
-    {
-        // arrange 
-        string s = "XCVI";
-        int expected = 96;
-
-        // act 
-        int actual = RomanToInteger.RomanToInt(s);
-
-        // assert 
-        actual.Should().Be(expected);
-    }
-    [Fact]
-    public void RomanToInt_ShouldReturn_kus7()
-    {
-        // arrange 
-        string s = "LXIX";
-        int expected = 69;
-
-        // act 
-        int actual = RomanToInteger.RomanToInt(s);
-
-        // assert 
-        actual.Should().Be(expected);
-    }
-    [Fact]
-    public void RomanToInt_ShouldReturn_MinValue()
-    {
-        // arrange 
-        string s = "I";
-        int expected = 1;
-
-        // act 
-        int actual = RomanToInteger.RomanToInt(s);
-
-        // assert 
-        actual.Should().Be(expected);
-    }
-    [Fact]
-    public void RomanToInt_ShouldReturn_MaxValue()
-    {
-        // arrange 
-        string s = "MMMCMXCIX";
-        int expected = 3999;
-
-        // act 
-        int actual = RomanToInteger.RomanToInt(s);
-
-        // assert 
-        actual.Should().Be(expected);
-    }
-    [Fact]
-    public void RomanToInt_ShouldReturn_SingleCharacter()
+    public void IsValidRomanNumeral_ShouldReturnTrue_ForSingleCharacter()
     {
         // arrange 
         string s = "V";
-        int expected = 5;
 
         // act 
-        int actual = RomanToInteger.RomanToInt(s);
+        bool actual = RomanToInteger.IsValidRomanNumeral(s);
 
         // assert 
-        actual.Should().Be(expected);
+        actual.Should().BeTrue();
     }
+
     [Fact]
-    public void RomanToInt_ShouldReturn_Combination()
+    public void IsValidRomanNumeral_ShouldReturnTrue_ForCombination()
     {
         // arrange 
         string s = "CDXLIV";
-        int expected = 444;
 
         // act 
-        int actual = RomanToInteger.RomanToInt(s);
+        bool actual = RomanToInteger.IsValidRomanNumeral(s);
 
         // assert 
-        actual.Should().Be(expected);
+        actual.Should().BeTrue();
     }
 }

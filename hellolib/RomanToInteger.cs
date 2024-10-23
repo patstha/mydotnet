@@ -39,7 +39,48 @@ public static class RomanToInteger
 
         return total;
     }
+
+    public static bool IsValidRomanNumeral(string s)
+    {
+        if (string.IsNullOrEmpty(s)) return false;
+
+        // Check for valid characters
+        foreach (char c in s)
+        {
+            if (!RomanMap.ContainsKey(c))
+            {
+                return false;
+            }
+        }
+
+        // Check for valid sequences
+        string[] invalidSequences = { "IIII", "VV", "XXXX", "LL", "CCCC", "DD", "MMMM" };
+        foreach (string seq in invalidSequences)
+        {
+            if (s.Contains(seq))
+            {
+                return false;
+            }
+        }
+
+        // Check for valid subtraction rules
+        string[] validSubtractions = { "IV", "IX", "XL", "XC", "CD", "CM" };
+        for (int i = 0; i < s.Length - 1; i++)
+        {
+            if (RomanMap[s[i]] < RomanMap[s[i + 1]])
+            {
+                string pair = s.Substring(i, 2);
+                if (!validSubtractions.Contains(pair))
+                {
+                    return false;
+                }
+            }
+        }
+
+        return true;
+    }
 }
+
 
 
 
