@@ -5,9 +5,12 @@ public class DesignDynamicArrayTests
     public class DynamicArray
     {
         int?[] values;
+        int size;
+
         public DynamicArray(int capacity)
         {
             values = new int?[capacity];
+            size = 0;
         }
 
         public int Get(int i)
@@ -22,52 +25,37 @@ public class DesignDynamicArrayTests
 
         public void PushBack(int n)
         {
-            if (values[values.Length - 1] == null)
+            if (size == values.Length)
             {
-                values[values.Length - 1] = n;
-            } else
-            {
-                int capacity = values.Length;
-                capacity++;
-                int?[] newValues = new int?[capacity];
-                for (int i = 0; i < values.Length; i++)
-                {
-                    newValues[i] = values[i];
-                }
-                values = newValues;
-                values[values.Length - 1] = n;
+                Resize();
             }
+            values[size] = n;
+            size++;
         }
 
         public int PopBack()
         {
-            int? returnvalue = values[values.Length - 1];
-            values[values.Length - 1] = null;
-            return returnvalue ?? 0;
+            if (size == 0) throw new InvalidOperationException("Array is empty.");
+            int? returnValue = values[size - 1];
+            values[size - 1] = null;
+            size--;
+            return returnValue ?? 0;
         }
 
         private void Resize()
         {
-            int capacity = values.Length;
-            capacity *= 2;
+            int capacity = values.Length * 2;
             int?[] newValues = new int?[capacity];
             for (int i = 0; i < values.Length; i++)
             {
                 newValues[i] = values[i];
             }
+            values = newValues;
         }
 
         public int GetSize()
         {
-            int counter = 0;
-            for (int i = 0; i < values.Length; i++)
-            {
-                if (values[i] != null)
-                {
-                    counter++; 
-                }
-            }
-            return counter;
+            return size;
         }
 
         public int GetCapacity()
@@ -79,32 +67,21 @@ public class DesignDynamicArrayTests
     [Fact]
     public void GetSizeGetCapacity_ShouldReturn()
     {
-        //Accepted
-        //Passed test cases: 2 / 3
-        //Input:
-        //["Array", 1, "getSize", "getCapacity"]
-        //Your Output:
-        //[null, 0, 1]
-        //Expected output:
-        //[null, 0, 1]
-
         DynamicArray dynamicArray = new(1);
         int size = dynamicArray.GetSize();
         size.Should().Be(0);
         int capacity = dynamicArray.GetCapacity();
         capacity.Should().Be(1);
     }
-    [Fact]
-    public void PushbackGetCapcityPushBackGetCapacity_ShouldReturn()
-    {
-        // input ["Array", 1, "pushback", 1, "getCapacity", "pushback", 2, "getCapacity"]
-        // expected [null,null,1,null,2]
 
+    [Fact]
+    public void PushbackGetCapacityPushBackGetCapacity_ShouldReturn()
+    {
         DynamicArray dynamicArray = new(1);
         dynamicArray.PushBack(1);
         int capacity = dynamicArray.GetCapacity();
         capacity.Should().Be(1);
-        dynamicArray.PushBack(1);
+        dynamicArray.PushBack(2);
         capacity = dynamicArray.GetCapacity();
         capacity.Should().Be(2);
     }
@@ -112,9 +89,6 @@ public class DesignDynamicArrayTests
     [Fact]
     public void PushbackPopback_ShouldReturn()
     {
-        // input ["Array", 1, "getSize", "getCapacity", "pushback", 1, "getSize", "getCapacity", "pushback", 2, "getSize", "getCapacity", "get", 1, "set", 1, 3, "get", 1, "popback", "getSize", "getCapacity"]
-        // expected [null,0,1,null,1,1,null,2,2,2,null,3,3,1,2]
-
         DynamicArray dynamicArray = new(1);
         int size = dynamicArray.GetSize();
         size.Should().Be(0);
@@ -140,8 +114,8 @@ public class DesignDynamicArrayTests
         capacity = dynamicArray.GetCapacity();
         capacity.Should().Be(2);
     }
-
 }
+
 
 
 //Design Dynamic Array(Resizable Array)
