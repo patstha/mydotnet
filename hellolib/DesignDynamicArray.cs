@@ -1,62 +1,62 @@
 ﻿namespace hellolib;
 public class DesignDynamicArray
 {
-    int?[] values;
-    int size;
+    int?[] _values;
+    int _size;
 
     public DesignDynamicArray(int capacity)
     {
-        values = new int?[capacity];
-        size = 0;
+        _values = new int?[capacity];
+        _size = 0;
     }
 
     public int Get(int i)
     {
-        return values[i] ?? 0;
+        return _values[i] ?? 0;
     }
 
     public void Set(int i, int n)
     {
-        values[i] = n;
+        _values[i] = n;
     }
 
     public void PushBack(int n)
     {
-        if (size == values.Length)
+        if (_size == _values.Length)
         {
             Resize();
         }
-        values[size] = n;
-        size++;
+        _values[_size] = n;
+        _size++;
     }
 
     public int PopBack()
     {
-        if (size == 0) throw new InvalidOperationException("Array is empty.");
-        int? returnValue = values[size - 1];
-        values[size - 1] = null;
-        size--;
+        if (_size == 0) throw new InvalidOperationException("Array is empty.");
+        int? returnValue = _values[_size - 1];
+        _values[_size - 1] = null;
+        _size--;
         return returnValue ?? 0;
     }
 
     private void Resize()
     {
-        int capacity = values.Length * 2;
+        int capacity = _values.Length * 2;
         int?[] newValues = new int?[capacity];
-        for (int i = 0; i < values.Length; i++)
+        for (int i = 0; i < _values.Length; i++)
         {
-            newValues[i] = values[i];
+            newValues[i] = _values[i];
         }
-        values = newValues;
+        _values = newValues;
     }
 
     public int GetSize()
     {
-        return size;
+        return _size;
     }
 
     public int GetCapacity()
     {
-        return values.Length;
+        return _values.Length;
     }
 }

@@ -5,8 +5,8 @@ public class PersonTests
     [Fact]
     public void CreatePersonWithName_ShouldSucceed_WhenPasswordMatchesMinimumLength()
     {
-        int MINIMUM_PASSWORD_LENGTH = 8;
-        Person person = PersonFactory.Create("", new string('X', MINIMUM_PASSWORD_LENGTH));
+        const int minimumPasswordLength = 8;
+        Person person = PersonFactory.Create("", new string('X', minimumPasswordLength));
         person.Name.Should().Be("");
         person.CreatedBy.Should().Be("System");
     }
@@ -16,9 +16,9 @@ public class PersonTests
     public void CreatePersonWithName_ShouldSucceed_WhenPasswordIsBetweenMinimumAndMaximumLength()
     {
         // Arrange
-        int MINIMUM_PASSWORD_LENGTH = 8;
-        int MAXIMUM_PASSWORD_LENGTH = 128;
-        for (int i = 0; i > MINIMUM_PASSWORD_LENGTH && i < MAXIMUM_PASSWORD_LENGTH; i++) 
+        const int minimumPasswordLength = 8;
+        const int maximumPasswordLength = 128;
+        for (int i = 0; i is > minimumPasswordLength and < maximumPasswordLength; i++) 
         {
             Person person = PersonFactory.Create("", new string('X', i));
             person.Name.Should().Be("");
@@ -29,8 +29,8 @@ public class PersonTests
     [Fact]
     public void CreatePersonWithName_ShouldSucceed_WhenPasswordMatchesMaximumLength()
     {
-        int MAXIMUM_PASSWORD_LENGTH = 128;
-        Person person = PersonFactory.Create("", new string('X', MAXIMUM_PASSWORD_LENGTH));
+        const int maximumPasswordLength = 128;
+        Person person = PersonFactory.Create("", new string('X', maximumPasswordLength));
         person.Name.Should().Be("");
         person.CreatedBy.Should().Be("System");
     }
@@ -60,13 +60,13 @@ public class PersonTests
     public void ShortOrLongPasswordsFail(string name, string password)
     {
         // Arrange
-        int MINIMUM_PASSWORD_LENGTH = 8;
-        int MAXIMUM_PASSWORD_LENGTH = 128;
+        const int minimumPasswordLength = 8;
+        const int maximumPasswordLength = 128;
 
         // Act
         Action act = () => PersonFactory.Create(name, password);
 
         // Assert
-        act.Should().Throw<ArgumentException>().WithMessage($"The password provided to create user {name} is not valid. A password must have a minimum length no shorter than {MINIMUM_PASSWORD_LENGTH} and no longer than {MAXIMUM_PASSWORD_LENGTH}.");
+        act.Should().Throw<ArgumentException>().WithMessage($"The password provided to create user {name} is not valid. A password must have a minimum length no shorter than {minimumPasswordLength} and no longer than {maximumPasswordLength}.");
     }
 }

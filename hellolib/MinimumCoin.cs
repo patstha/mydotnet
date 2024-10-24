@@ -1,9 +1,9 @@
 namespace hellolib;
 
-public class MinimumCoin(List<int> CoinSet, int RepeatFactor)
+public class MinimumCoin(List<int> coinSet, int repeatFactor)
 {
-    public List<int> CoinSet { get; private set; } = CoinSet;
-    public int RepeatFactor { get; private set; } = RepeatFactor;
+    public List<int> CoinSet { get; private set; } = coinSet;
+    public int RepeatFactor { get; private set; } = repeatFactor;
 
     private static IEnumerable<IEnumerable<T>> SubSetsOf<T>(IEnumerable<T> source)
     {

@@ -6,20 +6,20 @@ namespace hellobenchamarks;
 public class BubbleVsMerge
 {
     private const int N = 10000;
-    private readonly int[] data;
+    private readonly int[] _data;
     public BubbleVsMerge()
     {
-        data = new int[N];
+        _data = new int[N];
         Random randNum = new();
-        for (int i = 0; i < data.Length; i++)
+        for (int i = 0; i < _data.Length; i++)
         {
-            data[i] = randNum.Next(0, 100000);
+            _data[i] = randNum.Next(0, 100000);
         }
     }
 
     [Benchmark]
-    public void Bubble() => BubbleSort.SortIntegers(data);
+    public void Bubble() => BubbleSort.SortIntegers(_data);
 
     [Benchmark]
-    public void Merge() => MergeSort.SortIntegers(data);
+    public void Merge() => MergeSort.SortIntegers(_data);
 }

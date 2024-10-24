@@ -4,11 +4,11 @@ namespace tests;
 
 public class MinimumCoinTests
 {
-    private MinimumCoin minimumCoin;
+    private MinimumCoin _minimumCoin;
     public MinimumCoinTests()
     {
         List<int> coinValues = [1, 5, 10, 25];
-        minimumCoin = new MinimumCoin(CoinSet: coinValues, RepeatFactor: 5);
+        _minimumCoin = new MinimumCoin(coinSet: coinValues, repeatFactor: 5);
     }
 
     [Theory]
@@ -32,16 +32,16 @@ public class MinimumCoinTests
     [InlineData(1)]
     public void GetTrivialCase(int input)
     {
-        Assert.Equal(input, minimumCoin.GetCount(input));
+        Assert.Equal(input, _minimumCoin.GetCount(input));
     }
 
     [Fact]
     public void GetCaseOfTwoCoins()
     {
-        if (minimumCoin.CoinSet.Count > 1 && !minimumCoin.CoinSet.Contains(minimumCoin.CoinSet[0] + minimumCoin.CoinSet[1]))
+        if (_minimumCoin.CoinSet.Count > 1 && !_minimumCoin.CoinSet.Contains(_minimumCoin.CoinSet[0] + _minimumCoin.CoinSet[1]))
         {
-            int total = minimumCoin.CoinSet[0] + minimumCoin.CoinSet[1];
-            int actual = minimumCoin.GetCount(total);
+            int total = _minimumCoin.CoinSet[0] + _minimumCoin.CoinSet[1];
+            int actual = _minimumCoin.GetCount(total);
             Assert.Equal(2, actual);
         }
     }
@@ -49,11 +49,10 @@ public class MinimumCoinTests
     [Fact]
     public void GetCaseOfFourCoins()
     {
-        int total = minimumCoin.CoinSet[0] + minimumCoin.CoinSet[1] + minimumCoin.CoinSet[2] + minimumCoin.CoinSet[3];
-        if (minimumCoin.CoinSet.Count > 1 && !minimumCoin.CoinSet.Contains(total))
+        int total = _minimumCoin.CoinSet[0] + _minimumCoin.CoinSet[1] + _minimumCoin.CoinSet[2] + _minimumCoin.CoinSet[3];
+        if (_minimumCoin.CoinSet.Count > 1 && !_minimumCoin.CoinSet.Contains(total))
         {
-            ;
-            int actual = minimumCoin.GetCount(total);
+            int actual = _minimumCoin.GetCount(total);
             Assert.Equal(4, actual);
         }
     }
@@ -61,11 +60,10 @@ public class MinimumCoinTests
     [Fact]
     public void GetCaseOfEightCoins()
     {
-        int total = minimumCoin.CoinSet[0] + minimumCoin.CoinSet[1] + minimumCoin.CoinSet[2] + minimumCoin.CoinSet[3] + minimumCoin.CoinSet[0] + minimumCoin.CoinSet[1] + minimumCoin.CoinSet[2] + minimumCoin.CoinSet[3];
-        if (minimumCoin.CoinSet.Count > 1 && !minimumCoin.CoinSet.Contains(total))
+        int total = _minimumCoin.CoinSet[0] + _minimumCoin.CoinSet[1] + _minimumCoin.CoinSet[2] + _minimumCoin.CoinSet[3] + _minimumCoin.CoinSet[0] + _minimumCoin.CoinSet[1] + _minimumCoin.CoinSet[2] + _minimumCoin.CoinSet[3];
+        if (_minimumCoin.CoinSet.Count > 1 && !_minimumCoin.CoinSet.Contains(total))
         {
-            ;
-            int actual = minimumCoin.GetCount(total);
+            int actual = _minimumCoin.GetCount(total);
             Assert.True(6 >= actual);
         }
     }
@@ -74,8 +72,8 @@ public class MinimumCoinTests
     public void GetFreqLabsTwoCoins()
     {
         List<int> coinValues = [1, 120, 200];
-        minimumCoin = new MinimumCoin(CoinSet: coinValues, RepeatFactor: 6);
-        Assert.Equal(2, minimumCoin.GetCount(240));
+        _minimumCoin = new MinimumCoin(coinSet: coinValues, repeatFactor: 6);
+        Assert.Equal(2, _minimumCoin.GetCount(240));
     }
 
     [Fact]

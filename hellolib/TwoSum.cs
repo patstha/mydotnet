@@ -32,14 +32,14 @@ public static class TwoSum
         return [];
     }
 
-    public static bool CheckExists(int[] a, int X)
+    public static bool CheckExists(int[] a, int x)
     {
         List<int> myList = [.. a];
         for (int i = 0; i < myList.Count; i++)
         {
             for (int j = i + 1; j < myList.Count; j++)
             {
-                if (myList[i] + myList[j] == X)
+                if (myList[i] + myList[j] == x)
                 {
                     return true;
                 }

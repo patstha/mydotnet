@@ -172,29 +172,29 @@ public class TwoSumTests
 
     [Theory]
     [MemberData(nameof(SumExistsData))]
-    public void SumExistsInCheckExists(int[] a, int X) => Assert.True(TwoSum.CheckExists(a, X));
+    public void SumExistsInCheckExists(int[] a, int x) => Assert.True(TwoSum.CheckExists(a, x));
 
     [Theory]
     [MemberData(nameof(SumDoesNotExistData))]
-    public void SumDoesNotExistInCheckExists(int[] a, int X) => Assert.False(TwoSum.CheckExists(a, X));
+    public void SumDoesNotExistInCheckExists(int[] a, int x) => Assert.False(TwoSum.CheckExists(a, x));
 
     [Theory]
     [MemberData(nameof(SumDoesNotExistTenData))]
-    public void SumDoesNotExistInCheckExistsTen(int[] a, int X) => Assert.False(TwoSum.CheckExists(a, X));
+    public void SumDoesNotExistInCheckExistsTen(int[] a, int x) => Assert.False(TwoSum.CheckExists(a, x));
 
     [Theory]
     [MemberData(nameof(SumExistsTenData))]
-    public void SumExistsInCheckExistsTen(int[] a, int X) => Assert.True(TwoSum.CheckExists(a, X));
+    public void SumExistsInCheckExistsTen(int[] a, int x) => Assert.True(TwoSum.CheckExists(a, x));
 
     [Theory]
     [MemberData(nameof(SumExistsHashedData))]
-    public void SumExistsInCheckExistsHashed(int[] a, int X) => Assert.True(TwoSum.CheckExistsHashed(a, X));
+    public void SumExistsInCheckExistsHashed(int[] a, int x) => Assert.True(TwoSum.CheckExistsHashed(a, x));
 
     [Theory]
     [MemberData(nameof(SumDoesNotExistHashedTenData))]
-    public void SumDoesNotExistInCheckExistsHashedTen(int[] a, int X) => Assert.False(TwoSum.CheckExistsHashed(a, X));
+    public void SumDoesNotExistInCheckExistsHashedTen(int[] a, int x) => Assert.False(TwoSum.CheckExistsHashed(a, x));
 
     [Theory]
     [MemberData(nameof(SumDoesNotExistHashedData))]
-    public void SumDoesNotExistInCheckExistsHashed(int[] a, int X) => Assert.False(TwoSum.CheckExistsHashed(a, X));
+    public void SumDoesNotExistInCheckExistsHashed(int[] a, int x) => Assert.False(TwoSum.CheckExistsHashed(a, x));
 }

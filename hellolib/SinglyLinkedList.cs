@@ -8,16 +8,16 @@ public class SinglyLinkedListNode
 
 public class SinglyLinkedList
 {
-    private SinglyLinkedListNode head;
+    private SinglyLinkedListNode _head;
 
     public SinglyLinkedList()
     {
-        head = null;
+        _head = null;
     }
 
     public int Get(int index)
     {
-        SinglyLinkedListNode current = head;
+        SinglyLinkedListNode current = _head;
         for (int i = 0; i < index; i++)
         {
             if (current == null) return -1;
@@ -31,9 +31,9 @@ public class SinglyLinkedList
         SinglyLinkedListNode newNode = new SinglyLinkedListNode
         {
             Value = val,
-            Next = head
+            Next = _head
         };
-        head = newNode;
+        _head = newNode;
     }
 
     public void InsertTail(int val)
@@ -44,13 +44,13 @@ public class SinglyLinkedList
             Next = null
         };
 
-        if (head == null)
+        if (_head == null)
         {
-            head = newNode;
+            _head = newNode;
         }
         else
         {
-            SinglyLinkedListNode current = head;
+            SinglyLinkedListNode current = _head;
             while (current.Next != null)
             {
                 current = current.Next;
@@ -63,12 +63,12 @@ public class SinglyLinkedList
     {
         if (index == 0)
         {
-            if (head == null) return false;
-            head = head.Next;
+            if (_head == null) return false;
+            _head = _head.Next;
             return true;
         }
 
-        SinglyLinkedListNode current = head;
+        SinglyLinkedListNode current = _head;
         for (int i = 0; i < index - 1; i++)
         {
             if (current == null || current.Next == null) return false;
@@ -83,7 +83,7 @@ public class SinglyLinkedList
     public List<int> GetValues()
     {
         List<int> results = new List<int>();
-        SinglyLinkedListNode current = head;
+        SinglyLinkedListNode current = _head;
         while (current != null)
         {
             results.Add(current.Value ?? 0);
