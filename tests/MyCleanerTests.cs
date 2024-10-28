@@ -277,30 +277,31 @@ public class MyCleanerTests
         actual.Should().Be(expectedOutput);
     }
     [Fact]
-    public void RemoveAmazonExtraPathSegments_ShouldReturnLeftPartOfPath_WhenUrlDoesNotMatchAmazonSegments()
+    public async Task CleanUrl_ShouldReturnLeftPartOfPath_ForAmazonUrlWithoutSpecificSegments()
     {
         // Arrange
         const string input = "https://www.amazon.com/some/other/path";
         const string expectedOutput = "https://www.amazon.com/some/other/path";
 
         // Act
-        string actual = MyCleaner.RemoveAmazonExtraPathSegments(input);
+        string actual = await _myCleaner.CleanUrlAsync(input);
 
         // Assert
         actual.Should().Be(expectedOutput);
     }
     [Fact]
-    public void RemoveAmazonExtraPathSegments_ShouldReturnLeftPartOfPath_ForNonAmazonUrl()
+    public async Task CleanUrl_ShouldReturnLeftPartOfPath_ForNonAmazonUrl()
     {
         // Arrange
         const string input = "https://www.example.com/path/to/resource";
         const string expectedOutput = "https://www.example.com/path/to/resource";
 
         // Act
-        string actual = MyCleaner.RemoveAmazonExtraPathSegments(input);
+        string actual = await _myCleaner.CleanUrlAsync(input);
 
         // Assert
         actual.Should().Be(expectedOutput);
     }
+
 
 }
