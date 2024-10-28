@@ -1,6 +1,5 @@
 namespace tests;
-
-public class PersonTests
+public class PersonTests(PersonFactoryFixture fixture) : IClassFixture<PersonFactoryFixture>
 {
     [Fact]
     public void CreatePersonWithName_ShouldSucceed_WhenPasswordMatchesMinimumLength()
@@ -11,14 +10,12 @@ public class PersonTests
         person.CreatedBy.Should().Be("System");
     }
 
-
     [Fact]
     public void CreatePersonWithName_ShouldSucceed_WhenPasswordIsBetweenMinimumAndMaximumLength()
     {
-        // Arrange
         const int minimumPasswordLength = 8;
         const int maximumPasswordLength = 128;
-        for (int i = 0; i is > minimumPasswordLength and < maximumPasswordLength; i++) 
+        for (int i = minimumPasswordLength + 1; i < maximumPasswordLength; i++) 
         {
             Person person = PersonFactory.Create("", new string('X', i));
             person.Name.Should().Be("");
@@ -59,14 +56,29 @@ public class PersonTests
     [InlineData("Pratikchhya Shrestha", "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz")]
     public void ShortOrLongPasswordsFail(string name, string password)
     {
-        // Arrange
         const int minimumPasswordLength = 8;
         const int maximumPasswordLength = 128;
 
-        // Act
         Action act = () => PersonFactory.Create(name, password);
 
-        // Assert
         act.Should().Throw<ArgumentException>().WithMessage($"The password provided to create user {name} is not valid. A password must have a minimum length no shorter than {minimumPasswordLength} and no longer than {maximumPasswordLength}.");
+    }
+}
+
+public class PersonFactoryFixture : IDisposable
+{
+    public PersonFactoryFixture()
+    {
+        var passwordSettings = Options.Create(new PasswordSettings
+        {
+            MinimumPasswordLength = 8,
+            MaximumPasswordLength = 128
+        });
+        PersonFactory.Initialize(passwordSettings);
+    }
+
+    public void Dispose()
+    {
+        // Cleanup if needed
     }
 }
