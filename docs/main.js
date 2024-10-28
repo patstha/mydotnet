@@ -222,18 +222,18 @@ var assemblies = [
     "name": "hellolib",
     "classes": [
       { "name": "hellolib.BubbleSort", "rp": "hellolib_BubbleSort.html", "cl": 12, "ucl": 0, "cal": 12, "tl": 18, "cb": 6, "tb": 6, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
-      { "name": "hellolib.CurrentWeather", "rp": "hellolib_CurrentWeather.html", "cl": 4, "ucl": 0, "cal": 4, "tl": 40, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "hellolib.CurrentWeather", "rp": "hellolib_CurrentWeather.html", "cl": 4, "ucl": 0, "cal": 4, "tl": 38, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "hellolib.DesignDynamicArray", "rp": "hellolib_DesignDynamicArray.html", "cl": 38, "ucl": 0, "cal": 38, "tl": 56, "cb": 5, "tb": 6, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "hellolib.Entity", "rp": "hellolib_Entity.html", "cl": 5, "ucl": 0, "cal": 5, "tl": 10, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "hellolib.FindClosestNumberToZero", "rp": "hellolib_FindClosestNumberToZero.html", "cl": 14, "ucl": 6, "cal": 20, "tl": 64, "cb": 7, "tb": 10, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
-      { "name": "hellolib.Graph", "rp": "hellolib_Graph.html", "cl": 45, "ucl": 0, "cal": 45, "tl": 66, "cb": 15, "tb": 16, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "hellolib.Graph", "rp": "hellolib_Graph.html", "cl": 45, "ucl": 0, "cal": 45, "tl": 65, "cb": 15, "tb": 16, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "hellolib.ListNode", "rp": "hellolib_ListNode.html", "cl": 3, "ucl": 0, "cal": 3, "tl": 53, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "hellolib.MergeSort", "rp": "hellolib_MergeSort.html", "cl": 38, "ucl": 0, "cal": 38, "tl": 55, "cb": 10, "tb": 10, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "hellolib.MergeSortedArray", "rp": "hellolib_MergeSortedArray.html", "cl": 26, "ucl": 0, "cal": 26, "tl": 81, "cb": 8, "tb": 8, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "hellolib.MergeStringsAlternately", "rp": "hellolib_MergeStringsAlternately.html", "cl": 18, "ucl": 4, "cal": 22, "tl": 33, "cb": 4, "tb": 6, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
-      { "name": "hellolib.MinimumCoin", "rp": "hellolib_MinimumCoin.html", "cl": 46, "ucl": 0, "cal": 46, "tl": 66, "cb": 16, "tb": 16, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
-      { "name": "hellolib.MyCleaner", "rp": "hellolib_MyCleaner.html", "cl": 63, "ucl": 12, "cal": 75, "tl": 105, "cb": 26, "tb": 36, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
-      { "name": "hellolib.MySearch", "rp": "hellolib_MySearch.html", "cl": 53, "ucl": 0, "cal": 53, "tl": 68, "cb": 20, "tb": 20, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "hellolib.MinimumCoin", "rp": "hellolib_MinimumCoin.html", "cl": 45, "ucl": 0, "cal": 45, "tl": 65, "cb": 16, "tb": 16, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "hellolib.MyCleaner", "rp": "hellolib_MyCleaner.html", "cl": 63, "ucl": 12, "cal": 75, "tl": 108, "cb": 26, "tb": 36, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "hellolib.MySearch", "rp": "hellolib_MySearch.html", "cl": 53, "ucl": 0, "cal": 53, "tl": 70, "cb": 20, "tb": 20, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "hellolib.PascalTriangle", "rp": "hellolib_PascalTriangle.html", "cl": 17, "ucl": 0, "cal": 17, "tl": 28, "cb": 6, "tb": 6, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "hellolib.PasswordSettings", "rp": "hellolib_PasswordSettings.html", "cl": 2, "ucl": 0, "cal": 2, "tl": 50, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "hellolib.Person", "rp": "hellolib_Person.html", "cl": 17, "ucl": 0, "cal": 17, "tl": 27, "cb": 2, "tb": 2, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
@@ -243,9 +243,9 @@ var assemblies = [
       { "name": "hellolib.SinglyLinkedList", "rp": "hellolib_SinglyLinkedList.html", "cl": 47, "ucl": 15, "cal": 62, "tl": 89, "cb": 10, "tb": 24, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "hellolib.SinglyLinkedListAddTwoNumbers", "rp": "hellolib_SinglyLinkedListAddTwoNumbers.html", "cl": 32, "ucl": 3, "cal": 35, "tl": 53, "cb": 15, "tb": 20, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "hellolib.SinglyLinkedListNode", "rp": "hellolib_SinglyLinkedListNode.html", "cl": 2, "ucl": 0, "cal": 2, "tl": 89, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
-      { "name": "hellolib.TwoSum", "rp": "hellolib_TwoSum.html", "cl": 26, "ucl": 24, "cal": 50, "tl": 68, "cb": 10, "tb": 22, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
-      { "name": "hellolib.Weather", "rp": "hellolib_Weather.html", "cl": 13, "ucl": 0, "cal": 13, "tl": 40, "cb": 2, "tb": 2, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
-      { "name": "hellolib.WeatherFetchException", "rp": "hellolib_WeatherFetchException.html", "cl": 1, "ucl": 0, "cal": 1, "tl": 40, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "hellolib.TwoSum", "rp": "hellolib_TwoSum.html", "cl": 48, "ucl": 0, "cal": 48, "tl": 66, "cb": 22, "tb": 22, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "hellolib.Weather", "rp": "hellolib_Weather.html", "cl": 12, "ucl": 0, "cal": 12, "tl": 38, "cb": 2, "tb": 2, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "hellolib.WeatherFetchException", "rp": "hellolib_WeatherFetchException.html", "cl": 1, "ucl": 0, "cal": 1, "tl": 38, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
     ]},
 ];
 
@@ -260,19 +260,13 @@ var riskHotspotMetrics = [
 
 var riskHotspots = [
   {
-    "assembly": "hellolib", "class": "hellolib.TwoSum", "reportPath": "hellolib_TwoSum.html", "methodName": "GetTwoSumNaive(System.Int32[],System.Int32)", "methodShortName": "GetTwoSumNaive(...)", "fileIndex": 0, "line": 6,
-    "metrics": [
-      { "value": 72, "exceeded": true },
-      { "value": 8, "exceeded": false },
-    ]},
-  {
     "assembly": "hellolib", "class": "hellolib.SinglyLinkedListAddTwoNumbers", "reportPath": "hellolib_SinglyLinkedListAddTwoNumbers.html", "methodName": "AddTwoNumbers(hellolib.ListNode,hellolib.ListNode)", "methodShortName": "AddTwoNumbers(...)", "fileIndex": 0, "line": 13,
     "metrics": [
       { "value": 18.82, "exceeded": false },
       { "value": 18, "exceeded": true },
     ]},
   {
-    "assembly": "hellolib", "class": "hellolib.MyCleaner", "reportPath": "hellolib_MyCleaner.html", "methodName": "FollowRedirectsAsync()", "methodShortName": "FollowRedirectsAsync()", "fileIndex": 0, "line": 41,
+    "assembly": "hellolib", "class": "hellolib.MyCleaner", "reportPath": "hellolib_MyCleaner.html", "methodName": "FollowRedirectsAsync()", "methodShortName": "FollowRedirectsAsync()", "fileIndex": 0, "line": 44,
     "metrics": [
       { "value": 22.91, "exceeded": false },
       { "value": 16, "exceeded": true },
