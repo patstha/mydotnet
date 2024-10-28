@@ -7,9 +7,9 @@ public class MergeStringsAlternatelyTests
     public void MergeAlternately_ShouldReturn1()
     {
         // arrange 
-        string word1 = "abcd";
-        string word2 = "pq";
-        string expected = "apbqcd";
+        const string word1 = "abcd";
+        const string word2 = "pq";
+        const string expected = "apbqcd";
 
         // act 
         MergeStringsAlternately mergeStringsAlternately = new(_logger);
@@ -17,6 +17,91 @@ public class MergeStringsAlternatelyTests
 
         actual.Should().BeEquivalentTo(expected);
     }
+    [Fact]
+    public void MergeAlternately_ShouldMergeEqualLengthStrings()
+    {
+        // arrange 
+        const string word1 = "abc";
+        const string word2 = "xyz";
+        const string expected = "axbycz";
+
+        // act 
+        MergeStringsAlternately mergeStringsAlternately = new(_logger);
+        string actual = mergeStringsAlternately.MergeAlternately(word1, word2);
+
+        actual.Should().BeEquivalentTo(expected);
+    }
+    [Fact]
+    public void MergeAlternately_ShouldMergeWhenFirstStringIsLonger()
+    {
+        // arrange 
+        const string word1 = "abcd";
+        const string word2 = "xy";
+        const string expected = "axbycd";
+
+        // act 
+        MergeStringsAlternately mergeStringsAlternately = new(_logger);
+        string actual = mergeStringsAlternately.MergeAlternately(word1, word2);
+
+        actual.Should().BeEquivalentTo(expected);
+    }
+    [Fact]
+    public void MergeAlternately_ShouldMergeWhenSecondStringIsLonger()
+    {
+        // arrange 
+        const string word1 = "ab";
+        const string word2 = "wxyz";
+        const string expected = "awbxyz";
+
+        // act 
+        MergeStringsAlternately mergeStringsAlternately = new(_logger);
+        string actual = mergeStringsAlternately.MergeAlternately(word1, word2);
+
+        actual.Should().BeEquivalentTo(expected);
+    }
+    [Fact]
+    public void MergeAlternately_ShouldHandleEmptyFirstString()
+    {
+        // arrange 
+        const string word1 = "";
+        const string word2 = "xyz";
+        const string expected = "xyz";
+
+        // act 
+        MergeStringsAlternately mergeStringsAlternately = new(_logger);
+        string actual = mergeStringsAlternately.MergeAlternately(word1, word2);
+
+        actual.Should().BeEquivalentTo(expected);
+    }
+    [Fact]
+    public void MergeAlternately_ShouldHandleEmptySecondString()
+    {
+        // arrange 
+        const string word1 = "abc";
+        const string word2 = "";
+        const string expected = "abc";
+
+        // act 
+        MergeStringsAlternately mergeStringsAlternately = new(_logger);
+        string actual = mergeStringsAlternately.MergeAlternately(word1, word2);
+
+        actual.Should().BeEquivalentTo(expected);
+    }
+    [Fact]
+    public void MergeAlternately_ShouldHandleBothStringsEmpty()
+    {
+        // arrange 
+        const string word1 = "";
+        const string word2 = "";
+        const string expected = "";
+
+        // act 
+        MergeStringsAlternately mergeStringsAlternately = new(_logger);
+        string actual = mergeStringsAlternately.MergeAlternately(word1, word2);
+
+        actual.Should().BeEquivalentTo(expected);
+    }
+
 }
 
 //You are given two strings word1 and word2.Merge the strings by adding letters in alternating order, starting with word1.If a string is longer than the other, append the additional letters onto the end of the merged string.
