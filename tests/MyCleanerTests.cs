@@ -381,6 +381,13 @@ public class MyCleanerTests
                     Headers = { Location = null }
                 };
             }
+            else if (request.RequestUri?.ToString() == "https://www.example.com/initial")
+            {
+                return new HttpResponseMessage(HttpStatusCode.OK)
+                {
+                    RequestMessage = request
+                };
+            }
             return new HttpResponseMessage(HttpStatusCode.OK)
             {
                 RequestMessage = request
@@ -397,4 +404,5 @@ public class MyCleanerTests
         // Assert
         actual.Should().Be(expectedOutput);
     }
+
 }
