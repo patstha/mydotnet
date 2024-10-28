@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<coverage line-rate="0.9971" branch-rate="0.9409000000000001" version="1.9" timestamp="1730151780" lines-covered="696" lines-valid="698" branches-covered="239" branches-valid="254">
+<coverage line-rate="0.9971" branch-rate="0.9448000000000001" version="1.9" timestamp="1730153230" lines-covered="696" lines-valid="698" branches-covered="240" branches-valid="254">
   <sources>
     <source>C:\Users\kushal\src\mydotnet\hellolib\</source>
   </sources>
   <packages>
-    <package name="hellolib" line-rate="0.9971" branch-rate="0.9409000000000001" complexity="295">
+    <package name="hellolib" line-rate="0.9971" branch-rate="0.9448000000000001" complexity="295">
       <classes>
         <class name="HelloLib.RomanToInteger" filename="RomanToInteger.cs" line-rate="1" branch-rate="0.95" complexity="21">
           <methods>
@@ -454,7 +454,7 @@
             <line number="17" hits="8" branch="False" />
           </lines>
         </class>
-        <class name="hellolib.DesignDynamicArray" filename="DesignDynamicArray.cs" line-rate="1" branch-rate="0.8332999999999999" complexity="11">
+        <class name="hellolib.DesignDynamicArray" filename="DesignDynamicArray.cs" line-rate="1" branch-rate="1" complexity="11">
           <methods>
             <method name="Get" signature="(System.Int32)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
@@ -486,12 +486,12 @@
                 <line number="25" hits="4" branch="False" />
               </lines>
             </method>
-            <method name="PopBack" signature="()" line-rate="1" branch-rate="0.5" complexity="2">
+            <method name="PopBack" signature="()" line-rate="1" branch-rate="1" complexity="2">
               <lines>
-                <line number="28" hits="1" branch="False" />
-                <line number="29" hits="1" branch="True" condition-coverage="50% (1/2)">
+                <line number="28" hits="2" branch="False" />
+                <line number="29" hits="3" branch="True" condition-coverage="100% (2/2)">
                   <conditions>
-                    <condition number="12" type="jump" coverage="50%" />
+                    <condition number="12" type="jump" coverage="100%" />
                   </conditions>
                 </line>
                 <line number="30" hits="1" branch="False" />
@@ -534,8 +534,8 @@
             </method>
             <method name=".ctor" signature="(System.Int32)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="2" hits="3" branch="False" />
-                <line number="4" hits="3" branch="False" />
+                <line number="2" hits="4" branch="False" />
+                <line number="4" hits="4" branch="False" />
               </lines>
             </method>
           </methods>
@@ -558,10 +558,10 @@
             <line number="23" hits="4" branch="False" />
             <line number="24" hits="4" branch="False" />
             <line number="25" hits="4" branch="False" />
-            <line number="28" hits="1" branch="False" />
-            <line number="29" hits="1" branch="True" condition-coverage="50% (1/2)">
+            <line number="28" hits="2" branch="False" />
+            <line number="29" hits="3" branch="True" condition-coverage="100% (2/2)">
               <conditions>
-                <condition number="12" type="jump" coverage="50%" />
+                <condition number="12" type="jump" coverage="100%" />
               </conditions>
             </line>
             <line number="30" hits="1" branch="False" />
@@ -588,8 +588,8 @@
             <line number="53" hits="7" branch="False" />
             <line number="54" hits="7" branch="False" />
             <line number="55" hits="7" branch="False" />
-            <line number="2" hits="3" branch="False" />
-            <line number="4" hits="3" branch="False" />
+            <line number="2" hits="4" branch="False" />
+            <line number="4" hits="4" branch="False" />
           </lines>
         </class>
         <class name="hellolib.Entity" filename="Entity.cs" line-rate="1" branch-rate="1" complexity="5">

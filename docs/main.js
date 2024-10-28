@@ -223,7 +223,7 @@ var assemblies = [
     "classes": [
       { "name": "hellolib.BubbleSort", "rp": "hellolib_BubbleSort.html", "cl": 12, "ucl": 0, "cal": 12, "tl": 18, "cb": 6, "tb": 6, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "hellolib.CurrentWeather", "rp": "hellolib_CurrentWeather.html", "cl": 4, "ucl": 0, "cal": 4, "tl": 38, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
-      { "name": "hellolib.DesignDynamicArray", "rp": "hellolib_DesignDynamicArray.html", "cl": 38, "ucl": 0, "cal": 38, "tl": 56, "cb": 5, "tb": 6, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "hellolib.DesignDynamicArray", "rp": "hellolib_DesignDynamicArray.html", "cl": 38, "ucl": 0, "cal": 38, "tl": 56, "cb": 6, "tb": 6, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "hellolib.Entity", "rp": "hellolib_Entity.html", "cl": 5, "ucl": 0, "cal": 5, "tl": 10, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "hellolib.FindClosestNumberToZero", "rp": "hellolib_FindClosestNumberToZero.html", "cl": 20, "ucl": 0, "cal": 20, "tl": 64, "cb": 10, "tb": 10, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "hellolib.Graph", "rp": "hellolib_Graph.html", "cl": 45, "ucl": 0, "cal": 45, "tl": 65, "cb": 15, "tb": 16, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
