@@ -2,8 +2,7 @@
 
 public class AddTwoNumbersTests
 {
-    private readonly ILogger<SinglyLinkedListAddTwoNumbers> _logger;
-    public AddTwoNumbersTests() => _logger = Substitute.For<ILogger<SinglyLinkedListAddTwoNumbers>>();
+    private readonly ILogger<SinglyLinkedListAddTwoNumbers> _logger = Substitute.For<ILogger<SinglyLinkedListAddTwoNumbers>>();
 
     [Fact]
     public void AddTwoNumbers_Freebie()

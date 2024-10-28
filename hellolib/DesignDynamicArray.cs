@@ -1,14 +1,8 @@
 ﻿namespace hellolib;
-public class DesignDynamicArray
+public class DesignDynamicArray(int capacity)
 {
-    int?[] _values;
+    int?[] _values = new int?[capacity];
     int _size;
-
-    public DesignDynamicArray(int capacity)
-    {
-        _values = new int?[capacity];
-        _size = 0;
-    }
 
     public int Get(int i)
     {

@@ -10,11 +10,6 @@ public class SinglyLinkedList
 {
     private SinglyLinkedListNode _head;
 
-    public SinglyLinkedList()
-    {
-        _head = null;
-    }
-
     public int Get(int index)
     {
         SinglyLinkedListNode current = _head;

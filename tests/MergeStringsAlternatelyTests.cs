@@ -1,8 +1,8 @@
 ﻿namespace tests;
 public class MergeStringsAlternatelyTests
 {
-    private readonly ILogger<MergeStringsAlternately> _logger;
-    public MergeStringsAlternatelyTests() => _logger = Substitute.For<ILogger<MergeStringsAlternately>>();
+    private readonly ILogger<MergeStringsAlternately> _logger = Substitute.For<ILogger<MergeStringsAlternately>>();
+
     [Fact]
     public void MergeAlternately_ShouldReturn1()
     {

@@ -2,9 +2,7 @@
 
 public class FindClosestNumberToZeroTests
 {
-    private readonly ILogger<FindClosestNumberToZero> _logger;
-
-    public FindClosestNumberToZeroTests() => _logger = Substitute.For<ILogger<FindClosestNumberToZero>>();
+    private readonly ILogger<FindClosestNumberToZero> _logger = Substitute.For<ILogger<FindClosestNumberToZero>>();
 
     [Fact]
     public void FindClosestNumber_ShouldReturn1()

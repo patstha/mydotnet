@@ -3,34 +3,29 @@ using System.Collections.Generic;
 
 public class Graph
 {
-    private Dictionary<string, List<string>> adjacencyList;
-
-    public Graph()
-    {
-        adjacencyList = new Dictionary<string, List<string>>();
-    }
+    private readonly Dictionary<string, List<string>> _adjacencyList = new();
 
     public void AddNode(string node)
     {
-        if (!adjacencyList.ContainsKey(node))
+        if (!_adjacencyList.ContainsKey(node))
         {
-            adjacencyList[node] = new List<string>();
+            _adjacencyList[node] = [];
         }
     }
 
     public void AddEdge(string from, string to)
     {
-        if (adjacencyList.ContainsKey(from) && adjacencyList.ContainsKey(to))
+        if (_adjacencyList.ContainsKey(from) && _adjacencyList.ContainsKey(to))
         {
-            adjacencyList[from].Add(to);
+            _adjacencyList[from].Add(to);
         }
     }
 
-    public List<string> BFS(string start)
+    public List<string> Bfs(string start)
     {
-        HashSet<string> visited = new HashSet<string>();
+        HashSet<string> visited = [];
         Queue<string> queue = new Queue<string>();
-        List<string> result = new List<string>();
+        List<string> result = [];
 
         queue.Enqueue(start);
         visited.Add(start);
@@ -40,38 +35,32 @@ public class Graph
             string node = queue.Dequeue();
             result.Add(node);
 
-            foreach (string neighbor in adjacencyList[node])
+            foreach (string neighbor in _adjacencyList[node].Where(neighbor => !visited.Contains(neighbor)))
             {
-                if (!visited.Contains(neighbor))
-                {
-                    queue.Enqueue(neighbor);
-                    visited.Add(neighbor);
-                }
+                queue.Enqueue(neighbor);
+                visited.Add(neighbor);
             }
         }
 
         return result;
     }
 
-    public List<string> DFS(string start)
+    public List<string> Dfs(string start)
     {
-        HashSet<string> visited = new HashSet<string>();
-        List<string> result = new List<string>();
-        DFSRecursive(start, visited, result);
+        HashSet<string> visited = [];
+        List<string> result = [];
+        DfsRecursive(start, visited, result);
         return result;
     }
 
-    private void DFSRecursive(string node, HashSet<string> visited, List<string> result)
+    private void DfsRecursive(string node, HashSet<string> visited, List<string> result)
     {
         visited.Add(node);
         result.Add(node);
 
-        foreach (string neighbor in adjacencyList[node])
+        foreach (string neighbor in _adjacencyList[node].Where(neighbor => !visited.Contains(neighbor)))
         {
-            if (!visited.Contains(neighbor))
-            {
-                DFSRecursive(neighbor, visited, result);
-            }
+            DfsRecursive(neighbor, visited, result);
         }
     }
 }

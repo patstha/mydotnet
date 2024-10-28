@@ -22,7 +22,7 @@ public class GraphTests
         graph.AddEdge("C", "D");
 
         // Perform BFS and DFS
-        List<string> bfsResult = graph.BFS("A");
+        List<string> bfsResult = graph.Bfs("A");
         bfsResult.Should().Contain("A");
     }
     [Fact]
@@ -43,7 +43,7 @@ public class GraphTests
         graph.AddEdge("C", "D");
 
         // Perform BFS and DFS
-        List<string> dfsResult = graph.DFS("A");
+        List<string> dfsResult = graph.Dfs("A");
         dfsResult.Should().Contain("A");
     }
 }
