@@ -116,6 +116,73 @@ public class SinglyLinkedListTests
         SinglyLinkedList linkedList = new();
         linkedList.GetValues().Should().BeEmpty();
     }
+    
+    [Fact]
+    public void InsertHeadAndRemoveOnlyElement_ShouldReturnEmptyList()
+    {
+        SinglyLinkedList linkedList = new();
+        linkedList.InsertHead(1);
+        linkedList.Remove(0).Should().BeTrue();
+        linkedList.GetValues().Should().BeEmpty();
+    }
+    [Fact]
+    public void RemoveFromEmptyList_ShouldReturnFalse()
+    {
+        SinglyLinkedList linkedList = new();
+        linkedList.Remove(0).Should().BeFalse();
+    }
+    [Fact]
+    public void InsertMultipleHeads_ShouldAddValuesInReverseOrder()
+    {
+        SinglyLinkedList linkedList = new();
+        linkedList.InsertHead(1);
+        linkedList.InsertHead(2);
+        linkedList.InsertHead(3);
+        linkedList.GetValues().Should().BeEquivalentTo(new List<int> { 3, 2, 1 });
+    }
+    [Fact]
+    public void InsertMultipleTails_ShouldAddValuesInOrder()
+    {
+        SinglyLinkedList linkedList = new();
+        linkedList.InsertTail(1);
+        linkedList.InsertTail(2);
+        linkedList.InsertTail(3);
+        linkedList.GetValues().Should().BeEquivalentTo(new List<int> { 1, 2, 3 });
+    }
+    [Fact]
+    public void RemoveMiddleElement_ShouldRemoveCorrectly()
+    {
+        SinglyLinkedList linkedList = new();
+        linkedList.InsertTail(1);
+        linkedList.InsertTail(2);
+        linkedList.InsertTail(3);
+        linkedList.Remove(1).Should().BeTrue();
+        linkedList.GetValues().Should().BeEquivalentTo(new List<int> { 1, 3 });
+    }
+    [Fact]
+    public void GetHeadValue_ShouldReturnCorrectValue()
+    {
+        SinglyLinkedList linkedList = new();
+        linkedList.InsertHead(1);
+        linkedList.Get(0).Should().Be(1);
+    }
+    [Fact]
+    public void GetTailValue_ShouldReturnCorrectValue()
+    {
+        SinglyLinkedList linkedList = new();
+        linkedList.InsertTail(1);
+        linkedList.InsertTail(2);
+        linkedList.Get(1).Should().Be(2);
+    }
+    [Fact]
+    public void RemoveTailElement_ShouldRemoveCorrectly()
+    {
+        SinglyLinkedList linkedList = new();
+        linkedList.InsertTail(1);
+        linkedList.InsertTail(2);
+        linkedList.Remove(1).Should().BeTrue();
+        linkedList.GetValues().Should().BeEquivalentTo(new List<int> { 1 });
+    }
 }
 
 //Design Singly Linked List
