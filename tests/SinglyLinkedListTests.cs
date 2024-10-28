@@ -7,9 +7,9 @@ public class SinglyLinkedListTests
     [Fact]
     public void InsertHeadInsertTailRemove_ShouldReturnOneValue()
     {
-        List<int> expected = new List<int> { 0, 2 };
+        List<int> expected = [0, 2];
 
-        SinglyLinkedList linkedList = new SinglyLinkedList();
+        SinglyLinkedList linkedList = new();
         linkedList.InsertHead(1);
         linkedList.InsertTail(2);
         linkedList.InsertHead(0);
@@ -22,7 +22,7 @@ public class SinglyLinkedListTests
     [Fact]
     public void InsertHeadInsertHeadGet_ShouldReturn()
     {
-        SinglyLinkedList linkedList = new SinglyLinkedList();
+        SinglyLinkedList linkedList = new();
         linkedList.InsertHead(1);
         linkedList.InsertHead(2);
         int actual = linkedList.Get(5);

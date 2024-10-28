@@ -28,7 +28,7 @@ public class SinglyLinkedList
 
     public void InsertHead(int val)
     {
-        SinglyLinkedListNode newNode = new SinglyLinkedListNode
+        SinglyLinkedListNode newNode = new()
         {
             Value = val,
             Next = _head
@@ -38,7 +38,7 @@ public class SinglyLinkedList
 
     public void InsertTail(int val)
     {
-        SinglyLinkedListNode newNode = new SinglyLinkedListNode
+        SinglyLinkedListNode newNode = new()
         {
             Value = val,
             Next = null
@@ -82,7 +82,7 @@ public class SinglyLinkedList
 
     public List<int> GetValues()
     {
-        List<int> results = new List<int>();
+        List<int> results = [];
         SinglyLinkedListNode current = _head;
         while (current != null)
         {

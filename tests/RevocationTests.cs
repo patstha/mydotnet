@@ -46,7 +46,7 @@ public class RevocationTests
         List<int> numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
         // act
-        IEnumerable<IEnumerable<int>> batches = numbers.Batch(3);
+        IEnumerable<IEnumerable<int>> batches = numbers.Batch(3).ToList();
 
         // assert
         batches.Should().HaveCount(4);

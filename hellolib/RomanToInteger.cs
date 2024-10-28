@@ -54,7 +54,7 @@ public static class RomanToInteger
         }
 
         // Check for valid sequences
-        string[] invalidSequences = { "IIII", "VV", "XXXX", "LL", "CCCC", "DD", "MMMM" };
+        string[] invalidSequences = ["IIII", "VV", "XXXX", "LL", "CCCC", "DD", "MMMM"];
         foreach (string seq in invalidSequences)
         {
             if (s.Contains(seq))
@@ -64,7 +64,7 @@ public static class RomanToInteger
         }
 
         // Check for valid subtraction rules
-        string[] validSubtractions = { "IV", "IX", "XL", "XC", "CD", "CM" };
+        string[] validSubtractions = ["IV", "IX", "XL", "XC", "CD", "CM"];
         for (int i = 0; i < s.Length - 1; i++)
         {
             if (RomanMap[s[i]] < RomanMap[s[i + 1]])

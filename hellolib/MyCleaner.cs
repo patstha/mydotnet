@@ -42,7 +42,7 @@ public class MyCleaner(ILogger<MyCleaner> logger, HttpClient httpClient)
         HttpResponseMessage response = await httpClient.GetAsync(url);
         while (response.StatusCode == System.Net.HttpStatusCode.Redirect || response.StatusCode == System.Net.HttpStatusCode.MovedPermanently)
         {
-            string redirectUrl = response.Headers.Location.ToString();
+            string redirectUrl = response.Headers.Location?.ToString() ?? "";
             if (!Uri.IsWellFormedUriString(redirectUrl, UriKind.Absolute))
             {
                 Uri baseUri = new(url);
@@ -58,7 +58,7 @@ public class MyCleaner(ILogger<MyCleaner> logger, HttpClient httpClient)
                 return ExtractFromAddress(redirectUrl);
             }
         }
-        return response.RequestMessage.RequestUri.ToString();
+        return response.RequestMessage?.RequestUri?.ToString() ?? "";
     }
 
     private static string ExtractFromAddress(string url)

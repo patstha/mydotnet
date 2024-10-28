@@ -1,5 +1,5 @@
 namespace tests;
-public class PersonTests(PersonFactoryFixture fixture) : IClassFixture<PersonFactoryFixture>
+public class PersonTests : IClassFixture<PersonFactoryFixture>
 {
     [Fact]
     public void CreatePersonWithName_ShouldSucceed_WhenPasswordMatchesMinimumLength()
@@ -27,9 +27,11 @@ public class PersonTests(PersonFactoryFixture fixture) : IClassFixture<PersonFac
     public void CreatePersonWithName_ShouldSucceed_WhenPasswordMatchesMaximumLength()
     {
         const int maximumPasswordLength = 128;
-        Person person = PersonFactory.Create("", new string('X', maximumPasswordLength));
+        string expectedPassword = new('X', maximumPasswordLength);
+        Person person = PersonFactory.Create("", expectedPassword);
         person.Name.Should().Be("");
         person.CreatedBy.Should().Be("System");
+        person.Password.Should().Be(expectedPassword);
     }
 
     [Theory]
@@ -65,11 +67,11 @@ public class PersonTests(PersonFactoryFixture fixture) : IClassFixture<PersonFac
     }
 }
 
-public class PersonFactoryFixture : IDisposable
+internal class PersonFactoryFixture : IDisposable
 {
     public PersonFactoryFixture()
     {
-        var passwordSettings = Options.Create(new PasswordSettings
+        IOptions<PasswordSettings> passwordSettings = Options.Create(new PasswordSettings
         {
             MinimumPasswordLength = 8,
             MaximumPasswordLength = 128

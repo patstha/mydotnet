@@ -38,10 +38,9 @@ public class BubbleSortTests
     public void SortThreeElementUnsortedArray()
     {
         int[] input = [3, 2, 1];
-        int[] output = [3, 2, 1];
         int[] expectedOutput = [1, 2, 3];
-        BubbleSort.SortIntegers(output);
-        Assert.Equal(expectedOutput, output);
+        BubbleSort.SortIntegers(input);
+        Assert.Equal(expectedOutput, input);
     }
 
     [Fact]

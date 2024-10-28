@@ -2,16 +2,9 @@
 
 public class ListNode(int val = 0, ListNode next = null)
 {
-    public int Val
-    {
-        get => val;
-        set => val = value;
-    }
-    public ListNode Next
-    {
-        get => next;
-        set => next = value;
-    }
+    public int Val { get; init; } = val;
+
+    public ListNode Next { get; set; } = next;
 }
 
 public class SinglyLinkedListAddTwoNumbers(ILogger<SinglyLinkedListAddTwoNumbers> logger)
@@ -25,8 +18,8 @@ public class SinglyLinkedListAddTwoNumbers(ILogger<SinglyLinkedListAddTwoNumbers
 
         while (p != null || q != null)
         {
-            int x = (p != null) ? p.Val : 0;
-            int y = (q != null) ? q.Val : 0;
+            int x = p?.Val ?? 0;
+            int y = q?.Val ?? 0;
             int sum = carry + x + y;
             carry = sum / 10;
             current.Next = new ListNode(sum % 10);

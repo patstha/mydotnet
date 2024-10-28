@@ -37,7 +37,6 @@ public class MergeSortTests
     [Fact]
     public void SortThreeElementUnsortedArray()
     {
-        int[] input = [3, 2, 1];
         int[] output = [3, 2, 1];
         int[] expectedOutput = [1, 2, 3];
         MergeSort.SortIntegers(output);

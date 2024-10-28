@@ -14,7 +14,7 @@ public class FindClosestNumberToZeroTests
         int expected = 1;
 
         // act 
-        FindClosestNumberToZero find = new FindClosestNumberToZero(_logger);
+        FindClosestNumberToZero find = new(_logger);
         int actual = find.FindClosestNumber(nums);
 
         // assert 
@@ -29,7 +29,7 @@ public class FindClosestNumberToZeroTests
         int expected = -100000;
 
         // act 
-        FindClosestNumberToZero find = new FindClosestNumberToZero(_logger);
+        FindClosestNumberToZero find = new(_logger);
         int actual = find.FindClosestNumber(nums);
 
         // assert 

@@ -11,7 +11,7 @@ public static class Revocation
         while (!reader.EndOfStream)
         {
             string line = reader.ReadLine();
-            string[] values = line.Split(',');
+            string[] values = line?.Split(',') ?? [];
             result.Add(values[0]);
         }
         return result;
