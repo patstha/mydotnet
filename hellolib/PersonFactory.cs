@@ -4,12 +4,11 @@ namespace hellolib;
 
 public static class PersonFactory
 {
-    private static int _minimumPasswordLength;
-    private static int _maximumPasswordLength;
     private static bool _isInitialized;
 
-    public static int MinimumPasswordLength => _minimumPasswordLength;
-    public static int MaximumPasswordLength => _maximumPasswordLength;
+    public static int MinimumPasswordLength { get; private set; }
+
+    public static int MaximumPasswordLength { get; private set; }
 
     public static void Initialize(IOptions<PasswordSettings> passwordSettings)
     {
@@ -18,8 +17,8 @@ public static class PersonFactory
             throw new InvalidOperationException("PersonFactory is already initialized.");
         }
 
-        _minimumPasswordLength = passwordSettings.Value.MinimumPasswordLength;
-        _maximumPasswordLength = passwordSettings.Value.MaximumPasswordLength;
+        MinimumPasswordLength = passwordSettings.Value.MinimumPasswordLength;
+        MaximumPasswordLength = passwordSettings.Value.MaximumPasswordLength;
         _isInitialized = true;
     }
 
@@ -32,13 +31,13 @@ public static class PersonFactory
 
         return CheckPasswordMeetsRequirements(password)
             ? new Person(name, password)
-            : throw new ArgumentException($"The password provided to create user {name} is not valid. A password must have a minimum length no shorter than {_minimumPasswordLength} and no longer than {_maximumPasswordLength}.");
+            : throw new ArgumentException($"The password provided to create user {name} is not valid. A password must have a minimum length no shorter than {MinimumPasswordLength} and no longer than {MaximumPasswordLength}.");
     }
 
     public static bool CheckPasswordMeetsRequirements(string password)
     {
         int length = password.Length;
-        return length >= _minimumPasswordLength && length <= _maximumPasswordLength;
+        return length >= MinimumPasswordLength && length <= MaximumPasswordLength;
     }
 }
 
