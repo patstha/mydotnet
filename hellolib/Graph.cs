@@ -23,7 +23,7 @@ public class Graph
     public List<string> Bfs(string start)
     {
         HashSet<string> visited = [];
-        Queue<string> queue = new Queue<string>();
+        Queue<string> queue = new();
         List<string> result = [];
 
         queue.Enqueue(start);

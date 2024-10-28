@@ -7,7 +7,7 @@ public class GraphTests
     [Fact]
     public void BFS_ShouldFindElement()
     {
-        Graph graph = new Graph();
+        Graph graph = new();
 
         // Add nodes
         graph.AddNode("A");
@@ -28,7 +28,7 @@ public class GraphTests
     [Fact]
     public void DFS_ShouldFindElement()
     {
-        Graph graph = new Graph();
+        Graph graph = new();
 
         // Add nodes
         graph.AddNode("A");

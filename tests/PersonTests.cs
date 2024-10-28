@@ -57,7 +57,7 @@ public class PersonTests : IDisposable
         // Arrange
         InitializePersonFactory(8, 128);
         Person person = PersonFactory.Create("John Doe", "initialPassword");
-        string longPassword = new string('a', 129);
+        string longPassword = new('a', 129);
 
         // Act
         Action act = () => person.UpdatePassword(longPassword);
@@ -131,7 +131,7 @@ public class PersonTests : IDisposable
         // Arrange
         InitializePersonFactory(8, 128);
         const string name = "John Doe";
-        string password = new string('a', 129);
+        string password = new('a', 129);
 
         // Act
         Action act = () => PersonFactory.Create(name, password);
@@ -173,7 +173,7 @@ public class PersonTests : IDisposable
     {
         // Arrange
         InitializePersonFactory(8, 128);
-        string password = new string('a', 129);
+        string password = new('a', 129);
 
         // Act
         bool result = PersonFactory.CheckPasswordMeetsRequirements(password);
@@ -206,7 +206,7 @@ public class PersonTests : IDisposable
         // Arrange
         InitializePersonFactory(8, 128);
         const string name = "John Doe";
-        string password = new string('a', 8);
+        string password = new('a', 8);
 
         // Act
         Person person = PersonFactory.Create(name, password);
@@ -222,7 +222,7 @@ public class PersonTests : IDisposable
         // Arrange
         InitializePersonFactory(8, 128);
         const string name = "John Doe";
-        string password = new string('a', 128);
+        string password = new('a', 128);
 
         // Act
         Person person = PersonFactory.Create(name, password);

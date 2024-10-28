@@ -42,4 +42,91 @@ public class MyCleanerTests
     }
     // https://www.dpbolvw.net/click-4485850-10921729?sid=7ff429f4543711ef9cfbe634ded148ee0INT&url=%2Fasus-vivobook-15-15-6-laptop-1-4ghz-intel-core-5-120u-16gb-memory-512gb-ssd-windows-11-home-f1504vp-sb54%2Fproduct_24595128
     // https://cj.dotomi.com/2b74nmvuC/mty/BAJCBHCJ/EEIFIFA/A/A/A?v=n2sn%3DHppECJpEFEDHBBopJmploGDEnonBEIooASXd%2641v%3D%25CPk242-5s5ylyyu-BF-BF-G-vkz3yz-B-Eqr9-sx3ov-my1o-F-BCA4-BGql-wowy18-FBCql-22n-6sxny62-BB-rywo-pBFAE5z-2lFE%25CPz1yn4m3_CEFJFBCI%3c%3cr33z2%3A%2F%2F666.nzlyv56.xo3%2Fmvsmu-EEIFIFA-BAJCBHCJ%3c%3cQ%3c%3c%3cB%3cB%3cA%3cA%3c
+    [Fact]
+    public async Task CleanUrl_ShouldReturnNullForNullInput()
+    {
+        // Act
+        string actual = await _myCleaner.CleanUrlAsync(null);
+
+        // Assert
+        actual.Should().BeNull();
+    }
+    [Fact]
+    public async Task CleanUrl_ShouldReturnSameUrlIfNoExtractionNeeded()
+    {
+        // Arrange
+        const string input = "https://www.example.com/path";
+        const string expectedOutput = "https://www.example.com/path";
+
+        // Act
+        string actual = await _myCleaner.CleanUrlAsync(input);
+
+        // Assert
+        actual.Should().Be(expectedOutput);
+    }
+    [Fact]
+    public async Task CleanUrl_ShouldRemoveAmazonExtraPathSegments()
+    {
+        // Arrange
+        const string input = "https://www.amazon.com/gp/product/B08N5WRWNW/ref=ox_sc_saved_image_1?smid=ATVPDKIKX0DER&psc=1";
+        const string expectedOutput = "https://www.amazon.com/gp/product/B08N5WRWNW";
+
+        // Act
+        string actual = await _myCleaner.CleanUrlAsync(input);
+
+        // Assert
+        actual.Should().Be(expectedOutput);
+    }
+    [Fact]
+    public async Task CleanUrl_ShouldReturnNullAndLogErrorOnException()
+    {
+        // Arrange
+        const string input = "https://www.invalid-url.com";
+        HttpClientHandlerStub handler = new((request, cancellationToken) =>
+        {
+            request.Should().NotBeNull();
+            cancellationToken.IsCancellationRequested.Should().BeFalse();
+            throw new HttpRequestException("Invalid URL");
+        });
+        HttpClient httpClient = new(handler);
+        ILogger<MyCleaner> logger = Substitute.For<ILogger<MyCleaner>>();
+        MyCleaner myCleaner = new(logger, httpClient);
+
+        // Act
+        string actual = await myCleaner.CleanUrlAsync(input);
+
+        // Assert
+        actual.Should().BeNull();
+        logger.Received().LogError(Arg.Any<Exception>(), "Error processing URL: {Url}", input);
+    }
+
+    [Fact]
+    public async Task CleanUrl_ShouldFollowRedirects()
+    {
+        // Arrange
+        const string input = "https://httpbin.org/redirect/1";
+        const string expectedOutput = "https://httpbin.org/get";
+
+        // Act
+        string actual = await _myCleaner.CleanUrlAsync(input);
+
+        // Assert
+        actual.Should().Be(expectedOutput);
+    }
+    [Fact]
+    public async Task CleanUrl_ShouldRemoveQueryParameters()
+    {
+        // Arrange
+        const string input = "https://www.example.com/path?query=param";
+        const string expectedOutput = "https://www.example.com/path";
+
+        // Act
+        string actual = await _myCleaner.CleanUrlAsync(input);
+
+        // Assert
+        actual.Should().Be(expectedOutput);
+    }
+    
+    
+    
 }
