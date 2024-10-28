@@ -16,7 +16,7 @@ public class RevocationTests
     public void ReadCsv_ShouldReturnTokens()
     {
         // arrange
-        string filename = "authorizations.csv";
+        const string filename = "authorizations.csv";
 
         // act
         List<string> authorizationIds = Revocation.ReadCsv(filename);
@@ -29,7 +29,7 @@ public class RevocationTests
     public void ReadCsv_ShouldHandleEmptyFile()
     {
         // arrange
-        string filename = "empty.csv";
+        const string filename = "empty.csv";
         File.WriteAllText(filename, string.Empty);
 
         // act
@@ -77,7 +77,7 @@ public class RevocationTests
         List<string> result = Revocation.ReadCsv(filename);
 
         // Assert
-        result.Should().Contain(new[] { "value1", "value4" });
+        result.Should().Contain(["value1", "value4"]);
     }
     [Fact]
     public void ReadCsv_ShouldHandleLinesWithoutCommas()
@@ -90,7 +90,7 @@ public class RevocationTests
         List<string> result = Revocation.ReadCsv(filename);
 
         // Assert
-        result.Should().Contain(new[] { "value1", "value2" });
+        result.Should().Contain(["value1", "value2"]);
     }
     [Fact]
     public void ReadCsv_ShouldHandleNullLines()
@@ -103,6 +103,6 @@ public class RevocationTests
         List<string> result = Revocation.ReadCsv(filename);
 
         // Assert
-        result.Should().Contain(new[] { "value1", "value2" });
+        result.Should().Contain(["value1", "value2"]);
     }
 }
