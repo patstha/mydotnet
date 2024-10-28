@@ -52,6 +52,19 @@ public class DesignDynamicArrayTests
         capacity = dynamicArray.GetCapacity();
         capacity.Should().Be(2);
     }
+    [Fact]
+    public void PopBack_ShouldThrowException_WhenArrayIsEmpty()
+    {
+        // Arrange
+        DesignDynamicArray dynamicArray = new(1);
+
+        // Act
+        Action act = () => dynamicArray.PopBack();
+
+        // Assert
+        act.Should().Throw<InvalidOperationException>().WithMessage("Array is empty.");
+    }
+
 }
 
 
