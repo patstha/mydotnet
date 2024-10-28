@@ -381,11 +381,40 @@ public class MyCleanerTests
                     Headers = { Location = null }
                 };
             }
-            else if (request.RequestUri?.ToString() == "https://www.example.com/initial")
+            return new HttpResponseMessage(HttpStatusCode.OK)
             {
-                return new HttpResponseMessage(HttpStatusCode.OK)
+                RequestMessage = request
+            };
+        });
+
+        HttpClient httpClient = new(handler);
+        ILogger<MyCleaner> logger = Substitute.For<ILogger<MyCleaner>>();
+        MyCleaner myCleaner = new(logger, httpClient);
+
+        // Act
+        string actual = await myCleaner.CleanUrlAsync(input);
+
+        // Assert
+        actual.Should().Be(expectedOutput);
+    }
+    [Fact]
+    public async Task CleanUrl_ShouldHandleRedirect_WhenLocationHeaderIsNull_WithRedirectLimit()
+    {
+        // Arrange
+        const string input = "https://www.example.com/initial";
+        const string expectedOutput = "https://www.example.com/initial";
+        int redirectCount = 0;
+
+        HttpClientHandlerStub handler = new((request, cancellationToken) =>
+        {
+            cancellationToken.Should().NotBeNull();
+            cancellationToken.IsCancellationRequested.Should().BeFalse();
+            if (request.RequestUri?.ToString() == input && redirectCount < 1)
+            {
+                redirectCount++;
+                return new HttpResponseMessage(HttpStatusCode.Redirect)
                 {
-                    RequestMessage = request
+                    Headers = { Location = null }
                 };
             }
             return new HttpResponseMessage(HttpStatusCode.OK)
@@ -404,5 +433,6 @@ public class MyCleanerTests
         // Assert
         actual.Should().Be(expectedOutput);
     }
+
 
 }
