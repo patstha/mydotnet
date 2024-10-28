@@ -1,19 +1,16 @@
 ﻿using System.Net;
-using System.Threading;
 
 namespace tests
 {
     public class MyCleanerTests
     {
         private readonly MyCleaner _myCleaner;
-        private readonly ILogger<MyCleaner> _logger;
-        private readonly HttpClient _httpClient;
 
         public MyCleanerTests()
         {
-            _logger = Substitute.For<ILogger<MyCleaner>>();
-            _httpClient = new HttpClient(new HttpClientHandler { AllowAutoRedirect = true });
-            _myCleaner = new MyCleaner(_logger, _httpClient);
+            ILogger<MyCleaner> logger = Substitute.For<ILogger<MyCleaner>>();
+            HttpClient httpClient = new(new HttpClientHandler { AllowAutoRedirect = true });
+            _myCleaner = new MyCleaner(logger, httpClient);
         }
 
         [Theory]
@@ -116,6 +113,7 @@ namespace tests
 
             HttpClientHandlerStub handler = new((request, cancellationToken) =>
             {
+                cancellationToken.IsCancellationRequested.Should().BeFalse();
                 if (request.RequestUri?.ToString() == input)
                 {
                     return new HttpResponseMessage(HttpStatusCode.Redirect)
