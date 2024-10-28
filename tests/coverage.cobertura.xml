@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<coverage line-rate="0.8742" branch-rate="0.7711" version="1.9" timestamp="1730118355" lines-covered="570" lines-valid="652" branches-covered="182" branches-valid="236">
+<coverage line-rate="0.8926000000000001" branch-rate="0.7796" version="1.9" timestamp="1730119185" lines-covered="582" lines-valid="652" branches-covered="184" branches-valid="236">
   <sources>
     <source>C:\Users\kushal\src\mydotnet\hellolib\</source>
   </sources>
   <packages>
-    <package name="hellolib" line-rate="0.8742" branch-rate="0.7711" complexity="274">
+    <package name="hellolib" line-rate="0.8926000000000001" branch-rate="0.7796" complexity="274">
       <classes>
         <class name="HelloLib.RomanToInteger" filename="RomanToInteger.cs" line-rate="1" branch-rate="0.95" complexity="21">
           <methods>
@@ -220,27 +220,27 @@
           <methods>
             <method name="get_Val" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="5" hits="136" branch="False" />
+                <line number="5" hits="145" branch="False" />
               </lines>
             </method>
             <method name="get_Next" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="7" hits="150" branch="False" />
+                <line number="7" hits="159" branch="False" />
               </lines>
             </method>
             <method name=".ctor" signature="(System.Int32,hellolib.ListNode)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="3" hits="50" branch="False" />
+                <line number="3" hits="53" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="5" hits="136" branch="False" />
-            <line number="7" hits="150" branch="False" />
-            <line number="3" hits="50" branch="False" />
+            <line number="5" hits="145" branch="False" />
+            <line number="7" hits="159" branch="False" />
+            <line number="3" hits="53" branch="False" />
           </lines>
         </class>
-        <class name="hellolib.SinglyLinkedListAddTwoNumbers" filename="AddTwoNumbers.cs" line-rate="0.5714" branch-rate="0.65" complexity="21">
+        <class name="hellolib.SinglyLinkedListAddTwoNumbers" filename="AddTwoNumbers.cs" line-rate="0.9142" branch-rate="0.75" complexity="21">
           <methods>
             <method name="AddTwoNumbers" signature="(hellolib.ListNode,hellolib.ListNode)" line-rate="0.8636" branch-rate="0.7222" complexity="18">
               <lines>
@@ -298,29 +298,29 @@
                 <line number="37" hits="8" branch="False" />
               </lines>
             </method>
-            <method name="GetIntegerFromListNode" signature="(hellolib.ListNode)" line-rate="0" branch-rate="0" complexity="2">
+            <method name="GetIntegerFromListNode" signature="(hellolib.ListNode)" line-rate="1" branch-rate="1" complexity="2">
               <lines>
-                <line number="40" hits="0" branch="False" />
-                <line number="41" hits="0" branch="False" />
-                <line number="42" hits="0" branch="False" />
-                <line number="44" hits="0" branch="True" condition-coverage="0% (0/2)">
+                <line number="40" hits="2" branch="False" />
+                <line number="41" hits="2" branch="False" />
+                <line number="42" hits="2" branch="False" />
+                <line number="44" hits="5" branch="True" condition-coverage="100% (2/2)">
                   <conditions>
-                    <condition number="39" type="jump" coverage="0%" />
+                    <condition number="39" type="jump" coverage="100%" />
                   </conditions>
                 </line>
-                <line number="45" hits="0" branch="False" />
-                <line number="46" hits="0" branch="False" />
-                <line number="47" hits="0" branch="False" />
-                <line number="48" hits="0" branch="False" />
-                <line number="49" hits="0" branch="False" />
-                <line number="50" hits="0" branch="False" />
-                <line number="51" hits="0" branch="False" />
-                <line number="52" hits="0" branch="False" />
+                <line number="45" hits="3" branch="False" />
+                <line number="46" hits="3" branch="False" />
+                <line number="47" hits="3" branch="False" />
+                <line number="48" hits="3" branch="False" />
+                <line number="49" hits="3" branch="False" />
+                <line number="50" hits="2" branch="False" />
+                <line number="51" hits="2" branch="False" />
+                <line number="52" hits="2" branch="False" />
               </lines>
             </method>
             <method name=".ctor" signature="(Microsoft.Extensions.Logging.ILogger`1&lt;hellolib.SinglyLinkedListAddTwoNumbers&gt;)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="10" hits="9" branch="False" />
+                <line number="10" hits="11" branch="False" />
               </lines>
             </method>
           </methods>
@@ -377,23 +377,23 @@
             <line number="34" hits="0" branch="False" />
             <line number="36" hits="8" branch="False" />
             <line number="37" hits="8" branch="False" />
-            <line number="40" hits="0" branch="False" />
-            <line number="41" hits="0" branch="False" />
-            <line number="42" hits="0" branch="False" />
-            <line number="44" hits="0" branch="True" condition-coverage="0% (0/2)">
+            <line number="40" hits="2" branch="False" />
+            <line number="41" hits="2" branch="False" />
+            <line number="42" hits="2" branch="False" />
+            <line number="44" hits="5" branch="True" condition-coverage="100% (2/2)">
               <conditions>
-                <condition number="39" type="jump" coverage="0%" />
+                <condition number="39" type="jump" coverage="100%" />
               </conditions>
             </line>
-            <line number="45" hits="0" branch="False" />
-            <line number="46" hits="0" branch="False" />
-            <line number="47" hits="0" branch="False" />
-            <line number="48" hits="0" branch="False" />
-            <line number="49" hits="0" branch="False" />
-            <line number="50" hits="0" branch="False" />
-            <line number="51" hits="0" branch="False" />
-            <line number="52" hits="0" branch="False" />
-            <line number="10" hits="9" branch="False" />
+            <line number="45" hits="3" branch="False" />
+            <line number="46" hits="3" branch="False" />
+            <line number="47" hits="3" branch="False" />
+            <line number="48" hits="3" branch="False" />
+            <line number="49" hits="3" branch="False" />
+            <line number="50" hits="2" branch="False" />
+            <line number="51" hits="2" branch="False" />
+            <line number="52" hits="2" branch="False" />
+            <line number="10" hits="11" branch="False" />
           </lines>
         </class>
         <class name="hellolib.BubbleSort" filename="BubbleSort.cs" line-rate="1" branch-rate="1" complexity="6">
@@ -1814,18 +1814,18 @@
           <methods>
             <method name="Initialize" signature="(Microsoft.Extensions.Options.IOptions`1&lt;hellolib.PasswordSettings&gt;)" line-rate="0.75" branch-rate="0.5" complexity="2">
               <lines>
-                <line number="12" hits="1" branch="False" />
-                <line number="13" hits="1" branch="True" condition-coverage="50% (1/2)">
+                <line number="12" hits="2" branch="False" />
+                <line number="13" hits="2" branch="True" condition-coverage="50% (1/2)">
                   <conditions>
                     <condition number="8" type="jump" coverage="50%" />
                   </conditions>
                 </line>
                 <line number="14" hits="0" branch="False" />
                 <line number="15" hits="0" branch="False" />
-                <line number="18" hits="1" branch="False" />
-                <line number="19" hits="1" branch="False" />
-                <line number="20" hits="1" branch="False" />
-                <line number="21" hits="1" branch="False" />
+                <line number="18" hits="2" branch="False" />
+                <line number="19" hits="2" branch="False" />
+                <line number="20" hits="2" branch="False" />
+                <line number="21" hits="2" branch="False" />
               </lines>
             </method>
             <method name="Create" signature="(System.String,System.String)" line-rate="0.75" branch-rate="0.75" complexity="4">
@@ -1862,18 +1862,18 @@
             </method>
           </methods>
           <lines>
-            <line number="12" hits="1" branch="False" />
-            <line number="13" hits="1" branch="True" condition-coverage="50% (1/2)">
+            <line number="12" hits="2" branch="False" />
+            <line number="13" hits="2" branch="True" condition-coverage="50% (1/2)">
               <conditions>
                 <condition number="8" type="jump" coverage="50%" />
               </conditions>
             </line>
             <line number="14" hits="0" branch="False" />
             <line number="15" hits="0" branch="False" />
-            <line number="18" hits="1" branch="False" />
-            <line number="19" hits="1" branch="False" />
-            <line number="20" hits="1" branch="False" />
-            <line number="21" hits="1" branch="False" />
+            <line number="18" hits="2" branch="False" />
+            <line number="19" hits="2" branch="False" />
+            <line number="20" hits="2" branch="False" />
+            <line number="21" hits="2" branch="False" />
             <line number="24" hits="123" branch="False" />
             <line number="25" hits="123" branch="True" condition-coverage="50% (1/2)">
               <conditions>
@@ -1904,18 +1904,18 @@
           <methods>
             <method name="get_MinimumPasswordLength" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="44" hits="2" branch="False" />
+                <line number="44" hits="4" branch="False" />
               </lines>
             </method>
             <method name="get_MaximumPasswordLength" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="45" hits="2" branch="False" />
+                <line number="45" hits="4" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="44" hits="2" branch="False" />
-            <line number="45" hits="2" branch="False" />
+            <line number="44" hits="4" branch="False" />
+            <line number="45" hits="4" branch="False" />
           </lines>
         </class>
         <class name="hellolib.Revocation" filename="Revocation.cs" line-rate="1" branch-rate="0.75" complexity="8">
