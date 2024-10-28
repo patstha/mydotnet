@@ -302,6 +302,100 @@ public class MyCleanerTests
         // Assert
         actual.Should().Be(expectedOutput);
     }
+    [Fact]
+    public async Task CleanUrl_ShouldReturnOriginalUrl_WhenFinalUrlIsNull()
+    {
+        // Arrange
+        const string input = "https://www.example.com/path?return=https%3A%2F%2Fwww.example.com%2Fpath%3Fotherparam%3Dvalue";
+        const string expectedOutput = "https://www.example.com/path";
 
+        // Act
+        string actual = await _myCleaner.CleanUrlAsync(input);
+
+        // Assert
+        actual.Should().Be(expectedOutput);
+    }
+    [Fact]
+    public async Task CleanUrl_ShouldReturnOriginalUrl_WhenReturnParameterDoesNotContainU()
+    {
+        // Arrange
+        const string input = "https://www.example.com/path?return=https%3A%2F%2Fwww.example.com%2Fpath%3Fotherparam%3Dvalue";
+        const string expectedOutput = "https://www.example.com/path";
+
+        // Act
+        string actual = await _myCleaner.CleanUrlAsync(input);
+
+        // Assert
+        actual.Should().Be(expectedOutput);
+    }
+    [Fact]
+    public async Task CleanUrl_ShouldHandleRedirect_WhenLocationHeaderIsNotNull()
+    {
+        // Arrange
+        const string input = "https://www.example.com/initial";
+        const string redirectUrl = "https://www.example.com/redirected";
+        const string expectedOutput = "https://www.example.com/redirected";
+
+        HttpClientHandlerStub handler = new((request, cancellationToken) =>
+        {
+            cancellationToken.Should().NotBeNull();
+            cancellationToken.IsCancellationRequested.Should().BeFalse();
+            if (request.RequestUri?.ToString() == input)
+            {
+                return new HttpResponseMessage(HttpStatusCode.Redirect)
+                {
+                    Headers = { Location = new Uri(redirectUrl) }
+                };
+            }
+            return new HttpResponseMessage(HttpStatusCode.OK)
+            {
+                RequestMessage = request
+            };
+        });
+
+        HttpClient httpClient = new(handler);
+        ILogger<MyCleaner> logger = Substitute.For<ILogger<MyCleaner>>();
+        MyCleaner myCleaner = new(logger, httpClient);
+
+        // Act
+        string actual = await myCleaner.CleanUrlAsync(input);
+
+        // Assert
+        actual.Should().Be(expectedOutput);
+    }
+    [Fact]
+    public async Task CleanUrl_ShouldHandleRedirect_WhenLocationHeaderIsNull()
+    {
+        // Arrange
+        const string input = "https://www.example.com/initial";
+        const string expectedOutput = "https://www.example.com/initial";
+
+        HttpClientHandlerStub handler = new((request, cancellationToken) =>
+        {
+            cancellationToken.Should().NotBeNull();
+            cancellationToken.IsCancellationRequested.Should().BeFalse();
+            if (request.RequestUri?.ToString() == input)
+            {
+                return new HttpResponseMessage(HttpStatusCode.Redirect)
+                {
+                    Headers = { Location = null }
+                };
+            }
+            return new HttpResponseMessage(HttpStatusCode.OK)
+            {
+                RequestMessage = request
+            };
+        });
+
+        HttpClient httpClient = new(handler);
+        ILogger<MyCleaner> logger = Substitute.For<ILogger<MyCleaner>>();
+        MyCleaner myCleaner = new(logger, httpClient);
+
+        // Act
+        string actual = await myCleaner.CleanUrlAsync(input);
+
+        // Assert
+        actual.Should().Be(expectedOutput);
+    }
 
 }
