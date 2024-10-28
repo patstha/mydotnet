@@ -232,7 +232,7 @@ var assemblies = [
       { "name": "hellolib.MergeSortedArray", "rp": "hellolib_MergeSortedArray.html", "cl": 26, "ucl": 0, "cal": 26, "tl": 81, "cb": 8, "tb": 8, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "hellolib.MergeStringsAlternately", "rp": "hellolib_MergeStringsAlternately.html", "cl": 22, "ucl": 0, "cal": 22, "tl": 33, "cb": 6, "tb": 6, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "hellolib.MinimumCoin", "rp": "hellolib_MinimumCoin.html", "cl": 45, "ucl": 0, "cal": 45, "tl": 65, "cb": 16, "tb": 16, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
-      { "name": "hellolib.MyCleaner", "rp": "hellolib_MyCleaner.html", "cl": 75, "ucl": 0, "cal": 75, "tl": 108, "cb": 33, "tb": 36, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "hellolib.MyCleaner", "rp": "hellolib_MyCleaner.html", "cl": 75, "ucl": 0, "cal": 75, "tl": 108, "cb": 36, "tb": 36, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "hellolib.MySearch", "rp": "hellolib_MySearch.html", "cl": 53, "ucl": 0, "cal": 53, "tl": 70, "cb": 20, "tb": 20, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "hellolib.PascalTriangle", "rp": "hellolib_PascalTriangle.html", "cl": 17, "ucl": 0, "cal": 17, "tl": 28, "cb": 6, "tb": 6, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "hellolib.PasswordSettings", "rp": "hellolib_PasswordSettings.html", "cl": 2, "ucl": 0, "cal": 2, "tl": 49, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
