@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<coverage line-rate="0.9455" branch-rate="0.8425" version="1.9" timestamp="1730137572" lines-covered="660" lines-valid="698" branches-covered="214" branches-valid="254">
+<coverage line-rate="0.9455" branch-rate="0.8464" version="1.9" timestamp="1730138332" lines-covered="660" lines-valid="698" branches-covered="215" branches-valid="254">
   <sources>
     <source>C:\Users\kushal\src\mydotnet\hellolib\</source>
   </sources>
   <packages>
-    <package name="hellolib" line-rate="0.9455" branch-rate="0.8425" complexity="295">
+    <package name="hellolib" line-rate="0.9455" branch-rate="0.8464" complexity="295">
       <classes>
         <class name="HelloLib.RomanToInteger" filename="RomanToInteger.cs" line-rate="1" branch-rate="0.95" complexity="21">
           <methods>
@@ -628,20 +628,20 @@
             <line number="9" hits="2" branch="False" />
           </lines>
         </class>
-        <class name="hellolib.FindClosestNumberToZero" filename="FindClosestNumberToZero.cs" line-rate="1" branch-rate="0.9" complexity="11">
+        <class name="hellolib.FindClosestNumberToZero" filename="FindClosestNumberToZero.cs" line-rate="1" branch-rate="1" complexity="11">
           <methods>
-            <method name="FindClosestNumber" signature="(System.Int32[])" line-rate="1" branch-rate="0.9" complexity="10">
+            <method name="FindClosestNumber" signature="(System.Int32[])" line-rate="1" branch-rate="1" complexity="10">
               <lines>
-                <line number="6" hits="7" branch="False" />
-                <line number="7" hits="7" branch="True" condition-coverage="75% (3/4)">
+                <line number="6" hits="8" branch="False" />
+                <line number="7" hits="8" branch="True" condition-coverage="100% (4/4)">
                   <conditions>
-                    <condition number="2" type="jump" coverage="50%" />
+                    <condition number="2" type="jump" coverage="100%" />
                     <condition number="14" type="jump" coverage="100%" />
                   </conditions>
                 </line>
-                <line number="8" hits="1" branch="False" />
-                <line number="9" hits="1" branch="False" />
-                <line number="10" hits="1" branch="False" />
+                <line number="8" hits="2" branch="False" />
+                <line number="9" hits="2" branch="False" />
+                <line number="10" hits="2" branch="False" />
                 <line number="13" hits="6" branch="True" condition-coverage="100% (2/2)">
                   <conditions>
                     <condition number="56" type="jump" coverage="100%" />
@@ -667,26 +667,26 @@
                 </line>
                 <line number="28" hits="5" branch="False" />
                 <line number="30" hits="5" branch="False" />
-                <line number="31" hits="7" branch="False" />
+                <line number="31" hits="8" branch="False" />
               </lines>
             </method>
             <method name=".ctor" signature="(Microsoft.Extensions.Logging.ILogger`1&lt;hellolib.FindClosestNumberToZero&gt;)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="3" hits="7" branch="False" />
+                <line number="3" hits="8" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="6" hits="7" branch="False" />
-            <line number="7" hits="7" branch="True" condition-coverage="75% (3/4)">
+            <line number="6" hits="8" branch="False" />
+            <line number="7" hits="8" branch="True" condition-coverage="100% (4/4)">
               <conditions>
-                <condition number="2" type="jump" coverage="50%" />
+                <condition number="2" type="jump" coverage="100%" />
                 <condition number="14" type="jump" coverage="100%" />
               </conditions>
             </line>
-            <line number="8" hits="1" branch="False" />
-            <line number="9" hits="1" branch="False" />
-            <line number="10" hits="1" branch="False" />
+            <line number="8" hits="2" branch="False" />
+            <line number="9" hits="2" branch="False" />
+            <line number="10" hits="2" branch="False" />
             <line number="13" hits="6" branch="True" condition-coverage="100% (2/2)">
               <conditions>
                 <condition number="56" type="jump" coverage="100%" />
@@ -712,8 +712,8 @@
             </line>
             <line number="28" hits="5" branch="False" />
             <line number="30" hits="5" branch="False" />
-            <line number="31" hits="7" branch="False" />
-            <line number="3" hits="7" branch="False" />
+            <line number="31" hits="8" branch="False" />
+            <line number="3" hits="8" branch="False" />
           </lines>
         </class>
         <class name="hellolib.Graph" filename="Graph.cs" line-rate="1" branch-rate="0.9375" complexity="18">
