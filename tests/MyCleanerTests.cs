@@ -226,5 +226,51 @@ public class MyCleanerTests
         // Assert
         actual.Should().Be(expectedOutput);
     }
+    [Fact]
+    public async Task CleanUrl_ShouldExtractAndRemoveQueryParameters()
+    {
+        // Arrange
+        const string input = "https://www.example.com/path?u=https%3A%2F%2Fwww.example.com%2Ffinal%3Fquery%3Dparam";
+        const string expectedOutput = "https://www.example.com/final";
+
+        // Act
+        string actual = await _myCleaner.CleanUrlAsync(input);
+
+        // Assert
+        actual.Should().Be(expectedOutput);
+    }
+    [Fact]
+    public async Task CleanUrl_ShouldFollowRedirectsAndRemoveQueryParameters()
+    {
+        // Arrange
+        const string input = "https://www.example.com/initial";
+        const string redirectUrl = "https://www.example.com/redirected?query=param";
+        const string expectedOutput = "https://www.example.com/redirected";
+
+        HttpClientHandlerStub handler = new((request, cancellationToken) =>
+        {
+            if (request.RequestUri?.ToString() == input)
+            {
+                return new HttpResponseMessage(HttpStatusCode.Redirect)
+                {
+                    Headers = { Location = new Uri(redirectUrl) }
+                };
+            }
+            return new HttpResponseMessage(HttpStatusCode.OK)
+            {
+                RequestMessage = request
+            };
+        });
+
+        HttpClient httpClient = new(handler);
+        ILogger<MyCleaner> logger = Substitute.For<ILogger<MyCleaner>>();
+        MyCleaner myCleaner = new(logger, httpClient);
+
+        // Act
+        string actual = await myCleaner.CleanUrlAsync(input);
+
+        // Assert
+        actual.Should().Be(expectedOutput);
+    }
 
 }
