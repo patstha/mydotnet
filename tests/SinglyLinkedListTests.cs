@@ -277,6 +277,24 @@ public class SinglyLinkedListTests
         linkedList.InsertTail(3);
         linkedList.Remove(3).Should().BeFalse(); // current.Next will be null
     }
+    [Fact]
+    public void Remove_ShouldReturnFalseWhenCurrentIsNullInLargerList()
+    {
+        SinglyLinkedList linkedList = new();
+        linkedList.InsertTail(1);
+        linkedList.InsertTail(2);
+        linkedList.InsertTail(3);
+        linkedList.Remove(5).Should().BeFalse(); // current will be null
+    }
+    [Fact]
+    public void Remove_ShouldReturnFalseWhenCurrentNextIsNullInLargerList()
+    {
+        SinglyLinkedList linkedList = new();
+        linkedList.InsertTail(1);
+        linkedList.InsertTail(2);
+        linkedList.InsertTail(3);
+        linkedList.Remove(4).Should().BeFalse(); // current.Next will be null
+    }
 
 }
 
