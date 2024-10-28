@@ -152,5 +152,55 @@ public class AddTwoNumbersTests
         actual.Next.Next.Val.Should().Be(1); // carry over 1 should be added as a new node
         actual.Next.Next.Next.Should().BeNull(); // no more nodes
     }
+    [Fact]
+    public void AddTwoNumbers_ShouldHandleNullFirstList()
+    {
+        // Arrange
+        ListNode second = new()
+        {
+            Val = 1,
+            Next = new ListNode(2)
+        };
+        SinglyLinkedListAddTwoNumbers solution = new(_logger);
+
+        // Act
+        ListNode actual = solution.AddTwoNumbers(null, second);
+
+        // Assert
+        actual.Val.Should().Be(1);
+        actual.Next.Val.Should().Be(2);
+        actual.Next.Next.Should().BeNull();
+    }
+    [Fact]
+    public void AddTwoNumbers_ShouldHandleNullSecondList()
+    {
+        // Arrange
+        ListNode first = new()
+        {
+            Val = 1,
+            Next = new ListNode(2)
+        };
+        SinglyLinkedListAddTwoNumbers solution = new(_logger);
+
+        // Act
+        ListNode actual = solution.AddTwoNumbers(first, null);
+
+        // Assert
+        actual.Val.Should().Be(1);
+        actual.Next.Val.Should().Be(2);
+        actual.Next.Next.Should().BeNull();
+    }
+    [Fact]
+    public void AddTwoNumbers_ShouldHandleBothListsNull()
+    {
+        // Arrange
+        SinglyLinkedListAddTwoNumbers solution = new(_logger);
+
+        // Act
+        ListNode actual = solution.AddTwoNumbers(null, null);
+
+        // Assert
+        actual.Should().BeNull();
+    }
 
 }
