@@ -57,7 +57,7 @@ public class RevocationTests
     public void GetBatches_ShouldWorkWithDifferentSizes()
     {
         // arrange
-        string filename = "authorizations.csv";
+        const string filename = "authorizations.csv";
 
         // act
         Revocation.GetBatches(filename, 5);
@@ -66,11 +66,12 @@ public class RevocationTests
         // assert
         Assert.True(true); // Just to ensure no exceptions are thrown
     }
+
     [Fact]
     public void ReadCsv_ShouldHandleLinesWithCommas()
     {
         // Arrange
-        string filename = "test_with_commas.csv";
+        const string filename = "test_with_commas.csv";
         File.WriteAllText(filename, "value1,value2,value3\nvalue4,value5,value6");
 
         // Act
@@ -79,11 +80,12 @@ public class RevocationTests
         // Assert
         result.Should().Contain(["value1", "value4"]);
     }
+
     [Fact]
     public void ReadCsv_ShouldHandleLinesWithoutCommas()
     {
         // Arrange
-        string filename = "test_without_commas.csv";
+        const string filename = "test_without_commas.csv";
         File.WriteAllText(filename, "value1\nvalue2");
 
         // Act
@@ -92,11 +94,12 @@ public class RevocationTests
         // Assert
         result.Should().Contain(["value1", "value2"]);
     }
+
     [Fact]
     public void ReadCsv_ShouldHandleNullLines()
     {
         // Arrange
-        string filename = "test_with_null_line.csv";
+        const string filename = "test_with_null_line.csv";
         File.WriteAllText(filename, "value1\n\nvalue2");
 
         // Act
@@ -104,5 +107,61 @@ public class RevocationTests
 
         // Assert
         result.Should().Contain(["value1", "value2"]);
+    }
+
+    [Fact]
+    public void ReadCsv_ShouldHandleEmptyStringLines()
+    {
+        // Arrange
+        const string filename = "test_with_empty_string_line.csv";
+        File.WriteAllText(filename, "value1\n\nvalue2");
+
+        // Act
+        List<string> result = Revocation.ReadCsv(filename);
+
+        // Assert
+        result.Should().Contain(["value1", "value2"]);
+    }
+
+    [Fact]
+    public void ReadCsv_ShouldHandleSingleEmptyLine()
+    {
+        // Arrange
+        const string filename = "test_with_single_empty_line.csv";
+        File.WriteAllText(filename, "\n");
+
+        // Act
+        List<string> result = Revocation.ReadCsv(filename);
+
+        // Assert
+        result.Should().BeEmpty();
+    }
+
+    [Fact]
+    public void ReadCsv_ShouldHandleMultipleEmptyLines()
+    {
+        // Arrange
+        const string filename = "test_with_multiple_empty_lines.csv";
+        File.WriteAllText(filename, "\n\n\n");
+
+        // Act
+        List<string> result = Revocation.ReadCsv(filename);
+
+        // Assert
+        result.Should().BeEmpty();
+    }
+
+    [Fact]
+    public void ReadCsv_ShouldHandleMixedContent()
+    {
+        // Arrange
+        const string filename = "test_with_mixed_content.csv";
+        File.WriteAllText(filename, "value1,value2\n\nvalue3\n\nvalue4,value5");
+
+        // Act
+        List<string> result = Revocation.ReadCsv(filename);
+
+        // Assert
+        result.Should().Contain(["value1", "value3", "value4"]);
     }
 }
