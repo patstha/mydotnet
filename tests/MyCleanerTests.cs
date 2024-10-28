@@ -399,6 +399,106 @@ public class MyCleanerTests
         // Assert
         actual.Should().Be(expectedOutput);
     }
+    [Fact]
+    public async Task CleanUrl_ShouldReturnRequestUri_WhenRequestMessageAndRequestUriAreNotNull()
+    {
+        // Arrange
+        const string input = "https://www.example.com/initial";
+        const string expectedOutput = "https://www.example.com/final";
 
+        HttpClientHandlerStub handler = new((request, cancellationToken) =>
+        {
+            cancellationToken.Should().NotBeNull();
+            cancellationToken.IsCancellationRequested.Should().BeFalse();
+            if (request.RequestUri?.ToString() == input)
+            {
+                return new HttpResponseMessage(HttpStatusCode.OK)
+                {
+                    RequestMessage = new HttpRequestMessage(HttpMethod.Get, "https://www.example.com/final")
+                };
+            }
+            return new HttpResponseMessage(HttpStatusCode.OK)
+            {
+                RequestMessage = request
+            };
+        });
 
+        HttpClient httpClient = new(handler);
+        ILogger<MyCleaner> logger = Substitute.For<ILogger<MyCleaner>>();
+        MyCleaner myCleaner = new(logger, httpClient);
+
+        // Act
+        string actual = await myCleaner.CleanUrlAsync(input);
+
+        // Assert
+        actual.Should().Be(expectedOutput);
+    }
+    [Fact]
+    public async Task CleanUrl_ShouldReturnEmptyString_WhenRequestMessageIsNull()
+    {
+        // Arrange
+        const string input = "https://www.example.com/initial";
+        const string expectedOutput = "";
+
+        HttpClientHandlerStub handler = new((request, cancellationToken) =>
+        {
+            cancellationToken.Should().NotBeNull();
+            cancellationToken.IsCancellationRequested.Should().BeFalse();
+            if (request.RequestUri?.ToString() == input)
+            {
+                return new HttpResponseMessage(HttpStatusCode.OK)
+                {
+                    RequestMessage = null
+                };
+            }
+            return new HttpResponseMessage(HttpStatusCode.OK)
+            {
+                RequestMessage = request
+            };
+        });
+
+        HttpClient httpClient = new(handler);
+        ILogger<MyCleaner> logger = Substitute.For<ILogger<MyCleaner>>();
+        MyCleaner myCleaner = new(logger, httpClient);
+
+        // Act
+        string actual = await myCleaner.CleanUrlAsync(input);
+
+        // Assert
+        actual.Should().Be(expectedOutput);
+    }
+    [Fact]
+    public async Task CleanUrl_ShouldReturnEmptyString_WhenRequestUriIsNull()
+    {
+        // Arrange
+        const string input = "https://www.example.com/initial";
+        const string expectedOutput = "";
+
+        HttpClientHandlerStub handler = new((request, cancellationToken) =>
+        {
+            cancellationToken.Should().NotBeNull();
+            cancellationToken.IsCancellationRequested.Should().BeFalse();
+            if (request.RequestUri?.ToString() == input)
+            {
+                return new HttpResponseMessage(HttpStatusCode.OK)
+                {
+                    RequestMessage = new HttpRequestMessage(HttpMethod.Get, (Uri)null)
+                };
+            }
+            return new HttpResponseMessage(HttpStatusCode.OK)
+            {
+                RequestMessage = request
+            };
+        });
+
+        HttpClient httpClient = new(handler);
+        ILogger<MyCleaner> logger = Substitute.For<ILogger<MyCleaner>>();
+        MyCleaner myCleaner = new(logger, httpClient);
+
+        // Act
+        string actual = await myCleaner.CleanUrlAsync(input);
+
+        // Assert
+        actual.Should().Be(expectedOutput);
+    }
 }
