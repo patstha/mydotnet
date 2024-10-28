@@ -397,5 +397,4 @@ public class MyCleanerTests
         // Assert
         actual.Should().Be(expectedOutput);
     }
-
 }
