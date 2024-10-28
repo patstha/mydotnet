@@ -66,4 +66,43 @@ public class RevocationTests
         // assert
         Assert.True(true); // Just to ensure no exceptions are thrown
     }
+    [Fact]
+    public void ReadCsv_ShouldHandleLinesWithCommas()
+    {
+        // Arrange
+        string filename = "test_with_commas.csv";
+        File.WriteAllText(filename, "value1,value2,value3\nvalue4,value5,value6");
+
+        // Act
+        List<string> result = Revocation.ReadCsv(filename);
+
+        // Assert
+        result.Should().Contain(new[] { "value1", "value4" });
+    }
+    [Fact]
+    public void ReadCsv_ShouldHandleLinesWithoutCommas()
+    {
+        // Arrange
+        string filename = "test_without_commas.csv";
+        File.WriteAllText(filename, "value1\nvalue2");
+
+        // Act
+        List<string> result = Revocation.ReadCsv(filename);
+
+        // Assert
+        result.Should().Contain(new[] { "value1", "value2" });
+    }
+    [Fact]
+    public void ReadCsv_ShouldHandleNullLines()
+    {
+        // Arrange
+        string filename = "test_with_null_line.csv";
+        File.WriteAllText(filename, "value1\n\nvalue2");
+
+        // Act
+        List<string> result = Revocation.ReadCsv(filename);
+
+        // Assert
+        result.Should().Contain(new[] { "value1", "value2" });
+    }
 }
