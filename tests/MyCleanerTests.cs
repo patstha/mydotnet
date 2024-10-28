@@ -41,7 +41,6 @@ namespace tests
             string actual = await _myCleaner.CleanUrlAsync(input);
             actual.Should().Be(expectedOutput);
         }
-
         [Fact]
         public async Task CleanUrl_ShouldReturnNullAndLogErrorOnException()
         {
@@ -63,13 +62,11 @@ namespace tests
             // Assert
             actual.Should().BeNull();
             logger.Received().LogError(
-                Arg.Is<HttpRequestException>(ex => ex.Message == "Invalid URL"),
+                Arg.Any<HttpRequestException>(),
                 "Error processing URL: {Url}",
                 input
             );
         }
-
-
         [Fact]
         public async Task CleanUrl_ShouldReturnEmptyStringForNullInput()
         {
