@@ -1,7 +1,5 @@
 namespace tests;
 
-using hellolib;
-
 public class TwoSumTests
 {
     private static readonly int[] Array1 = [1, 5, 3, 7, 2, 8];

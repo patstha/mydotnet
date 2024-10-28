@@ -1,4 +1,7 @@
-﻿namespace hellolib;
+﻿using System.Collections.Specialized;
+using System.Net;
+
+namespace hellolib;
 
 public class MyCleaner(ILogger<MyCleaner> logger, HttpClient httpClient)
 {
@@ -40,7 +43,7 @@ public class MyCleaner(ILogger<MyCleaner> logger, HttpClient httpClient)
     private async Task<string> FollowRedirectsAsync(string url)
     {
         HttpResponseMessage response = await httpClient.GetAsync(url);
-        while (response.StatusCode == System.Net.HttpStatusCode.Redirect || response.StatusCode == System.Net.HttpStatusCode.MovedPermanently)
+        while (response.StatusCode == HttpStatusCode.Redirect || response.StatusCode == HttpStatusCode.MovedPermanently)
         {
             string redirectUrl = response.Headers.Location?.ToString() ?? "";
             if (!Uri.IsWellFormedUriString(redirectUrl, UriKind.Absolute))
@@ -64,7 +67,7 @@ public class MyCleaner(ILogger<MyCleaner> logger, HttpClient httpClient)
     private static string ExtractFromAddress(string url)
     {
         Uri uri = new(url);
-        System.Collections.Specialized.NameValueCollection queryParams = HttpUtility.ParseQueryString(uri.Query);
+        NameValueCollection queryParams = HttpUtility.ParseQueryString(uri.Query);
 
         string uParam = queryParams.Get("u");
         if (uParam != null)

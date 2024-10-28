@@ -1,6 +1,6 @@
 ﻿using System.Net;
-using System.Threading;
 using System.Text.Json;
+using System.Threading;
 
 namespace tests;
 public class WeatherTests

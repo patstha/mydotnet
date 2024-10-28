@@ -1,5 +1,5 @@
-﻿using BenchmarkDotNet.Attributes;
-using System.Security.Cryptography;
+﻿using System.Security.Cryptography;
+using BenchmarkDotNet.Attributes;
 
 namespace hellobenchamarks;
 

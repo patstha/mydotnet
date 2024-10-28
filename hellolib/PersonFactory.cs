@@ -1,6 +1,6 @@
-﻿namespace hellolib;
+﻿using Microsoft.Extensions.Options;
 
-using Microsoft.Extensions.Options;
+namespace hellolib;
 
 public static class PersonFactory
 {

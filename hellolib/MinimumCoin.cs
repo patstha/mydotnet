@@ -46,21 +46,20 @@ public class MinimumCoin(List<int> coinSet, int repeatFactor)
         {
             return 1;
         }
-        else if (CoinSet.Min() > total)
+
+        if (CoinSet.Min() > total)
         {
             return 0;
         }
-        else
+
+        List<int> repeatedList = [];
+        for (int i = 0; i < RepeatFactor; i++)
         {
-            List<int> repeatedList = [];
-            for (int i = 0; i < RepeatFactor; i++)
+            foreach (int x in CoinSet)
             {
-                foreach (int x in CoinSet)
-                {
-                    repeatedList.Add(x);
-                }
+                repeatedList.Add(x);
             }
-            return GetCountInternal(total, repeatedList);
         }
+        return GetCountInternal(total, repeatedList);
     }
 }

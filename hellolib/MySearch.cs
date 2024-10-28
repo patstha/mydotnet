@@ -28,7 +28,8 @@ public static class MySearch
             {
                 return midPoint;
             }
-            else if (inputArray[midPoint] < queryItem)
+
+            if (inputArray[midPoint] < queryItem)
             {
                 lowerBound = midPoint + 1;
             }
@@ -54,7 +55,8 @@ public static class MySearch
             {
                 return midPoint;
             }
-            else if (inputArray[midPoint] > queryItem)
+
+            if (inputArray[midPoint] > queryItem)
             {
                 upperBound = midPoint - 1;
             }

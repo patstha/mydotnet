@@ -58,10 +58,8 @@ public static class TwoSum
             {
                 return true;
             }
-            else
-            {
-                _ = mySet.Add(target - element);
-            }
+
+            _ = mySet.Add(target - element);
         }
         return false;
     }

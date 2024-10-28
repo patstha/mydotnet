@@ -20,10 +20,8 @@ public class Weather(HttpClient httpClient)
 
             return currentWeather;
         }
-        else
-        {
-            throw new WeatherFetchException($"Failed to get weather information: {response.StatusCode}");
-        }
+
+        throw new WeatherFetchException($"Failed to get weather information: {response.StatusCode}");
     }
 }
 
