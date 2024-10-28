@@ -120,11 +120,10 @@ public class AddTwoNumbersTests : IClassFixture<PersonFactoryFixture>
     public void GetIntegerFromListNode_ShouldReturnZeroForEmptyList()
     {
         // Arrange
-        ListNode node = null;
         SinglyLinkedListAddTwoNumbers solution = new(_logger);
 
         // Act
-        int result = solution.GetIntegerFromListNode(node);
+        int result = solution.GetIntegerFromListNode(null);
 
         // Assert
         result.Should().Be(0);
