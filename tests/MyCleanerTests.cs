@@ -434,11 +434,11 @@ public class MyCleanerTests
         actual.Should().Be(expectedOutput);
     }
     [Fact]
-    public async Task CleanUrl_ShouldReturnEmptyString_WhenRequestMessageIsNull()
+    public async Task CleanUrl_ShouldReturnNull_WhenRequestMessageIsNull()
     {
         // Arrange
         const string input = "https://www.example.com/initial";
-        const string expectedOutput = "";
+        const string expectedOutput = null;
 
         HttpClientHandlerStub handler = new((request, cancellationToken) =>
         {
@@ -468,11 +468,11 @@ public class MyCleanerTests
         actual.Should().Be(expectedOutput);
     }
     [Fact]
-    public async Task CleanUrl_ShouldReturnEmptyString_WhenRequestUriIsNull()
+    public async Task CleanUrl_ShouldReturnNull_WhenRequestUriIsNull()
     {
         // Arrange
         const string input = "https://www.example.com/initial";
-        const string expectedOutput = "";
+        const string expectedOutput = null;
 
         HttpClientHandlerStub handler = new((request, cancellationToken) =>
         {
