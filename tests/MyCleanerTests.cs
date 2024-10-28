@@ -61,10 +61,12 @@ namespace tests
 
             // Assert
             actual.Should().BeNull();
-            logger.Received().LogError(
-                Arg.Any<HttpRequestException>(),
-                "Error processing URL: {Url}",
-                input
+            logger.Received().Log(
+                LogLevel.Error,
+                Arg.Any<EventId>(),
+                Arg.Is<object>(v => v.ToString().Contains("Error processing URL: https://www.invalid-url.com")),
+                Arg.Is<HttpRequestException>(ex => ex.Message == "Invalid URL"),
+                Arg.Any<Func<object, Exception, string>>()
             );
         }
         [Fact]
