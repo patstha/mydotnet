@@ -3,6 +3,20 @@
 public class FindClosestNumberToZeroTests
 {
     private readonly ILogger<FindClosestNumberToZero> _logger = Substitute.For<ILogger<FindClosestNumberToZero>>();
+
+    [Fact]
+    public void FindClosestNumber_NullArray_ReturnsZero()
+    {
+        // arrange
+        const int expected = 0;
+
+        // act 
+        FindClosestNumberToZero find = new(_logger);
+        int actual = find.FindClosestNumber(null);
+
+        // assert 
+        actual.Should().Be(expected);
+    }
     
     [Fact]
     public void FindClosestNumber_EmptyArray_ReturnsZero()
