@@ -203,6 +203,8 @@ public class MyCleanerTests
 
         HttpClientHandlerStub handler = new((request, cancellationToken) =>
         {
+            cancellationToken.Should().NotBeNull();
+            cancellationToken.IsCancellationRequested.Should().BeFalse();
             if (request.RequestUri?.ToString() == input)
             {
                 return new HttpResponseMessage(HttpStatusCode.Redirect)
@@ -249,6 +251,8 @@ public class MyCleanerTests
 
         HttpClientHandlerStub handler = new((request, cancellationToken) =>
         {
+            cancellationToken.Should().NotBeNull();
+            cancellationToken.IsCancellationRequested.Should().BeFalse();
             if (request.RequestUri?.ToString() == input)
             {
                 return new HttpResponseMessage(HttpStatusCode.Redirect)

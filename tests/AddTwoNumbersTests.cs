@@ -127,4 +127,30 @@ public class AddTwoNumbersTests
         // Assert
         result.Should().Be(0);
     }
+    [Fact]
+    public void AddTwoNumbers_ShouldHandleCarryOver()
+    {
+        // Arrange
+        ListNode first = new()
+        {
+            Val = 5,
+            Next = new ListNode(6)
+        };
+        ListNode second = new()
+        {
+            Val = 5,
+            Next = new ListNode(4)
+        };
+        SinglyLinkedListAddTwoNumbers solution = new(_logger);
+
+        // Act
+        ListNode actual = solution.AddTwoNumbers(first, second);
+
+        // Assert
+        actual.Val.Should().Be(0); // 5 + 5 = 10, so 0 is the first digit
+        actual.Next.Val.Should().Be(1); // 6 + 4 + 1 (carry) = 11, so 1 is the next digit
+        actual.Next.Next.Val.Should().Be(1); // carry over 1 should be added as a new node
+        actual.Next.Next.Next.Should().BeNull(); // no more nodes
+    }
+
 }
