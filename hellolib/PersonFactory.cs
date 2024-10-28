@@ -8,6 +8,9 @@ public static class PersonFactory
     private static int _maximumPasswordLength;
     private static bool _isInitialized;
 
+    public static int MinimumPasswordLength => _minimumPasswordLength;
+    public static int MaximumPasswordLength => _maximumPasswordLength;
+
     public static void Initialize(IOptions<PasswordSettings> passwordSettings)
     {
         if (_isInitialized)
@@ -38,6 +41,7 @@ public static class PersonFactory
         return length >= _minimumPasswordLength && length <= _maximumPasswordLength;
     }
 }
+
 
 public class PasswordSettings
 {

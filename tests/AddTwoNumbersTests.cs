@@ -1,6 +1,6 @@
 ﻿namespace tests;
 
-public class AddTwoNumbersTests : IClassFixture<PersonFactoryFixture>
+public class AddTwoNumbersTests
 {
     private readonly ILogger<SinglyLinkedListAddTwoNumbers> _logger;
     public AddTwoNumbersTests() => _logger = Substitute.For<ILogger<SinglyLinkedListAddTwoNumbers>>();
