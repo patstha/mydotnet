@@ -295,7 +295,13 @@ public class SinglyLinkedListTests
         linkedList.InsertTail(3);
         linkedList.Remove(4).Should().BeFalse(); // current.Next will be null
     }
-
+    [Fact]
+    public void Remove_ShouldReturnFalseWhenCurrentAndCurrentNextAreNull()
+    {
+        SinglyLinkedList linkedList = new();
+        linkedList.InsertHead(1);
+        linkedList.Remove(1).Should().BeFalse(); // current will be the only node and current.Next will be null
+    }
 }
 
 //Design Singly Linked List
