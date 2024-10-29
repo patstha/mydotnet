@@ -8,7 +8,7 @@ public class Graph
     {
         if (!_adjacencyList.ContainsKey(node))
         {
-            _adjacencyList[node] = [];
+            _adjacencyList[node] = new List<string>();
         }
     }
 
@@ -22,9 +22,14 @@ public class Graph
 
     public List<string> Bfs(string start)
     {
-        HashSet<string> visited = [];
+        if (!_adjacencyList.ContainsKey(start))
+        {
+            return new List<string>();
+        }
+
+        HashSet<string> visited = new();
         Queue<string> queue = new();
-        List<string> result = [];
+        List<string> result = new();
 
         queue.Enqueue(start);
         visited.Add(start);
@@ -46,8 +51,13 @@ public class Graph
 
     public List<string> Dfs(string start)
     {
-        HashSet<string> visited = [];
-        List<string> result = [];
+        if (!_adjacencyList.ContainsKey(start))
+        {
+            return new List<string>();
+        }
+
+        HashSet<string> visited = new();
+        List<string> result = new();
         DfsRecursive(start, visited, result);
         return result;
     }
