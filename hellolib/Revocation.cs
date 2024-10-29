@@ -15,7 +15,7 @@ public static class Revocation
             {
                 continue;
             }
-            string[] values = line?.Split(',');
+            string[] values = line.Split(',');
             if (values.Length > 0)
             {
                 result.Add(values[0]);
