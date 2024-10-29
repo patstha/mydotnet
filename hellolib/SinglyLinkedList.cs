@@ -68,7 +68,7 @@ public class SinglyLinkedList
         SinglyLinkedListNode current = _head;
         for (int i = 0; i < index - 1; i++)
         {
-            if (current == null || current.Next == null) return false;
+            if (current?.Next == null) return false;
             current = current.Next;
         }
 
