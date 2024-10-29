@@ -202,4 +202,31 @@ public class GraphTests
         // Assert
         dfsResult.Should().BeEmpty();
     }
+    [Fact]
+    public void AddEdge_ShouldNotAddEdgeIfOnlyFromNodeExists()
+    {
+        // Arrange
+        Graph graph = new();
+        graph.AddNode("A");
+
+        // Act
+        graph.AddEdge("A", "B");
+
+        // Assert
+        graph.Bfs("A").Should().NotContain("B");
+    }
+    [Fact]
+    public void AddEdge_ShouldNotAddEdgeIfOnlyToNodeExists()
+    {
+        // Arrange
+        Graph graph = new();
+        graph.AddNode("B");
+
+        // Act
+        graph.AddEdge("A", "B");
+
+        // Assert
+        graph.Bfs("B").Should().NotContain("A");
+    }
+
 }
