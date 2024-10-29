@@ -56,6 +56,8 @@ public class SinglyLinkedList
 
     public bool Remove(int index)
     {
+        if (index < 0) return false; // Handle negative indices
+
         if (index == 0)
         {
             if (_head == null) return false;

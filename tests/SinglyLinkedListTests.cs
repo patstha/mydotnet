@@ -302,6 +302,63 @@ public class SinglyLinkedListTests
         linkedList.InsertHead(1);
         linkedList.Remove(1).Should().BeFalse(); // current will be the only node and current.Next will be null
     }
+    [Fact]
+    public void Get_ShouldReturnMinusOneForEmptyList()
+    {
+        SinglyLinkedList linkedList = new();
+        linkedList.Get(0).Should().Be(-1);
+    }
+
+    [Fact]
+    public void InsertHead_ShouldAddValueToEmptyList()
+    {
+        SinglyLinkedList linkedList = new();
+        linkedList.InsertHead(1);
+        linkedList.GetValues().Should().BeEquivalentTo(new List<int> { 1 });
+    }
+
+    [Fact]
+    public void InsertTail_ShouldAddValueToEmptyList()
+    {
+        SinglyLinkedList linkedList = new();
+        linkedList.InsertTail(1);
+        linkedList.GetValues().Should().BeEquivalentTo(new List<int> { 1 });
+    }
+
+    [Fact]
+    public void Remove_ShouldReturnFalseForNegativeIndex()
+    {
+        SinglyLinkedList linkedList = new();
+        linkedList.InsertHead(1);
+        linkedList.Remove(-1).Should().BeFalse();
+    }
+
+    [Fact]
+    public void Remove_ShouldReturnFalseForIndexGreaterThanLength()
+    {
+        SinglyLinkedList linkedList = new();
+        linkedList.InsertHead(1);
+        linkedList.Remove(2).Should().BeFalse();
+    }
+
+    [Fact]
+    public void GetValues_ShouldReturnListWithOneElement()
+    {
+        SinglyLinkedList linkedList = new();
+        linkedList.InsertHead(1);
+        linkedList.GetValues().Should().BeEquivalentTo(new List<int> { 1 });
+    }
+
+    [Fact]
+    public void GetValues_ShouldReturnListWithMultipleElements()
+    {
+        SinglyLinkedList linkedList = new();
+        linkedList.InsertHead(1);
+        linkedList.InsertTail(2);
+        linkedList.InsertTail(3);
+        linkedList.GetValues().Should().BeEquivalentTo(new List<int> { 1, 2, 3 });
+    }
+
 }
 
 //Design Singly Linked List
