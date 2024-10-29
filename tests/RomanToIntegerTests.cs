@@ -8,8 +8,8 @@ public class RomanToIntegerTests
     public void RomanToInt_ShouldReturn1()
     {
         // arrange 
-        string s = "III";
-        int expected = 3;
+        const string s = "III";
+        const int expected = 3;
 
         // act 
         int actual = RomanToInteger.RomanToInt(s);
@@ -22,8 +22,8 @@ public class RomanToIntegerTests
     public void RomanToInt_ShouldReturn2()
     {
         // arrange 
-        string s = "LVIII";
-        int expected = 58;
+        const string s = "LVIII";
+        const int expected = 58;
 
         // act 
         int actual = RomanToInteger.RomanToInt(s);
@@ -36,8 +36,8 @@ public class RomanToIntegerTests
     public void RomanToInt_ShouldReturn3()
     {
         // arrange 
-        string s = "MCMXCIV";
-        int expected = 1994;
+        const string s = "MCMXCIV";
+        const int expected = 1994;
 
         // act 
         int actual = RomanToInteger.RomanToInt(s);
@@ -51,7 +51,7 @@ public class RomanToIntegerTests
     public void IsValidRomanNumeral_ShouldReturnTrue_ForValidNumeral()
     {
         // arrange 
-        string s = "MCMXCIV";
+        const string s = "MCMXCIV";
 
         // act 
         bool actual = RomanToInteger.IsValidRomanNumeral(s);
@@ -64,7 +64,7 @@ public class RomanToIntegerTests
     public void IsValidRomanNumeral_ShouldReturnFalse_ForInvalidNumeral()
     {
         // arrange 
-        string s = "IIII";
+        const string s = "IIII";
 
         // act 
         bool actual = RomanToInteger.IsValidRomanNumeral(s);
@@ -77,7 +77,7 @@ public class RomanToIntegerTests
     public void IsValidRomanNumeral_ShouldReturnFalse_ForInvalidCharacters()
     {
         // arrange 
-        string s = "ABCD";
+        const string s = "ABCD";
 
         // act 
         bool actual = RomanToInteger.IsValidRomanNumeral(s);
@@ -90,7 +90,7 @@ public class RomanToIntegerTests
     public void IsValidRomanNumeral_ShouldReturnFalse_ForInvalidSubtraction()
     {
         // arrange 
-        string s = "IC";
+        const string s = "IC";
 
         // act 
         bool actual = RomanToInteger.IsValidRomanNumeral(s);
@@ -103,7 +103,7 @@ public class RomanToIntegerTests
     public void IsValidRomanNumeral_ShouldReturnTrue_ForSingleCharacter()
     {
         // arrange 
-        string s = "V";
+        const string s = "V";
 
         // act 
         bool actual = RomanToInteger.IsValidRomanNumeral(s);
@@ -116,7 +116,7 @@ public class RomanToIntegerTests
     public void IsValidRomanNumeral_ShouldReturnTrue_ForCombination()
     {
         // arrange 
-        string s = "CDXLIV";
+        const string s = "CDXLIV";
 
         // act 
         bool actual = RomanToInteger.IsValidRomanNumeral(s);
@@ -129,7 +129,7 @@ public class RomanToIntegerTests
     public void IsValidRomanNumeral_ShouldReturnTrue_ForCombinationVI()
     {
         // arrange 
-        string s = "VI";
+        const string s = "VI";
 
         // act 
         bool actual = RomanToInteger.IsValidRomanNumeral(s);
@@ -142,7 +142,7 @@ public class RomanToIntegerTests
     public void IsValidRomanNumeral_ShouldReturnFalse_ForCombination()
     {
         // arrange 
-        string s = "XD";
+        const string s = "XD";
 
         // act 
         bool actual = RomanToInteger.IsValidRomanNumeral(s);
@@ -150,4 +150,29 @@ public class RomanToIntegerTests
         // assert 
         actual.Should().BeFalse();
     }
+    [Fact]
+    public void IsValidRomanNumeral_ShouldReturnFalse_ForNullInput()
+    {
+        // arrange 
+
+        // act 
+        bool actual = RomanToInteger.IsValidRomanNumeral(null);
+
+        // assert 
+        actual.Should().BeFalse();
+    }
+    [Fact]
+    public void IsValidRomanNumeral_ShouldReturnFalse_ForEmptyString()
+    {
+        // arrange 
+        const string s = "";
+
+        // act 
+        bool actual = RomanToInteger.IsValidRomanNumeral(s);
+
+        // assert 
+        actual.Should().BeFalse();
+    }
+
+    
 }
