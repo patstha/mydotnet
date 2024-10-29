@@ -11,11 +11,19 @@ public static class Revocation
         while (!reader.EndOfStream)
         {
             string line = reader.ReadLine();
-            string[] values = line?.Split(',') ?? [];
-            result.Add(values[0]);
+            if (string.IsNullOrWhiteSpace(line))
+            {
+                continue;
+            }
+            string[] values = line?.Split(',');
+            if (values.Length > 0)
+            {
+                result.Add(values[0]);
+            }
         }
         return result;
     }
+
 
     public static void GetBatches(string filename, int size)
     {
