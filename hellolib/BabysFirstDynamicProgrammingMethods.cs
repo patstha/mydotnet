@@ -28,16 +28,39 @@ public static class BabysFirstDynamicProgrammingMethods
 
     public static List<KnapsackItem> KnapsackBruteForce(int knapsackSize, List<KnapsackItem> knapsackItems)
     {
-        List<KnapsackItem> newKnapsackItems = [];
-        int currentKnapsackSize = 0;
-        foreach (KnapsackItem t in knapsackItems.Where(t => currentKnapsackSize + t.Weight <= knapsackSize))
+        List<KnapsackItem> bestCombination = [];
+        decimal bestCost = 0;
+
+        int n = knapsackItems.Count;
+        // There are 2^n possible combinations of items
+        for (int i = 0; i < (1 << n); i++)
         {
-            newKnapsackItems.Add(t);
-            currentKnapsackSize += t.Weight;
+            List<KnapsackItem> currentCombination = [];
+            int currentWeight = 0;
+            decimal currentCost = 0;
+
+            for (int j = 0; j < n; j++)
+            {
+                // Check if the j-th item is included in the i-th combination
+                if ((i & (1 << j)) != 0)
+                {
+                    KnapsackItem item = knapsackItems[j];
+                    currentWeight += item.Weight;
+                    currentCost += item.Cost;
+                    currentCombination.Add(item);
+                }
+            }
+
+            // Update the best combination if the current one is better
+            if (currentWeight <= knapsackSize && currentCost > bestCost)
+            {
+                bestCombination = currentCombination;
+                bestCost = currentCost;
+            }
         }
-        return newKnapsackItems;
+
+        return bestCombination;
     }
-    
 }
 public record KnapsackItem(string Name, decimal Cost, int Weight);
 
