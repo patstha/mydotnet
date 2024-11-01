@@ -1,47 +1,43 @@
-﻿namespace hellolib
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+
+namespace hellolib
 {
     public class MinimumTotalDistanceTraveled
     {
         public static long MinimumTotalDistance(IList<int> robot, int[][] factory)
         {
-            int n = robot.Count;
-            int m = factory.Length;
-
-            // Sort robots and factories by their positions
+            // Sort robots and factories
             var sortedRobots = robot.OrderBy(r => r).ToList();
-            var sortedFactories = factory.OrderBy(f => f[0]).ToArray();
+            var sortedFactories = factory.OrderBy(f => f[0]).ToList();
 
-            // Initialize DP table
-            long[,] dp = new long[n + 1, m + 1];
-            for (int i = 0; i <= n; i++)
-            {
-                for (int j = 0; j <= m; j++)
-                {
-                    dp[i, j] = long.MaxValue;
-                }
-            }
-            dp[0, 0] = 0;
+            long totalDistance = 0;
+            int robotIndex = 0;
 
-            // Fill DP table
-            for (int j = 1; j <= m; j++)
+            // Iterate through each factory
+            foreach (var f in sortedFactories)
             {
-                dp[0, j] = 0; // No robots to repair
-                for (int i = 1; i <= n; i++)
+                int factoryPosition = f[0];
+                int factoryLimit = f[1];
+                int count = 0;
+
+                // While there are robots and the factory has capacity
+                while (robotIndex < sortedRobots.Count && count < factoryLimit)
                 {
-                    dp[i, j] = dp[i, j - 1]; // Case when we don't use the j-th factory
-                    long totalDistance = 0;
-                    for (int k = 1; k <= Math.Min(i, sortedFactories[j - 1][1]); k++)
-                    {
-                        totalDistance += Math.Abs(sortedRobots[i - k] - sortedFactories[j - 1][0]);
-                        dp[i, j] = Math.Min(dp[i, j], dp[i - k, j - 1] + totalDistance);
-                    }
+                    int robotPosition = sortedRobots[robotIndex];
+                    totalDistance += Math.Abs(factoryPosition - robotPosition);
+                    robotIndex++;
+                    count++;
                 }
             }
 
-            return dp[n, m];
+            return totalDistance;
         }
     }
 }
+
+
 
 //
 // 2463. Minimum Total Distance Traveled
