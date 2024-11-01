@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<coverage line-rate="1" branch-rate="0.9961" version="1.9" timestamp="1730408304" lines-covered="713" lines-valid="713" branches-covered="259" branches-valid="260">
+<coverage line-rate="1" branch-rate="0.9962000000000001" version="1.9" timestamp="1730462408" lines-covered="730" lines-valid="730" branches-covered="265" branches-valid="266">
   <sources>
     <source>C:\Users\kushal\src\mydotnet\hellolib\</source>
   </sources>
   <packages>
-    <package name="hellolib" line-rate="1" branch-rate="0.9961" complexity="300">
+    <package name="hellolib" line-rate="1" branch-rate="0.9962000000000001" complexity="306">
       <classes>
         <class name="HelloLib.RomanToInteger" filename="RomanToInteger.cs" line-rate="1" branch-rate="1" complexity="21">
           <methods>
@@ -394,6 +394,78 @@
             <line number="51" hits="2" branch="False" />
             <line number="52" hits="2" branch="False" />
             <line number="10" hits="15" branch="False" />
+          </lines>
+        </class>
+        <class name="hellolib.BabysFirstDynamicProgrammingMethods" filename="BabysFirstDynamicProgrammingMethods.cs" line-rate="1" branch-rate="1" complexity="6">
+          <methods>
+            <method name="FibonacciWithRecursion" signature="(System.Int32)" line-rate="1" branch-rate="1" complexity="2">
+              <lines>
+                <line number="6" hits="44" branch="False" />
+                <line number="7" hits="44" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="10" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="8" hits="25" branch="False" />
+                <line number="9" hits="19" branch="False" />
+                <line number="10" hits="44" branch="False" />
+              </lines>
+            </method>
+            <method name="FibonacciWithoutRecursion" signature="(System.Int32)" line-rate="1" branch-rate="1" complexity="4">
+              <lines>
+                <line number="13" hits="6" branch="False" />
+                <line number="14" hits="6" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="10" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="15" hits="2" branch="False" />
+                <line number="17" hits="4" branch="False" />
+                <line number="18" hits="4" branch="False" />
+                <line number="19" hits="4" branch="False" />
+                <line number="21" hits="30" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="68" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="22" hits="11" branch="False" />
+                <line number="23" hits="11" branch="False" />
+                <line number="24" hits="11" branch="False" />
+                <line number="26" hits="4" branch="False" />
+                <line number="27" hits="6" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="6" hits="44" branch="False" />
+            <line number="7" hits="44" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="10" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="8" hits="25" branch="False" />
+            <line number="9" hits="19" branch="False" />
+            <line number="10" hits="44" branch="False" />
+            <line number="13" hits="6" branch="False" />
+            <line number="14" hits="6" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="10" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="15" hits="2" branch="False" />
+            <line number="17" hits="4" branch="False" />
+            <line number="18" hits="4" branch="False" />
+            <line number="19" hits="4" branch="False" />
+            <line number="21" hits="30" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="68" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="22" hits="11" branch="False" />
+            <line number="23" hits="11" branch="False" />
+            <line number="24" hits="11" branch="False" />
+            <line number="26" hits="4" branch="False" />
+            <line number="27" hits="6" branch="False" />
           </lines>
         </class>
         <class name="hellolib.BubbleSort" filename="BubbleSort.cs" line-rate="1" branch-rate="1" complexity="6">
