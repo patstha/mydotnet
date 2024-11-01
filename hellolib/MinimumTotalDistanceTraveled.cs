@@ -1,6 +1,6 @@
 ﻿namespace hellolib;
 
-public abstract class MinimumTotalDistanceTraveled
+public static class MinimumTotalDistanceTraveled
 {
     public static long MinimumTotalDistance(IList<int> robot, int[][] factory)
     {
@@ -8,27 +8,46 @@ public abstract class MinimumTotalDistanceTraveled
         List<int> sortedRobots = robot.OrderBy(r => r).ToList();
         List<int[]> sortedFactories = factory.OrderBy(f => f[0]).ToList();
 
-        long totalDistance = 0;
-        int robotIndex = 0;
+        int robotCount = sortedRobots.Count;
+        int factoryCount = sortedFactories.Count;
 
-        // Iterate through each factory
-        foreach (int[] f in sortedFactories)
+        // Create a DP table
+        long[,] dp = new long[robotCount + 1, factoryCount + 1];
+
+        // Initialize the DP table with a large number
+        for (int i = 0; i <= robotCount; i++)
         {
-            int factoryPosition = f[0];
-            int factoryLimit = f[1];
-            int count = 0;
-
-            // While there are robots and the factory has capacity
-            while (robotIndex < sortedRobots.Count && count < factoryLimit)
+            for (int j = 0; j <= factoryCount; j++)
             {
-                int robotPosition = sortedRobots[robotIndex];
-                totalDistance += Math.Abs(factoryPosition - robotPosition);
-                robotIndex++;
-                count++;
+                dp[i, j] = long.MaxValue;
             }
         }
 
-        return totalDistance;
+        // Base case: 0 robots require 0 distance
+        dp[0, 0] = 0;
+
+        // Fill the DP table
+        for (int j = 1; j <= factoryCount; j++)
+        {
+            int factoryPosition = sortedFactories[j - 1][0];
+            int factoryLimit = sortedFactories[j - 1][1];
+
+            for (int i = 0; i <= robotCount; i++)
+            {
+                // If we don't use the current factory
+                dp[i, j] = dp[i, j - 1];
+
+                // Try to assign robots to the current factory
+                long distance = 0;
+                for (int k = 1; k <= factoryLimit && i - k >= 0; k++)
+                {
+                    distance += Math.Abs(factoryPosition - sortedRobots[i - k]);
+                    dp[i, j] = Math.Min(dp[i, j], dp[i - k, j - 1] + distance);
+                }
+            }
+        }
+
+        return dp[robotCount, factoryCount];
     }
 }
 
