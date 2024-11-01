@@ -11,8 +11,7 @@ public class MinimumTotalDistanceTraveledTests
         const long expected = 4;
         
         // act 
-        MinimumTotalDistanceTraveled solution = new();
-        long actual = solution.MinimumTotalDistance(robot, factory);
+        long actual = MinimumTotalDistanceTraveled.MinimumTotalDistance(robot, factory);
         
         // assert 
         actual.Should().Be(expected);
@@ -27,8 +26,7 @@ public class MinimumTotalDistanceTraveledTests
         const long expected = 2;
         
         // act 
-        MinimumTotalDistanceTraveled solution = new();
-        long actual = solution.MinimumTotalDistance(robot, factory);
+        long actual = MinimumTotalDistanceTraveled.MinimumTotalDistance(robot, factory);
         
         // assert 
         actual.Should().Be(expected);
@@ -43,8 +41,7 @@ public class MinimumTotalDistanceTraveledTests
         const long expected = 7;
         
         // act 
-        MinimumTotalDistanceTraveled solution = new();
-        long actual = solution.MinimumTotalDistance(robot, factory);
+        long actual = MinimumTotalDistanceTraveled.MinimumTotalDistance(robot, factory);
         
         // assert 
         actual.Should().Be(expected);
@@ -59,8 +56,7 @@ public class MinimumTotalDistanceTraveledTests
         const long expected = 10;
         
         // act 
-        MinimumTotalDistanceTraveled solution = new();
-        long actual = solution.MinimumTotalDistance(robot, factory);
+        long actual = MinimumTotalDistanceTraveled.MinimumTotalDistance(robot, factory);
         
         // assert 
         actual.Should().Be(expected);
@@ -75,8 +71,7 @@ public class MinimumTotalDistanceTraveledTests
         const long expected = 0;
         
         // act 
-        MinimumTotalDistanceTraveled solution = new();
-        long actual = solution.MinimumTotalDistance(robot, factory);
+        long actual = MinimumTotalDistanceTraveled.MinimumTotalDistance(robot, factory);
         
         // assert 
         actual.Should().Be(expected);
@@ -91,8 +86,7 @@ public class MinimumTotalDistanceTraveledTests
         const long expected = 2;
         
         // act 
-        MinimumTotalDistanceTraveled solution = new();
-        long actual = solution.MinimumTotalDistance(robot, factory);
+        long actual = MinimumTotalDistanceTraveled.MinimumTotalDistance(robot, factory);
         
         // assert 
         actual.Should().Be(expected);
@@ -107,8 +101,7 @@ public class MinimumTotalDistanceTraveledTests
         const long expected = 25;
         
         // act 
-        MinimumTotalDistanceTraveled solution = new();
-        long actual = solution.MinimumTotalDistance(robot, factory);
+        long actual = MinimumTotalDistanceTraveled.MinimumTotalDistance(robot, factory);
         
         // assert 
         actual.Should().Be(expected);
@@ -123,8 +116,7 @@ public class MinimumTotalDistanceTraveledTests
         const long expected = 20;
         
         // act 
-        MinimumTotalDistanceTraveled solution = new();
-        long actual = solution.MinimumTotalDistance(robot, factory);
+        long actual = MinimumTotalDistanceTraveled.MinimumTotalDistance(robot, factory);
         
         // assert 
         actual.Should().Be(expected);
@@ -139,8 +131,7 @@ public class MinimumTotalDistanceTraveledTests
         const long expected = 2;
         
         // act 
-        MinimumTotalDistanceTraveled solution = new();
-        long actual = solution.MinimumTotalDistance(robot, factory);
+        long actual = MinimumTotalDistanceTraveled.MinimumTotalDistance(robot, factory);
         
         // assert 
         actual.Should().Be(expected);
@@ -155,8 +146,7 @@ public class MinimumTotalDistanceTraveledTests
         const long expected = 10;
         
         // act 
-        MinimumTotalDistanceTraveled solution = new();
-        long actual = solution.MinimumTotalDistance(robot, factory);
+        long actual = MinimumTotalDistanceTraveled.MinimumTotalDistance(robot, factory);
         
         // assert 
         actual.Should().Be(expected);
@@ -171,8 +161,7 @@ public class MinimumTotalDistanceTraveledTests
         const long expected = 200;
         
         // act 
-        MinimumTotalDistanceTraveled solution = new();
-        long actual = solution.MinimumTotalDistance(robot, factory);
+        long actual = MinimumTotalDistanceTraveled.MinimumTotalDistance(robot, factory);
         
         // assert 
         actual.Should().Be(expected);
@@ -187,8 +176,7 @@ public class MinimumTotalDistanceTraveledTests
         const long expected = 250;
         
         // act 
-        MinimumTotalDistanceTraveled solution = new();
-        long actual = solution.MinimumTotalDistance(robot, factory);
+        long actual = MinimumTotalDistanceTraveled.MinimumTotalDistance(robot, factory);
         
         // assert 
         actual.Should().Be(expected);
