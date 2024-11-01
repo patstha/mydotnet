@@ -221,7 +221,7 @@ var assemblies = [
   {
     "name": "hellolib",
     "classes": [
-      { "name": "hellolib.BabysFirstDynamicProgrammingMethods", "rp": "hellolib_BabysFirstDynamicProgrammingMethods.html", "cl": 17, "ucl": 0, "cal": 17, "tl": 56, "cb": 6, "tb": 6, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "hellolib.BabysFirstDynamicProgrammingMethods", "rp": "hellolib_BabysFirstDynamicProgrammingMethods.html", "cl": 17, "ucl": 0, "cal": 17, "tl": 77, "cb": 6, "tb": 6, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "hellolib.BubbleSort", "rp": "hellolib_BubbleSort.html", "cl": 12, "ucl": 0, "cal": 12, "tl": 18, "cb": 6, "tb": 6, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "hellolib.CurrentWeather", "rp": "hellolib_CurrentWeather.html", "cl": 4, "ucl": 0, "cal": 4, "tl": 38, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "hellolib.DesignDynamicArray", "rp": "hellolib_DesignDynamicArray.html", "cl": 38, "ucl": 0, "cal": 38, "tl": 56, "cb": 6, "tb": 6, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
