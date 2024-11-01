@@ -1,44 +1,45 @@
-﻿namespace hellolib;
-
-public class MinimumTotalDistanceTraveled
+﻿namespace hellolib
 {
-    public static long MinimumTotalDistance(IList<int> robot, int[][] factory)
+    public class MinimumTotalDistanceTraveled
     {
-        int n = robot.Count;
-        int m = factory.Length;
-
-        // Sort robots and factories by their positions
-        List<int> sortedRobots = robot.OrderBy(r => r).ToList();
-        int[][] sortedFactories = factory.OrderBy(f => f[0]).ToArray();
-
-        // Initialize DP table
-        long[,] dp = new long[n + 1, m + 1];
-        for (int i = 0; i <= n; i++)
+        public static long MinimumTotalDistance(IList<int> robot, int[][] factory)
         {
-            for (int j = 0; j <= m; j++)
-            {
-                dp[i, j] = long.MaxValue;
-            }
-        }
-        dp[0, 0] = 0;
-        dp[0, 0] = 0;
+            int n = robot.Count;
+            int m = factory.Length;
 
-        // Fill DP table
-        for (int i = 0; i <= n; i++)
-        {
-            for (int j = 1; j <= m; j++)
+            // Sort robots and factories by their positions
+            var sortedRobots = robot.OrderBy(r => r).ToList();
+            var sortedFactories = factory.OrderBy(f => f[0]).ToArray();
+
+            // Initialize DP table
+            long[,] dp = new long[n + 1, m + 1];
+            for (int i = 0; i <= n; i++)
             {
-                dp[i, j] = dp[i, j - 1]; // Case when we don't use the j-th factory
-                long totalDistance = 0;
-                for (int k = 1; k <= Math.Min(i, sortedFactories[j - 1][1]); k++)
+                for (int j = 0; j <= m; j++)
                 {
-                    totalDistance += Math.Abs(sortedRobots[i - k] - sortedFactories[j - 1][0]);
-                    dp[i, j] = Math.Min(dp[i, j], dp[i - k, j - 1] + totalDistance);
+                    dp[i, j] = long.MaxValue;
                 }
             }
-        }
+            dp[0, 0] = 0;
 
-        return dp[n, m];
+            // Fill DP table
+            for (int j = 1; j <= m; j++)
+            {
+                dp[0, j] = 0; // No robots to repair
+                for (int i = 1; i <= n; i++)
+                {
+                    dp[i, j] = dp[i, j - 1]; // Case when we don't use the j-th factory
+                    long totalDistance = 0;
+                    for (int k = 1; k <= Math.Min(i, sortedFactories[j - 1][1]); k++)
+                    {
+                        totalDistance += Math.Abs(sortedRobots[i - k] - sortedFactories[j - 1][0]);
+                        dp[i, j] = Math.Min(dp[i, j], dp[i - k, j - 1] + totalDistance);
+                    }
+                }
+            }
+
+            return dp[n, m];
+        }
     }
 }
 //
