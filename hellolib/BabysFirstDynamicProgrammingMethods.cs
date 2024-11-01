@@ -25,7 +25,6 @@ public static class BabysFirstDynamicProgrammingMethods
 
         return dp[n];
     }
-
     public static List<KnapsackItem> KnapsackBruteForce(int knapsackSize, List<KnapsackItem> knapsackItems)
     {
         List<KnapsackItem> bestCombination = [];
@@ -51,6 +50,9 @@ public static class BabysFirstDynamicProgrammingMethods
                 }
             }
 
+            // Debugging output
+            Console.WriteLine($"Combination {i}: Weight = {currentWeight}, Cost = {currentCost}");
+
             // Update the best combination if the current one is better
             if (currentWeight <= knapsackSize && currentCost > bestCost)
             {
@@ -61,6 +63,7 @@ public static class BabysFirstDynamicProgrammingMethods
 
         return bestCombination;
     }
+
 }
 public record KnapsackItem(string Name, decimal Cost, int Weight);
 
