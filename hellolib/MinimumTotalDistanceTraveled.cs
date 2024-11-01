@@ -1,42 +1,36 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿namespace hellolib;
 
-namespace hellolib
+public abstract class MinimumTotalDistanceTraveled
 {
-    public class MinimumTotalDistanceTraveled
+    public static long MinimumTotalDistance(IList<int> robot, int[][] factory)
     {
-        public static long MinimumTotalDistance(IList<int> robot, int[][] factory)
+        // Sort robots and factories
+        List<int> sortedRobots = robot.OrderBy(r => r).ToList();
+        List<int[]> sortedFactories = factory.OrderBy(f => f[0]).ToList();
+
+        long totalDistance = 0;
+        int robotIndex = 0;
+
+        // Iterate through each factory
+        foreach (int[] f in sortedFactories)
         {
-            // Sort robots and factories
-            var sortedRobots = robot.OrderBy(r => r).ToList();
-            var sortedFactories = factory.OrderBy(f => f[0]).ToList();
+            int factoryPosition = f[0];
+            int factoryLimit = f[1];
+            int count = 0;
 
-            long totalDistance = 0;
-            int robotIndex = 0;
-
-            // Iterate through each factory
-            foreach (var f in sortedFactories)
+            // While there are robots and the factory has capacity
+            while (robotIndex < sortedRobots.Count && count < factoryLimit)
             {
-                int factoryPosition = f[0];
-                int factoryLimit = f[1];
-                int count = 0;
-
-                // While there are robots and the factory has capacity
-                while (robotIndex < sortedRobots.Count && count < factoryLimit)
-                {
-                    int robotPosition = sortedRobots[robotIndex];
-                    totalDistance += Math.Abs(factoryPosition - robotPosition);
-                    robotIndex++;
-                    count++;
-                }
+                int robotPosition = sortedRobots[robotIndex];
+                totalDistance += Math.Abs(factoryPosition - robotPosition);
+                robotIndex++;
+                count++;
             }
-
-            return totalDistance;
         }
+
+        return totalDistance;
     }
 }
-
 
 
 //
@@ -59,7 +53,7 @@ namespace hellolib
 //
 // All robots move at the same speed.
 // If two robots move in the same direction, they will never collide.
-// If two robots move in opposite directions and they meet at some point, they do not collide. They cross each other.
+// If two robots move in opposite directions, and they meet at some point, they do not collide. They cross each other.
 // If a robot passes by a factory that reached its limits, it crosses it as if it does not exist.
 // If the robot moved from a position x to a position y, the distance it moved is |y - x|.
 //  

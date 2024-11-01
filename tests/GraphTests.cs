@@ -1,6 +1,4 @@
-﻿using System.Collections.Generic;
-
-namespace tests;
+﻿namespace tests;
 
 public class GraphTests
 {

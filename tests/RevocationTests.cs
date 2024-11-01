@@ -1,8 +1,4 @@
-﻿using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-
-namespace tests;
+﻿namespace tests;
 
 public class RevocationTests
 {
