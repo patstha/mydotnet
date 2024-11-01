@@ -303,10 +303,7 @@ public void KnapsackBruteforce_ShouldReturnCorrectAnswerForSimpleCase3()
     ];
 
     const int knapsackCapacity = 10;
-    List<KnapsackItem> expected = new()
-    {
-        new("Car", 2000000, 10)
-    };
+    List<KnapsackItem> expected = [new("Car", 2000000, 10)];
     
     // act 
     List<KnapsackItem> actual = BabysFirstDynamicProgrammingMethods.KnapsackBruteForce(knapsackCapacity, knapsackItems);
