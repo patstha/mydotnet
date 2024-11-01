@@ -57,4 +57,19 @@ public class BabysFirstDynamicProgrammingMethodsTests
         int withoutRecursion = BabysFirstDynamicProgrammingMethods.FibonacciWithoutRecursion(6);
         withoutRecursion.Should().Be(8);
     }
+
+    [Fact]
+    public void KnapsackBruteforce_ShouldReturnCorrectAnswerForSimpleCase1()
+    {
+        // arrange 
+        List<KnapsackItem> knapsackItems = [new("Stereo", 3000, 4), new("Laptop", 2000, 3), new("Guitar", 1500, 1)];
+        const int knapsackCapacity = 4;
+        List<KnapsackItem> expected = [new("Laptop", 2000, 3), new("Guitar", 1500, 1)];
+        
+        // act 
+        List<KnapsackItem> actual = BabysFirstDynamicProgrammingMethods.KnapsackBruteForce(knapsackCapacity, knapsackItems);
+        
+        // assert 
+        actual.Should().BeEquivalentTo(expected);
+    }
 }
