@@ -4,6 +4,7 @@ public class MinimumTotalDistanceTraveled
 {
     public long MinimumTotalDistance(IList<int> robot, int[][] factory)
     {
+        
         return 0;
     }
 }
