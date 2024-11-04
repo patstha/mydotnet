@@ -221,13 +221,14 @@ var assemblies = [
   {
     "name": "hellolib",
     "classes": [
-      { "name": "hellolib.BabysFirstDynamicProgrammingMethods", "rp": "hellolib_BabysFirstDynamicProgrammingMethods.html", "cl": 17, "ucl": 0, "cal": 17, "tl": 77, "cb": 6, "tb": 6, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "hellolib.BabysFirstDynamicProgrammingMethods", "rp": "hellolib_BabysFirstDynamicProgrammingMethods.html", "cl": 43, "ucl": 0, "cal": 43, "tl": 75, "cb": 14, "tb": 14, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "hellolib.BubbleSort", "rp": "hellolib_BubbleSort.html", "cl": 12, "ucl": 0, "cal": 12, "tl": 18, "cb": 6, "tb": 6, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "hellolib.CurrentWeather", "rp": "hellolib_CurrentWeather.html", "cl": 4, "ucl": 0, "cal": 4, "tl": 38, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "hellolib.DesignDynamicArray", "rp": "hellolib_DesignDynamicArray.html", "cl": 38, "ucl": 0, "cal": 38, "tl": 56, "cb": 6, "tb": 6, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "hellolib.Entity", "rp": "hellolib_Entity.html", "cl": 5, "ucl": 0, "cal": 5, "tl": 10, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "hellolib.FindClosestNumberToZero", "rp": "hellolib_FindClosestNumberToZero.html", "cl": 20, "ucl": 0, "cal": 20, "tl": 64, "cb": 10, "tb": 10, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "hellolib.Graph", "rp": "hellolib_Graph.html", "cl": 51, "ucl": 0, "cal": 51, "tl": 75, "cb": 20, "tb": 20, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "hellolib.KnapsackItem", "rp": "hellolib_KnapsackItem.html", "cl": 1, "ucl": 0, "cal": 1, "tl": 75, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "hellolib.ListNode", "rp": "hellolib_ListNode.html", "cl": 3, "ucl": 0, "cal": 3, "tl": 53, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "hellolib.MergeSort", "rp": "hellolib_MergeSort.html", "cl": 38, "ucl": 0, "cal": 38, "tl": 55, "cb": 10, "tb": 10, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "hellolib.MergeSortedArray", "rp": "hellolib_MergeSortedArray.html", "cl": 26, "ucl": 0, "cal": 26, "tl": 81, "cb": 8, "tb": 8, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
