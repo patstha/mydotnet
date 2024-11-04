@@ -119,7 +119,7 @@ public static class Solution
         ];
 
         const int knapsackCapacity = 10;
-        List<KnapsackItem> bestCombination = BabysFirstDynamicProgrammingMethods.KnapsackBruteForce(knapsackCapacity, knapsackItems);
+        List<KnapsackItem> bestCombination = Knapsack.BruteForce(knapsackCapacity, knapsackItems);
 
         Console.WriteLine("Best combination of items:");
         foreach (KnapsackItem item in bestCombination)
