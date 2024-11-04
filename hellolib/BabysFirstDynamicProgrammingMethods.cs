@@ -31,37 +31,35 @@ public static class BabysFirstDynamicProgrammingMethods
         decimal bestCost = 0;
 
         int n = knapsackItems.Count;
-        // There are 2^n possible combinations of items
-        for (int i = 0; i < (1 << n); i++)
+        // for a set of items, generate all possible sub sets including the empty set and the whole set 
+        
+        IEnumerable<IEnumerable<KnapsackItem>> combinations = SubSetsOf(knapsackItems);
+        foreach (IEnumerable<KnapsackItem> combination in combinations)
         {
-            List<KnapsackItem> currentCombination = [];
-            int currentWeight = 0;
-            decimal currentCost = 0;
-
-            for (int j = 0; j < n; j++)
-            {
-                // Check if the j-th item is included in the i-th combination
-                if ((i & (1 << j)) != 0)
-                {
-                    KnapsackItem item = knapsackItems[j];
-                    currentWeight += item.Weight;
-                    currentCost += item.Cost;
-                    currentCombination.Add(item);
-                }
-            }
-
-            // Debugging output
-            Console.WriteLine($"Combination {i}: Weight = {currentWeight}, Cost = {currentCost}");
-
-            // Update the best combination if the current one is better
-            if (currentWeight <= knapsackSize && currentCost > bestCost)
-            {
-                bestCombination = currentCombination;
-                bestCost = currentCost;
-            }
+            IEnumerable<KnapsackItem> items = combination.ToList();
+            IEnumerable<KnapsackItem> enumerable = items.ToList();
+            decimal currentCost = enumerable.Sum(item => item.Cost);
+            if (currentCost <= bestCost || items.Sum(x => x.Weight) > knapsackSize) continue;
+            bestCost = currentCost;
+            bestCombination = enumerable.ToList();
         }
 
         return bestCombination;
+    }
+    
+    public static IEnumerable<IEnumerable<T>> SubSetsOf<T>(IEnumerable<T> source)
+    {
+        IEnumerable<T> enumerable = source.ToList();
+        if (!enumerable.Any())
+            return Enumerable.Repeat(Enumerable.Empty<T>(), 1);
+
+        IEnumerable<T> element = enumerable.Take(1);
+
+        IEnumerable<IEnumerable<T>> haveNots = SubSetsOf(enumerable.Skip(1));
+        IEnumerable<IEnumerable<T>> second = haveNots.ToList();
+        IEnumerable<IEnumerable<T>> haves = second.Select(set => element.Concat(set));
+
+        return haves.Concat(second);
     }
 
 }
