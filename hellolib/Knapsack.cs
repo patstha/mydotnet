@@ -18,6 +18,37 @@ public static class Knapsack
         }
         return bestCombination;
     }
+    
+    public static List<KnapsackItem> BruteForceOptimized(int knapsackSize, List<KnapsackItem> knapsackItems)
+    {
+        List<KnapsackItem> bestCombination = new();
+        decimal bestCost = 0;
+
+        // Sort items by value-to-weight ratio
+        knapsackItems = knapsackItems.OrderByDescending(item => item.Cost / item.Weight).ToList();
+
+        IEnumerable<IEnumerable<KnapsackItem>> combinations = SubSetsOf(knapsackItems);
+        foreach (IEnumerable<KnapsackItem> combination in combinations)
+        {
+            List<KnapsackItem> items = combination.ToList();
+            int totalWeight = items.Sum(item => item.Weight);
+            decimal currentCost = items.Sum(item => item.Cost);
+
+            // Prune branches that exceed the knapsack's capacity
+            if (totalWeight > knapsackSize) continue;
+
+            if (currentCost > bestCost)
+            {
+                bestCost = currentCost;
+                bestCombination = items;
+            }
+
+            // Early stopping if we find a perfect fit
+            if (totalWeight == knapsackSize) break;
+        }
+
+        return bestCombination;
+    }
 
     private static IEnumerable<IEnumerable<T>> SubSetsOf<T>(IEnumerable<T> source)
     {
