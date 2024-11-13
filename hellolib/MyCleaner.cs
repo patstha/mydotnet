@@ -60,7 +60,7 @@ public class MyCleaner(ILogger<MyCleaner> logger, HttpClient httpClient)
             catch (Exception e)
             {
                 logger.LogError(e, "Exception in method {Method}", nameof(FollowRedirectsAsync));
-                return ExtractFromAddress(redirectUrl);
+                throw;
             }
         }
         return response.RequestMessage?.RequestUri?.ToString() ?? "";
