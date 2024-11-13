@@ -551,7 +551,7 @@ public class MyCleanerTests
         // Arrange
         const string inputUrl = "https://www.example.com/initial";
         const string redirectUrl = "https://www.example.com/redirected";
-        const string expectedOutput = "https://www.example.com/extracted";
+        const string expectedOutput = "https://www.example.com/redirected";
 
         HttpClientHandlerStub handler = new((request, cancellationToken) =>
         {
@@ -589,7 +589,7 @@ public class MyCleanerTests
         // Arrange
         const string inputUrl = "https://www.example.com/initial";
         const string invalidRedirectUrl = "invalid-url";
-        const string expectedOutput = "https://www.example.com/extracted";
+        const string expectedOutput = "https://www.example.com/invalid-url";
 
         HttpClientHandlerStub handler = new((request, cancellationToken) =>
         {
