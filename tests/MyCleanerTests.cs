@@ -583,7 +583,6 @@ public class MyCleanerTests
             inputUrl
         );
     }
-
     [Fact]
     public async Task CleanUrlAsync_ShouldReturnExtractedUrl_WhenRedirectUrlIsInvalid()
     {
@@ -625,4 +624,5 @@ public class MyCleanerTests
             inputUrl
         );
     }
+
 }

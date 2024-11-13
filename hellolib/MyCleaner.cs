@@ -41,8 +41,7 @@ public class MyCleaner(ILogger<MyCleaner> logger, HttpClient httpClient)
         Uri uri = new(url);
         return uri.GetLeftPart(UriPartial.Path);
     }
-
-
+    
     private async Task<string> FollowRedirectsAsync(string url)
     {
         HttpResponseMessage response = await httpClient.GetAsync(url);
@@ -54,7 +53,6 @@ public class MyCleaner(ILogger<MyCleaner> logger, HttpClient httpClient)
                 Uri baseUri = new(url);
                 redirectUrl = new Uri(baseUri, redirectUrl).ToString();
             }
-
             try
             {
                 response = await httpClient.GetAsync(redirectUrl);
@@ -65,10 +63,9 @@ public class MyCleaner(ILogger<MyCleaner> logger, HttpClient httpClient)
                 return ExtractFromAddress(redirectUrl);
             }
         }
-
         return response.RequestMessage?.RequestUri?.ToString() ?? "";
     }
-
+    
     private static string ExtractFromAddress(string url)
     {
         Uri uri = new(url);
