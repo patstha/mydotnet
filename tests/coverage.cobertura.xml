@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<coverage line-rate="0.9934999999999999" branch-rate="0.9929000000000001" version="1.9" timestamp="1731494920" lines-covered="771" lines-valid="776" branches-covered="280" branches-valid="282">
+<coverage line-rate="0.9987" branch-rate="0.9929000000000001" version="1.9" timestamp="1731498364" lines-covered="775" lines-valid="776" branches-covered="280" branches-valid="282">
   <sources>
     <source>C:\Users\kushal\src\mydotnet\hellolib\</source>
   </sources>
   <packages>
-    <package name="hellolib" line-rate="0.9934999999999999" branch-rate="0.9929000000000001" complexity="323">
+    <package name="hellolib" line-rate="0.9987" branch-rate="0.9929000000000001" complexity="323">
       <classes>
         <class name="HelloLib.RomanToInteger" filename="RomanToInteger.cs" line-rate="1" branch-rate="1" complexity="21">
           <methods>
@@ -1654,25 +1654,25 @@
             </method>
             <method name="ExtractFromAddress" signature="(System.String)" line-rate="1" branch-rate="1" complexity="8">
               <lines>
-                <line number="68" hits="28" branch="False" />
-                <line number="69" hits="28" branch="False" />
-                <line number="70" hits="28" branch="False" />
-                <line number="72" hits="28" branch="False" />
-                <line number="73" hits="28" branch="True" condition-coverage="100% (2/2)">
+                <line number="68" hits="29" branch="False" />
+                <line number="69" hits="29" branch="False" />
+                <line number="70" hits="29" branch="False" />
+                <line number="72" hits="29" branch="False" />
+                <line number="73" hits="29" branch="True" condition-coverage="100% (2/2)">
                   <conditions>
                     <condition number="40" type="jump" coverage="100%" />
                   </conditions>
                 </line>
                 <line number="74" hits="6" branch="False" />
                 <line number="75" hits="6" branch="False" />
-                <line number="78" hits="22" branch="False" />
-                <line number="79" hits="22" branch="True" condition-coverage="100% (2/2)">
+                <line number="78" hits="23" branch="False" />
+                <line number="79" hits="23" branch="True" condition-coverage="100% (2/2)">
                   <conditions>
                     <condition number="73" type="jump" coverage="100%" />
                   </conditions>
                 </line>
-                <line number="80" hits="1" branch="False" />
-                <line number="81" hits="1" branch="False" />
+                <line number="80" hits="2" branch="False" />
+                <line number="81" hits="2" branch="False" />
                 <line number="84" hits="21" branch="False" />
                 <line number="85" hits="21" branch="True" condition-coverage="100% (2/2)">
                   <conditions>
@@ -1691,7 +1691,7 @@
                 <line number="91" hits="2" branch="False" />
                 <line number="93" hits="2" branch="False" />
                 <line number="95" hits="19" branch="False" />
-                <line number="96" hits="28" branch="False" />
+                <line number="96" hits="29" branch="False" />
               </lines>
             </method>
             <method name="RemoveAmazonExtraPathSegments" signature="(System.String)" line-rate="1" branch-rate="1" complexity="6">
@@ -1723,25 +1723,25 @@
             <line number="39" hits="27" branch="False" />
             <line number="40" hits="25" branch="False" />
             <line number="41" hits="25" branch="False" />
-            <line number="68" hits="28" branch="False" />
-            <line number="69" hits="28" branch="False" />
-            <line number="70" hits="28" branch="False" />
-            <line number="72" hits="28" branch="False" />
-            <line number="73" hits="28" branch="True" condition-coverage="100% (2/2)">
+            <line number="68" hits="29" branch="False" />
+            <line number="69" hits="29" branch="False" />
+            <line number="70" hits="29" branch="False" />
+            <line number="72" hits="29" branch="False" />
+            <line number="73" hits="29" branch="True" condition-coverage="100% (2/2)">
               <conditions>
                 <condition number="40" type="jump" coverage="100%" />
               </conditions>
             </line>
             <line number="74" hits="6" branch="False" />
             <line number="75" hits="6" branch="False" />
-            <line number="78" hits="22" branch="False" />
-            <line number="79" hits="22" branch="True" condition-coverage="100% (2/2)">
+            <line number="78" hits="23" branch="False" />
+            <line number="79" hits="23" branch="True" condition-coverage="100% (2/2)">
               <conditions>
                 <condition number="73" type="jump" coverage="100%" />
               </conditions>
             </line>
-            <line number="80" hits="1" branch="False" />
-            <line number="81" hits="1" branch="False" />
+            <line number="80" hits="2" branch="False" />
+            <line number="81" hits="2" branch="False" />
             <line number="84" hits="21" branch="False" />
             <line number="85" hits="21" branch="True" condition-coverage="100% (2/2)">
               <conditions>
@@ -1760,7 +1760,7 @@
             <line number="91" hits="2" branch="False" />
             <line number="93" hits="2" branch="False" />
             <line number="95" hits="19" branch="False" />
-            <line number="96" hits="28" branch="False" />
+            <line number="96" hits="29" branch="False" />
             <line number="99" hits="3" branch="False" />
             <line number="100" hits="3" branch="False" />
             <line number="101" hits="3" branch="False" />
@@ -1852,13 +1852,13 @@
             <line number="35" hits="31" branch="False" />
           </lines>
         </class>
-        <class name="hellolib.MyCleaner/&lt;FollowRedirectsAsync&gt;d__5" filename="MyCleaner.cs" line-rate="0.8" branch-rate="1" complexity="16">
+        <class name="hellolib.MyCleaner/&lt;FollowRedirectsAsync&gt;d__5" filename="MyCleaner.cs" line-rate="1" branch-rate="1" complexity="16">
           <methods>
-            <method name="MoveNext" signature="()" line-rate="0.8" branch-rate="1" complexity="16">
+            <method name="MoveNext" signature="()" line-rate="1" branch-rate="1" complexity="16">
               <lines>
                 <line number="44" hits="19" branch="False" />
                 <line number="45" hits="19" branch="False" />
-                <line number="46" hits="24" branch="True" condition-coverage="100% (4/4)">
+                <line number="46" hits="23" branch="True" condition-coverage="100% (4/4)">
                   <conditions>
                     <condition number="559" type="jump" coverage="100%" />
                     <condition number="532" type="jump" coverage="100%" />
@@ -1882,13 +1882,13 @@
                 <line number="53" hits="2" branch="False" />
                 <line number="55" hits="6" branch="False" />
                 <line number="56" hits="6" branch="False" />
-                <line number="57" hits="6" branch="False" />
-                <line number="58" hits="0" branch="False" />
-                <line number="59" hits="0" branch="False" />
-                <line number="60" hits="0" branch="False" />
-                <line number="61" hits="0" branch="False" />
-                <line number="63" hits="6" branch="False" />
-                <line number="64" hits="18" branch="True" condition-coverage="100% (6/6)">
+                <line number="57" hits="5" branch="False" />
+                <line number="58" hits="1" branch="False" />
+                <line number="59" hits="1" branch="False" />
+                <line number="60" hits="1" branch="False" />
+                <line number="61" hits="1" branch="False" />
+                <line number="63" hits="5" branch="False" />
+                <line number="64" hits="17" branch="True" condition-coverage="100% (6/6)">
                   <conditions>
                     <condition number="576" type="jump" coverage="100%" />
                     <condition number="588" type="jump" coverage="100%" />
@@ -1902,7 +1902,7 @@
           <lines>
             <line number="44" hits="19" branch="False" />
             <line number="45" hits="19" branch="False" />
-            <line number="46" hits="24" branch="True" condition-coverage="100% (4/4)">
+            <line number="46" hits="23" branch="True" condition-coverage="100% (4/4)">
               <conditions>
                 <condition number="559" type="jump" coverage="100%" />
                 <condition number="532" type="jump" coverage="100%" />
@@ -1926,13 +1926,13 @@
             <line number="53" hits="2" branch="False" />
             <line number="55" hits="6" branch="False" />
             <line number="56" hits="6" branch="False" />
-            <line number="57" hits="6" branch="False" />
-            <line number="58" hits="0" branch="False" />
-            <line number="59" hits="0" branch="False" />
-            <line number="60" hits="0" branch="False" />
-            <line number="61" hits="0" branch="False" />
-            <line number="63" hits="6" branch="False" />
-            <line number="64" hits="18" branch="True" condition-coverage="100% (6/6)">
+            <line number="57" hits="5" branch="False" />
+            <line number="58" hits="1" branch="False" />
+            <line number="59" hits="1" branch="False" />
+            <line number="60" hits="1" branch="False" />
+            <line number="61" hits="1" branch="False" />
+            <line number="63" hits="5" branch="False" />
+            <line number="64" hits="17" branch="True" condition-coverage="100% (6/6)">
               <conditions>
                 <condition number="576" type="jump" coverage="100%" />
                 <condition number="588" type="jump" coverage="100%" />
