@@ -11,11 +11,13 @@ public class MyCleaner(ILogger<MyCleaner> logger, HttpClient httpClient)
         {
             return "";
         }
+
         string extractedUrl = ExtractFromAddress(url);
         if (extractedUrl != url)
         {
             return RemoveQueryParameters(extractedUrl);
         }
+
         try
         {
             string finalRedirectUrl = await FollowRedirectsAsync(url);
@@ -40,6 +42,7 @@ public class MyCleaner(ILogger<MyCleaner> logger, HttpClient httpClient)
         return uri.GetLeftPart(UriPartial.Path);
     }
 
+
     private async Task<string> FollowRedirectsAsync(string url)
     {
         HttpResponseMessage response = await httpClient.GetAsync(url);
@@ -51,6 +54,7 @@ public class MyCleaner(ILogger<MyCleaner> logger, HttpClient httpClient)
                 Uri baseUri = new(url);
                 redirectUrl = new Uri(baseUri, redirectUrl).ToString();
             }
+
             try
             {
                 response = await httpClient.GetAsync(redirectUrl);
@@ -61,6 +65,7 @@ public class MyCleaner(ILogger<MyCleaner> logger, HttpClient httpClient)
                 return ExtractFromAddress(redirectUrl);
             }
         }
+
         return response.RequestMessage?.RequestUri?.ToString() ?? "";
     }
 
@@ -103,6 +108,7 @@ public class MyCleaner(ILogger<MyCleaner> logger, HttpClient httpClient)
         {
             return $"{uri.Scheme}://{uri.Host}{segments[0]}{segments[1]}{segments[2]}{segments[3]}";
         }
+
         return uri.GetLeftPart(UriPartial.Path);
     }
 }
