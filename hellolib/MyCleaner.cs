@@ -53,15 +53,7 @@ public class MyCleaner(ILogger<MyCleaner> logger, HttpClient httpClient)
                 Uri baseUri = new(url);
                 redirectUrl = new Uri(baseUri, redirectUrl).ToString();
             }
-            try
-            {
-                response = await httpClient.GetAsync(redirectUrl);
-            }
-            catch (Exception e)
-            {
-                logger.LogError(e, "Exception in method {Method}", nameof(FollowRedirectsAsync));
-                throw;
-            }
+            response = await httpClient.GetAsync(redirectUrl);
         }
         return response.RequestMessage?.RequestUri?.ToString() ?? "";
     }
