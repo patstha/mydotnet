@@ -21,7 +21,7 @@ public static class Knapsack
     
     public static List<KnapsackItem> BruteForceOptimized(int knapsackSize, List<KnapsackItem> knapsackItems)
     {
-        List<KnapsackItem> bestCombination = new();
+        List<KnapsackItem> bestCombination = [];
         decimal bestCost = 0;
 
         // Sort items by value-to-weight ratio
