@@ -242,7 +242,7 @@ var assemblies = [
       { "name": "hellolib.Person", "rp": "hellolib_Person.html", "cl": 17, "ucl": 0, "cal": 17, "tl": 27, "cb": 2, "tb": 2, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "hellolib.PersonFactory", "rp": "hellolib_PersonFactory.html", "cl": 22, "ucl": 0, "cal": 22, "tl": 49, "cb": 8, "tb": 8, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "hellolib.Revocation", "rp": "hellolib_Revocation.html", "cl": 44, "ucl": 0, "cal": 44, "tl": 62, "cb": 16, "tb": 16, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
-      { "name": "HelloLib.RomanToInteger", "rp": "hellolib_RomanToInteger.html", "cl": 56, "ucl": 0, "cal": 56, "tl": 141, "cb": 20, "tb": 20, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "hellolib.RomanToInteger", "rp": "hellolib_RomanToInteger.html", "cl": 56, "ucl": 0, "cal": 56, "tl": 141, "cb": 20, "tb": 20, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "hellolib.SinglyLinkedList", "rp": "hellolib_SinglyLinkedList.html", "cl": 65, "ucl": 0, "cal": 65, "tl": 95, "cb": 25, "tb": 26, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "hellolib.SinglyLinkedListAddTwoNumbers", "rp": "hellolib_SinglyLinkedListAddTwoNumbers.html", "cl": 35, "ucl": 0, "cal": 35, "tl": 53, "cb": 20, "tb": 20, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "hellolib.SinglyLinkedListNode", "rp": "hellolib_SinglyLinkedListNode.html", "cl": 2, "ucl": 0, "cal": 2, "tl": 95, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
@@ -275,7 +275,7 @@ var riskHotspots = [
       { "value": 16, "exceeded": true },
     ]},
   {
-    "assembly": "hellolib", "class": "HelloLib.RomanToInteger", "reportPath": "hellolib_RomanToInteger.html", "methodName": "IsValidRomanNumeral(System.String)", "methodShortName": "IsValidRomanNumeral(...)", "fileIndex": 0, "line": 44,
+    "assembly": "hellolib", "class": "hellolib.RomanToInteger", "reportPath": "hellolib_RomanToInteger.html", "methodName": "IsValidRomanNumeral(System.String)", "methodShortName": "IsValidRomanNumeral(...)", "fileIndex": 0, "line": 44,
     "metrics": [
       { "value": 16, "exceeded": false },
       { "value": 16, "exceeded": true },
