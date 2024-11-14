@@ -1,4 +1,4 @@
-﻿namespace HelloLib;
+﻿namespace hellolib;
 
 public static class RomanToInteger
 {
