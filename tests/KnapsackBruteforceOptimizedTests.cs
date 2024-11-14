@@ -88,6 +88,27 @@ public class KnapsackBruteforceOptimizedTests
         // assert 
         actual.Should().BeEquivalentTo(expected);
     }
+    [Fact]
+    public void KnapsackBruteforce_ShouldReturnCorrectAnswerForSimpleCase4()
+    {
+        // arrange 
+        List<KnapsackItem> knapsackItems =
+        [
+            new("Bicycle", 200, 4)
+        ];
+
+        const int knapsackCapacity = 24;
+        List<KnapsackItem> expected = [            
+            new("Bicycle", 200, 4)
+        ];
+
+        // act 
+        List<KnapsackItem> actual =
+            Knapsack.BruteForceOptimized(knapsackCapacity, knapsackItems);
+
+        // assert 
+        actual.Should().BeEquivalentTo(expected);
+    }
     // [Fact]
     // public void KnapsackBruteforce_ShouldReturnCorrectAnswerForSimpleCase4()
     // {

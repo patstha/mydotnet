@@ -228,7 +228,7 @@ var assemblies = [
       { "name": "hellolib.Entity", "rp": "hellolib_Entity.html", "cl": 5, "ucl": 0, "cal": 5, "tl": 10, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "hellolib.FindClosestNumberToZero", "rp": "hellolib_FindClosestNumberToZero.html", "cl": 20, "ucl": 0, "cal": 20, "tl": 64, "cb": 10, "tb": 10, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "hellolib.Graph", "rp": "hellolib_Graph.html", "cl": 51, "ucl": 0, "cal": 51, "tl": 75, "cb": 20, "tb": 20, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
-      { "name": "hellolib.Knapsack", "rp": "hellolib_Knapsack.html", "cl": 44, "ucl": 1, "cal": 45, "tl": 77, "cb": 15, "tb": 16, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "hellolib.Knapsack", "rp": "hellolib_Knapsack.html", "cl": 45, "ucl": 0, "cal": 45, "tl": 77, "cb": 16, "tb": 16, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "hellolib.KnapsackItem", "rp": "hellolib_KnapsackItem.html", "cl": 1, "ucl": 0, "cal": 1, "tl": 77, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "hellolib.ListNode", "rp": "hellolib_ListNode.html", "cl": 3, "ucl": 0, "cal": 3, "tl": 53, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
       { "name": "hellolib.MergeSort", "rp": "hellolib_MergeSort.html", "cl": 38, "ucl": 0, "cal": 38, "tl": 55, "cb": 10, "tb": 10, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
