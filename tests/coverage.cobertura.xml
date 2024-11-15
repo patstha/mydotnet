@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<coverage line-rate="1" branch-rate="0.9964" version="1.9" timestamp="1731624882" lines-covered="779" lines-valid="779" branches-covered="281" branches-valid="282">
+<coverage line-rate="1" branch-rate="0.9964" version="1.9" timestamp="1731637047" lines-covered="782" lines-valid="782" branches-covered="281" branches-valid="282">
   <sources>
     <source>C:\Users\kushal\src\mydotnet\hellolib\</source>
   </sources>
   <packages>
-    <package name="hellolib" line-rate="1" branch-rate="0.9964" complexity="328">
+    <package name="hellolib" line-rate="1" branch-rate="0.9964" complexity="327">
       <classes>
         <class name="hellolib.ListNode" filename="AddTwoNumbers.cs" line-rate="1" branch-rate="1" complexity="3">
           <methods>
@@ -454,48 +454,50 @@
             <line number="4" hits="4" branch="False" />
           </lines>
         </class>
-        <class name="hellolib.DotnetNineGuid" filename="DotnetNineGuid.cs" line-rate="1" branch-rate="1" complexity="5">
+        <class name="hellolib.DotnetNineGuid" filename="DotnetNineGuid.cs" line-rate="1" branch-rate="1" complexity="4">
           <methods>
-            <method name="get_TimestampUtc" signature="()" line-rate="1" branch-rate="1" complexity="1">
-              <lines>
-                <line number="5" hits="1004" branch="False" />
-              </lines>
-            </method>
-            <method name="get_Guid" signature="()" line-rate="1" branch-rate="1" complexity="1">
-              <lines>
-                <line number="6" hits="1000004" branch="False" />
-              </lines>
-            </method>
             <method name="GetGuid" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="7" hits="999002" branch="False" />
+                <line number="14" hits="48466704" branch="False" />
               </lines>
             </method>
             <method name="GetTimestamp" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="8" hits="2" branch="False" />
+                <line number="15" hits="2" branch="False" />
               </lines>
             </method>
             <method name="ExtractTimestamp" signature="(System.Guid)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="10" hits="999002" branch="False" />
-                <line number="11" hits="999002" branch="False" />
-                <line number="12" hits="999002" branch="False" />
-                <line number="13" hits="999002" branch="False" />
-                <line number="14" hits="999002" branch="False" />
+                <line number="18" hits="48466704" branch="False" />
+                <line number="19" hits="48466704" branch="False" />
+                <line number="20" hits="48466704" branch="False" />
+                <line number="21" hits="48466704" branch="False" />
+                <line number="22" hits="48466704" branch="False" />
+              </lines>
+            </method>
+            <method name=".ctor" signature="(System.Func`1&lt;System.DateTimeOffset&gt;)" line-rate="1" branch-rate="1" complexity="1">
+              <lines>
+                <line number="8" hits="1001002" branch="False" />
+                <line number="9" hits="1001002" branch="False" />
+                <line number="10" hits="1001002" branch="False" />
+                <line number="11" hits="1001002" branch="False" />
+                <line number="12" hits="1001002" branch="False" />
               </lines>
             </method>
           </methods>
           <lines>
-            <line number="5" hits="1004" branch="False" />
-            <line number="6" hits="1000004" branch="False" />
-            <line number="7" hits="999002" branch="False" />
-            <line number="8" hits="2" branch="False" />
-            <line number="10" hits="999002" branch="False" />
-            <line number="11" hits="999002" branch="False" />
-            <line number="12" hits="999002" branch="False" />
-            <line number="13" hits="999002" branch="False" />
-            <line number="14" hits="999002" branch="False" />
+            <line number="14" hits="48466704" branch="False" />
+            <line number="15" hits="2" branch="False" />
+            <line number="18" hits="48466704" branch="False" />
+            <line number="19" hits="48466704" branch="False" />
+            <line number="20" hits="48466704" branch="False" />
+            <line number="21" hits="48466704" branch="False" />
+            <line number="22" hits="48466704" branch="False" />
+            <line number="8" hits="1001002" branch="False" />
+            <line number="9" hits="1001002" branch="False" />
+            <line number="10" hits="1001002" branch="False" />
+            <line number="11" hits="1001002" branch="False" />
+            <line number="12" hits="1001002" branch="False" />
           </lines>
         </class>
         <class name="hellolib.Entity" filename="Entity.cs" line-rate="1" branch-rate="1" complexity="5">

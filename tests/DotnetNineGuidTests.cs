@@ -26,7 +26,7 @@
         [Fact]
         public void GenerateGuidv7_ShouldGenerateGuidv7_sequentially2()
         {
-            List<DotnetNineGuid> objects = new List<DotnetNineGuid>();
+            List<DotnetNineGuid> objects = [];
             DateTimeOffset startTime = DateTimeOffset.UtcNow;
 
             for (int i = 0; i < 1_000; i++)
@@ -49,7 +49,7 @@
         [Fact]
         public void GenerateGuidv7_ShouldGenerateGuidv7_sequentially3()
         {
-            List<DotnetNineGuid> objects = new List<DotnetNineGuid>();
+            List<DotnetNineGuid> objects = [];
             DateTimeOffset startTime = DateTimeOffset.UtcNow;
 
             for (int i = 0; i < 1_000_000; i++)
