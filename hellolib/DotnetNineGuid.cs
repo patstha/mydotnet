@@ -8,7 +8,7 @@ public class DotnetNineGuid
     public DotnetNineGuid(Func<DateTimeOffset> timestampProvider)
     {
         _timestampUtc = timestampProvider();
-        _guid = Guid.CreateVersion7();
+        _guid = Guid.CreateVersion7(_timestampUtc);
     }
 
     public Guid GetGuid() => _guid;
