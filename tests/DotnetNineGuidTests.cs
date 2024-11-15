@@ -24,7 +24,7 @@ public class DotnetNineGuidTests
     public async Task GenerateGuidv7_ShouldGenerateGuidv7_sequentially2()
     {
         List<DotnetNineGuid> objects = [];
-        for (int i = 0; i < 1000; i++)
+        for (int i = 0; i < 1_000_000; i++)
         {
             DotnetNineGuid myObject = new();
             objects.Add(myObject);

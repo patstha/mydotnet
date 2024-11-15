@@ -6,6 +6,7 @@ public class DotnetNineGuid
     private Guid Guid { get; } = Guid.CreateVersion7();
     public Guid GetGuid() => Guid;
     public DateTimeOffset GetTimestamp() => TimestampUtc;
+
     public static long ExtractTimestamp(Guid uuid)
     {
         byte[] bytes = uuid.ToByteArray();
