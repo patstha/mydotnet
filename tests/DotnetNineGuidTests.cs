@@ -28,7 +28,7 @@ public class DotnetNineGuidTests
         {
             DotnetNineGuid myObject = new();
             objects.Add(myObject);
-            await Task.Delay(1);
+            await Task.Delay(10);
         }
 
         for (int i = 0; i < objects.Count; i++)
