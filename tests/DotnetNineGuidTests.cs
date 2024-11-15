@@ -52,7 +52,7 @@
             List<DotnetNineGuid> objects = [];
             DateTimeOffset startTime = DateTimeOffset.UtcNow;
 
-            for (int i = 0; i < 100_000_000; i++)
+            for (int i = 0; i < 1_000_000; i++)
             {
                 DotnetNineGuid myObject = new(TimestampProvider(i * 10, startTime));
                 objects.Add(myObject);
