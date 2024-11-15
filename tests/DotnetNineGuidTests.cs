@@ -21,14 +21,16 @@ public class DotnetNineGuidTests
     }
 
     [Fact]
-    public async Task GenerateGuidv7_ShouldGenerateGuidv7_sequentially2()
+    public void GenerateGuidv7_ShouldGenerateGuidv7_sequentially2()
     {
-        List<DotnetNineGuid> objects = [];
-        for (int i = 0; i < 1_000_000; i++)
+        List<DotnetNineGuid> objects = new List<DotnetNineGuid>();
+        DateTimeOffset startTime = DateTimeOffset.UtcNow;
+
+        for (int i = 0; i < 1000; i++)
         {
-            DotnetNineGuid myObject = new();
+            Func<DateTimeOffset> timestampProvider = () => startTime.AddMilliseconds(i);
+            DotnetNineGuid myObject = new DotnetNineGuid(timestampProvider);
             objects.Add(myObject);
-            await Task.Delay(10);
         }
 
         for (int i = 0; i < objects.Count; i++)

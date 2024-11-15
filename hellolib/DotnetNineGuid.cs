@@ -2,10 +2,17 @@
 
 public class DotnetNineGuid
 {
-    private DateTimeOffset TimestampUtc { get; } = DateTimeOffset.UtcNow;
-    private Guid Guid { get; } = Guid.CreateVersion7();
-    public Guid GetGuid() => Guid;
-    public DateTimeOffset GetTimestamp() => TimestampUtc;
+    private readonly DateTimeOffset _timestampUtc;
+    private readonly Guid _guid;
+
+    public DotnetNineGuid(Func<DateTimeOffset> timestampProvider)
+    {
+        _timestampUtc = timestampProvider();
+        _guid = Guid.CreateVersion7();
+    }
+
+    public Guid GetGuid() => _guid;
+    public DateTimeOffset GetTimestamp() => _timestampUtc;
 
     public static long ExtractTimestamp(Guid uuid)
     {
