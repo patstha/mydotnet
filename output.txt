@@ -1,0 +1,195 @@
+**********************
+PowerShell transcript start
+Start time: 20241119072821
+Username: KUS2023\kushal
+RunAs User: KUS2023\kushal
+Configuration Name: 
+Machine: KUS2023 (Microsoft Windows NT 10.0.22631.0)
+Host Application: C:\Program Files\PowerShell\7\pwsh.dll
+Process ID: 7472
+PSVersion: 7.4.6
+PSEdition: Core
+GitCommitId: 7.4.6
+OS: Microsoft Windows 10.0.22631
+Platform: Win32NT
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1, 6.0, 7.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+WSManStackVersion: 3.0
+**********************
+Transcript started, output file is output.txt
+Building with configuration: Debug, OS: win-x64
+
+Tuesday, November 19, 2024 7:28:21 AM
+
+Tuesday, November 19, 2024 7:28:22 AM
+
+Tuesday, November 19, 2024 7:28:23 AM
+
+Tuesday, November 19, 2024 7:28:24 AM
+
+Tuesday, November 19, 2024 7:28:32 AM
+Building with configuration: Debug, OS: linux-x64
+Tuesday, November 19, 2024 7:28:32 AM
+
+Tuesday, November 19, 2024 7:28:33 AM
+
+Tuesday, November 19, 2024 7:28:34 AM
+
+Tuesday, November 19, 2024 7:28:35 AM
+
+Tuesday, November 19, 2024 7:28:41 AM
+Building with configuration: Debug, OS: osx-x64
+Tuesday, November 19, 2024 7:28:41 AM
+
+Tuesday, November 19, 2024 7:28:42 AM
+
+Tuesday, November 19, 2024 7:28:43 AM
+
+Tuesday, November 19, 2024 7:28:44 AM
+
+Tuesday, November 19, 2024 7:28:51 AM
+Building with configuration: Debug, OS: linux-arm64
+Tuesday, November 19, 2024 7:28:51 AM
+
+Tuesday, November 19, 2024 7:28:51 AM
+
+Tuesday, November 19, 2024 7:28:52 AM
+
+Tuesday, November 19, 2024 7:28:54 AM
+
+Tuesday, November 19, 2024 7:29:00 AM
+Building with configuration: Release, OS: win-x64
+Tuesday, November 19, 2024 7:29:00 AM
+
+Tuesday, November 19, 2024 7:29:00 AM
+
+Tuesday, November 19, 2024 7:29:01 AM
+
+Tuesday, November 19, 2024 7:29:03 AM
+
+Tuesday, November 19, 2024 7:29:09 AM
+Building with configuration: Release, OS: linux-x64
+Tuesday, November 19, 2024 7:29:09 AM
+
+Tuesday, November 19, 2024 7:29:10 AM
+
+Tuesday, November 19, 2024 7:29:11 AM
+
+Tuesday, November 19, 2024 7:29:12 AM
+
+Tuesday, November 19, 2024 7:29:18 AM
+Building with configuration: Release, OS: osx-x64
+Tuesday, November 19, 2024 7:29:18 AM
+Batch size: 20
+Batch size: 20
+Batch size: 20
+Batch size: 20
+Batch size: 20
+Batch size: 20
+Batch size: 20
+Batch size: 20
+Batch size: 20
+Batch size: 20
+Batch size: 20
+Batch size: 20
+Batch size: 20
+Batch size: 20
+Batch size: 20
+Batch size: 20
+Batch size: 20
+Batch size: 20
+Batch size: 20
+Batch size: 20
+Batch size: 20
+Batch size: 20
+Batch size: 20
+Batch size: 20
+Batch size: 20
+Batch size: 20
+Batch size: 20
+Batch size: 20
+Batch size: 20
+Batch size: 20
+Batch size: 20
+Batch size: 20
+Batch size: 20
+Batch size: 20
+Batch size: 20
+Batch size: 20
+Batch size: 20
+Batch size: 20
+Batch size: 20
+Batch size: 20
+Batch size: 20
+Batch size: 20
+Batch size: 20
+Batch size: 20
+Batch size: 20
+Batch size: 20
+Batch size: 20
+Batch size: 20
+Batch size: 20
+Batch size: 20
+Batch size: 20
+Batch size: 20
+Batch size: 20
+Batch size: 20
+Batch size: 20
+Batch size: 20
+Batch size: 20
+Batch size: 20
+Batch size: 20
+Batch size: 20
+Batch size: 20
+Batch size: 20
+Batch size: 20
+Batch size: 20
+Batch size: 20
+Batch size: 20
+Batch size: 20
+Batch size: 20
+Batch size: 20
+Batch size: 20
+Batch size: 20
+Batch size: 20
+Batch size: 20
+Batch size: 20
+Batch size: 9
+[xUnit.net 00:00:05.21]   Finished:    tests
+  tests test succeeded (5.7s)
+
+Test summary: total: 334, failed: 0, succeeded: 334, skipped: 0, duration: 5.7s
+Build succeeded in 6.6s
+Tuesday, November 19, 2024 7:29:18 AM
+Building with configuration: Release, OS: osx-x64
+Tuesday, November 19, 2024 7:29:18 AM
+
+Build succeeded in 0.7s
+Tuesday, November 19, 2024 7:29:19 AM
+Build succeeded in 0.9s
+Tuesday, November 19, 2024 7:29:20 AM
+
+Tuesday, November 19, 2024 7:29:22 AM
+
+Tuesday, November 19, 2024 7:29:28 AM
+Building with configuration: Release, OS: linux-arm64
+Tuesday, November 19, 2024 7:29:28 AM
+
+Tuesday, November 19, 2024 7:29:29 AM
+
+Tuesday, November 19, 2024 7:29:30 AM
+
+Tuesday, November 19, 2024 7:29:31 AM
+
+Tuesday, November 19, 2024 7:29:37 AM
+Tuesday, November 19, 2024 7:29:37 AM
+
+Tuesday, November 19, 2024 7:29:45 AM
+
+Tuesday, November 19, 2024 7:29:45 AM
+Tuesday, November 19, 2024 7:29:45 AM
+**********************
+PowerShell transcript end
+End time: 20241119072945
+**********************
