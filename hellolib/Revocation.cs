@@ -31,7 +31,7 @@ public static class Revocation
         IEnumerable<IEnumerable<string>> batches = source.Batch(size);
         foreach (IEnumerable<string> bat in batches)
         {
-            Console.WriteLine($"Batch size: {bat.Count()}");
+            Console.Write($"Batch size: {bat.Count()}");
         }
     }
 

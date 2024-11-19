@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<coverage line-rate="1" branch-rate="0.9964" version="1.9" timestamp="1732019569" lines-covered="782" lines-valid="782" branches-covered="281" branches-valid="282">
+<coverage line-rate="1" branch-rate="0.9964" version="1.9" timestamp="1732019784" lines-covered="782" lines-valid="782" branches-covered="281" branches-valid="282">
   <sources>
     <source>C:\Users\kushal\src\mydotnet\hellolib\</source>
   </sources>
@@ -458,7 +458,7 @@
           <methods>
             <method name="GetGuid" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="14" hits="49513878" branch="False" />
+                <line number="14" hits="48705436" branch="False" />
               </lines>
             </method>
             <method name="GetTimestamp" signature="()" line-rate="1" branch-rate="1" complexity="1">
@@ -468,11 +468,11 @@
             </method>
             <method name="ExtractTimestamp" signature="(System.Guid)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="18" hits="49513878" branch="False" />
-                <line number="19" hits="49513878" branch="False" />
-                <line number="20" hits="49513878" branch="False" />
-                <line number="21" hits="49513878" branch="False" />
-                <line number="22" hits="49513878" branch="False" />
+                <line number="18" hits="48705436" branch="False" />
+                <line number="19" hits="48705436" branch="False" />
+                <line number="20" hits="48705436" branch="False" />
+                <line number="21" hits="48705436" branch="False" />
+                <line number="22" hits="48705436" branch="False" />
               </lines>
             </method>
             <method name=".ctor" signature="(System.Func`1&lt;System.DateTimeOffset&gt;)" line-rate="1" branch-rate="1" complexity="1">
@@ -486,13 +486,13 @@
             </method>
           </methods>
           <lines>
-            <line number="14" hits="49513878" branch="False" />
+            <line number="14" hits="48705436" branch="False" />
             <line number="15" hits="2" branch="False" />
-            <line number="18" hits="49513878" branch="False" />
-            <line number="19" hits="49513878" branch="False" />
-            <line number="20" hits="49513878" branch="False" />
-            <line number="21" hits="49513878" branch="False" />
-            <line number="22" hits="49513878" branch="False" />
+            <line number="18" hits="48705436" branch="False" />
+            <line number="19" hits="48705436" branch="False" />
+            <line number="20" hits="48705436" branch="False" />
+            <line number="21" hits="48705436" branch="False" />
+            <line number="22" hits="48705436" branch="False" />
             <line number="8" hits="1001002" branch="False" />
             <line number="9" hits="1001002" branch="False" />
             <line number="10" hits="1001002" branch="False" />

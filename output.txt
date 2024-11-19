@@ -1,6 +1,6 @@
 **********************
 PowerShell transcript start
-Start time: 20241119073119
+Start time: 20241119073453
 Username: KUS2023\kushal
 RunAs User: KUS2023\kushal
 Configuration Name: 
@@ -20,5 +20,5 @@ WSManStackVersion: 3.0
 Transcript started, output file is output.txt
 **********************
 PowerShell transcript end
-End time: 20241119073249
+End time: 20241119073624
 **********************
