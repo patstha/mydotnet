@@ -421,3 +421,45 @@ Tuesday, November 19, 2024 11:32:59 AM
 
 Tuesday, November 19, 2024 11:32:59 AM
 
+
+Tuesday, November 19, 2024 2:48:13 PM
+
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  hellolib -> C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net9.0\hellolib.dll
+  tests -> C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\tests.dll
+  [coverlet] _mapping file name: 'CoverletSourceRootsMapping_tests'
+Test run for C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\tests.dll (.NETCoreApp,Version=v9.0)
+VSTest version 17.12.0 (x64)
+
+Starting test execution, please wait...
+A total of 1 test files matched the specified pattern.
+[xUnit.net 00:00:05.39]     tests.DotnetNineGuidTests.GenerateGuidv7_ShouldGenerateGuidv7_sequentially2 [FAIL]
+  Failed tests.DotnetNineGuidTests.GenerateGuidv7_ShouldGenerateGuidv7_sequentially2 [4 ms]
+  Error Message:
+   Expected firstLong to be less than 12911330808L, but found 280113498506743L (difference of 280100587175935).
+  Stack Trace:
+     at FluentAssertions.Execution.XUnit2TestFramework.Throw(String message)
+   at FluentAssertions.Execution.TestFrameworkProvider.Throw(String message)
+   at FluentAssertions.Execution.DefaultAssertionStrategy.HandleFailure(String message)
+   at FluentAssertions.Execution.AssertionScope.FailWith(Func`1 failReasonFunc)
+   at FluentAssertions.Numeric.NumericAssertions`2.BeLessThan(T expected, String because, Object[] becauseArgs)
+   at tests.DotnetNineGuidTests.GenerateGuidv7_ShouldGenerateGuidv7_sequentially2() in C:\Users\kushal\src\mydotnet\tests\DotnetNineGuidTests.cs:line 44
+   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
+   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
+
+Failed!  - Failed:     1, Passed:   333, Skipped:     0, Total:   334, Duration: 5 s - tests.dll (net9.0)
+
+Tuesday, November 19, 2024 2:48:21 PM
+
+2024-11-19T14:48:21: Arguments
+2024-11-19T14:48:21:  -reports:coverage.cobertura.xml
+2024-11-19T14:48:21:  -targetdir:coverage-report
+2024-11-19T14:48:21: Writing report file 'coverage-report\index.html'
+2024-11-19T14:48:21: Report generation took 0.2 seconds
+
+Tuesday, November 19, 2024 2:48:22 PM
+
+
+Tuesday, November 19, 2024 2:48:22 PM
+
