@@ -557,3 +557,50 @@ Tuesday, November 19, 2024 3:59:52 PM
 
 Tuesday, November 19, 2024 3:59:52 PM
 
+
+Tuesday, November 19, 2024 7:03:51 PM
+
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  hellolib -> C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net9.0\hellolib.dll
+  tests -> C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\tests.dll
+  [coverlet] _mapping file name: 'CoverletSourceRootsMapping_tests'
+Test run for C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\tests.dll (.NETCoreApp,Version=v9.0)
+VSTest version 17.12.0 (x64)
+
+Starting test execution, please wait...
+A total of 1 test files matched the specified pattern.
+
+Passed!  - Failed:     0, Passed:   334, Skipped:     0, Total:   334, Duration: 5 s - tests.dll (net9.0)
+  [coverlet] 
+  Calculating coverage result...
+   Generating report 'C:\Users\kushal\src\mydotnet\tests\coverage.cobertura.xml'
+
++----------+------+--------+--------+
+| Module   | Line | Branch | Method |
++----------+------+--------+--------+
+| hellolib | 100% | 99.64% | 100%   |
++----------+------+--------+--------+
+
++---------+------+--------+--------+
+|         | Line | Branch | Method |
++---------+------+--------+--------+
+| Total   | 100% | 99.64% | 100%   |
++---------+------+--------+--------+
+| Average | 100% | 99.64% | 100%   |
++---------+------+--------+--------+
+
+
+Tuesday, November 19, 2024 7:03:59 PM
+
+2024-11-19T19:03:59: Arguments
+2024-11-19T19:03:59:  -reports:coverage.cobertura.xml
+2024-11-19T19:03:59:  -targetdir:coverage-report
+2024-11-19T19:04:00: Writing report file 'coverage-report\index.html'
+2024-11-19T19:04:00: Report generation took 0.1 seconds
+
+Tuesday, November 19, 2024 7:04:00 PM
+
+
+Tuesday, November 19, 2024 7:04:00 PM
+
