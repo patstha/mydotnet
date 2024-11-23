@@ -1318,3 +1318,46 @@ Friday, November 22, 2024 8:58:56 PM
 
 Friday, November 22, 2024 8:58:56 PM
 
+
+Saturday, November 23, 2024 8:26:45 AM
+
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  hellolib -> C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net9.0\hellolib.dll
+  tests -> C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\tests.dll
+  [coverlet] _mapping file name: 'CoverletSourceRootsMapping_tests'
+Test run for C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\tests.dll (.NETCoreApp,Version=v9.0)
+VSTest version 17.12.0 (x64)
+
+Starting test execution, please wait...
+A total of 1 test files matched the specified pattern.
+[xUnit.net 00:00:03.68]     tests.MyCleanerTests.CleanUrl_ShouldReturnValidOutput(input: "https://slickdeals.net/?adobeRef=3600a9663d6311efb"┬╖┬╖┬╖, expectedOutput: "https://www.xbox.com/en-us/games/store/forza-horiz"┬╖┬╖┬╖) [FAIL]
+  Failed tests.MyCleanerTests.CleanUrl_ShouldReturnValidOutput(input: "https://slickdeals.net/?adobeRef=3600a9663d6311efb"┬╖┬╖┬╖, expectedOutput: "https://www.xbox.com/en-us/games/store/forza-horiz"┬╖┬╖┬╖) [3 s]
+  Error Message:
+   Expected actual to be "https://www.xbox.com/en-us/games/store/forza-horizon-4-1979-talbot-sunbeam-lotus/9nnm9m4t5j5q", but found <null>.
+  Stack Trace:
+     at FluentAssertions.Execution.XUnit2TestFramework.Throw(String message)
+   at FluentAssertions.Execution.TestFrameworkProvider.Throw(String message)
+   at FluentAssertions.Execution.DefaultAssertionStrategy.HandleFailure(String message)
+   at FluentAssertions.Execution.AssertionScope.FailWith(Func`1 failReasonFunc)
+   at FluentAssertions.Primitives.StringValidator.ValidateAgainstNulls()
+   at FluentAssertions.Primitives.StringValidator.Validate()
+   at FluentAssertions.Primitives.StringAssertions`1.Be(String expected, String because, Object[] becauseArgs)
+   at tests.MyCleanerTests.CleanUrl_ShouldReturnValidOutput(String input, String expectedOutput) in C:\Users\kushal\src\mydotnet\tests\MyCleanerTests.cs:line 55
+--- End of stack trace from previous location ---
+
+Failed!  - Failed:     1, Passed:   333, Skipped:     0, Total:   334, Duration: 6 s - tests.dll (net9.0)
+
+Saturday, November 23, 2024 8:26:54 AM
+
+2024-11-23T08:26:54: Arguments
+2024-11-23T08:26:54:  -reports:coverage.cobertura.xml
+2024-11-23T08:26:54:  -targetdir:coverage-report
+2024-11-23T08:26:54: Writing report file 'coverage-report\index.html'
+2024-11-23T08:26:54: Report generation took 0.1 seconds
+
+Saturday, November 23, 2024 8:26:54 AM
+
+
+Saturday, November 23, 2024 8:26:54 AM
+
