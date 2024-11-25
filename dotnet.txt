@@ -1,14 +1,14 @@
 C:\Users\kushal\src\mydotnet\
 Building with configuration: Debug, OS: win-x64
 
-Sunday, November 24, 2024 9:51:49 PM
+Monday, November 25, 2024 5:23:28 AM
 
-Build started 11/24/2024 9:51:49 PM.
+Build started 11/25/2024 5:23:28 AM.
      1>Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" on node 1 (Clean target(s)).
      1>ValidateSolutionConfiguration:
          Building solution configuration "Debug|Any CPU".
-     1>Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" (1) is building "C:\Users\kushal\src\mydotnet\hellolib\hellolib.csproj" (4) on node 3 (Clean target(s)).
-     4>CoreClean:
+     1>Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" (1) is building "C:\Users\kushal\src\mydotnet\hellolib\hellolib.csproj" (3) on node 4 (Clean target(s)).
+     3>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net9.0\hellolib.deps.json".
          Deleting file "C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net9.0\hellolib.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net9.0\hellolib.pdb".
@@ -22,7 +22,7 @@ Build started 11/24/2024 9:51:49 PM.
          Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\refint\hellolib.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.pdb".
          Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\ref\hellolib.dll".
-     1>Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" (1) is building "C:\Users\kushal\src\mydotnet\tests\tests.csproj" (5) on node 4 (Clean target(s)).
+     1>Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" (1) is building "C:\Users\kushal\src\mydotnet\tests\tests.csproj" (5) on node 3 (Clean target(s)).
      5>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\.msCoverageSourceRootsMapping_tests".
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\CoverletSourceRootsMapping_tests".
@@ -144,7 +144,7 @@ Build started 11/24/2024 9:51:49 PM.
          Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net9.0\tests.pdb".
          Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net9.0\tests.genruntimeconfig.cache".
          Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net9.0\ref\tests.dll".
-     4>Done Building Project "C:\Users\kushal\src\mydotnet\hellolib\hellolib.csproj" (Clean target(s)).
+     3>Done Building Project "C:\Users\kushal\src\mydotnet\hellolib\hellolib.csproj" (Clean target(s)).
      5>Done Building Project "C:\Users\kushal\src\mydotnet\tests\tests.csproj" (Clean target(s)).
      1>Done Building Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" (Clean target(s)).
 
@@ -152,9 +152,9 @@ Build succeeded.
     0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:00.71
+Time Elapsed 00:00:00.92
 
-Sunday, November 24, 2024 9:51:50 PM
+Monday, November 25, 2024 5:23:29 AM
 
   Determining projects to restore...
   All projects are up-to-date for restore.
@@ -167,32 +167,32 @@ Build succeeded.
     0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:03.39
+Time Elapsed 00:00:04.18
 
-Sunday, November 24, 2024 9:51:53 PM
+Monday, November 25, 2024 5:23:34 AM
 
   Determining projects to restore...
-  Restored C:\Users\kushal\src\mydotnet\tests\tests.csproj (in 466 ms).
-  Restored C:\Users\kushal\src\mydotnet\hello\hello.csproj (in 460 ms).
-  Restored C:\Users\kushal\src\mydotnet\hellolib\hellolib.csproj (in 460 ms).
-  Restored C:\Users\kushal\src\mydotnet\hellobenchamarks\hellobenchamarks.csproj (in 469 ms).
+  Restored C:\Users\kushal\src\mydotnet\hello\hello.csproj (in 760 ms).
+  Restored C:\Users\kushal\src\mydotnet\hellolib\hellolib.csproj (in 760 ms).
+  Restored C:\Users\kushal\src\mydotnet\tests\tests.csproj (in 768 ms).
+  Restored C:\Users\kushal\src\mydotnet\hellobenchamarks\hellobenchamarks.csproj (in 770 ms).
   hellolib -> C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net9.0\hellolib.dll
   hellolib -> C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net9.0\win-x64\hellolib.dll
   hellolib -> C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net9.0\win-x64\publish\
-  hellobenchamarks -> C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net9.0\win-x64\hellobenchamarks.dll
-  hellobenchamarks -> C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net9.0\win-x64\publish\
-  hello -> C:\Users\kushal\src\mydotnet\hello\bin\Debug\net9.0\win-x64\hello.dll
-  hello -> C:\Users\kushal\src\mydotnet\hello\bin\Debug\net9.0\win-x64\publish\
   tests -> C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\win-x64\tests.dll
   tests -> C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\win-x64\publish\
+  hellobenchamarks -> C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net9.0\win-x64\hellobenchamarks.dll
+  hello -> C:\Users\kushal\src\mydotnet\hello\bin\Debug\net9.0\win-x64\hello.dll
+  hellobenchamarks -> C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net9.0\win-x64\publish\
+  hello -> C:\Users\kushal\src\mydotnet\hello\bin\Debug\net9.0\win-x64\publish\
 
-Sunday, November 24, 2024 9:51:55 PM
+Monday, November 25, 2024 5:23:36 AM
 
   Determining projects to restore...
-  Restored C:\Users\kushal\src\mydotnet\hellolib\hellolib.csproj (in 212 ms).
-  Restored C:\Users\kushal\src\mydotnet\hellobenchamarks\hellobenchamarks.csproj (in 212 ms).
-  Restored C:\Users\kushal\src\mydotnet\tests\tests.csproj (in 212 ms).
-  Restored C:\Users\kushal\src\mydotnet\hello\hello.csproj (in 212 ms).
+  Restored C:\Users\kushal\src\mydotnet\hello\hello.csproj (in 281 ms).
+  Restored C:\Users\kushal\src\mydotnet\hellobenchamarks\hellobenchamarks.csproj (in 281 ms).
+  Restored C:\Users\kushal\src\mydotnet\hellolib\hellolib.csproj (in 281 ms).
+  Restored C:\Users\kushal\src\mydotnet\tests\tests.csproj (in 281 ms).
   hellolib -> C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net9.0\hellolib.dll
   tests -> C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\tests.dll
 Test run for C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\tests.dll (.NETCoreApp,Version=v9.0)
@@ -200,106 +200,93 @@ VSTest version 17.12.0 (x64)
 
 Starting test execution, please wait...
 A total of 1 test files matched the specified pattern.
-[xUnit.net 00:00:03.11]     tests.MyCleanerTests.CleanUrl_ShouldReturnValidOutput(input: "https://slickdeals.net/?adobeRef=3600a9663d6311efb"┬╖┬╖┬╖, expectedOutput: "https://www.xbox.com/en-us/games/store/forza-horiz"┬╖┬╖┬╖) [FAIL]
-  Failed tests.MyCleanerTests.CleanUrl_ShouldReturnValidOutput(input: "https://slickdeals.net/?adobeRef=3600a9663d6311efb"┬╖┬╖┬╖, expectedOutput: "https://www.xbox.com/en-us/games/store/forza-horiz"┬╖┬╖┬╖) [2 s]
-  Error Message:
-   Expected actual to be "https://www.xbox.com/en-us/games/store/forza-horizon-4-1979-talbot-sunbeam-lotus/9nnm9m4t5j5q", but found <null>.
-  Stack Trace:
-     at FluentAssertions.Execution.XUnit2TestFramework.Throw(String message)
-   at FluentAssertions.Execution.TestFrameworkProvider.Throw(String message)
-   at FluentAssertions.Execution.DefaultAssertionStrategy.HandleFailure(String message)
-   at FluentAssertions.Execution.AssertionScope.FailWith(Func`1 failReasonFunc)
-   at FluentAssertions.Primitives.StringValidator.ValidateAgainstNulls()
-   at FluentAssertions.Primitives.StringValidator.Validate()
-   at FluentAssertions.Primitives.StringAssertions`1.Be(String expected, String because, Object[] becauseArgs)
-   at tests.MyCleanerTests.CleanUrl_ShouldReturnValidOutput(String input, String expectedOutput) in C:\Users\kushal\src\mydotnet\tests\MyCleanerTests.cs:line 55
---- End of stack trace from previous location ---
 
-Failed!  - Failed:     1, Passed:   333, Skipped:     0, Total:   334, Duration: 7 s - tests.dll (net9.0)
+Passed!  - Failed:     0, Passed:   334, Skipped:     0, Total:   334, Duration: 6 s - tests.dll (net9.0)
 
-Sunday, November 24, 2024 9:52:05 PM
+Monday, November 25, 2024 5:23:46 AM
 
 Building with configuration: Debug, OS: linux-x64
 
-Sunday, November 24, 2024 9:52:05 PM
+Monday, November 25, 2024 5:23:46 AM
 
-Build started 11/24/2024 9:52:05 PM.
+Build started 11/25/2024 5:23:46 AM.
      1>Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" on node 1 (Clean target(s)).
      1>ValidateSolutionConfiguration:
          Building solution configuration "Debug|Any CPU".
-     1>Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" (1) is building "C:\Users\kushal\src\mydotnet\hello\hello.csproj" (2) on node 4 (Clean target(s)).
+     1>Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" (1) is building "C:\Users\kushal\src\mydotnet\hellolib\hellolib.csproj" (2) on node 4 (Clean target(s)).
      2>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net9.0\hello.exe".
-         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net9.0\hello.deps.json".
-         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net9.0\hello.runtimeconfig.json".
-         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net9.0\hello.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net9.0\hello.pdb".
-     1>Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" (1) is building "C:\Users\kushal\src\mydotnet\hellolib\hellolib.csproj" (3) on node 3 (Clean target(s)).
-     3>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net9.0\hellolib.deps.json".
          Deleting file "C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net9.0\hellolib.dll".
-     2>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.dll".
-     3>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net9.0\hellolib.pdb".
-     2>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll".
-     3>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.csproj.AssemblyReference.cache".
-     2>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net9.0\Microsoft.Extensions.Logging.dll".
-     3>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.GeneratedMSBuildEditorConfig.editorconfig".
-     2>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net9.0\Microsoft.Extensions.Logging.Abstractions.dll".
-     3>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.AssemblyInfoInputs.cache".
-     2>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net9.0\Microsoft.Extensions.Options.dll".
-     3>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.AssemblyInfo.cs".
          Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.csproj.CoreCompileInputs.cache".
          Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.sourcelink.json".
          Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\refint\hellolib.dll".
-     2>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net9.0\Microsoft.Extensions.Primitives.dll".
-     3>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.pdb".
-     2>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net9.0\MoreLinq.dll".
-     3>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\ref\hellolib.dll".
-     2>CoreClean:
+     1>Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" (1) is building "C:\Users\kushal\src\mydotnet\hello\hello.csproj" (3) on node 2 (Clean target(s)).
+     3>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net9.0\hello.exe".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net9.0\hello.deps.json".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net9.0\hello.runtimeconfig.json".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net9.0\hello.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net9.0\hello.pdb".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net9.0\Microsoft.Extensions.Logging.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net9.0\Microsoft.Extensions.Logging.Abstractions.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net9.0\Microsoft.Extensions.Options.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net9.0\Microsoft.Extensions.Primitives.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net9.0\MoreLinq.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net9.0\hellolib.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net9.0\hellolib.pdb".
          Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net9.0\hello.csproj.AssemblyReference.cache".
          Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net9.0\hello.GeneratedMSBuildEditorConfig.editorconfig".
-         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net9.0\hello.AssemblyInfoInputs.cache".
-         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net9.0\hello.AssemblyInfo.cs".
-         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net9.0\hello.csproj.CoreCompileInputs.cache".
-         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net9.0\hello.sourcelink.json".
-         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net9.0\hello.csproj.Up2Date".
-         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net9.0\hello.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net9.0\refint\hello.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net9.0\hello.pdb".
-         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net9.0\hello.genruntimeconfig.cache".
-         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net9.0\ref\hello.dll".
-     1>Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" (1) is building "C:\Users\kushal\src\mydotnet\tests\tests.csproj" (4) on node 2 (Clean target(s)).
+     1>Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" (1) is building "C:\Users\kushal\src\mydotnet\tests\tests.csproj" (4) on node 3 (Clean target(s)).
      4>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\.msCoverageSourceRootsMapping_tests".
+     3>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net9.0\hello.AssemblyInfoInputs.cache".
+     4>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\CoverletSourceRootsMapping_tests".
+     3>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net9.0\hello.AssemblyInfo.cs".
+     4>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\testhost.dll".
+     3>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net9.0\hello.csproj.CoreCompileInputs.cache".
+     4>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\testhost.exe".
+     3>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net9.0\hello.sourcelink.json".
+     4>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\xunit.runner.visualstudio.testadapter.dll".
+     3>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net9.0\hello.csproj.Up2Date".
+     4>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\xunit.runner.reporters.netcoreapp10.dll".
+     3>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net9.0\hello.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net9.0\refint\hello.dll".
+     4>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\xunit.runner.utility.netcoreapp10.dll".
+     3>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net9.0\hello.pdb".
+     4>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\authorizations.csv".
-     3>Done Building Project "C:\Users\kushal\src\mydotnet\hellolib\hellolib.csproj" (Clean target(s)).
+     3>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net9.0\hello.genruntimeconfig.cache".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net9.0\ref\hello.dll".
      4>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\tests.deps.json".
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\tests.runtimeconfig.json".
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\tests.dll".
+     2>Done Building Project "C:\Users\kushal\src\mydotnet\hellolib\hellolib.csproj" (Clean target(s)).
+     4>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\tests.pdb".
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\Castle.Core.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\FluentAssertions.dll".
@@ -352,14 +339,14 @@ Build started 11/24/2024 9:52:05 PM.
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\zh-Hans\Microsoft.TestPlatform.CoreUtilities.resources.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\zh-Hans\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\zh-Hant\Microsoft.TestPlatform.CoreUtilities.resources.dll".
-     2>Done Building Project "C:\Users\kushal\src\mydotnet\hello\hello.csproj" (Clean target(s)).
-     4>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\zh-Hant\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\cs\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\cs\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\cs\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\de\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\de\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+     3>Done Building Project "C:\Users\kushal\src\mydotnet\hello\hello.csproj" (Clean target(s)).
+     4>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\de\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\es\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\es\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
@@ -508,9 +495,9 @@ Build succeeded.
     0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:00.43
+Time Elapsed 00:00:00.57
 
-Sunday, November 24, 2024 9:52:05 PM
+Monday, November 25, 2024 5:23:47 AM
 
   Determining projects to restore...
   All projects are up-to-date for restore.
@@ -523,32 +510,32 @@ Build succeeded.
     0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:00.97
+Time Elapsed 00:00:01.37
 
-Sunday, November 24, 2024 9:52:07 PM
+Monday, November 25, 2024 5:23:48 AM
 
   Determining projects to restore...
-  Restored C:\Users\kushal\src\mydotnet\hellobenchamarks\hellobenchamarks.csproj (in 223 ms).
-  Restored C:\Users\kushal\src\mydotnet\tests\tests.csproj (in 221 ms).
-  Restored C:\Users\kushal\src\mydotnet\hellolib\hellolib.csproj (in 218 ms).
-  Restored C:\Users\kushal\src\mydotnet\hello\hello.csproj (in 218 ms).
+  Restored C:\Users\kushal\src\mydotnet\hellobenchamarks\hellobenchamarks.csproj (in 341 ms).
+  Restored C:\Users\kushal\src\mydotnet\hellolib\hellolib.csproj (in 333 ms).
+  Restored C:\Users\kushal\src\mydotnet\hello\hello.csproj (in 333 ms).
+  Restored C:\Users\kushal\src\mydotnet\tests\tests.csproj (in 339 ms).
   hellolib -> C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net9.0\hellolib.dll
   hellolib -> C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net9.0\linux-x64\hellolib.dll
   hellolib -> C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net9.0\linux-x64\publish\
+  tests -> C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\linux-x64\tests.dll
+  tests -> C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\linux-x64\publish\
   hellobenchamarks -> C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net9.0\linux-x64\hellobenchamarks.dll
   hellobenchamarks -> C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net9.0\linux-x64\publish\
-  tests -> C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\linux-x64\tests.dll
   hello -> C:\Users\kushal\src\mydotnet\hello\bin\Debug\net9.0\linux-x64\hello.dll
   hello -> C:\Users\kushal\src\mydotnet\hello\bin\Debug\net9.0\linux-x64\publish\
-  tests -> C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\linux-x64\publish\
 
-Sunday, November 24, 2024 9:52:08 PM
+Monday, November 25, 2024 5:23:51 AM
 
   Determining projects to restore...
-  Restored C:\Users\kushal\src\mydotnet\tests\tests.csproj (in 219 ms).
-  Restored C:\Users\kushal\src\mydotnet\hellobenchamarks\hellobenchamarks.csproj (in 219 ms).
-  Restored C:\Users\kushal\src\mydotnet\hellolib\hellolib.csproj (in 219 ms).
-  Restored C:\Users\kushal\src\mydotnet\hello\hello.csproj (in 219 ms).
+  Restored C:\Users\kushal\src\mydotnet\hellobenchamarks\hellobenchamarks.csproj (in 289 ms).
+  Restored C:\Users\kushal\src\mydotnet\hello\hello.csproj (in 287 ms).
+  Restored C:\Users\kushal\src\mydotnet\hellolib\hellolib.csproj (in 287 ms).
+  Restored C:\Users\kushal\src\mydotnet\tests\tests.csproj (in 289 ms).
   hellolib -> C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net9.0\hellolib.dll
   tests -> C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\tests.dll
 Test run for C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\tests.dll (.NETCoreApp,Version=v9.0)
@@ -556,37 +543,34 @@ VSTest version 17.12.0 (x64)
 
 Starting test execution, please wait...
 A total of 1 test files matched the specified pattern.
-[xUnit.net 00:00:03.35]     tests.DotnetNineGuidTests.GenerateGuidv7_ShouldGenerateGuidv7_sequentially2 [FAIL]
-  Failed tests.DotnetNineGuidTests.GenerateGuidv7_ShouldGenerateGuidv7_sequentially2 [6 ms]
-  Error Message:
-   Expected firstLong to be less than 8616370492L, but found 244675723354427L (difference of 244667106983935).
-  Stack Trace:
-     at FluentAssertions.Execution.XUnit2TestFramework.Throw(String message)
-   at FluentAssertions.Execution.TestFrameworkProvider.Throw(String message)
-   at FluentAssertions.Execution.DefaultAssertionStrategy.HandleFailure(String message)
-   at FluentAssertions.Execution.AssertionScope.FailWith(Func`1 failReasonFunc)
-   at FluentAssertions.Numeric.NumericAssertions`2.BeLessThan(T expected, String because, Object[] becauseArgs)
-   at tests.DotnetNineGuidTests.GenerateGuidv7_ShouldGenerateGuidv7_sequentially2() in C:\Users\kushal\src\mydotnet\tests\DotnetNineGuidTests.cs:line 44
-   at System.RuntimeMethodHandle.InvokeMethod(Object target, Void** arguments, Signature sig, Boolean isConstructor)
-   at System.Reflection.MethodBaseInvoker.InvokeWithNoArgs(Object obj, BindingFlags invokeAttr)
 
-Failed!  - Failed:     1, Passed:   333, Skipped:     0, Total:   334, Duration: 5 s - tests.dll (net9.0)
+Passed!  - Failed:     0, Passed:   334, Skipped:     0, Total:   334, Duration: 5 s - tests.dll (net9.0)
 
-Sunday, November 24, 2024 9:52:16 PM
+Monday, November 25, 2024 5:23:59 AM
 
 Building with configuration: Debug, OS: osx-x64
 
-Sunday, November 24, 2024 9:52:16 PM
+Monday, November 25, 2024 5:23:59 AM
 
-Build started 11/24/2024 9:52:16 PM.
+Build started 11/25/2024 5:24:00 AM.
      1>Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" on node 1 (Clean target(s)).
      1>ValidateSolutionConfiguration:
          Building solution configuration "Debug|Any CPU".
-     1>Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" (1) is building "C:\Users\kushal\src\mydotnet\hello\hello.csproj" (2) on node 2 (Clean target(s)).
-     2>CoreClean:
+     1>Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" (1) is building "C:\Users\kushal\src\mydotnet\hello\hello.csproj" (3) on node 2 (Clean target(s)).
+     3>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net9.0\hello.exe".
+     1>Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" (1) is building "C:\Users\kushal\src\mydotnet\hellolib\hellolib.csproj" (2) on node 4 (Clean target(s)).
+     2>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net9.0\hellolib.deps.json".
+     3>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net9.0\hello.deps.json".
+     2>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net9.0\hellolib.dll".
+     3>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net9.0\hello.runtimeconfig.json".
+     2>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net9.0\hellolib.pdb".
+     3>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net9.0\hello.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net9.0\hello.pdb".
          Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.dll".
@@ -594,47 +578,71 @@ Build started 11/24/2024 9:52:16 PM.
          Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net9.0\Microsoft.Extensions.Logging.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net9.0\Microsoft.Extensions.Logging.Abstractions.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net9.0\Microsoft.Extensions.Options.dll".
+     2>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.csproj.AssemblyReference.cache".
+     3>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net9.0\Microsoft.Extensions.Primitives.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net9.0\MoreLinq.dll".
+     2>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.GeneratedMSBuildEditorConfig.editorconfig".
+     3>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net9.0\hellolib.dll".
+     2>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.AssemblyInfoInputs.cache".
+     3>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net9.0\hellolib.pdb".
+     2>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.AssemblyInfo.cs".
+     1>Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" (1) is building "C:\Users\kushal\src\mydotnet\tests\tests.csproj" (4) on node 3 (Clean target(s)).
+     4>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\.msCoverageSourceRootsMapping_tests".
+     3>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net9.0\hello.csproj.AssemblyReference.cache".
+     2>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.csproj.CoreCompileInputs.cache".
+     3>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net9.0\hello.GeneratedMSBuildEditorConfig.editorconfig".
+     4>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\CoverletSourceRootsMapping_tests".
+     3>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net9.0\hello.AssemblyInfoInputs.cache".
+     2>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.sourcelink.json".
+     4>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\testhost.dll".
+     2>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.dll".
+     3>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net9.0\hello.AssemblyInfo.cs".
+     4>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\testhost.exe".
+     3>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net9.0\hello.csproj.CoreCompileInputs.cache".
+     4>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\xunit.runner.visualstudio.testadapter.dll".
+     2>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\refint\hellolib.dll".
+     4>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\xunit.runner.reporters.netcoreapp10.dll".
+     3>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net9.0\hello.sourcelink.json".
+     2>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.pdb".
+     4>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\xunit.runner.utility.netcoreapp10.dll".
+     2>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\ref\hellolib.dll".
+     3>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net9.0\hello.csproj.Up2Date".
          Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net9.0\hello.dll".
+     4>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\authorizations.csv".
+     3>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net9.0\refint\hello.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net9.0\hello.pdb".
          Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net9.0\hello.genruntimeconfig.cache".
          Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net9.0\ref\hello.dll".
-     1>Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" (1) is building "C:\Users\kushal\src\mydotnet\hellolib\hellolib.csproj" (3) on node 3 (Clean target(s)).
-     3>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net9.0\hellolib.deps.json".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net9.0\hellolib.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net9.0\hellolib.pdb".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.csproj.AssemblyReference.cache".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.GeneratedMSBuildEditorConfig.editorconfig".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.AssemblyInfoInputs.cache".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.AssemblyInfo.cs".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.csproj.CoreCompileInputs.cache".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.sourcelink.json".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\refint\hellolib.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.pdb".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\ref\hellolib.dll".
-     1>Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" (1) is building "C:\Users\kushal\src\mydotnet\tests\tests.csproj" (4) on node 4 (Clean target(s)).
      4>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\.msCoverageSourceRootsMapping_tests".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\CoverletSourceRootsMapping_tests".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\testhost.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\testhost.exe".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\xunit.runner.visualstudio.testadapter.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\xunit.runner.reporters.netcoreapp10.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\xunit.runner.utility.netcoreapp10.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\authorizations.csv".
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\tests.deps.json".
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\tests.runtimeconfig.json".
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\tests.dll".
@@ -659,11 +667,11 @@ Build started 11/24/2024 9:52:16 PM.
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\Newtonsoft.Json.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\NSubstitute.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\System.Configuration.ConfigurationManager.dll".
+     2>Done Building Project "C:\Users\kushal\src\mydotnet\hellolib\hellolib.csproj" (Clean target(s)).
+     4>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\System.Diagnostics.EventLog.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\System.Security.Cryptography.ProtectedData.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\xunit.abstractions.dll".
-     3>Done Building Project "C:\Users\kushal\src\mydotnet\hellolib\hellolib.csproj" (Clean target(s)).
-     4>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\xunit.assert.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\xunit.core.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\xunit.execution.dotnet.dll".
@@ -703,6 +711,8 @@ Build started 11/24/2024 9:52:16 PM.
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\es\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\es\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\fr\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+     3>Done Building Project "C:\Users\kushal\src\mydotnet\hello\hello.csproj" (Clean target(s)).
+     4>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\fr\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\fr\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\it\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
@@ -722,8 +732,6 @@ Build started 11/24/2024 9:52:16 PM.
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\pt-BR\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\ru\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\ru\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
-     2>Done Building Project "C:\Users\kushal\src\mydotnet\hello\hello.csproj" (Clean target(s)).
-     4>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\ru\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\tr\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\tr\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
@@ -848,9 +856,9 @@ Build succeeded.
     0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:00.78
+Time Elapsed 00:00:00.59
 
-Sunday, November 24, 2024 9:52:17 PM
+Monday, November 25, 2024 5:24:00 AM
 
   Determining projects to restore...
   All projects are up-to-date for restore.
@@ -863,32 +871,32 @@ Build succeeded.
     0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:01.80
+Time Elapsed 00:00:01.32
 
-Sunday, November 24, 2024 9:52:19 PM
+Monday, November 25, 2024 5:24:02 AM
 
   Determining projects to restore...
-  Restored C:\Users\kushal\src\mydotnet\hello\hello.csproj (in 355 ms).
-  Restored C:\Users\kushal\src\mydotnet\hellobenchamarks\hellobenchamarks.csproj (in 365 ms).
-  Restored C:\Users\kushal\src\mydotnet\tests\tests.csproj (in 362 ms).
-  Restored C:\Users\kushal\src\mydotnet\hellolib\hellolib.csproj (in 356 ms).
+  Restored C:\Users\kushal\src\mydotnet\tests\tests.csproj (in 292 ms).
+  Restored C:\Users\kushal\src\mydotnet\hellolib\hellolib.csproj (in 287 ms).
+  Restored C:\Users\kushal\src\mydotnet\hello\hello.csproj (in 287 ms).
+  Restored C:\Users\kushal\src\mydotnet\hellobenchamarks\hellobenchamarks.csproj (in 294 ms).
   hellolib -> C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net9.0\hellolib.dll
   hellolib -> C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net9.0\osx-x64\hellolib.dll
   hellolib -> C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net9.0\osx-x64\publish\
-  tests -> C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\osx-x64\tests.dll
-  tests -> C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\osx-x64\publish\
   hellobenchamarks -> C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net9.0\osx-x64\hellobenchamarks.dll
   hellobenchamarks -> C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net9.0\osx-x64\publish\
+  tests -> C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\osx-x64\tests.dll
   hello -> C:\Users\kushal\src\mydotnet\hello\bin\Debug\net9.0\osx-x64\hello.dll
+  tests -> C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\osx-x64\publish\
   hello -> C:\Users\kushal\src\mydotnet\hello\bin\Debug\net9.0\osx-x64\publish\
 
-Sunday, November 24, 2024 9:52:22 PM
+Monday, November 25, 2024 5:24:03 AM
 
   Determining projects to restore...
-  Restored C:\Users\kushal\src\mydotnet\tests\tests.csproj (in 346 ms).
-  Restored C:\Users\kushal\src\mydotnet\hellobenchamarks\hellobenchamarks.csproj (in 345 ms).
-  Restored C:\Users\kushal\src\mydotnet\hellolib\hellolib.csproj (in 345 ms).
-  Restored C:\Users\kushal\src\mydotnet\hello\hello.csproj (in 346 ms).
+  Restored C:\Users\kushal\src\mydotnet\hellobenchamarks\hellobenchamarks.csproj (in 274 ms).
+  Restored C:\Users\kushal\src\mydotnet\hellolib\hellolib.csproj (in 273 ms).
+  Restored C:\Users\kushal\src\mydotnet\hello\hello.csproj (in 273 ms).
+  Restored C:\Users\kushal\src\mydotnet\tests\tests.csproj (in 274 ms).
   hellolib -> C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net9.0\hellolib.dll
   tests -> C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\tests.dll
 Test run for C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\tests.dll (.NETCoreApp,Version=v9.0)
@@ -897,122 +905,118 @@ VSTest version 17.12.0 (x64)
 Starting test execution, please wait...
 A total of 1 test files matched the specified pattern.
 
-Passed!  - Failed:     0, Passed:   334, Skipped:     0, Total:   334, Duration: 7 s - tests.dll (net9.0)
+Passed!  - Failed:     0, Passed:   334, Skipped:     0, Total:   334, Duration: 5 s - tests.dll (net9.0)
 
-Sunday, November 24, 2024 9:52:33 PM
+Monday, November 25, 2024 5:24:12 AM
 
 Building with configuration: Debug, OS: linux-arm64
 
-Sunday, November 24, 2024 9:52:33 PM
+Monday, November 25, 2024 5:24:12 AM
 
-Build started 11/24/2024 9:52:33 PM.
+Build started 11/25/2024 5:24:12 AM.
      1>Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" on node 1 (Clean target(s)).
      1>ValidateSolutionConfiguration:
          Building solution configuration "Debug|Any CPU".
-     1>Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" (1) is building "C:\Users\kushal\src\mydotnet\tests\tests.csproj" (2) on node 3 (Clean target(s)).
-     2>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\.msCoverageSourceRootsMapping_tests".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\CoverletSourceRootsMapping_tests".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\testhost.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\testhost.exe".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\xunit.runner.visualstudio.testadapter.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\xunit.runner.reporters.netcoreapp10.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\xunit.runner.utility.netcoreapp10.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\authorizations.csv".
-     1>Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" (1) is building "C:\Users\kushal\src\mydotnet\hellolib\hellolib.csproj" (3) on node 4 (Clean target(s)).
-     3>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net9.0\hellolib.deps.json".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net9.0\hellolib.dll".
-     2>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\tests.deps.json".
-     3>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net9.0\hellolib.pdb".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.csproj.AssemblyReference.cache".
-     2>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\tests.runtimeconfig.json".
-     3>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.GeneratedMSBuildEditorConfig.editorconfig".
-     2>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\tests.dll".
-     3>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.AssemblyInfoInputs.cache".
-     2>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\tests.pdb".
-     3>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.AssemblyInfo.cs".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.csproj.CoreCompileInputs.cache".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.sourcelink.json".
-     2>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\Castle.Core.dll".
-     1>Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" (1) is building "C:\Users\kushal\src\mydotnet\hello\hello.csproj" (4) on node 2 (Clean target(s)).
+     1>Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" (1) is building "C:\Users\kushal\src\mydotnet\hello\hello.csproj" (4) on node 3 (Clean target(s)).
      4>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net9.0\hello.exe".
+     1>Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" (1) is building "C:\Users\kushal\src\mydotnet\tests\tests.csproj" (3) on node 4 (Clean target(s)).
      3>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\.msCoverageSourceRootsMapping_tests".
      4>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net9.0\hello.deps.json".
      3>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\refint\hellolib.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\CoverletSourceRootsMapping_tests".
      4>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net9.0\hello.runtimeconfig.json".
-     2>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\FluentAssertions.dll".
      3>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.pdb".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\testhost.dll".
      4>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net9.0\hello.dll".
-     3>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\ref\hellolib.dll".
-     4>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net9.0\hello.pdb".
          Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.dll".
+     1>Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" (1) is building "C:\Users\kushal\src\mydotnet\hellolib\hellolib.csproj" (2) on node 2 (Clean target(s)).
+     2>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net9.0\hellolib.deps.json".
+     4>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net9.0\Microsoft.Extensions.Logging.dll".
      2>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\Microsoft.VisualStudio.CodeCoverage.Shim.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net9.0\hellolib.dll".
+     3>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\testhost.exe".
+     2>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net9.0\hellolib.pdb".
      4>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net9.0\Microsoft.Extensions.Logging.Abstractions.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net9.0\Microsoft.Extensions.Options.dll".
      2>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.csproj.AssemblyReference.cache".
      4>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net9.0\Microsoft.Extensions.Primitives.dll".
+     2>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.GeneratedMSBuildEditorConfig.editorconfig".
+     4>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net9.0\MoreLinq.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net9.0\hellolib.dll".
      2>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.AssemblyInfoInputs.cache".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.AssemblyInfo.cs".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.csproj.CoreCompileInputs.cache".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.sourcelink.json".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.dll".
+     3>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\xunit.runner.visualstudio.testadapter.dll".
+     2>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\refint\hellolib.dll".
      4>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net9.0\hellolib.pdb".
-         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net9.0\hello.csproj.AssemblyReference.cache".
-         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net9.0\hello.GeneratedMSBuildEditorConfig.editorconfig".
      2>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\Microsoft.Extensions.Logging.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.pdb".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\ref\hellolib.dll".
+     4>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net9.0\hello.csproj.AssemblyReference.cache".
+     3>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\xunit.runner.reporters.netcoreapp10.dll".
+     4>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net9.0\hello.GeneratedMSBuildEditorConfig.editorconfig".
+     3>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\xunit.runner.utility.netcoreapp10.dll".
      4>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net9.0\hello.AssemblyInfoInputs.cache".
+     3>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\authorizations.csv".
+     4>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net9.0\hello.AssemblyInfo.cs".
          Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net9.0\hello.csproj.CoreCompileInputs.cache".
-     2>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\Microsoft.Extensions.Logging.Abstractions.dll".
-     4>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net9.0\hello.sourcelink.json".
          Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net9.0\hello.csproj.Up2Date".
          Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net9.0\hello.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net9.0\refint\hello.dll".
-     2>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\Microsoft.Extensions.Options.dll".
-     4>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net9.0\hello.pdb".
          Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net9.0\hello.genruntimeconfig.cache".
          Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net9.0\ref\hello.dll".
-     2>CoreClean:
+     3>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\tests.deps.json".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\tests.runtimeconfig.json".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\tests.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\tests.pdb".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\Castle.Core.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\FluentAssertions.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\Microsoft.VisualStudio.CodeCoverage.Shim.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\Microsoft.Extensions.Logging.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\Microsoft.Extensions.Logging.Abstractions.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\Microsoft.Extensions.Options.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\Microsoft.Extensions.Primitives.dll".
-     3>Done Building Project "C:\Users\kushal\src\mydotnet\hellolib\hellolib.csproj" (Clean target(s)).
-     2>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\Microsoft.TestPlatform.CoreUtilities.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\Microsoft.TestPlatform.PlatformAbstractions.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\Microsoft.VisualStudio.TestPlatform.ObjectModel.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\Microsoft.TestPlatform.CommunicationUtilities.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\Microsoft.TestPlatform.CrossPlatEngine.dll".
+     2>Done Building Project "C:\Users\kushal\src\mydotnet\hellolib\hellolib.csproj" (Clean target(s)).
+     3>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\Microsoft.TestPlatform.Utilities.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\Microsoft.VisualStudio.TestPlatform.Common.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\MoreLinq.dll".
@@ -1052,6 +1056,8 @@ Build started 11/24/2024 9:52:33 PM.
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\zh-Hant\Microsoft.TestPlatform.CoreUtilities.resources.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\zh-Hant\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\cs\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+     4>Done Building Project "C:\Users\kushal\src\mydotnet\hello\hello.csproj" (Clean target(s)).
+     3>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\cs\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\cs\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\de\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
@@ -1068,8 +1074,6 @@ Build started 11/24/2024 9:52:33 PM.
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\it\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\ja\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\ja\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
-     4>Done Building Project "C:\Users\kushal\src\mydotnet\hello\hello.csproj" (Clean target(s)).
-     2>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\ja\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\ko\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\ko\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
@@ -1109,7 +1113,7 @@ Build started 11/24/2024 9:52:33 PM.
          Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net9.0\tests.pdb".
          Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net9.0\tests.genruntimeconfig.cache".
          Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net9.0\ref\tests.dll".
-     2>Done Building Project "C:\Users\kushal\src\mydotnet\tests\tests.csproj" (Clean target(s)).
+     3>Done Building Project "C:\Users\kushal\src\mydotnet\tests\tests.csproj" (Clean target(s)).
      1>Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" (1) is building "C:\Users\kushal\src\mydotnet\hellobenchamarks\hellobenchamarks.csproj" (5) on node 1 (Clean target(s)).
      5>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Debug\net9.0\TraceReloggerLib.dll".
@@ -1206,9 +1210,9 @@ Build succeeded.
     0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:00.80
+Time Elapsed 00:00:00.58
 
-Sunday, November 24, 2024 9:52:34 PM
+Monday, November 25, 2024 5:24:13 AM
 
   Determining projects to restore...
   All projects are up-to-date for restore.
@@ -1221,15 +1225,15 @@ Build succeeded.
     0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:01.88
+Time Elapsed 00:00:01.34
 
-Sunday, November 24, 2024 9:52:36 PM
+Monday, November 25, 2024 5:24:14 AM
 
   Determining projects to restore...
-  Restored C:\Users\kushal\src\mydotnet\hello\hello.csproj (in 364 ms).
-  Restored C:\Users\kushal\src\mydotnet\hellolib\hellolib.csproj (in 363 ms).
-  Restored C:\Users\kushal\src\mydotnet\hellobenchamarks\hellobenchamarks.csproj (in 371 ms).
-  Restored C:\Users\kushal\src\mydotnet\tests\tests.csproj (in 369 ms).
+  Restored C:\Users\kushal\src\mydotnet\hellolib\hellolib.csproj (in 293 ms).
+  Restored C:\Users\kushal\src\mydotnet\hello\hello.csproj (in 293 ms).
+  Restored C:\Users\kushal\src\mydotnet\hellobenchamarks\hellobenchamarks.csproj (in 302 ms).
+  Restored C:\Users\kushal\src\mydotnet\tests\tests.csproj (in 300 ms).
   hellolib -> C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net9.0\hellolib.dll
   hellolib -> C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net9.0\linux-arm64\hellolib.dll
   hellolib -> C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net9.0\linux-arm64\publish\
@@ -1240,13 +1244,13 @@ Sunday, November 24, 2024 9:52:36 PM
   hello -> C:\Users\kushal\src\mydotnet\hello\bin\Debug\net9.0\linux-arm64\publish\
   tests -> C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\linux-arm64\publish\
 
-Sunday, November 24, 2024 9:52:38 PM
+Monday, November 25, 2024 5:24:16 AM
 
   Determining projects to restore...
-  Restored C:\Users\kushal\src\mydotnet\hellobenchamarks\hellobenchamarks.csproj (in 349 ms).
-  Restored C:\Users\kushal\src\mydotnet\hellolib\hellolib.csproj (in 346 ms).
-  Restored C:\Users\kushal\src\mydotnet\hello\hello.csproj (in 346 ms).
-  Restored C:\Users\kushal\src\mydotnet\tests\tests.csproj (in 348 ms).
+  Restored C:\Users\kushal\src\mydotnet\hellolib\hellolib.csproj (in 265 ms).
+  Restored C:\Users\kushal\src\mydotnet\hellobenchamarks\hellobenchamarks.csproj (in 266 ms).
+  Restored C:\Users\kushal\src\mydotnet\tests\tests.csproj (in 265 ms).
+  Restored C:\Users\kushal\src\mydotnet\hello\hello.csproj (in 265 ms).
   hellolib -> C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net9.0\hellolib.dll
   tests -> C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\tests.dll
 Test run for C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\tests.dll (.NETCoreApp,Version=v9.0)
@@ -1255,100 +1259,102 @@ VSTest version 17.12.0 (x64)
 Starting test execution, please wait...
 A total of 1 test files matched the specified pattern.
 
-Passed!  - Failed:     0, Passed:   334, Skipped:     0, Total:   334, Duration: 5 s - tests.dll (net9.0)
+Passed!  - Failed:     0, Passed:   334, Skipped:     0, Total:   334, Duration: 4 s - tests.dll (net9.0)
 
-Sunday, November 24, 2024 9:52:48 PM
+Monday, November 25, 2024 5:24:24 AM
 
 Building with configuration: Release, OS: win-x64
 
-Sunday, November 24, 2024 9:52:48 PM
+Monday, November 25, 2024 5:24:24 AM
 
-Build started 11/24/2024 9:52:48 PM.
+Build started 11/25/2024 5:24:24 AM.
      1>Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" on node 1 (Clean target(s)).
      1>ValidateSolutionConfiguration:
          Building solution configuration "Debug|Any CPU".
-     1>Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" (1) is building "C:\Users\kushal\src\mydotnet\hello\hello.csproj" (2) on node 3 (Clean target(s)).
-     2>CoreClean:
+     1>Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" (1) is building "C:\Users\kushal\src\mydotnet\hello\hello.csproj" (3) on node 4 (Clean target(s)).
+     3>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net9.0\hello.exe".
-     1>Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" (1) is building "C:\Users\kushal\src\mydotnet\hellolib\hellolib.csproj" (3) on node 4 (Clean target(s)).
-     3>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net9.0\hellolib.deps.json".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net9.0\hellolib.dll".
-     2>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net9.0\hello.deps.json".
-     3>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net9.0\hellolib.pdb".
-     2>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net9.0\hello.runtimeconfig.json".
-     3>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.csproj.AssemblyReference.cache".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.GeneratedMSBuildEditorConfig.editorconfig".
+     1>Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" (1) is building "C:\Users\kushal\src\mydotnet\hellolib\hellolib.csproj" (2) on node 2 (Clean target(s)).
      2>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net9.0\hellolib.deps.json".
+     3>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net9.0\hello.dll".
-     3>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.AssemblyInfoInputs.cache".
      2>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net9.0\hello.pdb".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net9.0\hellolib.dll".
      3>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net9.0\hello.pdb".
+     2>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net9.0\hellolib.pdb".
+     3>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net9.0\Microsoft.Extensions.Logging.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net9.0\Microsoft.Extensions.Logging.Abstractions.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net9.0\Microsoft.Extensions.Options.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net9.0\Microsoft.Extensions.Primitives.dll".
+     2>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.csproj.AssemblyReference.cache".
+     3>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net9.0\MoreLinq.dll".
+     2>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.GeneratedMSBuildEditorConfig.editorconfig".
+     3>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net9.0\hellolib.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net9.0\hellolib.pdb".
+     2>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.AssemblyInfoInputs.cache".
+     3>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net9.0\hello.csproj.AssemblyReference.cache".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net9.0\hello.GeneratedMSBuildEditorConfig.editorconfig".
+     2>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.AssemblyInfo.cs".
-     1>Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" (1) is building "C:\Users\kushal\src\mydotnet\tests\tests.csproj" (4) on node 2 (Clean target(s)).
+     3>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net9.0\hello.AssemblyInfoInputs.cache".
+     2>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.csproj.CoreCompileInputs.cache".
+     1>Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" (1) is building "C:\Users\kushal\src\mydotnet\tests\tests.csproj" (4) on node 3 (Clean target(s)).
      4>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\.msCoverageSourceRootsMapping_tests".
-     2>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.dll".
-     4>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\CoverletSourceRootsMapping_tests".
-     3>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.csproj.CoreCompileInputs.cache".
      2>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.sourcelink.json".
+     3>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net9.0\hello.AssemblyInfo.cs".
      4>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\testhost.dll".
      3>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.sourcelink.json".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net9.0\hello.csproj.CoreCompileInputs.cache".
      2>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net9.0\Microsoft.Extensions.Logging.dll".
-     3>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.dll".
-     2>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net9.0\Microsoft.Extensions.Logging.Abstractions.dll".
-     3>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\refint\hellolib.dll".
      4>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\testhost.exe".
-     2>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net9.0\Microsoft.Extensions.Options.dll".
      3>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.pdb".
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net9.0\hello.sourcelink.json".
+     2>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\refint\hellolib.dll".
+     3>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net9.0\hello.csproj.Up2Date".
      4>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\xunit.runner.visualstudio.testadapter.dll".
-     3>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\ref\hellolib.dll".
-     2>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net9.0\Microsoft.Extensions.Primitives.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net9.0\MoreLinq.dll".
-     4>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\xunit.runner.reporters.netcoreapp10.dll".
      2>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net9.0\hellolib.dll".
-     4>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\xunit.runner.utility.netcoreapp10.dll".
-     2>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hello\bin\Debug\net9.0\hellolib.pdb".
-         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net9.0\hello.csproj.AssemblyReference.cache".
-     4>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\authorizations.csv".
-     2>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net9.0\hello.GeneratedMSBuildEditorConfig.editorconfig".
-         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net9.0\hello.AssemblyInfoInputs.cache".
-         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net9.0\hello.AssemblyInfo.cs".
-         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net9.0\hello.csproj.CoreCompileInputs.cache".
-         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net9.0\hello.sourcelink.json".
-         Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net9.0\hello.csproj.Up2Date".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.pdb".
+     3>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net9.0\hello.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net9.0\refint\hello.dll".
+     4>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\xunit.runner.utility.netcoreapp10.dll".
+     3>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net9.0\hello.pdb".
+     2>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\ref\hellolib.dll".
+     3>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net9.0\hello.genruntimeconfig.cache".
+     4>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\authorizations.csv".
+     3>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\hello\obj\Debug\net9.0\ref\hello.dll".
      4>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\tests.deps.json".
@@ -1370,14 +1376,14 @@ Build started 11/24/2024 9:52:48 PM.
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\Microsoft.TestPlatform.CommunicationUtilities.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\Microsoft.TestPlatform.CrossPlatEngine.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\Microsoft.TestPlatform.Utilities.dll".
-     3>Done Building Project "C:\Users\kushal\src\mydotnet\hellolib\hellolib.csproj" (Clean target(s)).
-     4>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\Microsoft.VisualStudio.TestPlatform.Common.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\MoreLinq.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\Newtonsoft.Json.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\NSubstitute.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\System.Configuration.ConfigurationManager.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\System.Diagnostics.EventLog.dll".
+     2>Done Building Project "C:\Users\kushal\src\mydotnet\hellolib\hellolib.csproj" (Clean target(s)).
+     4>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\System.Security.Cryptography.ProtectedData.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\xunit.abstractions.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\xunit.assert.dll".
@@ -1414,9 +1420,9 @@ Build started 11/24/2024 9:52:48 PM.
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\cs\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\de\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\de\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\de\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
-     2>Done Building Project "C:\Users\kushal\src\mydotnet\hello\hello.csproj" (Clean target(s)).
+     3>Done Building Project "C:\Users\kushal\src\mydotnet\hello\hello.csproj" (Clean target(s)).
      4>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\de\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\es\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\es\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\es\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
@@ -1564,9 +1570,9 @@ Build succeeded.
     0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:00.41
+Time Elapsed 00:00:00.58
 
-Sunday, November 24, 2024 9:52:48 PM
+Monday, November 25, 2024 5:24:25 AM
 
   Determining projects to restore...
   All projects are up-to-date for restore.
@@ -1579,32 +1585,32 @@ Build succeeded.
     0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:00.91
+Time Elapsed 00:00:01.26
 
-Sunday, November 24, 2024 9:52:49 PM
+Monday, November 25, 2024 5:24:26 AM
 
   Determining projects to restore...
-  Restored C:\Users\kushal\src\mydotnet\hellobenchamarks\hellobenchamarks.csproj (in 213 ms).
-  Restored C:\Users\kushal\src\mydotnet\tests\tests.csproj (in 211 ms).
-  Restored C:\Users\kushal\src\mydotnet\hellolib\hellolib.csproj (in 208 ms).
-  Restored C:\Users\kushal\src\mydotnet\hello\hello.csproj (in 208 ms).
+  Restored C:\Users\kushal\src\mydotnet\tests\tests.csproj (in 285 ms).
+  Restored C:\Users\kushal\src\mydotnet\hellolib\hellolib.csproj (in 279 ms).
+  Restored C:\Users\kushal\src\mydotnet\hello\hello.csproj (in 279 ms).
+  Restored C:\Users\kushal\src\mydotnet\hellobenchamarks\hellobenchamarks.csproj (in 288 ms).
   hellolib -> C:\Users\kushal\src\mydotnet\hellolib\bin\Release\net9.0\hellolib.dll
   hellolib -> C:\Users\kushal\src\mydotnet\hellolib\bin\Release\net9.0\win-x64\hellolib.dll
   hellolib -> C:\Users\kushal\src\mydotnet\hellolib\bin\Release\net9.0\win-x64\publish\
+  tests -> C:\Users\kushal\src\mydotnet\tests\bin\Release\net9.0\win-x64\tests.dll
+  tests -> C:\Users\kushal\src\mydotnet\tests\bin\Release\net9.0\win-x64\publish\
   hellobenchamarks -> C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Release\net9.0\win-x64\hellobenchamarks.dll
   hellobenchamarks -> C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Release\net9.0\win-x64\publish\
-  tests -> C:\Users\kushal\src\mydotnet\tests\bin\Release\net9.0\win-x64\tests.dll
   hello -> C:\Users\kushal\src\mydotnet\hello\bin\Release\net9.0\win-x64\hello.dll
   hello -> C:\Users\kushal\src\mydotnet\hello\bin\Release\net9.0\win-x64\publish\
-  tests -> C:\Users\kushal\src\mydotnet\tests\bin\Release\net9.0\win-x64\publish\
 
-Sunday, November 24, 2024 9:52:51 PM
+Monday, November 25, 2024 5:24:28 AM
 
   Determining projects to restore...
-  Restored C:\Users\kushal\src\mydotnet\hello\hello.csproj (in 207 ms).
-  Restored C:\Users\kushal\src\mydotnet\tests\tests.csproj (in 207 ms).
-  Restored C:\Users\kushal\src\mydotnet\hellobenchamarks\hellobenchamarks.csproj (in 207 ms).
-  Restored C:\Users\kushal\src\mydotnet\hellolib\hellolib.csproj (in 207 ms).
+  Restored C:\Users\kushal\src\mydotnet\hellolib\hellolib.csproj (in 292 ms).
+  Restored C:\Users\kushal\src\mydotnet\hellobenchamarks\hellobenchamarks.csproj (in 295 ms).
+  Restored C:\Users\kushal\src\mydotnet\tests\tests.csproj (in 295 ms).
+  Restored C:\Users\kushal\src\mydotnet\hello\hello.csproj (in 292 ms).
   hellolib -> C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net9.0\hellolib.dll
   tests -> C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\tests.dll
 Test run for C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\tests.dll (.NETCoreApp,Version=v9.0)
@@ -1615,17 +1621,232 @@ A total of 1 test files matched the specified pattern.
 
 Passed!  - Failed:     0, Passed:   334, Skipped:     0, Total:   334, Duration: 5 s - tests.dll (net9.0)
 
-Sunday, November 24, 2024 9:52:58 PM
+Monday, November 25, 2024 5:24:37 AM
 
 Building with configuration: Release, OS: linux-x64
 
-Sunday, November 24, 2024 9:52:58 PM
+Monday, November 25, 2024 5:24:37 AM
 
-Build started 11/24/2024 9:52:58 PM.
+Build started 11/25/2024 5:24:37 AM.
      1>Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" on node 1 (Clean target(s)).
      1>ValidateSolutionConfiguration:
          Building solution configuration "Debug|Any CPU".
-     1>Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" (1) is building "C:\Users\kushal\src\mydotnet\hellolib\hellolib.csproj" (3) on node 4 (Clean target(s)).
+     1>Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" (1) is building "C:\Users\kushal\src\mydotnet\hellolib\hellolib.csproj" (2) on node 3 (Clean target(s)).
+     2>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net9.0\hellolib.deps.json".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net9.0\hellolib.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net9.0\hellolib.pdb".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.csproj.AssemblyReference.cache".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.GeneratedMSBuildEditorConfig.editorconfig".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.AssemblyInfoInputs.cache".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.AssemblyInfo.cs".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.csproj.CoreCompileInputs.cache".
+     1>Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" (1) is building "C:\Users\kushal\src\mydotnet\tests\tests.csproj" (4) on node 2 (Clean target(s)).
+     4>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\.msCoverageSourceRootsMapping_tests".
+     2>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.sourcelink.json".
+     4>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\CoverletSourceRootsMapping_tests".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\testhost.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\testhost.exe".
+     2>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.dll".
+     4>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\xunit.runner.visualstudio.testadapter.dll".
+     2>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\refint\hellolib.dll".
+     4>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\xunit.runner.reporters.netcoreapp10.dll".
+     2>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.pdb".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\ref\hellolib.dll".
+     4>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\xunit.runner.utility.netcoreapp10.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\authorizations.csv".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\tests.deps.json".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\tests.runtimeconfig.json".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\tests.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\tests.pdb".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\Castle.Core.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\FluentAssertions.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\Microsoft.VisualStudio.CodeCoverage.Shim.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\Microsoft.Extensions.Logging.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\Microsoft.Extensions.Logging.Abstractions.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\Microsoft.Extensions.Options.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\Microsoft.Extensions.Primitives.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\Microsoft.TestPlatform.CoreUtilities.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\Microsoft.TestPlatform.PlatformAbstractions.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\Microsoft.VisualStudio.TestPlatform.ObjectModel.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\Microsoft.TestPlatform.CommunicationUtilities.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\Microsoft.TestPlatform.CrossPlatEngine.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\Microsoft.TestPlatform.Utilities.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\Microsoft.VisualStudio.TestPlatform.Common.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\MoreLinq.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\Newtonsoft.Json.dll".
+     2>Done Building Project "C:\Users\kushal\src\mydotnet\hellolib\hellolib.csproj" (Clean target(s)).
+     4>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\NSubstitute.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\System.Configuration.ConfigurationManager.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\System.Diagnostics.EventLog.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\System.Security.Cryptography.ProtectedData.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\xunit.abstractions.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\xunit.assert.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\xunit.core.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\xunit.execution.dotnet.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\cs\Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\cs\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\de\Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\de\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\es\Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\es\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\fr\Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\fr\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\it\Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\it\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\ja\Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\ja\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\ko\Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\ko\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\pl\Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\pl\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\pt-BR\Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\pt-BR\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\ru\Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\ru\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\tr\Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\tr\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\zh-Hans\Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\zh-Hans\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\zh-Hant\Microsoft.TestPlatform.CoreUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\zh-Hant\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\cs\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\cs\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\cs\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\de\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\de\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\de\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\es\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\es\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\es\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\fr\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\fr\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\fr\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\it\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\it\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\it\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\ja\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\ja\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\ja\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\ko\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\ko\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\ko\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\pl\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\pl\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\pl\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\pt-BR\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\pt-BR\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\pt-BR\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\ru\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\ru\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\ru\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\tr\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\tr\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\tr\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\zh-Hans\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\zh-Hans\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\zh-Hans\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\zh-Hant\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\zh-Hant\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\zh-Hant\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Diagnostics.EventLog.Messages.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Diagnostics.EventLog.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\hellolib.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\hellolib.pdb".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net9.0\tests.csproj.AssemblyReference.cache".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net9.0\tests.GeneratedMSBuildEditorConfig.editorconfig".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net9.0\tests.AssemblyInfoInputs.cache".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net9.0\tests.AssemblyInfo.cs".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net9.0\tests.csproj.CoreCompileInputs.cache".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net9.0\tests.sourcelink.json".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net9.0\tests.csproj.Up2Date".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net9.0\tests.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net9.0\refint\tests.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net9.0\tests.pdb".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net9.0\tests.genruntimeconfig.cache".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net9.0\ref\tests.dll".
+     4>Done Building Project "C:\Users\kushal\src\mydotnet\tests\tests.csproj" (Clean target(s)).
+     1>Done Building Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" (Clean target(s)).
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:00.54
+
+Monday, November 25, 2024 5:24:38 AM
+
+  Determining projects to restore...
+  All projects are up-to-date for restore.
+  hellolib -> C:\Users\kushal\src\mydotnet\hellolib\bin\Release\net9.0\hellolib.dll
+  hellobenchamarks -> C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Release\net9.0\hellobenchamarks.dll
+  tests -> C:\Users\kushal\src\mydotnet\tests\bin\Release\net9.0\tests.dll
+  hello -> C:\Users\kushal\src\mydotnet\hello\bin\Release\net9.0\hello.dll
+
+Build succeeded.
+    0 Warning(s)
+    0 Error(s)
+
+Time Elapsed 00:00:01.12
+
+Monday, November 25, 2024 5:24:39 AM
+
+  Determining projects to restore...
+  Restored C:\Users\kushal\src\mydotnet\hellolib\hellolib.csproj (in 277 ms).
+  Restored C:\Users\kushal\src\mydotnet\tests\tests.csproj (in 283 ms).
+  Restored C:\Users\kushal\src\mydotnet\hello\hello.csproj (in 277 ms).
+  Restored C:\Users\kushal\src\mydotnet\hellobenchamarks\hellobenchamarks.csproj (in 285 ms).
+  hellolib -> C:\Users\kushal\src\mydotnet\hellolib\bin\Release\net9.0\hellolib.dll
+  hellolib -> C:\Users\kushal\src\mydotnet\hellolib\bin\Release\net9.0\linux-x64\hellolib.dll
+  hellolib -> C:\Users\kushal\src\mydotnet\hellolib\bin\Release\net9.0\linux-x64\publish\
+  hellobenchamarks -> C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Release\net9.0\linux-x64\hellobenchamarks.dll
+  hellobenchamarks -> C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Release\net9.0\linux-x64\publish\
+  tests -> C:\Users\kushal\src\mydotnet\tests\bin\Release\net9.0\linux-x64\tests.dll
+  tests -> C:\Users\kushal\src\mydotnet\tests\bin\Release\net9.0\linux-x64\publish\
+  hello -> C:\Users\kushal\src\mydotnet\hello\bin\Release\net9.0\linux-x64\hello.dll
+  hello -> C:\Users\kushal\src\mydotnet\hello\bin\Release\net9.0\linux-x64\publish\
+
+Monday, November 25, 2024 5:24:41 AM
+
+  Determining projects to restore...
+  Restored C:\Users\kushal\src\mydotnet\hellolib\hellolib.csproj (in 273 ms).
+  Restored C:\Users\kushal\src\mydotnet\tests\tests.csproj (in 274 ms).
+  Restored C:\Users\kushal\src\mydotnet\hellobenchamarks\hellobenchamarks.csproj (in 275 ms).
+  Restored C:\Users\kushal\src\mydotnet\hello\hello.csproj (in 273 ms).
+  hellolib -> C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net9.0\hellolib.dll
+  tests -> C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\tests.dll
+Test run for C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\tests.dll (.NETCoreApp,Version=v9.0)
+VSTest version 17.12.0 (x64)
+
+Starting test execution, please wait...
+A total of 1 test files matched the specified pattern.
+
+Passed!  - Failed:     0, Passed:   334, Skipped:     0, Total:   334, Duration: 5 s - tests.dll (net9.0)
+
+Monday, November 25, 2024 5:24:50 AM
+
+Building with configuration: Release, OS: osx-x64
+
+Monday, November 25, 2024 5:24:50 AM
+
+Build started 11/25/2024 5:24:50 AM.
+     1>Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" on node 1 (Clean target(s)).
+     1>ValidateSolutionConfiguration:
+         Building solution configuration "Debug|Any CPU".
+     1>Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" (1) is building "C:\Users\kushal\src\mydotnet\hellolib\hellolib.csproj" (3) on node 2 (Clean target(s)).
      3>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net9.0\hellolib.deps.json".
          Deleting file "C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net9.0\hellolib.dll".
@@ -1635,20 +1856,28 @@ Build started 11/24/2024 9:52:58 PM.
          Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.AssemblyInfoInputs.cache".
          Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.AssemblyInfo.cs".
          Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.csproj.CoreCompileInputs.cache".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.sourcelink.json".
      1>Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" (1) is building "C:\Users\kushal\src\mydotnet\tests\tests.csproj" (4) on node 3 (Clean target(s)).
      4>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\.msCoverageSourceRootsMapping_tests".
      3>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\refint\hellolib.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.pdb".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\ref\hellolib.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.sourcelink.json".
      4>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\CoverletSourceRootsMapping_tests".
+     3>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.dll".
+     4>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\testhost.dll".
+     3>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\refint\hellolib.dll".
+     4>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\testhost.exe".
+     3>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.pdb".
+     4>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\xunit.runner.visualstudio.testadapter.dll".
+     3>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\ref\hellolib.dll".
+     4>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\xunit.runner.reporters.netcoreapp10.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\xunit.runner.utility.netcoreapp10.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\authorizations.csv".
@@ -1664,8 +1893,6 @@ Build started 11/24/2024 9:52:58 PM.
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\Microsoft.Extensions.Logging.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\Microsoft.Extensions.Logging.Abstractions.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\Microsoft.Extensions.Options.dll".
-     3>Done Building Project "C:\Users\kushal\src\mydotnet\hellolib\hellolib.csproj" (Clean target(s)).
-     4>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\Microsoft.Extensions.Primitives.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\Microsoft.TestPlatform.CoreUtilities.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\Microsoft.TestPlatform.PlatformAbstractions.dll".
@@ -1673,6 +1900,8 @@ Build started 11/24/2024 9:52:58 PM.
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\Microsoft.TestPlatform.CommunicationUtilities.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\Microsoft.TestPlatform.CrossPlatEngine.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\Microsoft.TestPlatform.Utilities.dll".
+     3>Done Building Project "C:\Users\kushal\src\mydotnet\hellolib\hellolib.csproj" (Clean target(s)).
+     4>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\Microsoft.VisualStudio.TestPlatform.Common.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\MoreLinq.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\Newtonsoft.Json.dll".
@@ -1773,9 +2002,9 @@ Build succeeded.
     0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:00.39
+Time Elapsed 00:00:00.55
 
-Sunday, November 24, 2024 9:52:59 PM
+Monday, November 25, 2024 5:24:51 AM
 
   Determining projects to restore...
   All projects are up-to-date for restore.
@@ -1788,32 +2017,32 @@ Build succeeded.
     0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:00.79
+Time Elapsed 00:00:01.10
 
-Sunday, November 24, 2024 9:53:00 PM
+Monday, November 25, 2024 5:24:52 AM
 
   Determining projects to restore...
-  Restored C:\Users\kushal\src\mydotnet\tests\tests.csproj (in 224 ms).
-  Restored C:\Users\kushal\src\mydotnet\hellobenchamarks\hellobenchamarks.csproj (in 226 ms).
-  Restored C:\Users\kushal\src\mydotnet\hello\hello.csproj (in 219 ms).
-  Restored C:\Users\kushal\src\mydotnet\hellolib\hellolib.csproj (in 219 ms).
+  Restored C:\Users\kushal\src\mydotnet\tests\tests.csproj (in 284 ms).
+  Restored C:\Users\kushal\src\mydotnet\hellolib\hellolib.csproj (in 279 ms).
+  Restored C:\Users\kushal\src\mydotnet\hello\hello.csproj (in 279 ms).
+  Restored C:\Users\kushal\src\mydotnet\hellobenchamarks\hellobenchamarks.csproj (in 287 ms).
   hellolib -> C:\Users\kushal\src\mydotnet\hellolib\bin\Release\net9.0\hellolib.dll
-  hellolib -> C:\Users\kushal\src\mydotnet\hellolib\bin\Release\net9.0\linux-x64\hellolib.dll
-  hellolib -> C:\Users\kushal\src\mydotnet\hellolib\bin\Release\net9.0\linux-x64\publish\
-  tests -> C:\Users\kushal\src\mydotnet\tests\bin\Release\net9.0\linux-x64\tests.dll
-  tests -> C:\Users\kushal\src\mydotnet\tests\bin\Release\net9.0\linux-x64\publish\
-  hellobenchamarks -> C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Release\net9.0\linux-x64\hellobenchamarks.dll
-  hellobenchamarks -> C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Release\net9.0\linux-x64\publish\
-  hello -> C:\Users\kushal\src\mydotnet\hello\bin\Release\net9.0\linux-x64\hello.dll
-  hello -> C:\Users\kushal\src\mydotnet\hello\bin\Release\net9.0\linux-x64\publish\
+  hellolib -> C:\Users\kushal\src\mydotnet\hellolib\bin\Release\net9.0\osx-x64\hellolib.dll
+  hellolib -> C:\Users\kushal\src\mydotnet\hellolib\bin\Release\net9.0\osx-x64\publish\
+  hellobenchamarks -> C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Release\net9.0\osx-x64\hellobenchamarks.dll
+  hellobenchamarks -> C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Release\net9.0\osx-x64\publish\
+  tests -> C:\Users\kushal\src\mydotnet\tests\bin\Release\net9.0\osx-x64\tests.dll
+  hello -> C:\Users\kushal\src\mydotnet\hello\bin\Release\net9.0\osx-x64\hello.dll
+  tests -> C:\Users\kushal\src\mydotnet\tests\bin\Release\net9.0\osx-x64\publish\
+  hello -> C:\Users\kushal\src\mydotnet\hello\bin\Release\net9.0\osx-x64\publish\
 
-Sunday, November 24, 2024 9:53:01 PM
+Monday, November 25, 2024 5:24:54 AM
 
   Determining projects to restore...
-  Restored C:\Users\kushal\src\mydotnet\tests\tests.csproj (in 216 ms).
-  Restored C:\Users\kushal\src\mydotnet\hello\hello.csproj (in 216 ms).
-  Restored C:\Users\kushal\src\mydotnet\hellolib\hellolib.csproj (in 216 ms).
-  Restored C:\Users\kushal\src\mydotnet\hellobenchamarks\hellobenchamarks.csproj (in 220 ms).
+  Restored C:\Users\kushal\src\mydotnet\hellolib\hellolib.csproj (in 277 ms).
+  Restored C:\Users\kushal\src\mydotnet\tests\tests.csproj (in 279 ms).
+  Restored C:\Users\kushal\src\mydotnet\hello\hello.csproj (in 277 ms).
+  Restored C:\Users\kushal\src\mydotnet\hellobenchamarks\hellobenchamarks.csproj (in 279 ms).
   hellolib -> C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net9.0\hellolib.dll
   tests -> C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\tests.dll
 Test run for C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\tests.dll (.NETCoreApp,Version=v9.0)
@@ -1822,20 +2051,20 @@ VSTest version 17.12.0 (x64)
 Starting test execution, please wait...
 A total of 1 test files matched the specified pattern.
 
-Passed!  - Failed:     0, Passed:   334, Skipped:     0, Total:   334, Duration: 4 s - tests.dll (net9.0)
+Passed!  - Failed:     0, Passed:   334, Skipped:     0, Total:   334, Duration: 5 s - tests.dll (net9.0)
 
-Sunday, November 24, 2024 9:53:08 PM
+Monday, November 25, 2024 5:25:02 AM
 
-Building with configuration: Release, OS: osx-x64
+Building with configuration: Release, OS: linux-arm64
 
-Sunday, November 24, 2024 9:53:08 PM
+Monday, November 25, 2024 5:25:02 AM
 
-Build started 11/24/2024 9:53:09 PM.
+Build started 11/25/2024 5:25:02 AM.
      1>Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" on node 1 (Clean target(s)).
      1>ValidateSolutionConfiguration:
          Building solution configuration "Debug|Any CPU".
-     1>Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" (1) is building "C:\Users\kushal\src\mydotnet\hellolib\hellolib.csproj" (4) on node 3 (Clean target(s)).
-     4>CoreClean:
+     1>Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" (1) is building "C:\Users\kushal\src\mydotnet\hellolib\hellolib.csproj" (2) on node 2 (Clean target(s)).
+     2>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net9.0\hellolib.deps.json".
          Deleting file "C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net9.0\hellolib.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net9.0\hellolib.pdb".
@@ -1844,26 +2073,20 @@ Build started 11/24/2024 9:53:09 PM.
          Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.AssemblyInfoInputs.cache".
          Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.AssemblyInfo.cs".
          Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.csproj.CoreCompileInputs.cache".
-     1>Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" (1) is building "C:\Users\kushal\src\mydotnet\tests\tests.csproj" (3) on node 2 (Clean target(s)).
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.sourcelink.json".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\refint\hellolib.dll".
+     1>Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" (1) is building "C:\Users\kushal\src\mydotnet\tests\tests.csproj" (3) on node 4 (Clean target(s)).
      3>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\.msCoverageSourceRootsMapping_tests".
-     4>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.sourcelink.json".
-     3>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\CoverletSourceRootsMapping_tests".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\testhost.dll".
-     4>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.dll".
-     3>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\testhost.exe".
-     4>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\refint\hellolib.dll".
-     3>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\xunit.runner.visualstudio.testadapter.dll".
-     4>CoreClean:
+     2>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.pdb".
          Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\ref\hellolib.dll".
      3>CoreClean:
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\CoverletSourceRootsMapping_tests".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\testhost.dll".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\testhost.exe".
+         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\xunit.runner.visualstudio.testadapter.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\xunit.runner.reporters.netcoreapp10.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\xunit.runner.utility.netcoreapp10.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\authorizations.csv".
@@ -1880,6 +2103,8 @@ Build started 11/24/2024 9:53:09 PM.
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\Microsoft.Extensions.Logging.Abstractions.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\Microsoft.Extensions.Options.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\Microsoft.Extensions.Primitives.dll".
+     2>Done Building Project "C:\Users\kushal\src\mydotnet\hellolib\hellolib.csproj" (Clean target(s)).
+     3>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\Microsoft.TestPlatform.CoreUtilities.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\Microsoft.TestPlatform.PlatformAbstractions.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\Microsoft.VisualStudio.TestPlatform.ObjectModel.dll".
@@ -1892,8 +2117,6 @@ Build started 11/24/2024 9:53:09 PM.
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\NSubstitute.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\System.Configuration.ConfigurationManager.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\System.Diagnostics.EventLog.dll".
-     4>Done Building Project "C:\Users\kushal\src\mydotnet\hellolib\hellolib.csproj" (Clean target(s)).
-     3>CoreClean:
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\System.Security.Cryptography.ProtectedData.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\xunit.abstractions.dll".
          Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\xunit.assert.dll".
@@ -1988,226 +2211,9 @@ Build succeeded.
     0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:00.54
+Time Elapsed 00:00:00.56
 
-Sunday, November 24, 2024 9:53:09 PM
-
-  Determining projects to restore...
-  All projects are up-to-date for restore.
-  hellolib -> C:\Users\kushal\src\mydotnet\hellolib\bin\Release\net9.0\hellolib.dll
-  hellobenchamarks -> C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Release\net9.0\hellobenchamarks.dll
-  tests -> C:\Users\kushal\src\mydotnet\tests\bin\Release\net9.0\tests.dll
-  hello -> C:\Users\kushal\src\mydotnet\hello\bin\Release\net9.0\hello.dll
-
-Build succeeded.
-    0 Warning(s)
-    0 Error(s)
-
-Time Elapsed 00:00:00.89
-
-Sunday, November 24, 2024 9:53:10 PM
-
-  Determining projects to restore...
-  Restored C:\Users\kushal\src\mydotnet\hellolib\hellolib.csproj (in 232 ms).
-  Restored C:\Users\kushal\src\mydotnet\tests\tests.csproj (in 235 ms).
-  Restored C:\Users\kushal\src\mydotnet\hello\hello.csproj (in 232 ms).
-  Restored C:\Users\kushal\src\mydotnet\hellobenchamarks\hellobenchamarks.csproj (in 237 ms).
-  hellolib -> C:\Users\kushal\src\mydotnet\hellolib\bin\Release\net9.0\hellolib.dll
-  hellolib -> C:\Users\kushal\src\mydotnet\hellolib\bin\Release\net9.0\osx-x64\hellolib.dll
-  hellolib -> C:\Users\kushal\src\mydotnet\hellolib\bin\Release\net9.0\osx-x64\publish\
-  hellobenchamarks -> C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Release\net9.0\osx-x64\hellobenchamarks.dll
-  hellobenchamarks -> C:\Users\kushal\src\mydotnet\hellobenchamarks\bin\Release\net9.0\osx-x64\publish\
-  tests -> C:\Users\kushal\src\mydotnet\tests\bin\Release\net9.0\osx-x64\tests.dll
-  hello -> C:\Users\kushal\src\mydotnet\hello\bin\Release\net9.0\osx-x64\hello.dll
-  hello -> C:\Users\kushal\src\mydotnet\hello\bin\Release\net9.0\osx-x64\publish\
-  tests -> C:\Users\kushal\src\mydotnet\tests\bin\Release\net9.0\osx-x64\publish\
-
-Sunday, November 24, 2024 9:53:12 PM
-
-  Determining projects to restore...
-  Restored C:\Users\kushal\src\mydotnet\tests\tests.csproj (in 208 ms).
-  Restored C:\Users\kushal\src\mydotnet\hellobenchamarks\hellobenchamarks.csproj (in 208 ms).
-  Restored C:\Users\kushal\src\mydotnet\hello\hello.csproj (in 208 ms).
-  Restored C:\Users\kushal\src\mydotnet\hellolib\hellolib.csproj (in 208 ms).
-  hellolib -> C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net9.0\hellolib.dll
-  tests -> C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\tests.dll
-Test run for C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\tests.dll (.NETCoreApp,Version=v9.0)
-VSTest version 17.12.0 (x64)
-
-Starting test execution, please wait...
-A total of 1 test files matched the specified pattern.
-
-Passed!  - Failed:     0, Passed:   334, Skipped:     0, Total:   334, Duration: 5 s - tests.dll (net9.0)
-
-Sunday, November 24, 2024 9:53:20 PM
-
-Building with configuration: Release, OS: linux-arm64
-
-Sunday, November 24, 2024 9:53:20 PM
-
-Build started 11/24/2024 9:53:20 PM.
-     1>Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" on node 1 (Clean target(s)).
-     1>ValidateSolutionConfiguration:
-         Building solution configuration "Debug|Any CPU".
-     1>Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" (1) is building "C:\Users\kushal\src\mydotnet\hellolib\hellolib.csproj" (2) on node 2 (Clean target(s)).
-     2>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net9.0\hellolib.deps.json".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net9.0\hellolib.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net9.0\hellolib.pdb".
-     1>Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" (1) is building "C:\Users\kushal\src\mydotnet\tests\tests.csproj" (4) on node 3 (Clean target(s)).
-     4>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\.msCoverageSourceRootsMapping_tests".
-     2>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.csproj.AssemblyReference.cache".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.GeneratedMSBuildEditorConfig.editorconfig".
-     4>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\CoverletSourceRootsMapping_tests".
-     2>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.AssemblyInfoInputs.cache".
-     4>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\testhost.dll".
-     2>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.AssemblyInfo.cs".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.csproj.CoreCompileInputs.cache".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.sourcelink.json".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\refint\hellolib.dll".
-     4>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\testhost.exe".
-     2>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\hellolib.pdb".
-     4>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\xunit.runner.visualstudio.testadapter.dll".
-     2>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\hellolib\obj\Debug\net9.0\ref\hellolib.dll".
-     4>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\xunit.runner.reporters.netcoreapp10.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\xunit.runner.utility.netcoreapp10.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\authorizations.csv".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\tests.deps.json".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\tests.runtimeconfig.json".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\tests.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\tests.pdb".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\Castle.Core.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\FluentAssertions.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\Microsoft.VisualStudio.CodeCoverage.Shim.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\Microsoft.Extensions.Logging.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\Microsoft.Extensions.Logging.Abstractions.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\Microsoft.Extensions.Options.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\Microsoft.Extensions.Primitives.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\Microsoft.TestPlatform.CoreUtilities.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\Microsoft.TestPlatform.PlatformAbstractions.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\Microsoft.VisualStudio.TestPlatform.ObjectModel.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\Microsoft.TestPlatform.CommunicationUtilities.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\Microsoft.TestPlatform.CrossPlatEngine.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\Microsoft.TestPlatform.Utilities.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\Microsoft.VisualStudio.TestPlatform.Common.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\MoreLinq.dll".
-     2>Done Building Project "C:\Users\kushal\src\mydotnet\hellolib\hellolib.csproj" (Clean target(s)).
-     4>CoreClean:
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\Newtonsoft.Json.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\NSubstitute.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\System.Configuration.ConfigurationManager.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\System.Diagnostics.EventLog.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\System.Security.Cryptography.ProtectedData.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\xunit.abstractions.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\xunit.assert.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\xunit.core.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\xunit.execution.dotnet.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\cs\Microsoft.TestPlatform.CoreUtilities.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\cs\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\de\Microsoft.TestPlatform.CoreUtilities.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\de\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\es\Microsoft.TestPlatform.CoreUtilities.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\es\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\fr\Microsoft.TestPlatform.CoreUtilities.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\fr\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\it\Microsoft.TestPlatform.CoreUtilities.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\it\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\ja\Microsoft.TestPlatform.CoreUtilities.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\ja\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\ko\Microsoft.TestPlatform.CoreUtilities.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\ko\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\pl\Microsoft.TestPlatform.CoreUtilities.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\pl\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\pt-BR\Microsoft.TestPlatform.CoreUtilities.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\pt-BR\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\ru\Microsoft.TestPlatform.CoreUtilities.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\ru\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\tr\Microsoft.TestPlatform.CoreUtilities.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\tr\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\zh-Hans\Microsoft.TestPlatform.CoreUtilities.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\zh-Hans\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\zh-Hant\Microsoft.TestPlatform.CoreUtilities.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\zh-Hant\Microsoft.VisualStudio.TestPlatform.ObjectModel.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\cs\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\cs\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\cs\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\de\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\de\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\de\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\es\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\es\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\es\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\fr\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\fr\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\fr\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\it\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\it\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\it\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\ja\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\ja\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\ja\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\ko\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\ko\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\ko\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\pl\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\pl\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\pl\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\pt-BR\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\pt-BR\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\pt-BR\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\ru\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\ru\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\ru\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\tr\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\tr\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\tr\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\zh-Hans\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\zh-Hans\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\zh-Hans\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\zh-Hant\Microsoft.TestPlatform.CommunicationUtilities.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\zh-Hant\Microsoft.TestPlatform.CrossPlatEngine.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\zh-Hant\Microsoft.VisualStudio.TestPlatform.Common.resources.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Diagnostics.EventLog.Messages.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\runtimes\win\lib\net6.0\System.Diagnostics.EventLog.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\hellolib.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\hellolib.pdb".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net9.0\tests.csproj.AssemblyReference.cache".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net9.0\tests.GeneratedMSBuildEditorConfig.editorconfig".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net9.0\tests.AssemblyInfoInputs.cache".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net9.0\tests.AssemblyInfo.cs".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net9.0\tests.csproj.CoreCompileInputs.cache".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net9.0\tests.sourcelink.json".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net9.0\tests.csproj.Up2Date".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net9.0\tests.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net9.0\refint\tests.dll".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net9.0\tests.pdb".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net9.0\tests.genruntimeconfig.cache".
-         Deleting file "C:\Users\kushal\src\mydotnet\tests\obj\Debug\net9.0\ref\tests.dll".
-     4>Done Building Project "C:\Users\kushal\src\mydotnet\tests\tests.csproj" (Clean target(s)).
-     1>Done Building Project "C:\Users\kushal\src\mydotnet\mydotnet.sln" (Clean target(s)).
-
-Build succeeded.
-    0 Warning(s)
-    0 Error(s)
-
-Time Elapsed 00:00:00.41
-
-Sunday, November 24, 2024 9:53:20 PM
+Monday, November 25, 2024 5:25:03 AM
 
   Determining projects to restore...
   All projects are up-to-date for restore.
@@ -2220,15 +2226,15 @@ Build succeeded.
     0 Warning(s)
     0 Error(s)
 
-Time Elapsed 00:00:00.84
+Time Elapsed 00:00:01.08
 
-Sunday, November 24, 2024 9:53:21 PM
+Monday, November 25, 2024 5:25:04 AM
 
   Determining projects to restore...
-  Restored C:\Users\kushal\src\mydotnet\tests\tests.csproj (in 223 ms).
-  Restored C:\Users\kushal\src\mydotnet\hellobenchamarks\hellobenchamarks.csproj (in 227 ms).
-  Restored C:\Users\kushal\src\mydotnet\hello\hello.csproj (in 219 ms).
-  Restored C:\Users\kushal\src\mydotnet\hellolib\hellolib.csproj (in 219 ms).
+  Restored C:\Users\kushal\src\mydotnet\hello\hello.csproj (in 277 ms).
+  Restored C:\Users\kushal\src\mydotnet\hellolib\hellolib.csproj (in 277 ms).
+  Restored C:\Users\kushal\src\mydotnet\tests\tests.csproj (in 281 ms).
+  Restored C:\Users\kushal\src\mydotnet\hellobenchamarks\hellobenchamarks.csproj (in 283 ms).
   hellolib -> C:\Users\kushal\src\mydotnet\hellolib\bin\Release\net9.0\hellolib.dll
   hellolib -> C:\Users\kushal\src\mydotnet\hellolib\bin\Release\net9.0\linux-arm64\hellolib.dll
   hellolib -> C:\Users\kushal\src\mydotnet\hellolib\bin\Release\net9.0\linux-arm64\publish\
@@ -2239,13 +2245,13 @@ Sunday, November 24, 2024 9:53:21 PM
   tests -> C:\Users\kushal\src\mydotnet\tests\bin\Release\net9.0\linux-arm64\publish\
   hello -> C:\Users\kushal\src\mydotnet\hello\bin\Release\net9.0\linux-arm64\publish\
 
-Sunday, November 24, 2024 9:53:23 PM
+Monday, November 25, 2024 5:25:06 AM
 
   Determining projects to restore...
-  Restored C:\Users\kushal\src\mydotnet\hello\hello.csproj (in 253 ms).
-  Restored C:\Users\kushal\src\mydotnet\tests\tests.csproj (in 266 ms).
-  Restored C:\Users\kushal\src\mydotnet\hellobenchamarks\hellobenchamarks.csproj (in 266 ms).
-  Restored C:\Users\kushal\src\mydotnet\hellolib\hellolib.csproj (in 253 ms).
+  Restored C:\Users\kushal\src\mydotnet\tests\tests.csproj (in 283 ms).
+  Restored C:\Users\kushal\src\mydotnet\hellolib\hellolib.csproj (in 282 ms).
+  Restored C:\Users\kushal\src\mydotnet\hello\hello.csproj (in 282 ms).
+  Restored C:\Users\kushal\src\mydotnet\hellobenchamarks\hellobenchamarks.csproj (in 284 ms).
   hellolib -> C:\Users\kushal\src\mydotnet\hellolib\bin\Debug\net9.0\hellolib.dll
   tests -> C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\tests.dll
 Test run for C:\Users\kushal\src\mydotnet\tests\bin\Debug\net9.0\tests.dll (.NETCoreApp,Version=v9.0)
@@ -2254,7 +2260,7 @@ VSTest version 17.12.0 (x64)
 Starting test execution, please wait...
 A total of 1 test files matched the specified pattern.
 
-Passed!  - Failed:     0, Passed:   334, Skipped:     0, Total:   334, Duration: 9 s - tests.dll (net9.0)
+Passed!  - Failed:     0, Passed:   334, Skipped:     0, Total:   334, Duration: 5 s - tests.dll (net9.0)
 
-Sunday, November 24, 2024 9:53:35 PM
+Monday, November 25, 2024 5:25:14 AM
 
