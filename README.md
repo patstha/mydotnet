@@ -35,3 +35,7 @@ AMD Ryzen 7 5800X, 1 CPU, 16 logical and 8 physical cores
 ```powershell
 cd "C:\Users\kushal\src\mydotnet\"; date; dotnet clean; date; dotnet build; date; dotnet test; date; cd "C:\Users\kushal\src\mydotnet\tests\"; date; dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura; reportgenerator -reports:coverage.cobertura.xml -targetdir:coverage-report; date; Move-Item -Path "C:\Users\kushal\src\mydotnet\tests\coverage-report\*" -Destination "C:\Users\kushal\src\mydotnet\docs" -Force; date; cd  "C:\Users\kushal\src\mydotnet\"; git add .; date; git status; date; git commit --message "build application" --message "from the terminal" --verbose; date; git pull --rebase origin master --verbose; date; git push origin master --verbose; date;
 ```
+
+```bash
+cd "/home/kushal/src/dotnet/mydotnet/"; date; time dotnet clean; date; time dotnet build; date; time dotnet test; date; cd "/home/kushal/src/dotnet/mydotnet/tests"; date; time dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura; reportgenerator -reports:coverage.cobertura.xml -targetdir:coverage-report; date; time mv -f "/home/kushal/src/dotnet/mydotnet/tests/coverage-report/*" "/home/kushal/src/dotnet/mydotnet/docs"; date; cd  "/home/kushal/src/dotnet/mydotnet/"; git add .; date; git status; date; git commit --message "build application" --message "from the terminal" --verbose; date; git pull --rebase origin master --verbose; date; git push origin master --verbose; date;
+```
