@@ -31,7 +31,7 @@
 
             for (int i = 0; i < 1_000; i++)
             {
-                DotnetNineGuid myObject = new(TimestampProvider(i * 10, startTime));
+                DotnetNineGuid myObject = new(TimestampProvider(i * 100, startTime));
                 objects.Add(myObject);
             }
 
