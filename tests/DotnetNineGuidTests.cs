@@ -26,12 +26,12 @@
         [Fact]
         public void GenerateGuidv7_ShouldGenerateGuidv7_sequentially2()
         {
-            List<DotnetNineGuid> objects = [];
+            List<DotnetNineGuid> objects = new();
             DateTimeOffset startTime = DateTimeOffset.UtcNow;
 
             for (int i = 0; i < 1_000; i++)
             {
-                DotnetNineGuid myObject = new(TimestampProvider(i * 100, startTime));
+                DotnetNineGuid myObject = new(() => startTime.AddMilliseconds(i * 100));
                 objects.Add(myObject);
             }
 
@@ -41,6 +41,10 @@
                 {
                     long firstLong = DotnetNineGuid.ExtractTimestamp(objects[i].GetGuid());
                     long secondLong = DotnetNineGuid.ExtractTimestamp(objects[j].GetGuid());
+
+                    // Log the timestamps for debugging
+                    Console.WriteLine($"firstLong: {firstLong}, secondLong: {secondLong}");
+
                     firstLong.Should().BeLessThan(secondLong);
                 }
             }
