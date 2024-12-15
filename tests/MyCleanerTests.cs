@@ -48,10 +48,16 @@ public class MyCleanerTests
     [InlineData(
         "https://slickdeals.net/?adobeRef=3600a9663d6311efbcdebafcfc5720790000&sdtrk=jfy&prop=diavail-false%7Cdincp-0%7Cdinpd-0%7Cdipgavail-false%7Crcmid-b410546529081f06acf4f98ecd492c65&afsrc=1&trd=Get%20Deal%20at%20Steam&sdtid=17602899&tid=17602899&pv=36090a2a3d6311efbcdebafcfc572079&au=880a0f2cfe1c4f9cab597d823947a3de&attr_track=JFYCarousel%3APosition%3A4%7CJFYCarousel%3AType%3Athread",
         "https://www.xbox.com/en-us/games/store/forza-horizon-4-1979-talbot-sunbeam-lotus/9nnm9m4t5j5q")]
-    public async Task CleanUrl_ShouldReturnValidOutput(string input, string expectedOutput)
+    public async Task CleanUrl_ShouldReturnValidOutput(string input, string expectedOutput, int iteration = 0)
     {
         // Act 
         string actual = await _myCleaner.CleanUrlAsync(input);
+        if (actual == "https://www.amazon.com/gp/redirect.html" && iteration < 10)
+        {
+            await Task.Delay(5000);
+            iteration++;
+            await CleanUrl_ShouldReturnValidOutput(input, expectedOutput, iteration);
+        }
         actual.Should().Be(expectedOutput);
     }
 

@@ -26,12 +26,12 @@
         [Fact]
         public void GenerateGuidv7_ShouldGenerateGuidv7_sequentially2()
         {
-            List<DotnetNineGuid> objects = new();
-            DateTimeOffset startTime = DateTimeOffset.UtcNow;
+            List<DotnetNineGuid> objects = [];
+            DateTimeOffset startTime = DateTimeOffset.UtcNow.AddDays(-100);
 
             for (int i = 0; i < 1_000; i++)
             {
-                DotnetNineGuid myObject = new(() => startTime.AddMilliseconds(i * 100));
+                DotnetNineGuid myObject = new(TimestampProvider(i * 10, startTime));
                 objects.Add(myObject);
             }
 
@@ -41,10 +41,6 @@
                 {
                     long firstLong = DotnetNineGuid.ExtractTimestamp(objects[i].GetGuid());
                     long secondLong = DotnetNineGuid.ExtractTimestamp(objects[j].GetGuid());
-
-                    // Log the timestamps for debugging
-                    Console.WriteLine($"firstLong: {firstLong}, secondLong: {secondLong}");
-
                     firstLong.Should().BeLessThan(secondLong);
                 }
             }
@@ -71,6 +67,29 @@
                 long firstLong = DotnetNineGuid.ExtractTimestamp(objects[i].GetGuid());
                 long secondLong = DotnetNineGuid.ExtractTimestamp(objects[i + 1].GetGuid());
                 firstLong.Should().BeLessThan(secondLong);
+            }
+        }
+        
+        [Fact]
+        public void GenerateGuidv7_ShouldGenerateGuidv7_sequentially4()
+        {
+            List<DotnetNineGuid> objects = [];
+            DateTimeOffset startTime = DateTimeOffset.UtcNow;
+
+            for (int i = 0; i < 1_000; i++)
+            {
+                DotnetNineGuid myObject = new(TimestampProvider(i * 10, startTime));
+                objects.Add(myObject);
+            }
+
+            for (int i = 0; i < objects.Count; i++)
+            {
+                for (int j = i + 1; j < objects.Count; j++)
+                {
+                    long firstLong = DotnetNineGuid.ExtractTimestamp(objects[i].GetGuid());
+                    long secondLong = DotnetNineGuid.ExtractTimestamp(objects[j].GetGuid());
+                    firstLong.Should().BeLessThan(secondLong);
+                }
             }
         }
     }
