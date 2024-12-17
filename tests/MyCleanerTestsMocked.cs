@@ -2,6 +2,7 @@ using System.Net;
 using System.Threading;
 
 namespace tests;
+
 public class MyCleanerTestsMocked
 {
     private readonly ILogger<MyCleaner> _logger;
@@ -84,10 +85,13 @@ public class MyCleanerTestsMocked
 
         // Assert
         result.Should().BeNull();
-        _logger.Received(1).LogError(Arg.Any<Exception>(), "Error processing URL: {Url}", url);
+        _logger.Received(1).LogError(
+            Arg.Is<Exception>(ex => ex.Message == "Network error"),
+            Arg.Is<string>(s => s.Contains("Error processing URL:")),
+            Arg.Is<string>(s => s == url)
+        );
     }
 }
-
 
 public class TestHttpMessageHandler : HttpMessageHandler
 {
