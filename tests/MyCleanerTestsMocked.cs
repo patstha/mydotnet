@@ -5,7 +5,6 @@ namespace tests;
 public class MyCleanerTestsMocked
 {
     private readonly ILogger<MyCleaner> _logger;
-    private readonly HttpClient _httpClient;
     private readonly MyCleaner _myCleaner;
     private readonly TestHttpMessageHandler _httpMessageHandler;
 
@@ -13,8 +12,8 @@ public class MyCleanerTestsMocked
     {
         _logger = Substitute.For<ILogger<MyCleaner>>();
         _httpMessageHandler = new TestHttpMessageHandler();
-        _httpClient = new HttpClient(_httpMessageHandler);
-        _myCleaner = new MyCleaner(_logger, _httpClient);
+        HttpClient httpClient = new(_httpMessageHandler);
+        _myCleaner = new MyCleaner(_logger, httpClient);
     }
 
     [Fact]
@@ -24,7 +23,7 @@ public class MyCleanerTestsMocked
         string url = "";
 
         // Act
-        var result = await _myCleaner.CleanUrlAsync(url);
+        string result = await _myCleaner.CleanUrlAsync(url);
 
         // Assert
         result.Should().BeEmpty();
@@ -34,11 +33,11 @@ public class MyCleanerTestsMocked
     public async Task CleanUrlAsync_ShouldReturnExtractedUrl_WhenUrlContainsQueryParameter()
     {
         // Arrange
-        string url = "http://example.com?u=http://redirected.com";
-        string expectedUrl = "http://redirected.com";
+        const string url = "https://example.com?u=https://redirected.com/";
+        const string expectedUrl = "https://redirected.com/";
 
         // Act
-        var result = await _myCleaner.CleanUrlAsync(url);
+        string result = await _myCleaner.CleanUrlAsync(url);
 
         // Assert
         result.Should().Be(expectedUrl);
@@ -48,8 +47,8 @@ public class MyCleanerTestsMocked
     public async Task CleanUrlAsync_ShouldReturnFinalRedirectUrl_WhenUrlIsRedirected()
     {
         // Arrange
-        string url = "http://example.com";
-        string redirectedUrl = "http://redirected.com";
+        const string url = "https://example.com/";
+        const string redirectedUrl = "https://redirected.com/";
         _httpMessageHandler.SendAsyncFunc = (request, cancellationToken) =>
         {
             if (request.RequestUri == new Uri(url))
@@ -66,7 +65,7 @@ public class MyCleanerTestsMocked
         };
 
         // Act
-        var result = await _myCleaner.CleanUrlAsync(url);
+        string result = await _myCleaner.CleanUrlAsync(url);
 
         // Assert
         result.Should().Be(redirectedUrl);
@@ -76,12 +75,12 @@ public class MyCleanerTestsMocked
     public async Task CleanUrlAsync_ShouldLogError_WhenExceptionIsThrown()
     {
         // Arrange
-        string url = "http://example.com";
+        const string url = "http://example.com";
         _httpMessageHandler.SendAsyncFunc = (request, cancellationToken) =>
             Task.FromException<HttpResponseMessage>(new Exception("Network error"));
 
         // Act
-        var result = await _myCleaner.CleanUrlAsync(url);
+        string result = await _myCleaner.CleanUrlAsync(url);
 
         // Assert
         result.Should().BeNull();
