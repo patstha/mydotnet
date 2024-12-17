@@ -92,10 +92,8 @@ namespace tests
             result.Should().BeNull();
             _logger.Received(1).LogError(
                 Arg.Is<Exception>(ex => ex.Message == "Network error"),
-                Arg.Any<EventId>(),
-                Arg.Is<object>((o) => o.ToString().Contains("Error processing URL:")),
-                Arg.Any<Exception>(),
-                Arg.Any<Func<object, Exception, string>>()
+                Arg.Is<string>(s => s.Contains("Error processing URL: {Url}")),
+                Arg.Is<string>(s => s == url)
             );
         }
     }
