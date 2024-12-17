@@ -1,17 +1,19 @@
 using System.Net;
+using System.Threading;
 
 namespace tests;
-
 public class MyCleanerTestsMocked
 {
     private readonly ILogger<MyCleaner> _logger;
     private readonly HttpClient _httpClient;
     private readonly MyCleaner _myCleaner;
+    private readonly TestHttpMessageHandler _httpMessageHandler;
 
     public MyCleanerTestsMocked()
     {
         _logger = Substitute.For<ILogger<MyCleaner>>();
-        _httpClient = Substitute.For<HttpClient>();
+        _httpMessageHandler = new TestHttpMessageHandler();
+        _httpClient = new HttpClient(_httpMessageHandler);
         _myCleaner = new MyCleaner(_logger, _httpClient);
     }
 
@@ -48,15 +50,20 @@ public class MyCleanerTestsMocked
         // Arrange
         string url = "http://example.com";
         string redirectedUrl = "http://redirected.com";
-        var response = new HttpResponseMessage(HttpStatusCode.Redirect)
+        _httpMessageHandler.SendAsyncFunc = (request, cancellationToken) =>
         {
-            Headers = { Location = new Uri(redirectedUrl) }
+            if (request.RequestUri == new Uri(url))
+            {
+                return Task.FromResult(new HttpResponseMessage(HttpStatusCode.Redirect)
+                {
+                    Headers = { Location = new Uri(redirectedUrl) }
+                });
+            }
+            return Task.FromResult(new HttpResponseMessage(HttpStatusCode.OK)
+            {
+                RequestMessage = new HttpRequestMessage(HttpMethod.Get, redirectedUrl)
+            });
         };
-        _httpClient.GetAsync(url).Returns(Task.FromResult(response));
-        _httpClient.GetAsync(redirectedUrl).Returns(Task.FromResult(new HttpResponseMessage(HttpStatusCode.OK)
-        {
-            RequestMessage = new HttpRequestMessage(HttpMethod.Get, redirectedUrl)
-        }));
 
         // Act
         var result = await _myCleaner.CleanUrlAsync(url);
@@ -70,7 +77,8 @@ public class MyCleanerTestsMocked
     {
         // Arrange
         string url = "http://example.com";
-        _httpClient.GetAsync(url).Returns(Task.FromException<HttpResponseMessage>(new Exception("Network error")));
+        _httpMessageHandler.SendAsyncFunc = (request, cancellationToken) =>
+            Task.FromException<HttpResponseMessage>(new Exception("Network error"));
 
         // Act
         var result = await _myCleaner.CleanUrlAsync(url);
@@ -78,5 +86,16 @@ public class MyCleanerTestsMocked
         // Assert
         result.Should().BeNull();
         _logger.Received(1).LogError(Arg.Any<Exception>(), "Error processing URL: {Url}", url);
+    }
+}
+
+
+public class TestHttpMessageHandler : HttpMessageHandler
+{
+    public Func<HttpRequestMessage, CancellationToken, Task<HttpResponseMessage>> SendAsyncFunc { get; set; }
+
+    protected override Task<HttpResponseMessage> SendAsync(HttpRequestMessage request, CancellationToken cancellationToken)
+    {
+        return SendAsyncFunc(request, cancellationToken);
     }
 }
