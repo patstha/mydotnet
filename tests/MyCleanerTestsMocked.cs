@@ -81,7 +81,7 @@ namespace tests
         public async Task CleanUrlAsync_ShouldLogError_WhenExceptionIsThrown()
         {
             // Arrange
-            const string url = "http://example.com";
+            const string url = "https://example.com";
             _httpMessageHandler.SendAsyncFunc = (request, cancellationToken) =>
                 Task.FromException<HttpResponseMessage>(new Exception("Network error"));
 
@@ -92,8 +92,8 @@ namespace tests
             result.Should().BeNull();
             _logger.Received(1).LogError(
                 Arg.Is<Exception>(ex => ex.Message == "Network error"),
-                Arg.Is<string>(s => s.Contains("Error processing URL: {Url}")),
-                Arg.Is<string>(s => s == url)
+                "Error processing URL: {Url}",
+                url
             );
         }
     }
