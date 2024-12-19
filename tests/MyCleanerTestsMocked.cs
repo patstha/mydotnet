@@ -80,6 +80,7 @@ namespace tests
             Exception exception = new("Network error");
             _httpMessageHandler.SendAsyncFunc = (request, cancellationToken) =>
             {
+                request.Should().NotBeNull();
                 cancellationToken.IsCancellationRequested.Should().BeFalse();
                 return Task.FromException<HttpResponseMessage>(exception);
             };
