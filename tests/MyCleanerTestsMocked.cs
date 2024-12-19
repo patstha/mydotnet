@@ -20,7 +20,7 @@ namespace tests
         public async Task CleanUrlAsync_ShouldReturnEmptyString_WhenUrlIsNullOrWhiteSpace()
         {
             // Arrange
-            string url = "";
+            const string url = "";
 
             // Act
             string result = await _myCleaner.CleanUrlAsync(url);
@@ -37,7 +37,7 @@ namespace tests
             const string expectedUrl = "https://redirected.com/";
 
             // Act
-            string result = await _myCleaner.CleanUrlAsync(url);
+            string result = await _myCleaner.CleanUrlAsync(url, CancellationToken.None);
 
             // Assert
             result.Should().Be(expectedUrl);
@@ -51,6 +51,7 @@ namespace tests
             const string redirectedUrl = "https://redirected.com/";
             _httpMessageHandler.SendAsyncFunc = (request, cancellationToken) =>
             {
+                cancellationToken.IsCancellationRequested.Should().BeFalse();
                 if (request.RequestUri == new Uri(url))
                 {
                     return Task.FromResult(new HttpResponseMessage(HttpStatusCode.Redirect)
@@ -78,8 +79,10 @@ namespace tests
             const string url = "https://example.com";
             Exception exception = new("Network error");
             _httpMessageHandler.SendAsyncFunc = (request, cancellationToken) =>
-                Task.FromException<HttpResponseMessage>(exception);
-
+            {
+                cancellationToken.IsCancellationRequested.Should().BeFalse();
+                return Task.FromException<HttpResponseMessage>(exception);
+            };
             // Act
             string result = await _myCleaner.CleanUrlAsync(url);
 
