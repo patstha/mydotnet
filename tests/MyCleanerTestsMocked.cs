@@ -1,25 +1,19 @@
 using System.Net;
 using System.Threading;
-using System.Threading.Tasks;
-using FluentAssertions;
-using Microsoft.Extensions.Logging;
-using NSubstitute;
-using Xunit;
 
 namespace tests
 {
     public class MyCleanerTestsMocked
     {
-        private readonly ILogger<MyCleaner> _logger;
         private readonly MyCleaner _myCleaner;
         private readonly TestHttpMessageHandler _httpMessageHandler;
 
         public MyCleanerTestsMocked()
         {
-            _logger = Substitute.For<ILogger<MyCleaner>>();
+            ILogger<MyCleaner> logger = Substitute.For<ILogger<MyCleaner>>();
             _httpMessageHandler = new TestHttpMessageHandler();
             HttpClient httpClient = new(_httpMessageHandler);
-            _myCleaner = new MyCleaner(_logger, httpClient);
+            _myCleaner = new MyCleaner(logger, httpClient);
         }
 
         [Fact]
@@ -81,8 +75,8 @@ namespace tests
         public async Task CleanUrlAsync_ShouldLogError_WhenExceptionIsThrown()
         {
             // Arrange
-            const string url = "http://example.com";
-            Exception exception = new Exception("Network error");
+            const string url = "https://example.com";
+            Exception exception = new("Network error");
             _httpMessageHandler.SendAsyncFunc = (request, cancellationToken) =>
                 Task.FromException<HttpResponseMessage>(exception);
 

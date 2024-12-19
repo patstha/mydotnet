@@ -1,11 +1,12 @@
 ﻿using System.Collections.Specialized;
 using System.Net;
+using System.Threading;
 
 namespace hellolib;
 
 public class MyCleaner(ILogger<MyCleaner> logger, HttpClient httpClient)
 {
-    public async Task<string> CleanUrlAsync(string url)
+    public async Task<string> CleanUrlAsync(string url, CancellationToken token = default)
     {
         if (string.IsNullOrWhiteSpace(url))
         {
@@ -20,7 +21,7 @@ public class MyCleaner(ILogger<MyCleaner> logger, HttpClient httpClient)
 
         try
         {
-            string finalRedirectUrl = await FollowRedirectsAsync(url);
+            string finalRedirectUrl = await FollowRedirectsAsync(url, token);
 
             if (finalRedirectUrl.Contains("amazon.com"))
             {
@@ -42,9 +43,9 @@ public class MyCleaner(ILogger<MyCleaner> logger, HttpClient httpClient)
         return uri.GetLeftPart(UriPartial.Path);
     }
     
-    private async Task<string> FollowRedirectsAsync(string url)
+    private async Task<string> FollowRedirectsAsync(string url, CancellationToken token = default)
     {
-        HttpResponseMessage response = await httpClient.GetAsync(url);
+        HttpResponseMessage response = await httpClient.GetAsync(url, token);
         while (response.StatusCode == HttpStatusCode.Redirect || response.StatusCode == HttpStatusCode.MovedPermanently)
         {
             string redirectUrl = response.Headers.Location?.ToString() ?? "";
@@ -53,7 +54,7 @@ public class MyCleaner(ILogger<MyCleaner> logger, HttpClient httpClient)
                 Uri baseUri = new(url);
                 redirectUrl = new Uri(baseUri, redirectUrl).ToString();
             }
-            response = await httpClient.GetAsync(redirectUrl);
+            response = await httpClient.GetAsync(redirectUrl, token);
         }
         return response.RequestMessage?.RequestUri?.ToString() ?? "";
     }
