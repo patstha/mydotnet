@@ -44,7 +44,7 @@ public class MyCleanerTests
         "https://www.target.com/p/fae-farm-nintendo-switch-digital/-/A-89638075")]
     [InlineData(
         "https://slickdeals.net/?adobeRef=d92c693a3d5011efb40f5e3ace1557e10001&sdtrk=frontpage_recombee&prop=diavail-false%7Cdincp-0%7Cdinpd-0%7Cdipgavail-false%7Crcmid=4d911dbd885c9d4514957dfd7e40cdbf&afsrc=1&trd=Get%20Deal%20at%20Amazon&sdtid=17605128&tid=17605128&pno=972987&pv=d934885e3d5011efb40f5e3ace1557e1&au=880a0f2cfe1c4f9cab597d823947a3de",
-        "https://www.amazon.com/gp/product/B0B5M5YB9G/")]
+        "https://www.amazon.com/gp/product/B0B5M5YB9G")]
     [InlineData(
         "https://slickdeals.net/?adobeRef=3600a9663d6311efbcdebafcfc5720790000&sdtrk=jfy&prop=diavail-false%7Cdincp-0%7Cdinpd-0%7Cdipgavail-false%7Crcmid-b410546529081f06acf4f98ecd492c65&afsrc=1&trd=Get%20Deal%20at%20Steam&sdtid=17602899&tid=17602899&pv=36090a2a3d6311efbcdebafcfc572079&au=880a0f2cfe1c4f9cab597d823947a3de&attr_track=JFYCarousel%3APosition%3A4%7CJFYCarousel%3AType%3Athread",
         "https://www.xbox.com/en-us/games/store/forza-horizon-4-1979-talbot-sunbeam-lotus/9nnm9m4t5j5q")]
@@ -120,7 +120,7 @@ public class MyCleanerTests
         // Arrange
         const string input =
             "https://www.amazon.com/gp/product/B08N5WRWNW/ref=ox_sc_saved_image_1?smid=ATVPDKIKX0DER&psc=1";
-        const string expectedOutput = "https://www.amazon.com/gp/product/B08N5WRWNW/";
+        const string expectedOutput = "https://www.amazon.com/gp/product/B08N5WRWNW";
 
         // Act
         string actual = await _myCleaner.CleanUrlAsync(input);

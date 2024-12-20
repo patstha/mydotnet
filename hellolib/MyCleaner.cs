@@ -40,7 +40,7 @@ public class MyCleaner(ILogger<MyCleaner> logger, HttpClient httpClient)
     private static string RemoveQueryParameters(string url)
     {
         Uri uri = new(url);
-        return uri.GetLeftPart(UriPartial.Path);
+        return uri.GetLeftPart(UriPartial.Path).TrimEnd('/');
     }
     
     private async Task<string> FollowRedirectsAsync(string url, CancellationToken token = default)

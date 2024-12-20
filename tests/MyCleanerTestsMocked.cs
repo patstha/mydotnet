@@ -33,8 +33,8 @@ namespace tests
         public async Task CleanUrlAsync_ShouldReturnExtractedUrl_WhenUrlContainsQueryParameter()
         {
             // Arrange
-            const string url = "https://example.com?u=https://redirected.com/";
-            const string expectedUrl = "https://redirected.com/";
+            const string url = "https://example.com?u=https://redirected.com";
+            const string expectedUrl = "https://redirected.com"; // Remove the trailing slash
 
             // Act
             string result = await _myCleaner.CleanUrlAsync(url, CancellationToken.None);
@@ -47,8 +47,8 @@ namespace tests
         public async Task CleanUrlAsync_ShouldReturnFinalRedirectUrl_WhenUrlIsRedirected()
         {
             // Arrange
-            const string url = "https://example.com/";
-            const string redirectedUrl = "https://redirected.com/";
+            const string url = "https://example.com";
+            const string redirectedUrl = "https://redirected.com";
             _httpMessageHandler.SendAsyncFunc = (request, cancellationToken) =>
             {
                 cancellationToken.IsCancellationRequested.Should().BeFalse();
