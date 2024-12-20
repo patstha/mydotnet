@@ -398,5 +398,129 @@ kushal@kusfedora2024:~/src/dotnet/mydotnet$
 
 
 ```bash
+$ cd "/home/kushal/src/dotnet/mydotnet/"; date; time dotnet clean; date; time dotnet build; date; time dotnet test; date; cd "/home/kushal/src/dotnet/mydotnet/tests"; date; time dotnet test /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura; reportgenerator -reports:coverage.cobertura.xml -targetdir:coverage-report; date; time mv -f "/home/kushal/src/dotnet/mydotnet/tests/coverage-report/*" "/home/kushal/src/dotnet/mydotnet/docs"; date; cd  "/home/kushal/src/dotnet/mydotnet/"; git add .; date; git status; date; git commit --message "build application" --message "from the terminal" --verbose; date; git pull --rebase origin master --verbose; date; git push origin master --verbose; date;
+Fri Dec 20 10:09:05 AM EST 2024
 
+Welcome to .NET 9.0!
+---------------------
+SDK Version: 9.0.101
+
+----------------
+Installed an ASP.NET Core HTTPS development certificate.
+To trust the certificate, run 'dotnet dev-certs https --trust'
+Learn about HTTPS: https://aka.ms/dotnet-https
+
+----------------
+Write your first app: https://aka.ms/dotnet-hello-world
+Find out what's new: https://aka.ms/dotnet-whats-new
+Explore documentation: https://aka.ms/dotnet-docs
+Report issues and find source on GitHub: https://github.com/dotnet/core
+Use 'dotnet --help' to see available commands or visit: https://aka.ms/dotnet-cli
+--------------------------------------------------------------------------------------
+
+Build succeeded in 0.7s
+
+real	0m0.852s
+user	0m0.634s
+sys	0m0.130s
+Fri Dec 20 10:09:06 AM EST 2024
+Restore complete (0.5s)
+  hellolib succeeded (0.2s) → hellolib/bin/Debug/net9.0/hellolib.dll
+  hello succeeded (0.4s) → hello/bin/Debug/net9.0/hello.dll
+  tests succeeded (0.4s) → tests/bin/Debug/net9.0/tests.dll
+  hellobenchamarks succeeded (0.6s) → hellobenchamarks/bin/Debug/net9.0/hellobenchamarks.dll
+
+Build succeeded in 1.4s
+
+real	0m1.569s
+user	0m1.599s
+sys	0m0.358s
+Fri Dec 20 10:09:07 AM EST 2024
+Restore complete (0.4s)
+  hellolib succeeded (0.1s) → hellolib/bin/Debug/net9.0/hellolib.dll
+  tests succeeded (0.1s) → tests/bin/Debug/net9.0/tests.dll
+[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v3.0.0+e341b939fe (64-bit .NET 9.0.0)
+[xUnit.net 00:00:00.07]   Discovering: tests
+[xUnit.net 00:00:00.14]   Discovered:  tests
+[xUnit.net 00:00:00.19]   Starting:    tests
+[xUnit.net 00:00:08.82]   Finished:    tests
+  tests test succeeded (9.4s)
+
+Test summary: total: 338, failed: 0, succeeded: 338, skipped: 0, duration: 9.4s
+Build succeeded in 10.2s
+
+real	0m10.348s
+user	0m1.004s
+sys	0m0.212s
+Fri Dec 20 10:09:18 AM EST 2024
+Fri Dec 20 10:09:18 AM EST 2024
+Restore complete (0.3s)
+  hellolib succeeded (0.1s) → /home/kushal/src/dotnet/mydotnet/hellolib/bin/Debug/net9.0/hellolib.dll
+  tests succeeded (0.1s) → bin/Debug/net9.0/tests.dll
+[xUnit.net 00:00:00.00] xUnit.net VSTest Adapter v3.0.0+e341b939fe (64-bit .NET 9.0.0)
+[xUnit.net 00:00:00.06]   Discovering: tests
+[xUnit.net 00:00:00.13]   Discovered:  tests
+[xUnit.net 00:00:00.17]   Starting:    tests
+[xUnit.net 00:00:05.43]   Finished:    tests
+  tests                                                                                   GenerateCoverageResult (6.4s)
+
++----------+------+--------+--------+
+| Module   | Line | Branch | Method |
++----------+------+--------+--------+
+| hellolib | 100% | 99.64% | 100%   |
++----------+------+--------+--------+
+
++---------+------+--------+--------+
+|         | Line | Branch | Method |
++---------+------+--------+--------+
+| Total   | 100% | 99.64% | 100%   |
++---------+------+--------+--------+
+| Average | 100% | 99.64% | 100%   |
++---------+------+--------+--------+
+  tests test succeeded (6.4s)
+
+Test summary: total: 338, failed: 0, succeeded: 338, skipped: 0, duration: 5.9s
+Build succeeded in 7.4s
+
+real	0m7.520s
+user	0m13.356s
+sys	0m1.134s
+bash: reportgenerator: command not found...
+Fri Dec 20 10:09:26 AM EST 2024
+mv: cannot stat '/home/kushal/src/dotnet/mydotnet/tests/coverage-report/*': No such file or directory
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.001s
+Fri Dec 20 10:09:26 AM EST 2024
+Fri Dec 20 10:09:26 AM EST 2024
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	modified:   README.md
+	modified:   tests/coverage.cobertura.xml
+
+Fri Dec 20 10:09:26 AM EST 2024
+[master 962aa0b] build application
+ 2 files changed, 157 insertions(+), 152 deletions(-)
+Fri Dec 20 10:09:26 AM EST 2024
+From github.com:patstha/mydotnet
+ * branch            master     -> FETCH_HEAD
+ = [up to date]      master     -> origin/master
+Current branch master is up to date.
+Fri Dec 20 10:09:26 AM EST 2024
+Pushing to github.com:patstha/mydotnet.git
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 1.81 KiB | 1.81 MiB/s, done.
+Total 5 (delta 4), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (4/4), completed with 4 local objects.
+To github.com:patstha/mydotnet.git
+   28b4ac3..962aa0b  master -> master
+updating local tracking ref 'refs/remotes/origin/master'
+Fri Dec 20 10:09:27 AM EST 2024
 ```
