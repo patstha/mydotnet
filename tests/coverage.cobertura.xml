@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<coverage line-rate="1" branch-rate="0.9964" version="1.9" timestamp="1734707365" lines-covered="782" lines-valid="782" branches-covered="281" branches-valid="282">
+<coverage line-rate="1" branch-rate="0.9965" version="1.9" timestamp="1735663897" lines-covered="799" lines-valid="799" branches-covered="287" branches-valid="288">
   <sources>
     <source>/home/kushal/src/dotnet/mydotnet/hellolib/</source>
   </sources>
   <packages>
-    <package name="hellolib" line-rate="1" branch-rate="0.9964" complexity="327">
+    <package name="hellolib" line-rate="1" branch-rate="0.9965" complexity="333">
       <classes>
         <class name="hellolib.ListNode" filename="AddTwoNumbers.cs" line-rate="1" branch-rate="1" complexity="3">
           <methods>
@@ -258,6 +258,74 @@
             <line number="27" hits="6" branch="False" />
           </lines>
         </class>
+        <class name="hellolib.BestTimeToBuySellStock" filename="BestTimeToBuySellStock.cs" line-rate="1" branch-rate="1" complexity="6">
+          <methods>
+            <method name="CalculateMaximumProfit" signature="(System.Int32[])" line-rate="1" branch-rate="1" complexity="6">
+              <lines>
+                <line number="6" hits="6" branch="False" />
+                <line number="7" hits="6" branch="False" />
+                <line number="8" hits="6" branch="False" />
+                <line number="9" hits="68" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="69" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="10" hits="25" branch="False" />
+                <line number="11" hits="25" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="31" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="12" hits="11" branch="False" />
+                <line number="13" hits="11" branch="False" />
+                <line number="14" hits="11" branch="False" />
+                <line number="15" hits="25" branch="False" />
+                <line number="16" hits="25" branch="True" condition-coverage="100% (2/2)">
+                  <conditions>
+                    <condition number="53" type="jump" coverage="100%" />
+                  </conditions>
+                </line>
+                <line number="17" hits="5" branch="False" />
+                <line number="18" hits="5" branch="False" />
+                <line number="19" hits="5" branch="False" />
+                <line number="20" hits="25" branch="False" />
+                <line number="21" hits="6" branch="False" />
+                <line number="22" hits="6" branch="False" />
+              </lines>
+            </method>
+          </methods>
+          <lines>
+            <line number="6" hits="6" branch="False" />
+            <line number="7" hits="6" branch="False" />
+            <line number="8" hits="6" branch="False" />
+            <line number="9" hits="68" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="69" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="10" hits="25" branch="False" />
+            <line number="11" hits="25" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="31" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="12" hits="11" branch="False" />
+            <line number="13" hits="11" branch="False" />
+            <line number="14" hits="11" branch="False" />
+            <line number="15" hits="25" branch="False" />
+            <line number="16" hits="25" branch="True" condition-coverage="100% (2/2)">
+              <conditions>
+                <condition number="53" type="jump" coverage="100%" />
+              </conditions>
+            </line>
+            <line number="17" hits="5" branch="False" />
+            <line number="18" hits="5" branch="False" />
+            <line number="19" hits="5" branch="False" />
+            <line number="20" hits="25" branch="False" />
+            <line number="21" hits="6" branch="False" />
+            <line number="22" hits="6" branch="False" />
+          </lines>
+        </class>
         <class name="hellolib.BubbleSort" filename="BubbleSort.cs" line-rate="1" branch-rate="1" complexity="6">
           <methods>
             <method name="SortIntegers" signature="(System.Int32[])" line-rate="1" branch-rate="1" complexity="6">
@@ -458,7 +526,7 @@
           <methods>
             <method name="GetGuid" signature="()" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="14" hits="49977418" branch="False" />
+                <line number="14" hits="49731402" branch="False" />
               </lines>
             </method>
             <method name="GetTimestamp" signature="()" line-rate="1" branch-rate="1" complexity="1">
@@ -468,11 +536,11 @@
             </method>
             <method name="ExtractTimestamp" signature="(System.Guid)" line-rate="1" branch-rate="1" complexity="1">
               <lines>
-                <line number="18" hits="49977418" branch="False" />
-                <line number="19" hits="49977418" branch="False" />
-                <line number="20" hits="49977418" branch="False" />
-                <line number="21" hits="49977418" branch="False" />
-                <line number="22" hits="49977418" branch="False" />
+                <line number="18" hits="49731402" branch="False" />
+                <line number="19" hits="49731402" branch="False" />
+                <line number="20" hits="49731402" branch="False" />
+                <line number="21" hits="49731402" branch="False" />
+                <line number="22" hits="49731402" branch="False" />
               </lines>
             </method>
             <method name=".ctor" signature="(System.Func`1&lt;System.DateTimeOffset&gt;)" line-rate="1" branch-rate="1" complexity="1">
@@ -486,13 +554,13 @@
             </method>
           </methods>
           <lines>
-            <line number="14" hits="49977418" branch="False" />
+            <line number="14" hits="49731402" branch="False" />
             <line number="15" hits="2" branch="False" />
-            <line number="18" hits="49977418" branch="False" />
-            <line number="19" hits="49977418" branch="False" />
-            <line number="20" hits="49977418" branch="False" />
-            <line number="21" hits="49977418" branch="False" />
-            <line number="22" hits="49977418" branch="False" />
+            <line number="18" hits="49731402" branch="False" />
+            <line number="19" hits="49731402" branch="False" />
+            <line number="20" hits="49731402" branch="False" />
+            <line number="21" hits="49731402" branch="False" />
+            <line number="22" hits="49731402" branch="False" />
             <line number="8" hits="1002002" branch="False" />
             <line number="9" hits="1002002" branch="False" />
             <line number="10" hits="1002002" branch="False" />
