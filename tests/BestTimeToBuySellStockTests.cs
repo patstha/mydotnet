@@ -14,6 +14,61 @@ public class BestTimeToBuySellStockTests
         
         actual.Should().Be(expected);
     }
+    [Fact]
+    public void CalculateProfit_ReturnsZeroForEmptyArray()
+    {
+        int[] prices = [];
+        BestTimeToBuySellStock stock = new();
+        const int expected = 0;
+    
+        int actual = stock.CalculateMaximumProfit(prices);
+    
+        actual.Should().Be(expected);
+    }
+    [Fact]
+    public void CalculateProfit_ReturnsZeroForSingleElementArray()
+    {
+        int[] prices = [5];
+        BestTimeToBuySellStock stock = new();
+        const int expected = 0;
+    
+        int actual = stock.CalculateMaximumProfit(prices);
+    
+        actual.Should().Be(expected);
+    }
+    [Fact]
+    public void CalculateProfit_ReturnsZeroForDecreasingPrices()
+    {
+        int[] prices = [7, 6, 4, 3, 1];
+        BestTimeToBuySellStock stock = new();
+        const int expected = 0;
+    
+        int actual = stock.CalculateMaximumProfit(prices);
+    
+        actual.Should().Be(expected);
+    }
+    [Fact]
+    public void CalculateProfit_ReturnsZeroForAllPricesSame()
+    {
+        int[] prices = [5, 5, 5, 5, 5];
+        BestTimeToBuySellStock stock = new();
+        const int expected = 0;
+    
+        int actual = stock.CalculateMaximumProfit(prices);
+    
+        actual.Should().Be(expected);
+    }
+    [Fact]
+    public void CalculateProfit_ReturnsMaxProfitForMultipleProfitableTransactions()
+    {
+        int[] prices = [3, 3, 5, 0, 0, 3, 1, 4];
+        BestTimeToBuySellStock stock = new();
+        const int expected = 4;
+    
+        int actual = stock.CalculateMaximumProfit(prices);
+    
+        actual.Should().Be(expected);
+    }
 }
 
 
