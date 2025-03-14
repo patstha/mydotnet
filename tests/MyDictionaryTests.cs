@@ -55,7 +55,7 @@ public class MyDictionaryTests
         string originalValue = dictionary["key1"];
     
         // Act & Assert
-        var exception = Assert.Throws<ArgumentException>(() => dictionary.Add("key1", "value21"));
+        ArgumentException exception = Assert.Throws<ArgumentException>(() => dictionary.Add("key1", "value21"));
     
         // Additional assertions
         Assert.Contains("key already exists", exception.Message, StringComparison.OrdinalIgnoreCase);
