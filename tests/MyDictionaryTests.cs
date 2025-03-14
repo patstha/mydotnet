@@ -84,9 +84,22 @@ public class MyDictionaryTests
     [Fact]
     public void Contains_Key_Should_Return_False()
     {
+        // Arrange
         Dictionary<string, string> dictionary = GetTestDictionary();
-        bool actual = dictionary.ContainsKey("key21");
+        string nonExistentKey = "key21";
+    
+        // Act
+        bool actual = dictionary.ContainsKey(nonExistentKey);
+    
+        // Assert
         Assert.False(actual);
+    
+        // Additional assertions
+        Assert.Throws<KeyNotFoundException>(() => dictionary[nonExistentKey]);
+    
+        // Verify that similar keys don't cause false positives
+        Assert.False(dictionary.ContainsKey("key2" + "1"));
+        Assert.False(dictionary.ContainsKey("key2.1"));
     }
 
     [Fact]
