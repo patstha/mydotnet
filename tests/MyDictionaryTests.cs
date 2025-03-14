@@ -58,7 +58,7 @@ public class MyDictionaryTests
         ArgumentException exception = Assert.Throws<ArgumentException>(() => dictionary.Add("key1", "value21"));
     
         // Additional assertions
-        Assert.Contains("key already exists", exception.Message, StringComparison.OrdinalIgnoreCase);
+        Assert.Contains("key has already been added", exception.Message, StringComparison.OrdinalIgnoreCase);
         Assert.Equal(initialCount, dictionary.Count);
         Assert.Equal(originalValue, dictionary["key1"]);
     }
