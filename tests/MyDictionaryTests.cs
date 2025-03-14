@@ -49,8 +49,18 @@ public class MyDictionaryTests
     [Fact]
     public void Add_DuplicateKey_Should_Throw()
     {
+        // Arrange
         Dictionary<string, string> dictionary = GetTestDictionary();
-        Assert.Throws<ArgumentException>(() => dictionary.Add("key1", "value21"));    
+        int initialCount = dictionary.Count;
+        string originalValue = dictionary["key1"];
+    
+        // Act & Assert
+        var exception = Assert.Throws<ArgumentException>(() => dictionary.Add("key1", "value21"));
+    
+        // Additional assertions
+        Assert.Contains("key already exists", exception.Message, StringComparison.OrdinalIgnoreCase);
+        Assert.Equal(initialCount, dictionary.Count);
+        Assert.Equal(originalValue, dictionary["key1"]);
     }
 
     [Fact]
