@@ -66,9 +66,19 @@ public class MyDictionaryTests
     [Fact]
     public void Contains_Key_Should_Return_True()
     {
+        // Arrange
         Dictionary<string, string> dictionary = GetTestDictionary();
-        bool actual = dictionary.ContainsKey("key1");
+        string keyToCheck = "key1";
+    
+        // Act
+        bool actual = dictionary.ContainsKey(keyToCheck);
+    
+        // Assert
         Assert.True(actual);
+        Assert.Equal("value1", dictionary[keyToCheck]); // Verify we can access the value
+    
+        // Verify case sensitivity
+        Assert.False(dictionary.ContainsKey("KEY1"));
     }
 
     [Fact]
