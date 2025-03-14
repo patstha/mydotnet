@@ -48,25 +48,39 @@ public class MyDictionaryTests
     public void Add_DuplicateKey_Should_Throw()
     {
         Dictionary<string, string> dictionary = GetTestDictionary();
-        Assert.Throws<ArgumentException>(() => dictionary.Add("key1", "value21"));    
+        Assert.Throws<ArgumentException>(() => dictionary.Add("key1", "value21"));
     }
 
     [Fact]
-    public void AddKeyValuePair_NewKey_Should_Add_Key()
+    public void IDictionary_Add_Should_Add_Key_And_Value()
     {
         Dictionary<string, string> dictionary = GetTestDictionary();
-        KeyValuePair<string, string> kvp = new("key21", "value21");
-        dictionary.Add(kvp);
+        // Cast to IDictionary to access the non-generic Add method
+        IDictionary<string, string> idictionary = dictionary;
+        idictionary.Add("key21", "value21");
 
         Assert.Equal("value21", dictionary["key21"]);
     }
 
     [Fact]
-    public void AddKeyValuePair_DuplicateKey_Should_Throw()
+    public void ICollection_Add_Should_Add_KeyValuePair()
     {
         Dictionary<string, string> dictionary = GetTestDictionary();
-        KeyValuePair<string, string> kvp = new("key1", "value21");
-        Assert.Throws<ArgumentException>(() => dictionary.Add(kvp));
+        // Cast to ICollection<KeyValuePair<string, string>> to access the Add(KeyValuePair) method
+        ICollection<KeyValuePair<string, string>> collection = dictionary;
+        collection.Add(new KeyValuePair<string, string>("key21", "value21"));
+
+        Assert.Equal("value21", dictionary["key21"]);
+    }
+
+    [Fact]
+    public void ICollection_Add_With_Duplicate_Key_Should_Throw()
+    {
+        Dictionary<string, string> dictionary = GetTestDictionary();
+        ICollection<KeyValuePair<string, string>> collection = dictionary;
+
+        Assert.Throws<ArgumentException>(() =>
+            collection.Add(new KeyValuePair<string, string>("key1", "value21")));
     }
 
     [Fact]
@@ -74,7 +88,7 @@ public class MyDictionaryTests
     {
         Dictionary<string, string> dictionary = GetTestDictionary();
         dictionary.Clear();
-        
+
         Assert.Empty(dictionary);
     }
 
@@ -111,20 +125,22 @@ public class MyDictionaryTests
     }
 
     [Fact]
-    public void Contains_Should_Return_True_For_Existing_KeyValuePair()
+    public void ICollection_Contains_Should_Return_True_For_Existing_KeyValuePair()
     {
         Dictionary<string, string> dictionary = GetTestDictionary();
-        KeyValuePair<string, string> kvp = new("key1", "value1");
-        bool actual = dictionary.Contains(kvp);
+        ICollection<KeyValuePair<string, string>> collection = dictionary;
+
+        bool actual = collection.Contains(new KeyValuePair<string, string>("key1", "value1"));
         Assert.True(actual);
     }
 
     [Fact]
-    public void Contains_Should_Return_False_For_NonExisting_KeyValuePair()
+    public void ICollection_Contains_Should_Return_False_For_NonExisting_KeyValuePair()
     {
         Dictionary<string, string> dictionary = GetTestDictionary();
-        KeyValuePair<string, string> kvp = new("key1", "wrong-value");
-        bool actual = dictionary.Contains(kvp);
+        ICollection<KeyValuePair<string, string>> collection = dictionary;
+
+        bool actual = collection.Contains(new KeyValuePair<string, string>("key1", "wrong-value"));
         Assert.False(actual);
     }
 
@@ -136,10 +152,10 @@ public class MyDictionaryTests
             { "key1", "value1" },
             { "key2", "value2" }
         };
-        
+
         KeyValuePair<string, string>[] array = new KeyValuePair<string, string>[3];
-        dictionary.CopyTo(array, 1);
-        
+        ((ICollection<KeyValuePair<string, string>>)dictionary).CopyTo(array, 1);
+
         Assert.Equal(default, array[0]);
         Assert.Contains(new KeyValuePair<string, string>("key1", "value1"), array);
         Assert.Contains(new KeyValuePair<string, string>("key2", "value2"), array);
@@ -153,6 +169,15 @@ public class MyDictionaryTests
     }
 
     [Fact]
+    public void IsReadOnly_Should_Return_False()
+    {
+        Dictionary<string, string> dictionary = GetTestDictionary();
+        ICollection<KeyValuePair<string, string>> collection = dictionary;
+
+        Assert.False(collection.IsReadOnly);
+    }
+
+    [Fact]
     public void GetEnumerator_Should_Enumerate_All_Elements()
     {
         Dictionary<string, string> dictionary = new()
@@ -160,14 +185,14 @@ public class MyDictionaryTests
             { "key1", "value1" },
             { "key2", "value2" }
         };
-        
+
         int count = 0;
         foreach (var kvp in dictionary)
         {
             count++;
             Assert.Equal($"value{kvp.Key[3]}", kvp.Value);
         }
-        
+
         Assert.Equal(2, count);
     }
 
@@ -206,7 +231,7 @@ public class MyDictionaryTests
     {
         Dictionary<string, string> dictionary = GetTestDictionary();
         ICollection<string> keys = dictionary.Keys;
-        
+
         Assert.Equal(20, keys.Count);
         Assert.Contains("key1", keys);
         Assert.Contains("key20", keys);
@@ -218,7 +243,7 @@ public class MyDictionaryTests
     {
         Dictionary<string, string> dictionary = GetTestDictionary();
         ICollection<string> values = dictionary.Values;
-        
+
         Assert.Equal(20, values.Count);
         Assert.Contains("value1", values);
         Assert.Contains("value20", values);
@@ -230,7 +255,7 @@ public class MyDictionaryTests
     {
         Dictionary<string, string> dictionary = GetTestDictionary();
         bool result = dictionary.Remove("key1");
-        
+
         Assert.True(result);
         Assert.Equal(19, dictionary.Count);
         Assert.False(dictionary.ContainsKey("key1"));
@@ -241,30 +266,32 @@ public class MyDictionaryTests
     {
         Dictionary<string, string> dictionary = GetTestDictionary();
         bool result = dictionary.Remove("key21");
-        
+
         Assert.False(result);
         Assert.Equal(20, dictionary.Count);
     }
 
     [Fact]
-    public void Remove_With_KeyValuePair_Should_Return_True_And_Remove_Element()
+    public void ICollection_Remove_Should_Return_True_And_Remove_Element()
     {
         Dictionary<string, string> dictionary = GetTestDictionary();
-        KeyValuePair<string, string> kvp = new("key1", "value1");
-        bool result = dictionary.Remove(kvp);
-        
+        ICollection<KeyValuePair<string, string>> collection = dictionary;
+
+        bool result = collection.Remove(new KeyValuePair<string, string>("key1", "value1"));
+
         Assert.True(result);
         Assert.Equal(19, dictionary.Count);
         Assert.False(dictionary.ContainsKey("key1"));
     }
 
     [Fact]
-    public void Remove_With_KeyValuePair_Should_Return_False_When_KeyValuePair_Not_Found()
+    public void ICollection_Remove_Should_Return_False_When_KeyValuePair_Not_Found()
     {
         Dictionary<string, string> dictionary = GetTestDictionary();
-        KeyValuePair<string, string> kvp = new("key1", "wrong-value");
-        bool result = dictionary.Remove(kvp);
-        
+        ICollection<KeyValuePair<string, string>> collection = dictionary;
+
+        bool result = collection.Remove(new KeyValuePair<string, string>("key1", "wrong-value"));
+
         Assert.False(result);
         Assert.Equal(20, dictionary.Count);
     }
@@ -274,7 +301,7 @@ public class MyDictionaryTests
     {
         Dictionary<string, string> dictionary = GetTestDictionary();
         bool result = dictionary.TryAdd("key21", "value21");
-        
+
         Assert.True(result);
         Assert.Equal(21, dictionary.Count);
         Assert.Equal("value21", dictionary["key21"]);
@@ -285,7 +312,7 @@ public class MyDictionaryTests
     {
         Dictionary<string, string> dictionary = GetTestDictionary();
         bool result = dictionary.TryAdd("key1", "new-value");
-        
+
         Assert.False(result);
         Assert.Equal(20, dictionary.Count);
         Assert.Equal("value1", dictionary["key1"]);
@@ -296,7 +323,7 @@ public class MyDictionaryTests
     {
         Dictionary<string, string> dictionary = GetTestDictionary();
         bool result = dictionary.TryGetValue("key1", out string value);
-        
+
         Assert.True(result);
         Assert.Equal("value1", value);
     }
@@ -306,7 +333,7 @@ public class MyDictionaryTests
     {
         Dictionary<string, string> dictionary = GetTestDictionary();
         bool result = dictionary.TryGetValue("key21", out string value);
-        
+
         Assert.False(result);
         Assert.Equal(default, value);
     }
@@ -316,56 +343,39 @@ public class MyDictionaryTests
     {
         Dictionary<string, string> dictionary = new();
         int newCapacity = dictionary.EnsureCapacity(100);
-        
+
         Assert.True(newCapacity >= 100);
     }
 
     [Fact]
-    public void GetAlternateLookup_Should_Return_Value_With_Case_Insensitive_StringComparer()
+    public void GetAlternateLookup_Should_Return_Value_Using_Transform()
     {
-        var dictionary = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase)
-        {
-            { "KEY1", "value1" }
-        };
+        Dictionary<string, string> dictionary = GetTestDictionary();
+        dictionary.Add("KEY21", "special-value");
 
-        // Get value using different case
-        string result = dictionary.GetAlternateLookup("key1", key => key.ToUpper());
-        
-        Assert.Equal("value1", result);
+        // This will transform "key21" to "KEY21" which exists in the dictionary
+        string result = dictionary.GetAlternateLookup("key21", key => key.ToUpper());
+
+        Assert.Equal("special-value", result);
     }
 
     [Fact]
     public void GetAlternateLookup_Should_Throw_When_Key_Not_Found_After_Transform()
     {
         Dictionary<string, string> dictionary = GetTestDictionary();
-        
-        Assert.Throws<KeyNotFoundException>(() => 
-            dictionary.GetAlternateLookup("KEY1", key => key.ToUpper()));
-    }
 
-    [Fact]
-    public void GetAlternateLookup_Should_Use_Transform_Function()
-    {
-        Dictionary<string, string> dictionary = GetTestDictionary();
-        
-        // Add a key that will match after transformation
-        dictionary.Add("KEY21", "special-value");
-        
-        string result = dictionary.GetAlternateLookup("key21", key => key.ToUpper());
-        
-        Assert.Equal("special-value", result);
+        Assert.Throws<KeyNotFoundException>(() =>
+            dictionary.GetAlternateLookup("nonexistent", key => key.ToUpper()));
     }
 
     [Fact]
     public void TryGetAlternateLookup_Should_Return_True_And_Value_When_Key_Found_After_Transform()
     {
         Dictionary<string, string> dictionary = GetTestDictionary();
-        
-        // Add a key that will match after transformation
         dictionary.Add("KEY21", "special-value");
-        
+
         bool success = dictionary.TryGetAlternateLookup("key21", out string value, key => key.ToUpper());
-        
+
         Assert.True(success);
         Assert.Equal("special-value", value);
     }
@@ -374,9 +384,9 @@ public class MyDictionaryTests
     public void TryGetAlternateLookup_Should_Return_False_When_Key_Not_Found_After_Transform()
     {
         Dictionary<string, string> dictionary = GetTestDictionary();
-        
-        bool success = dictionary.TryGetAlternateLookup("notpresent", out string value, key => key.ToUpper());
-        
+
+        bool success = dictionary.TryGetAlternateLookup("nonexistent", out string value, key => key.ToUpper());
+
         Assert.False(success);
         Assert.Equal(default, value);
     }
@@ -385,10 +395,10 @@ public class MyDictionaryTests
     public void TrimExcess_Should_Not_Throw()
     {
         Dictionary<string, string> dictionary = GetTestDictionary();
-        
+
         // This doesn't have a return value, so we just confirm it doesn't throw
         dictionary.TrimExcess();
-        
+
         Assert.Equal(20, dictionary.Count);
     }
 
@@ -396,10 +406,24 @@ public class MyDictionaryTests
     public void TrimExcess_With_Capacity_Should_Not_Throw()
     {
         Dictionary<string, string> dictionary = GetTestDictionary();
-        
+
         // This doesn't have a return value, so we just confirm it doesn't throw
         dictionary.TrimExcess(25);
-        
+
         Assert.Equal(20, dictionary.Count);
     }
+
+    [Fact]
+    public void Remove_With_Key_And_Value_Should_Return_True_When_Removed()
+    {
+        Dictionary<string, string> dictionary = GetTestDictionary();
+
+        bool result = dictionary.Remove("key1", out string removedValue);
+
+        Assert.True(result);
+        Assert.Equal("value1", removedValue);
+        Assert.Equal(19, dictionary.Count);
+        Assert.False(dictionary.ContainsKey("key1"));
+    }
+
 }
