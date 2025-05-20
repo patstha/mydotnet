@@ -18,8 +18,8 @@ jobs:
       with:
         dotnet-version: '9.0.x'
     - name: Install dependencies
-      run: dotnet restore
+      run: dotnet restore mydotnet.sln
     - name: Build
-      run: dotnet build --configuration Release --no-restore
+      run: dotnet build mydotnet.sln --configuration Release --no-restore
     - name: Test
-      run: dotnet test --no-restore --verbosity normal
+      run: dotnet test mydotnet.sln --no-restore --verbosity normal
